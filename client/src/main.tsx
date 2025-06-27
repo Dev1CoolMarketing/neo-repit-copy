@@ -10,6 +10,7 @@ import VIPMembership from "./pages/vip-membership";
 import TreatmentsPremium from "./pages/treatments-premium";
 import ComponentExportPage from "./pages/component-export";
 import NotFound from "./pages/not-found";
+import GrowthFactors from "./pages/growth-factors";
 
 console.log("THIS IS RUNNING");
 
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")!).render(
     <Route path="/vip-membership" component={VIPMembership} />
     <Route path="/treatments" component={TreatmentsPremium} />
     <Route path="/fue" component={Fue} />
+    <Route path="/growth-factors" component={GrowthFactors} />
     <Route path="/component-export" component={ComponentExportPage} />
     {/* Fallback to 404 */}
     <Route component={NotFound} />

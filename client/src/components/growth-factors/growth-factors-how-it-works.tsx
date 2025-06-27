@@ -9,28 +9,28 @@ const GrowthFactorsHowItWorks = () => {
       title: "Blood Draw & Processing",
       description:
         "A small amount of your blood is drawn and processed using advanced centrifugation technology to isolate and concentrate your platelet-rich plasma (PRP). This natural concentrate contains powerful growth factors that stimulate hair follicle regeneration and promote healthy hair growth.",
-      image: "/assets/growth-factors/blood_draw.png",
+      image: "/assets/growth-factors/blood_draw.svg",
       alt: "Blood draw and PRP processing equipment",
     },
     {
       title: "Scalp Preparation",
       description:
         "Your scalp is carefully prepared and cleansed. Local anesthetic is applied to ensure maximum comfort during the treatment. The targeted areas for injection are mapped out based on your specific hair loss pattern and treatment goals.",
-      image: "/assets/growth-factors/scalp_prep.png",
+      image: "/assets/growth-factors/scalp_prep.svg",
       alt: "Scalp preparation and treatment mapping",
     },
     {
       title: "Growth Factor Injection",
       description:
         "The concentrated growth factors are precisely injected into the scalp using micro-needles. This process delivers the healing proteins directly to hair follicles, stimulating cellular regeneration and improving blood flow to promote natural hair growth.",
-      image: "/assets/growth-factors/injection.png",
+      image: "/assets/growth-factors/injection.svg",
       alt: "Growth factor injection procedure",
     },
     {
       title: "Recovery & Results",
       description:
         "Recovery is minimal with most patients returning to normal activities immediately. You may experience mild tenderness for 24-48 hours. Results typically become visible within 3-4 months, with continued improvement over 6-12 months as new hair growth strengthens.",
-      image: "/assets/growth-factors/recovery.png",
+      image: "/assets/growth-factors/recovery.svg",
       alt: "Patient recovery and results timeline",
     },
   ];
@@ -155,7 +155,7 @@ const GrowthFactorsHowItWorks = () => {
                 <div className="flex-1 flex items-center justify-center pl-5 pr-11">
                   <div className="w-full max-w-[405px] h-[370px] rounded-2xl flex items-center justify-center">
                     <motion.img
-                      src="/assets/growth-factors/blood_draw_desktop.png"
+                      src="/assets/growth-factors/blood_draw_desktop.svg"
                       alt="Blood draw and PRP processing equipment"
                       className="w-full h-full object-contain border-2 border-white shadow-sm"
                       whileHover={{ scale: 1.05 }}
@@ -247,7 +247,7 @@ const GrowthFactorsHowItWorks = () => {
                 <div className="flex justify-center items-end">
                   <div className="w-[243px] h-[337px] rounded-2xl flex items-center justify-center">
                     <motion.img
-                      src="/assets/growth-factors/injection_desktop.png"
+                      src="/assets/growth-factors/injection_desktop.svg"
                       alt="Growth factor injection procedure"
                       className="w-full h-full object-contain border-2 border-white shadow-sm"
                       whileHover={{ scale: 1.05 }}
@@ -295,7 +295,7 @@ const GrowthFactorsHowItWorks = () => {
                 <div className="flex-1 flex items-center justify-center">
                   <div className="w-[380px] h-[280px] rounded-2xl flex items-center justify-center">
                     <motion.img
-                      src="/assets/growth-factors/recovery_desktop.png"
+                      src="/assets/growth-factors/recovery_desktop.svg"
                       alt="Patient recovery and results timeline"
                       className="w-full h-full object-contain border-2 border-white shadow-sm"
                       whileHover={{ scale: 1.05 }}
