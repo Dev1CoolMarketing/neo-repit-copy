@@ -1,0 +1,14 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#F8F9FA"/>
+  <!-- Blood tube -->
+  <rect x="120" y="50" width="20" height="80" rx="10" fill="#E5E7EB"/>
+  <rect x="122" y="52" width="16" height="76" rx="8" fill="#FFF"/>
+  <rect x="122" y="100" width="16" height="28" rx="8" fill="#DC2626"/>
+  <!-- Syringe -->
+  <rect x="160" y="70" width="60" height="8" rx="4" fill="#6B7280"/>
+  <rect x="220" y="68" width="8" height="12" rx="4" fill="#374151"/>
+  <circle cx="164" cy="74" r="3" fill="#DC2626"/>
+  <!-- Text -->
+  <text x="150" y="160" text-anchor="middle" fill="#2D5A27" font-family="Arial" font-size="14" font-weight="bold">Blood Draw</text>
+  <text x="150" y="180" text-anchor="middle" fill="#6B7280" font-family="Arial" font-size="12">& Processing</text>
+</svg>

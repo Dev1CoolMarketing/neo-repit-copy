@@ -11,6 +11,7 @@ import TreatmentsPremium from "@/pages/treatments-premium";
 import ComponentExportPage from "@/pages/component-export";
 import NotFound from "@/pages/not-found";
 import Fue from "@/pages/fue";
+import GrowthFactors from "@/pages/growth-factors";
 function Router() {
   const [location] = useLocation();
   
@@ -34,7 +35,8 @@ function Router() {
       <Route path="/vip-membership" component={VIPMembership} />
       <Route path="/treatments" component={TreatmentsPremium} />
       <Route path="/component-export" component={ComponentExportPage} />
-      <Route path="/fue" component={Fue}
+      <Route path="/fue" component={Fue} />
+      <Route path="/growth-factors" component={GrowthFactors} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

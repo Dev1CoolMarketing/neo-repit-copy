@@ -1,0 +1,6 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F8F9FA"/>
+  <circle cx="200" cy="150" r="80" fill="#E8F5E8"/>
+  <path d="M160 150 L180 170 L240 110" stroke="#2D5A27" stroke-width="6" fill="none"/>
+  <text x="200" y="270" text-anchor="middle" fill="#2D5A27" font-size="16" font-weight="bold">Recovery & Results</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#F8F9FA"/>
+  <circle cx="150" cy="100" r="50" fill="#E8F5E8"/>
+  <rect x="140" y="60" width="20" height="80" rx="10" fill="#2D5A27"/>
+  <text x="150" y="180" text-anchor="middle" fill="#2D5A27" font-size="14" font-weight="bold">Growth Factor Injection</text>
+</svg>
