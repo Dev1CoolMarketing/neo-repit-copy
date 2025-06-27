@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { usePathname } from "wouter/use-browser-location";
 
 export default function Frame_81() {
   return (

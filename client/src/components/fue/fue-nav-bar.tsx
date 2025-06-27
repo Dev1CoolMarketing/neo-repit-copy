@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { Menu, Search, Phone, ChevronRight } from "lucide-react";
+import { Menu, Search, Phone, ChevronRight, ChevronDown } from "lucide-react";
 import { cn, NEO_LOGO_WHITE } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { smoothScrollTo } from "@/lib/utils";
 import { Link, useLocation } from "wouter";
 import { usePathname } from "wouter/use-browser-location";
-import { type } from "os";
 
 // Navigation links with proper organization for better user flow
 const navLinks = [
@@ -74,7 +73,7 @@ export default function FueNavBar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide"
+              className="text-white  hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide"
               style={{ textShadow: "0px 1px 1px rgba(0,0,0,0.2)" }}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -94,14 +93,14 @@ export default function FueNavBar() {
                 }}
               >
                 {link.name}{" "}
-                <ChevronRight
+                <ChevronDown
                   className={`
                               ${typeDropdownOpen === link.name ? "rotate-90" : "rotate-0"}
                               animate duration-300 h-4 w-4`}
                 />
               </div>
               <div
-                className={`${typeDropdownOpen === link.name ? "block" : "hidden"} text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide pl-4`}
+                className={`${typeDropdownOpen === link.name ? "block" : "hidden"} text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide pl-4 md:bg-black md: absolute border-white border md:px-5`}
               >
                 <div className="flex flex-col gap-2">
                   {generateLinks(link.dropdownItems)}
@@ -191,7 +190,7 @@ export default function FueNavBar() {
       )}
     >
       {/* Mobile header */}
-      <div className="md:hidden container mx-auto px-4 flex justify-between items-center h-12">
+      <div className="md:hidden container mx-auto px-4 flex justify-between items-center h-14">
         {/* Left Side Icons */}
         <div className="flex items-center">
           <div className="flex justify-center items-center h-full">
@@ -199,7 +198,7 @@ export default function FueNavBar() {
               <img
                 src="/assets/n-logo.svg"
                 alt="Dr. NEO"
-                className="h-6 w-auto"
+                className="h-8 w-auto"
               />
             </Link>
           </div>
@@ -271,7 +270,7 @@ export default function FueNavBar() {
       </div>
 
       {/* Desktop header - Hims inspired */}
-      <div className="hidden md:block">
+      <div className="hidden md:block bg-black">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
             {/* Logo */}
@@ -280,36 +279,14 @@ export default function FueNavBar() {
                 <img
                   src="/assets/NEO LOGO WHITE.png"
                   alt="Dr. NEO"
-                  className="h-6 w-auto invert"
+                  className="h-6 w-auto "
                 />
               </Link>
             </div>
 
             {/* Main Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              {navLinks.map((link) =>
-                link.type === "anchor" ? (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className={`text-black ${isScrolled ? "hover:text-white" : "hover:text-[#EDB930]"} font-medium transition-colors text-sm`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(link.href);
-                    }}
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className={`text-black ${isScrolled ? "hover:text-white" : "hover:text-[#EDB930]"} font-medium transition-colors text-sm`}
-                  >
-                    {link.name}
-                  </Link>
-                ),
-              )}
+              {generateLinks(navLinks)}
             </nav>
 
             {/* Action buttons */}

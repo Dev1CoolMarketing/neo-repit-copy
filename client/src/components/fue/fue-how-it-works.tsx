@@ -1,8 +1,7 @@
-import { useState } from "react";
-import Navigation from "@/components/Navigation";
-import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import HiddenCard from "../ui/hidden-card";
+import AnimatedImage from "../ui/animtated-image";
 
 const HowItWorks = () => {
   const processDetails = [
@@ -11,24 +10,29 @@ const HowItWorks = () => {
       description:
         "The main goal of the initial consultation is to determine if you are a good candidate for a Dr. Neo hair restoration procedure. The good news is NeoGraft has a proven track-record of delivering excellent hair transplantation results for both men and women of all ethnicities.",
       image: "/assets/fue/initial_consultation.png",
+      alt: "Initial Consultation Inspection Gadget",
     },
+
     {
       title: "Procedure Day",
       description:
         'First, it is important to note we call it "Procedure Day" because the duration of a Dr. Neo transplantation session ranges from 4 to 10 hours and depends on the number of grafts (follicular units) we harvest and implant that particular day.',
       image: "assets/fue/procedure_day.png",
+      alt: "Hand Transplanting a hair follicle with Dr.Neo Tweezers",
     },
     {
       title: "Recovery & Regrowth",
       description:
         "There's typically very little pain or discomfort after the NeoGraft procedure. You may experience some tenderness around the donor site, but this is a normal part of the healing process and should subside in a few days. You may also experience a slight amount of drainage for the first day after your procedure, but this is minimal.",
       image: "/assets/fue/recovery_&_regrowth.png",
+      alt: "Two spray bottles of The Rinse and The Spritz from Dr.Neo",
     },
     {
       title: "Follow-Up Consultation",
       description:
         "We encourage all of our NeoGraft patients to schedule a follow up consultation to analyze results we achieved and determine if additional sessions would be beneficial.",
       image: "/assets/fue/follow_up_consultation.png",
+      alt: "Ipad image showing follow up consultation",
     },
   ];
 
@@ -59,18 +63,18 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="bg-[#F3F4F6] font-sf-pro">
+    <div className="bg-[#F3F4F6]">
       {/* Promotional Ribbon */}
 
       {/* How It Works Section */}
       <section className="bg-light-gray px-5 py-16 md:py-12">
         <div className="container mx-auto max-w-sm md:max-w-5xl">
           <div className="text-center mb-8 md:mb-20 flex flex-col items-center">
-            <h2 className="text-4xl md:text-7xl font-bold text-black mb-2 leading-tight tracking-tight">
+            <h2 className="text-center bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent w-full text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] font-normal leading-[1.1] tracking-[-0.04em pb-6">
               How It Works
               <br />
             </h2>
-            <div className="w-20 h-1 rounded-full bg-gradient-to-l from-[#FC8310] to-[#C8B68F] mt-5"></div>
+            {/* <div className="w-20 h-1 rounded-full bg-gradient-to-l from-[#625046] to-[#C8B68F] mt-5"></div> */}
 
             <div />
           </div>
@@ -79,7 +83,7 @@ const HowItWorks = () => {
           <div className="block md:hidden space-y-6">
             {processDetails.map((detail, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-sm">
-                <div className="space-y- p-8 ">
+                <div className="space-y- p-8 pb-0 ">
                   <h3 className="text-xl font-[700] text-black leading-tight mb-2">
                     {detail.title}
                   </h3>
@@ -98,11 +102,13 @@ const HowItWorks = () => {
                     </HiddenCard>
                   </div>
                 </div>
-                <div className="w-full pl-10 bg-light-gray rounded-2xl mt-2 flex items-center justify-center">
-                  <img
-                    src={`${detail.image}`}
-                    alt="Sarah K."
-                    className="w-full h-full object-cover border-2 border-white shadow-sm"
+                <div className="w-full pl-10 bg-light-gray rounded-2xl flex items-center justify-center max-h-[450px]">
+                  <AnimatedImage
+                    initial={detail.initial}
+                    animate={detail.animate}
+                    transition={detail.transition}
+                    image={detail.image}
+                    alt={detail.alt}
                   />
                 </div>
               </div>
@@ -141,10 +147,17 @@ const HowItWorks = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center pl-5 pr-11">
                   <div className="w-full max-w-[405px] h-[370px] ounded-2xl flex items-center justify-center">
-                    <img
+                    <motion.img
                       src="/assets/fue/initial_consultation_desktop.png"
                       alt="Initial Consultation Inspection Gadget"
-                      className="w-full h-full object-contain border-2 border-white shadow-sm"
+                      className="w-full h-full object-contain border-2 
+                      border-white shadow-sm"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
                     />
                   </div>
                 </div>
@@ -177,10 +190,16 @@ const HowItWorks = () => {
                 </div>
                 <div className="flex justify-center items-end">
                   <div className="w-[243px] h-[337px] rounded-2xl flex items-center justify-center">
-                    <img
+                    <motion.img
                       src="/assets/fue/procedure_day.png"
                       alt="Hand Transplanting a hair follicle with Dr.Neo Tweezers"
                       className="w-full h-full object-cover border-2 border-white shadow-sm"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
                     />
                   </div>
                 </div>
@@ -214,10 +233,16 @@ const HowItWorks = () => {
                 </div>
                 <div className="flex justify-center items-end">
                   <div className="w-[243px] h-[337px] rounded-2xl flex items-center justify-center">
-                    <img
+                    <motion.img
                       src="/assets/fue/recovery_&_regrowth_desktop.png"
                       alt="Two spray bottles of The Rinse and The Spritz from Dr.Neo"
                       className="w-full h-full object-contain border-2 border-white shadow-sm"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
                     />
                   </div>
                 </div>
@@ -284,10 +309,13 @@ const HowItWorks = () => {
                       </g>
                     </svg>
                   </div> */}
-                  <img
+                  <motion.img
                     src="/assets/fue/follow_up_consultation_desktop.png"
                     alt="Ipad image showing follow up consultation  "
-                    className="w-full h-full object-contain border-2 border-white shadow-sm"
+                    className="w-full h-full object-contain border-2 
+                    border-white shadow-sm"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   />
                 </div>
               </div>
