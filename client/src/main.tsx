@@ -10,7 +10,7 @@ import VIPMembership from "./pages/vip-membership";
 import TreatmentsPremium from "./pages/treatments-premium";
 import ComponentExportPage from "./pages/component-export";
 import NotFound from "./pages/not-found";
-import GrowthFactors from "./pages/growth-factors";
+import GrowthFactors from "./pages/growth-factors2";
 
 console.log("THIS IS RUNNING");
 

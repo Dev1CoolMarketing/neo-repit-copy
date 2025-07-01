@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../styles/fue.module.css";
 import shinyFolliclePath from "@assets/shinyfollicle.png";
 import { motion } from "framer-motion";
+import { ProcessTimeline } from "@/pages/growth-factors2";
 
 export default function FueHeader() {
   return (
@@ -22,7 +23,7 @@ export default function FueHeader() {
           </span>
         </div>
       </div>
-      <div className="text-3xl font-[600] px-10">
+      <div className="md:text-2xl lg:text-3xl font-[600] px-10">
         <p
           className={
             styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
@@ -52,8 +53,8 @@ export default function FueHeader() {
           </span>
         </div>
       </div>
-      <motion.div className={`${styles.Container_436_7769} max-w`}>
-        <motion.div className={styles.Container_436_7770}>
+      <motion.div className={`max-w`}>
+        {/* <motion.div className={styles.Container_436_7770}>
           <div className={styles.Component_3_436_7771}>
             <div className={styles.Container_420_12636}>
               <span className={styles.Text_420_12637}>Before</span>
@@ -87,7 +88,8 @@ export default function FueHeader() {
               <span className={styles.Text_420_12637}>After</span>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
+        <ProcessTimeline color="[#FC8310]" />
       </motion.div>
     </section>
   );

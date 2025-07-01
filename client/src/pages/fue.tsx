@@ -36,7 +36,7 @@ export default function Fue() {
         <FueHowItWorks />
         <FueProcess />
         <Frame_81 />
-        <TestimonialsSectionPremium />
+        {/* <TestimonialsSectionPremium /> */}
         <FueResults />
 
         {/* <FueExpertConsultations />

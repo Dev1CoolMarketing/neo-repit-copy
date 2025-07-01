@@ -18,11 +18,11 @@ const HiddenCard = ({
         <p className={`${cardTextClasses} font-400 text-[#A87B23]`}>
           {cardText}{" "}
         </p>
-        <button
+        <div
           className={`transition-transform duration-300 ${showCard ? "rotate-180" : "rotate-0 "} ont-400 text-[#A87B23] flex flex-row items-center`}
         >
           {showCard ? showCardIconFinal : showCardIconInitial}
-        </button>
+        </div>
       </div>
       <div
         className={`${showCard ? "opacity-100 block" : "opacity-0 hidden"} 

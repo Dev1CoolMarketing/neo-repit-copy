@@ -91,6 +91,11 @@
   border: 2px solid #836F10;
 }
 
+.custom-button-growth-factors {
+  background-color: #84CC16;
+  color: #100a03;
+}
+
 /* Ensure yellow/gold buttons always have dark brown text */
 button {
 

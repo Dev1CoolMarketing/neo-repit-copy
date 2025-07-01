@@ -68,7 +68,7 @@ const HowItWorks = () => {
 
       {/* How It Works Section */}
       <section className="bg-light-gray px-5 py-16 md:py-12">
-        <div className="container mx-auto max-w-sm md:max-w-5xl">
+        <div className="container mx-auto max-w-md md:max-w-5xl">
           <div className="text-center mb-8 md:mb-20 flex flex-col items-center">
             <h2 className="text-center bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent w-full text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] font-normal leading-[1.1] tracking-[-0.04em pb-6">
               How It Works
