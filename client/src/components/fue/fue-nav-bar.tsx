@@ -57,7 +57,7 @@ export default function FueNavBar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide"
+              className="text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide cursor-pointer"
               style={{ textShadow: "0px 1px 1px rgba(0,0,0,0.2)" }}
               onClick={(e) => {
                 e.preventDefault();
@@ -73,7 +73,7 @@ export default function FueNavBar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-white  hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide"
+              className="text-white  hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide cursor-pointer"
               style={{ textShadow: "0px 1px 1px rgba(0,0,0,0.2)" }}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -85,7 +85,7 @@ export default function FueNavBar() {
           linkType = (
             <div>
               <div
-                className="text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide flex flex-row items-center "
+                className="text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide flex flex-row items-center z-10 bg-black cursor-pointer "
                 onClick={() => {
                   if (typeDropdownOpen === link.name) {
                     setTypeDropdownOpen(null);
@@ -93,14 +93,14 @@ export default function FueNavBar() {
                 }}
               >
                 {link.name}{" "}
-                <ChevronDown
+                <ChevronRight
                   className={`
                               ${typeDropdownOpen === link.name ? "rotate-90" : "rotate-0"}
                               animate duration-300 h-4 w-4`}
                 />
               </div>
               <div
-                className={`${typeDropdownOpen === link.name ? "block" : "hidden"} text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide pl-4 md:bg-black md: absolute border-white border md:px-5`}
+                className={`${typeDropdownOpen === link.name ? "block" : "hidden"} text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide pl-4 bg-black md:absolute md:border-white md:border md:px-5`}
               >
                 <div className="flex flex-col gap-2">
                   {generateLinks(link.dropdownItems)}
@@ -306,7 +306,7 @@ export default function FueNavBar() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-[#EDB930] lg:hidden"
+                className="text-[#EDB930] md:hidden"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <Menu className="h-5 w-5" strokeWidth={0.5} />
@@ -319,7 +319,7 @@ export default function FueNavBar() {
 
       {/* Mobile Navigation - Enhanced with clear CTA */}
       {isMenuOpen && (
-        <nav className="lg:hidden p-4 sm:p-5 bg-black border-t border-[#C8B68F]/20 shadow-md">
+        <nav className="md:hidden p-4 sm:p-5 bg-black border-t border-[#C8B68F]/20 shadow-md">
           <div className="flex flex-col space-y-3">
             {generateLinks(navLinks)}
             {/* Clear Call-to-Action button */}

@@ -225,8 +225,8 @@ function ProcessStep({
   index,
   onHover,
   isHovered,
-  color = "lime-500/40",
-  bgColor = "lime-500/20",
+  color = "lime-200",
+  bgColor = "lime-200",
 }) {
   console.log("THIS IS COLOR", color);
   return (
@@ -240,9 +240,9 @@ function ProcessStep({
       whileHover={{ y: -4 }}
     >
       <motion.div
-        className={`w-20 h-28 md:w-24 md:h-32 rounded-2xl flex items-center justify-center transition-all duration-500 relative overflow-hidden ${
+        className={`w-16 h-20 md:w-24 md:h-32 rounded-2xl flex items-center justify-center transition-all duration-500 relative overflow-hidden ${
           isActive || isHovered
-            ? `bg-${bgColor} border border-${color}`
+            ? `bg-${bgColor} bg-opacity-20 border border-${color}`
             : "bg-white/8 border border-white/15"
         }`}
         whileHover={{ scale: 1.05 }}
@@ -251,8 +251,8 @@ function ProcessStep({
       </motion.div>
 
       <motion.span
-        className={`text-sm font-medium text-center transition-colors duration-300 ${
-          isActive || isHovered ? `text-${color}` : "text-white/90"
+        className={`text-xs md: text-sm font-medium text-center transition-colors duration-300 ${
+          isActive || isHovered ? `text-${color}` : "text-transparent"
         }`}
       >
         {label}
@@ -261,7 +261,7 @@ function ProcessStep({
   );
 }
 
-export function ProcessTimeline({ color }) {
+export function ProcessTimeline({ color = "lime-200" }) {
   const [hoveredStep, setHoveredStep] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
 
@@ -290,13 +290,13 @@ export function ProcessTimeline({ color }) {
       {/* Timeline connector */}
       <div className="relative">
         <motion.div
-          className="absolute top-14 md:top-16 left-10 right-10 h-0.5 bg-white/15 rounded-full"
+          className="absolute op-10 sm:top-12 md:top-16 right-10 h-0.5 bg-white/15 rounded-full"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 2.2, duration: 1.5 }}
         />
         <motion.div
-          className={`absolute top-14 md:top-16 left-10 h-0.5 bg-${color} rounded-full`}
+          className={`absolute top-10 sm:top-12 md:top-16 left-10 h-0.5 bg-${color} rounded-full`}
           animate={{
             width: `${(activeStep / (steps.length - 1)) * (100 - 80 / steps.length)}%`,
           }}
@@ -315,7 +315,7 @@ export function ProcessTimeline({ color }) {
             onHover={setHoveredStep}
             isHovered={hoveredStep === index}
             color={color}
-            bgColor={`bg-${color}/20`}
+            bgColor={`${color}`}
           />
         ))}
       </div>
@@ -325,7 +325,7 @@ export function ProcessTimeline({ color }) {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden">
+    <section className="relative min-h-scren bg-black overflow-hidden">
       {/* Subtle background effect */}
       <div className="absolute inset-0 opacity-20">
         <motion.div
@@ -346,10 +346,10 @@ function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col justify-center min-h-screen pt-24 pb-16">
+      <div className="relative z-10 flex flex-col justify-center min-h-screen pt-24 ">
         <div className="flex-1 flex flex-col justify-center space-y-20">
           <HeroContent />
-          <ProcessTimeline />
+          <ProcessTimeline color="white" />
         </div>
       </div>
     </section>
@@ -725,7 +725,7 @@ function ProcessSection() {
   ];
 
   return (
-    <section id="treatment" className="bg-white py-32 md:py-48 overflow-hidden">
+    <section id="treatment" className="bg-white py-32 md:-48 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <AnimatedSection className="text-center mb-24">
@@ -1226,7 +1226,7 @@ function AppleContactForm() {
           className={`w-full px-4 py-4 bg-gray-50 border-2 rounded-2xl transition-all duration-300 
                      resize-none focus:outline-none focus:bg-white text-gray-900 placeholder-gray-500 ${
                        focused === name
-                         ? "border-lime-500 shadow-lg shadow-lime-100"
+                         ? "border-lime-200 shadow-lg shadow-lime-100"
                          : "border-gray-200 hover:border-gray-300"
                      }`}
           whileFocus={{ scale: 1.01 }}
@@ -1243,7 +1243,7 @@ function AppleContactForm() {
           className={`w-full px-4 py-4 bg-gray-50 border-2 rounded-2xl transition-all duration-300 
                      focus:outline-none focus:bg-white text-gray-900 placeholder-gray-500 ${
                        focused === name
-                         ? "border-lime-500 shadow-lg shadow-lime-100"
+                         ? "border-lime-200 shadow-lg shadow-lime-100"
                          : "border-gray-200 hover:border-gray-300"
                      }`}
           whileFocus={{ scale: 1.01 }}
