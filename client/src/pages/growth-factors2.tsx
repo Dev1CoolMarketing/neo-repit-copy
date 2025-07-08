@@ -16,6 +16,7 @@ import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
 import dermatoscopeImg from "@assets/66F01987-4F54-4A36-B770-0806AA31AE24_1751966280504.png";
 import prpTubeImg from "@assets/715D4C1D-9DD8-4F92-877A-16505BC39FC9_1751966394883.png";
 import microneedlingPenImg from "@assets/699A977B-D602-4DE4-90D7-4B61A9565492_1751972967388.png";
+import recoveryTrackerImg from "@assets/DB46019A-08E7-4A57-AF2B-478B6D57F6C9_1751973693083.png";
 
 function DrNeoLogo() {
   return (
@@ -762,13 +763,15 @@ function ProcessSection() {
     {
       title: "Recovery & Results",
       description:
-        "Structured healing protocol with progress monitoring. Hair growth initiation typically begins at 4-6 weeks.",
+        "Digital progress tracking with AI-powered growth analysis. Hair density improvements of 70%+ documented within 6 months.",
       features: [
         "24-48hr recovery",
-        "Progress photography",
-        "Custom aftercare",
+        "AI progress tracking",
+        "70%+ density improvement",
       ],
-      learnMoreContent: "Recovery typically involves minimal downtime with most patients returning to normal activities within 24-48 hours. Our structured monitoring protocol includes progress photography and follow-up assessments to track hair growth initiation, which typically begins at 4-6 weeks with visible improvements at 3-6 months."
+      learnMoreContent: "Our proprietary Recovery Tracker app provides real-time monitoring of your hair restoration journey. Using advanced AI analysis, we track density improvements, growth patterns, and treatment effectiveness. Most patients experience 70%+ hair density improvements within 6 months, with progress visible as early as 4-6 weeks.",
+      image: recoveryTrackerImg,
+      featured: true
     },
   ];
 
