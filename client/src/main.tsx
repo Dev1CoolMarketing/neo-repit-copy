@@ -1,32 +1,39 @@
-import { createRoot } from "react-dom/client";
-import App from "./App";
-import Home from "./pages/home";
-import "./index.css";
-import "./styles/animations.css";
-import "./styles/premium-animations.css";
-import { Switch, Route, useLocation } from "wouter";
-import Fue from "./pages/fue";
-import VIPMembership from "./pages/vip-membership";
-import TreatmentsPremium from "./pages/treatments-premium";
-import ComponentExportPage from "./pages/component-export";
-import NotFound from "./pages/not-found";
-import GrowthFactors from "./pages/growth-factors2";
-import ImageGeneratorPage from "./pages/image-generator";
-import GrowthFactorsImagesPage from "./pages/growth-factors-images";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './index.css'
+import Home from './pages/home'
+import GrowthFactors from './pages/growth-factors'
+import GrowthFactors2 from './pages/growth-factors2'
+import FUE from './pages/fue'
+import VIPMembership from './pages/vip-membership'
+import ComponentExport from './pages/component-export'
+import ImageGenerator from './pages/image-generator'
+import GrowthFactorsImages from './pages/growth-factors-images'
+import Treatments from './pages/treatments'
+import TreatmentsNew from './pages/treatments-new'
+import TreatmentsOptimized from './pages/treatments-optimized'
+import TreatmentsPremium from './pages/treatments-premium'
+import NotFound from './pages/not-found'
 
-console.log("THIS IS RUNNING");
-
-createRoot(document.getElementById("root")!).render(
-  <Switch>
-    <Route path="/" component={Home} />
-    <Route path="/vip-membership" component={VIPMembership} />
-    <Route path="/treatments" component={TreatmentsPremium} />
-    <Route path="/fue" component={Fue} />
-    <Route path="/growth-factors" component={GrowthFactors} />
-    <Route path="/component-export" component={ComponentExportPage} />
-    <Route path="/image-generator" component={ImageGeneratorPage} />
-    <Route path="/growth-factors-images" component={GrowthFactorsImagesPage} />
-    {/* Fallback to 404 */}
-    <Route component={NotFound} />
-  </Switch>,
-);
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/growth-factors" element={<GrowthFactors />} />
+        <Route path="/growth-factors2" element={<GrowthFactors2 />} />
+        <Route path="/fue" element={<FUE />} />
+        <Route path="/vip-membership" element={<VIPMembership />} />
+        <Route path="/component-export" element={<ComponentExport />} />
+        <Route path="/image-generator" element={<ImageGenerator />} />
+        <Route path="/growth-factors-images" element={<GrowthFactorsImages />} />
+        <Route path="/treatments" element={<Treatments />} />
+        <Route path="/treatments-new" element={<TreatmentsNew />} />
+        <Route path="/treatments-optimized" element={<TreatmentsOptimized />} />
+        <Route path="/treatments-premium" element={<TreatmentsPremium />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>,
+)
