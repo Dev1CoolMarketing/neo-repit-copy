@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 // import imgDrNeoLogo from "@/assets/letterN.png";
