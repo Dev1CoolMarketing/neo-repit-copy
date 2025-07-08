@@ -13,6 +13,8 @@ import {
 import FueResults from "@/components/fue/fue-results-from-real-patients";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
+import dermatoscopeImg from "@assets/66F01987-4F54-4A36-B770-0806AA31AE24_1751966280504.png";
+import prpTubeImg from "@assets/715D4C1D-9DD8-4F92-877A-16505BC39FC9_1751966394883.png";
 
 function DrNeoLogo() {
   return (
@@ -689,7 +691,7 @@ function ProcessSection() {
         "Response prediction",
       ],
       learnMoreContent: "Our comprehensive assessment utilizes state-of-the-art dermoscopic imaging to create detailed follicular maps. We analyze hair density, caliber variations, and miniaturization patterns to develop personalized treatment protocols. This thorough evaluation ensures optimal outcomes tailored to your specific hair restoration needs.",
-      image: "@assets/66F01987-4F54-4A36-B770-0806AA31AE24_1751966280504.png",
+      image: dermatoscopeImg,
       featured: true
     },
     {
@@ -702,7 +704,7 @@ function ProcessSection() {
         "500K platelets/μL",
       ],
       learnMoreContent: "Our specialized dual-spin centrifugation protocol maximizes platelet concentration while preserving growth factor integrity. The 60ml blood draw is processed using FDA-approved techniques to achieve therapeutic platelet concentrations of 500,000+ platelets per microliter, significantly higher than baseline levels.",
-      image: "@assets/715D4C1D-9DD8-4F92-877A-16505BC39FC9_1751966394883.png",
+      image: prpTubeImg,
       featured: true
     },
     {
