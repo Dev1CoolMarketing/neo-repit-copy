@@ -15,6 +15,7 @@ import FueNavBar from "@/components/fue/fue-nav-bar";
 import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
 import dermatoscopeImg from "@assets/66F01987-4F54-4A36-B770-0806AA31AE24_1751966280504.png";
 import prpTubeImg from "@assets/715D4C1D-9DD8-4F92-877A-16505BC39FC9_1751966394883.png";
+import microneedlingPenImg from "@assets/699A977B-D602-4DE4-90D7-4B61A9565492_1751972967388.png";
 
 function DrNeoLogo() {
   return (
@@ -200,7 +201,7 @@ function HeroContent() {
         >
           Your body's natural healing power.
           <br />
-          <span className="text-white/70 font-[400]">Amplified by science.</span>
+          <span className="text-white/70 font-[400]">Amplified by precision.</span>
         </motion.p>
       </motion.div>
 
@@ -213,10 +214,14 @@ function HeroContent() {
       >
         <motion.button
           className="bg-[#32d74b] text-black font-[700] text-xl px-12 py-5 rounded-full hover:bg-[#2fb943] transition-all duration-300 shadow-2xl"
-          whileHover={{ scale: 1.03, boxShadow: "0 25px 50px rgba(50,215,75,0.3)" }}
+          whileHover={{ 
+            scale: 1.03, 
+            boxShadow: "0 25px 50px rgba(50,215,75,0.4)",
+            y: -2
+          }}
           whileTap={{ scale: 0.97 }}
         >
-          Start Your Journey
+          Book Free Assessment
         </motion.button>
         
         <motion.p
@@ -305,14 +310,9 @@ export function ProcessTimeline() {
         <motion.h2
           className="text-4xl md:text-6xl font-[800] text-[#32d74b] mb-2 tracking-tight"
           animate={{ 
-            scale: [1, 1.02, 1],
-            textShadow: [
-              "0 0 20px rgba(50,215,75,0.3)",
-              "0 0 40px rgba(50,215,75,0.5)",
-              "0 0 20px rgba(50,215,75,0.3)"
-            ]
+            scale: [1, 1.01, 1],
           }}
-          transition={{ duration: 2, repeat: Infinity }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
           {steps[activeStep]}
         </motion.h2>
@@ -755,7 +755,9 @@ function ProcessSection() {
         "16K channels/cm²",
         "Immediate PRP application",
       ],
-      learnMoreContent: "The precise 1.5mm needle depth creates optimal micro-channels for growth factor delivery directly to hair follicles. Our technique generates 16,000 channels per square centimeter, maximizing PRP absorption while minimizing discomfort. Immediate application ensures maximum bioavailability of growth factors."
+      learnMoreContent: "The precise 1.5mm needle depth creates optimal micro-channels for growth factor delivery directly to hair follicles. Our technique generates 16,000 channels per square centimeter, maximizing PRP absorption while minimizing discomfort. Immediate application ensures maximum bioavailability of growth factors.",
+      image: microneedlingPenImg,
+      featured: true
     },
     {
       title: "Recovery & Results",
