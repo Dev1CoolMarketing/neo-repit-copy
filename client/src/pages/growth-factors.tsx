@@ -64,14 +64,14 @@ export default function GrowthFactors() {
         {/* <GrowthFactorsReasons /> */}
         
         {/* HOW IT WORKS START */}
-        <section className="py-16 bg-[#F3F4F6]">
+        <section className="py-24 bg-[#f5f5f7]">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
               <h2 className="text-center bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent w-full text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] font-normal leading-[1.1] tracking-[-0.04em] pb-6">
                 How It Works
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Growth Factor Therapy rundown
+                growth factor therapy rundown
               </p>
             </div>
             
@@ -114,7 +114,7 @@ export default function GrowthFactors() {
               subtitle="Reduced shedding 4–6 wks • fuller density 3–6 mo"
               align="center"
             />
-            <a href="/booking" className="inline-block bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition">
+            <a href="/booking" className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-7 py-3 rounded-full transition">
               book your consult
             </a>
           </div>

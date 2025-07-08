@@ -82,7 +82,7 @@ export default function GrowthFactorsPage() {
       </section>
 
       <section>
-        <SectionHeader title="Benefits of Growth Factor Therapy" align="left" />
+        <SectionHeader title="benefits of growth factor therapy" align="left" />
         <ul className="list-disc list-inside text-lg text-slate-700">
           <li>Reduces the appearance of fine lines and wrinkles</li>
           <li>Improves skin texture and elasticity</li>
