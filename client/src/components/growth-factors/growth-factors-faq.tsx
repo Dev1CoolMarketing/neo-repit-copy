@@ -1,3 +1,4 @@
+
 import { useState, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
@@ -188,11 +189,6 @@ export default function GrowthFactorsFAQ() {
           >
             Schedule Free Consultation
           </motion.button>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
         </motion.div>
       </div>
     </section>
