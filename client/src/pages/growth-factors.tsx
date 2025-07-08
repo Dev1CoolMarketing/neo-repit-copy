@@ -34,7 +34,7 @@ export default function GrowthFactors() {
       <SiteHeader />
       <main className="flex-1">
         <GrowthFactorsHeader />
-        <GrowthFactorsReasons />
+        {/* <GrowthFactorsReasons /> */}
         
         {/* HOW IT WORKS START */}
         <section className="py-16 bg-white">

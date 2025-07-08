@@ -140,15 +140,7 @@ const GrowthFactorsHowItWorks = () => {
                       animationIconClasses="transition-transform duration-300"
                       cardTextClasses="text-md font-bold text-medium-gray"
                     >
-                      <div className="text-sm text-gray-600 mt-2">
-                        <h4 className="font-semibold mb-2">PRP Processing Details:</h4>
-                        <ul className="list-disc list-inside space-y-1">
-                          <li>Advanced centrifuge technology</li>
-                          <li>Sterile processing environment</li>
-                          <li>Optimal platelet concentration</li>
-                          <li>Quality control measures</li>
-                        </ul>
-                      </div>
+                      <div>THIS IS WHERE ALL THE INFORMATION WILL GO</div>
                     </HiddenCard>
                   </div>
                 </div>
@@ -187,21 +179,13 @@ const GrowthFactorsHowItWorks = () => {
                     animationIconClasses="transition-transform duration-300"
                     cardTextClasses="text-md font-bold text-medium-gray"
                   >
-                    <div className="text-sm text-gray-600 mt-2">
-                      <h4 className="font-semibold mb-2">Preparation Steps:</h4>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>Thorough scalp assessment</li>
-                        <li>Sterile preparation</li>
-                        <li>Comfort measures applied</li>
-                        <li>Treatment area mapping</li>
-                      </ul>
-                    </div>
+                    <div>THIS IS WHERE ALL THE INFORMATION WILL GO</div>
                   </HiddenCard>
                 </div>
                 <div className="flex justify-center items-end">
                   <div className="w-[243px] h-[337px] rounded-2xl flex items-center justify-center">
                     <motion.img
-                      src="/assets/growth-factors/scalp_prep.png"
+                      src="/assets/growth-factors/scalp_prep.svg"
                       alt="Scalp preparation and treatment mapping"
                       className="w-full h-full object-cover border-2 border-white shadow-sm"
                       whileHover={{ scale: 1.05 }}
@@ -233,21 +217,13 @@ const GrowthFactorsHowItWorks = () => {
                     animationIconClasses="transition-transform duration-300"
                     cardTextClasses="text-md font-bold text-medium-gray"
                   >
-                    <div className="text-sm text-gray-600 mt-2">
-                      <h4 className="font-semibold mb-2">Injection Process:</h4>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>Micro-needle precision</li>
-                        <li>Targeted follicle delivery</li>
-                        <li>Minimal discomfort</li>
-                        <li>Immediate growth factor activation</li>
-                      </ul>
-                    </div>
+                    <div>THIS IS WHERE ALL THE INFORMATION WILL GO</div>
                   </HiddenCard>
                 </div>
                 <div className="flex justify-center items-end">
                   <div className="w-[243px] h-[337px] rounded-2xl flex items-center justify-center">
                     <motion.img
-                      src="/assets/growth-factors/injection_desktop.svg"
+                      src="/assets/growth-factors/injection.svg"
                       alt="Growth factor injection procedure"
                       className="w-full h-full object-contain border-2 border-white shadow-sm"
                       whileHover={{ scale: 1.05 }}
@@ -280,15 +256,7 @@ const GrowthFactorsHowItWorks = () => {
                       animationIconClasses="transition-transform duration-300"
                       cardTextClasses="text-md font-bold text-medium-gray"
                     >
-                      <div className="text-sm text-gray-600 mt-2">
-                        <h4 className="font-semibold mb-2">Recovery Timeline:</h4>
-                        <ul className="list-disc list-inside space-y-1">
-                          <li>Day 1-2: Mild tenderness possible</li>
-                          <li>Week 1: Return to normal activities</li>
-                          <li>Month 3-4: Initial results visible</li>
-                          <li>Month 6-12: Continued improvement</li>
-                        </ul>
-                      </div>
+                      <div>THIS IS WHERE ALL THE INFORMATION WILL GO</div>
                     </HiddenCard>
                   </div>
                 </div>
