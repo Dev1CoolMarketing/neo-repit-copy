@@ -35,7 +35,7 @@ export default function FueStyleTreatmentCard({
     >
       <div className="flex flex-col min-h-[460px] relative">
         {/* Content section */}
-        <div className={`flex-1 p-8 ${featured ? 'lg:w-1/2 lg:pr-0' : ''}`}>
+        <div className={`flex-1 p-8 ${featured ? 'lg:w-1/2 lg:ml-[50%] lg:pr-0' : ''}`}>
           <div className={featured ? 'max-w-lg' : 'max-w-md'}>
             <h3 className="text-2xl font-semibold text-black leading-tight mb-4 tracking-[-0.057px]">
               {title}
@@ -94,23 +94,23 @@ export default function FueStyleTreatmentCard({
         </div>
 
         {/* Apple-style floating image section */}
-        <div className={`flex-shrink-0 ${featured ? 'lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full lg:pointer-events-none' : 'p-8 pt-0'}`}>
+        <div className={`flex-shrink-0 ${featured ? 'lg:absolute lg:left-0 lg:top-0 lg:w-1/2 lg:h-full lg:pointer-events-none lg:overflow-hidden' : 'p-8 pt-0'}`}>
           {featured ? (
-            // Featured: Device floats directly on card background with no container
-            <div className="w-full h-full flex items-center justify-end pr-8 relative">
+            // Featured: Device emerges from left edge like Apple product pages
+            <div className="w-full h-full flex items-center justify-start relative">
               <motion.img
                 src={image}
                 alt={`${title} illustration`}
-                className="w-3/4 h-auto object-contain max-h-[80%]"
+                className="w-full h-auto object-contain max-h-[85%] ml-[-15%]"
                 whileHover={{ 
-                  scale: 1.08,
-                  rotateY: 8,
-                  rotateX: -3,
-                  rotateZ: 2
+                  scale: 1.05,
+                  x: 10,
+                  rotateY: 3,
+                  rotateZ: 1
                 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 style={{
-                  filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.25)) drop-shadow(0 10px 20px rgba(0,0,0,0.15))',
+                  filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.2)) drop-shadow(0 8px 16px rgba(0,0,0,0.1))',
                   transformStyle: 'preserve-3d'
                 }}
               />
