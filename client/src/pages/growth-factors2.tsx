@@ -219,163 +219,126 @@ function HeroContent() {
 
 function ProcessStep({
   label,
-  description,
   isActive = false,
   index,
-  onHover,
-  isHovered,
 }) {
   return (
     <motion.div
-      className="flex-1 cursor-pointer"
-      onHoverStart={() => onHover(index)}
-      onHoverEnd={() => onHover(null)}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 + 1.8, duration: 0.6 }}
+      className="flex flex-col items-center space-y-3 text-center"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: index * 0.15 + 2.0, duration: 0.6 }}
     >
+      {/* Apple-style minimal step indicator */}
       <motion.div
-        className={`p-6 rounded-2xl transition-all duration-500 ${
-          isActive || isHovered
-            ? "bg-[#32d74b]/10 border border-[#32d74b]/30"
-            : "bg-white/5 border border-white/10"
+        className={`w-12 h-12 rounded-full flex items-center justify-center text-base font-[600] transition-all duration-700 ${
+          isActive
+            ? "bg-[#32d74b] text-black shadow-lg shadow-[#32d74b]/30"
+            : "bg-white/15 text-white/60 backdrop-blur-sm"
         }`}
-        whileHover={{ scale: 1.02 }}
-        layout
+        animate={{
+          scale: isActive ? 1.1 : 1,
+          backgroundColor: isActive ? "#32d74b" : "rgba(255,255,255,0.15)",
+        }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <div className="flex items-center space-x-3 mb-3">
-          <motion.div
-            className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-[600] transition-all duration-500 ${
-              isActive || isHovered
-                ? "bg-[#32d74b] text-black"
-                : "bg-white/20 text-white/60"
-            }`}
-            whileHover={{ scale: 1.1 }}
-          >
-            {index + 1}
-          </motion.div>
-          <motion.h3
-            className={`text-lg font-[600] transition-colors duration-500 ${
-              isActive || isHovered ? "text-[#32d74b]" : "text-white/80"
-            }`}
-          >
-            {label}
-          </motion.h3>
-        </div>
-        
-        <motion.p
-          className={`text-sm leading-relaxed transition-colors duration-500 ${
-            isActive || isHovered ? "text-white/90" : "text-white/60"
-          }`}
-          animate={{ opacity: isActive || isHovered ? 1 : 0.7 }}
-        >
-          {description}
-        </motion.p>
+        {index + 1}
       </motion.div>
+      
+      {/* Minimal label */}
+      <motion.span
+        className={`text-sm font-[500] transition-all duration-700 ${
+          isActive ? "text-[#32d74b]" : "text-white/70"
+        }`}
+        animate={{
+          color: isActive ? "#32d74b" : "rgba(255,255,255,0.7)",
+        }}
+      >
+        {label}
+      </motion.span>
     </motion.div>
   );
 }
 
-export function ProcessTimeline({ color = "#32d74b" }) {
-  const [hoveredStep, setHoveredStep] = useState(null);
+export function ProcessTimeline() {
   const [activeStep, setActiveStep] = useState(0);
 
   const steps = [
-    { 
-      label: "Assessment", 
-      description: "Comprehensive scalp analysis using advanced dermoscopic technology to map follicular patterns."
-    },
-    { 
-      label: "Preparation", 
-      description: "Autologous PRP extraction with dual-spin centrifugation to achieve optimal growth factor concentration."
-    },
-    { 
-      label: "Treatment", 
-      description: "Precision microneedling with controlled micro-channel delivery for enhanced PRP absorption."
-    },
-    { 
-      label: "Recovery", 
-      description: "Minimal downtime with professional aftercare protocol for optimal healing and results."
-    },
-    { 
-      label: "Results", 
-      description: "Visible hair density improvement typically observed within 3-4 months of treatment."
-    },
+    { label: "Assessment" },
+    { label: "Preparation" },
+    { label: "Treatment" },
+    { label: "Recovery" },
+    { label: "Results" },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 4000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <motion.div
-      className="px-6 max-w-7xl mx-auto"
-      initial={{ opacity: 0, y: 30 }}
+      className="px-6 max-w-4xl mx-auto"
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.6, duration: 1 }}
+      transition={{ delay: 1.6, duration: 0.8 }}
     >
-      {/* Apple-style section header */}
-      <motion.div
-        className="text-center mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.8, duration: 0.8 }}
-      >
-        <h2 className="text-3xl md:text-4xl font-[700] text-white mb-4">
-          The Process
-        </h2>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto">
-          A precise, evidence-based protocol refined through 2,400+ successful treatments
-        </p>
-      </motion.div>
-
-      {/* Apple-style progress indicator */}
-      <div className="relative mb-8">
-        <div className="flex justify-between items-center relative">
+      {/* Apple Fitness-style minimal progress bar */}
+      <div className="relative mb-12">
+        <motion.div
+          className="w-full h-1 bg-white/10 rounded-full overflow-hidden"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 2.0, duration: 1.0 }}
+        >
           <motion.div
-            className="absolute top-4 left-0 right-0 h-0.5 bg-white/10 rounded-full"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 2.2, duration: 1.5 }}
-          />
-          <motion.div
-            className="absolute top-4 left-0 h-0.5 bg-[#32d74b] rounded-full shadow-lg shadow-[#32d74b]/50"
+            className="h-full bg-[#32d74b] rounded-full origin-left"
             animate={{
-              width: `${(activeStep / (steps.length - 1)) * 100}%`,
+              scaleX: (activeStep + 1) / steps.length,
             }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
           />
-          {steps.map((_, index) => (
-            <motion.div
-              key={index}
-              className={`w-2 h-2 rounded-full z-10 transition-all duration-500 ${
-                index <= activeStep ? "bg-[#32d74b]" : "bg-white/20"
-              }`}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 2.4 + index * 0.1, duration: 0.5 }}
-            />
-          ))}
-        </div>
+        </motion.div>
       </div>
 
-      {/* Apple-style information cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+      {/* Apple-style minimal step indicators */}
+      <div className="flex justify-between items-center max-w-2xl mx-auto">
         {steps.map((step, index) => (
           <ProcessStep
             key={index}
             label={step.label}
-            description={step.description}
             isActive={activeStep === index}
             index={index}
-            onHover={setHoveredStep}
-            isHovered={hoveredStep === index}
           />
         ))}
       </div>
+
+      {/* Apple-style current step highlight */}
+      <motion.div
+        className="text-center mt-12"
+        key={activeStep}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.h3
+          className="text-2xl font-[600] text-[#32d74b] mb-2"
+          animate={{ scale: [0.98, 1, 0.98] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          {steps[activeStep].label}
+        </motion.h3>
+        <p className="text-lg text-white/80 max-w-md mx-auto">
+          {activeStep === 0 && "Advanced dermoscopic analysis"}
+          {activeStep === 1 && "PRP extraction & concentration"}
+          {activeStep === 2 && "Precision microneedling delivery"}
+          {activeStep === 3 && "Professional aftercare protocol"}
+          {activeStep === 4 && "Hair density improvement"}
+        </p>
+      </motion.div>
     </motion.div>
   );
 }
