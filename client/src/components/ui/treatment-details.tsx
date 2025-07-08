@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
 import { 
   Check, Clock, Calendar, ChevronRight, Plus, Minus, 
@@ -81,7 +81,7 @@ interface TreatmentDetailsProps {
   isMobile: boolean;
 }
 
-const TreatmentDetails: React.FC<TreatmentDetailsProps> = ({ 
+const TreatmentDetails: FC<TreatmentDetailsProps> = ({ 
   treatment, 
   isMobile 
 }) => {

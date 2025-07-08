@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronDown } from "lucide-react";
 
@@ -8,7 +8,7 @@ interface TagMultiSelectProps {
   placeholder?: string;
 }
 
-const TagMultiSelect: React.FC<TagMultiSelectProps> = ({
+const TagMultiSelect: FC<TagMultiSelectProps> = ({
   options,
   onChange,
   placeholder,

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, TouchEvent } from "react";
 import TestimonialCard from "@/components/ui/testimonial-card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -44,11 +44,11 @@ export default function Frame_90() {
   };
 
   // Handle touch events for mobile swiping
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = (e: TouchEvent) => {
     setTouchStartX(e.targetTouches[0].clientX);
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const handleTouchMove = (e: TouchEvent) => {
     setTouchEndX(e.targetTouches[0].clientX);
   };
 

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 
 interface FueStyleTreatmentCardProps {
   step: number;
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
   features?: string[];
   image?: string;
   gradient?: string;

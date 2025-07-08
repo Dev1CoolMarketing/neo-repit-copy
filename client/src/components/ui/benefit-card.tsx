@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { motion } from 'framer-motion';
 import { BenefitIcon } from './benefit-icon';
 import { PlusCircle, ArrowRight } from 'lucide-react';
 
 interface BenefitCardProps {
   title: string;
-  iconType: React.ComponentProps<typeof BenefitIcon>['type'];
+  iconType: ComponentProps<typeof BenefitIcon>['type'];
   description?: string;
   variant?: 'default' | 'premium' | 'minimal' | 'glass' | 'accent';
   hoverEffect?: boolean;
@@ -13,7 +13,7 @@ interface BenefitCardProps {
   onClick?: () => void;
 }
 
-export const BenefitCard: React.FC<BenefitCardProps> = ({
+export const BenefitCard: FC<BenefitCardProps> = ({
   title,
   iconType,
   description,

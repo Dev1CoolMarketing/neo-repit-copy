@@ -1,5 +1,5 @@
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const AnimatedImage = ({ image, alt, initial, animate, transition }: any) => {
   console.log("THIS IS IMAGE?", image);

@@ -315,7 +315,7 @@ const animationVariants = {
   },
 };
 
-export const BenefitIcon: React.FC<BenefitIconProps> = ({ 
+export const BenefitIcon: FC<BenefitIconProps> = ({ 
   type, 
   size = 'md', 
   animated = false 

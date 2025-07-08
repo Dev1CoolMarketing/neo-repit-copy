@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 interface BeforeAfterSliderProps {
@@ -88,7 +88,7 @@ export default function BeforeAfterSlider({
   }, [autoAnimate, isDragging, isHovered]);
 
   // Handle mouse and touch interactions
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     setIsDragging(true);
   };
@@ -105,7 +105,7 @@ export default function BeforeAfterSlider({
     setIsDragging(false);
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (isDragging && containerRef.current) {
       const containerRect = containerRef.current.getBoundingClientRect();
       const newPosition = ((e.clientX - containerRect.left) / containerRect.width) * 100;
@@ -113,7 +113,7 @@ export default function BeforeAfterSlider({
     }
   };
 
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
     if (isDragging && containerRef.current) {
       const containerRect = containerRef.current.getBoundingClientRect();
       const touch = e.touches[0];

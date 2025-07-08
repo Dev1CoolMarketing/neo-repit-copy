@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, ReactNode } from "react";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +11,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 import { Check, ArrowRight, Info } from "lucide-react";
 import { set } from "zod";
 

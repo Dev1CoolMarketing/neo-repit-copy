@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { smoothScrollTo } from "@/lib/utils";
 import styles from "@/styles/Frame_82.module.css";
 import {
@@ -48,7 +48,7 @@ const differenceCards = [
 ];
 
 export default function NeoDifferenceSection() {
-  const [api, setApi] = React.useState<any>(null);
+  const [api, setApi] = useState<any>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useIntersectionObserver({
     ref: sectionRef,

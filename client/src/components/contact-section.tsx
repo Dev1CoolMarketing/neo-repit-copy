@@ -94,7 +94,7 @@ const expectationItems = [
 
 export default function ContactSection() {
   const { toast } = useToast();
-  const [api, setApi] = React.useState<any>(null);
+  const [api, setApi] = useState<any>(null);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 

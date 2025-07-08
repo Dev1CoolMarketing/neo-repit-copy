@@ -1,15 +1,15 @@
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 // components/FadeInOnScroll.tsx
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 export function FadeInOnScroll({
   children,
   className,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }) {
   const controls = useAnimation();

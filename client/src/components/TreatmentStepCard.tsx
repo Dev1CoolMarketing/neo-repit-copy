@@ -1,5 +1,5 @@
 // TreatmentStepCard component
-
+import { ReactNode } from "react";
 
 export default function TreatmentStepCard({ 
   step, 
@@ -8,7 +8,7 @@ export default function TreatmentStepCard({
 }: {
   step: number;
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <div className="bg-white shadow-lgsoft rounded-3xl p-8">
