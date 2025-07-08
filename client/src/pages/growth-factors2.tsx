@@ -10,7 +10,7 @@ import {
   CheckIcon,
   StarIcon,
 } from "../components/growth-factors/timeline-icons";
-import FueResults from "@/components/fue/fue-results-from-real-patients";
+
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
 import dermatoscopeImg from "@assets/66F01987-4F54-4A36-B770-0806AA31AE24_1751966280504.png";
@@ -1478,7 +1478,6 @@ export default function App() {
       {/* <div ref={contactRef}>
         <AppleContactForm />
       </div> */}
-      <FueResults />
       <GrowthFactorsFAQ />
       <SiteFooter />
     </div>
