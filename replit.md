@@ -153,3 +153,10 @@ This is a modern, premium hair restoration website for Dr. Neo, built with a ful
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+### Footer Design Updates (January 8, 2025)
+- **Updated color palette**: Changed from green accents to main brand yellow (#FAE151)
+- **Simplified structure**: Reduced from 4 columns to 3 columns with essential information only
+- **More minimal design**: Smaller logo, reduced padding, cleaner typography
+- **Human-centered approach**: Focused on key user needs - treatments, resources, and contact
+- **Faster scrolling**: Reduced content density for better user experience
