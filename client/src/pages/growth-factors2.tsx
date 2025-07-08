@@ -151,70 +151,66 @@ function Nav({ onBookClick }) {
 
 function HeroContent() {
   return (
-    <div className="text-center space-y-8 px-6 max-w-4xl mx-auto">
+    <div className="text-center space-y-12 px-6 max-w-5xl mx-auto">
+      {/* Apple Fitness-style Hero Title */}
       <motion.div
-        className="space-y-6"
+        className="space-y-8"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <motion.h1
-          className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[0.85]"
-          initial={{ opacity: 0, scale: 0.9 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-[700] tracking-tight text-white leading-[0.9] max-w-4xl mx-auto"
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             delay: 0.2,
-            duration: 1,
+            duration: 1.2,
             ease: "easeOut",
           }}
         >
-          RESTORE
+          Restore your hair.
+          <br />
+          <span className="text-[#32d74b]">Naturally.</span>
         </motion.h1>
+        
         <motion.p
-          className="text-xl text-lime-400 tracking-[0.08em] uppercase font-medium"
+          className="text-2xl md:text-3xl text-white/90 font-[400] leading-relaxed tracking-tight max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
         >
-          Microneedling + PRP Growth Factors
+          FDA-approved microneedling with PRP growth factors. 
+          <br className="hidden md:block" />
+          <span className="text-[#32d74b]">89% success rate</span> in clinical trials.
         </motion.p>
       </motion.div>
 
+      {/* Apple-style CTA */}
       <motion.div
-        className="space-y-12"
+        className="space-y-6"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8, duration: 1 }}
+        transition={{ delay: 1.0, duration: 1 }}
       >
-        <p className="text-xl md:text-2xl lg:text-3xl text-white font-[600] leading-relaxed tracking-tight max-w-3xl mx-auto">
-          <span className="text-lime-400 font-semibold">FDA-approved</span>{" "}
-          microneedling with{" "}
-          <span className="text-lime-400 font-semibold">
-            PRP growth factors
-          </span>{" "}
-          clinically proven to stimulate natural hair regrowth in 89% of
-          patients.
-        </p>
-
         <motion.button
-          className={` p-4 custom-button-growth-factors py-3 rounded-full w-3/4 md:w-fit mx-5 mb-10 max-w-sm`}
+          className="bg-[#32d74b] text-black font-[600] text-lg px-8 py-4 rounded-full hover:bg-[#2fb943] transition-all duration-300 shadow-lg hover:shadow-xl"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <span className="text-md font-[700]">Book Free Assessment</span>
+          Book Free Assessment
         </motion.button>
 
         <motion.p
-          className="text-sm text-white/80"
+          className="text-lg text-white/70 font-[400]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.6 }}
+          transition={{ delay: 1.4, duration: 0.6 }}
         >
-          <span className="text-lime-400 font-semibold">$500 value</span> • No
-          obligation consultation
+          <span className="text-[#32d74b]">$500 value</span> • No obligation consultation
         </motion.p>
       </motion.div>
     </div>
@@ -228,34 +224,37 @@ function ProcessStep({
   index,
   onHover,
   isHovered,
-  color = "lime-200",
-  bgColor = "lime-200",
+  color = "#32d74b",
+  bgColor = "#32d74b",
 }) {
-  // console.log("THIS IS COLOR", color);
   return (
     <motion.div
-      className="flex flex-col items-center space-y-4 cursor-pointer"
+      className="flex flex-col items-center space-y-3 cursor-pointer"
       onHoverStart={() => onHover(index)}
       onHoverEnd={() => onHover(null)}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 + 1.8, duration: 0.6 }}
-      whileHover={{ y: -4 }}
+      transition={{ delay: index * 0.15 + 1.8, duration: 0.8 }}
+      whileHover={{ y: -2 }}
     >
       <motion.div
-        className={`w-16 h-20 md:w-24 md:h-32 rounded-2xl flex items-center justify-center transition-all duration-500 relative overflow-hidden ${
+        className={`w-20 h-20 md:w-24 md:h-24 rounded-3xl flex items-center justify-center transition-all duration-500 relative overflow-hidden ${
           isActive || isHovered
-            ? `bg-${bgColor} bg-opacity-20 border border-${color}`
-            : "bg-white/8 border border-white/15"
+            ? "bg-[#32d74b]/20 border-2 border-[#32d74b] shadow-lg shadow-[#32d74b]/25"
+            : "bg-white/5 border border-white/20 backdrop-blur-sm"
         }`}
         whileHover={{ scale: 1.05 }}
+        style={{
+          backgroundColor: isActive || isHovered ? 'rgba(50, 215, 75, 0.15)' : 'rgba(255, 255, 255, 0.05)',
+          borderColor: isActive || isHovered ? '#32d74b' : 'rgba(255, 255, 255, 0.2)'
+        }}
       >
         <IconComponent isActive={isActive} isHovered={isHovered} />
       </motion.div>
 
       <motion.span
-        className={`text-xs md: text-sm font-medium text-center transition-colors duration-300 ${
-          isActive || isHovered ? `text-${color}` : "text-transparent"
+        className={`text-sm md:text-base font-[500] text-center transition-colors duration-500 ${
+          isActive || isHovered ? "text-[#32d74b]" : "text-white/60"
         }`}
       >
         {label}
@@ -264,7 +263,7 @@ function ProcessStep({
   );
 }
 
-export function ProcessTimeline({ color = "lime-200" }) {
+export function ProcessTimeline({ color = "#32d74b" }) {
   const [hoveredStep, setHoveredStep] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
 
@@ -279,31 +278,31 @@ export function ProcessTimeline({ color = "lime-200" }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 4000);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
-  // console.log("THIS IS COLOR I NN TIMELNE", color);
+
   return (
     <motion.div
-      className="px-6 max-w-4xl mx-auto"
-      initial={{ opacity: 0, y: 50 }}
+      className="px-6 max-w-5xl mx-auto"
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.5, duration: 1 }}
+      transition={{ delay: 1.6, duration: 1 }}
     >
-      {/* Timeline connector */}
-      <div className="relative">
+      {/* Apple-style timeline connector */}
+      <div className="relative mb-6">
         <motion.div
-          className="absolute op-10 sm:top-12 md:top-16 right-10 h-0.5 bg-white/15 rounded-full"
+          className="absolute top-10 md:top-12 left-10 right-10 h-0.5 bg-white/10 rounded-full"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 2.2, duration: 1.5 }}
         />
         <motion.div
-          className={`absolute top-10 sm:top-12 md:top-16 left-10 h-0.5 bg-${color} rounded-full`}
+          className="absolute top-10 md:top-12 left-10 h-0.5 bg-[#32d74b] rounded-full shadow-lg shadow-[#32d74b]/50"
           animate={{
             width: `${(activeStep / (steps.length - 1)) * (100 - 80 / steps.length)}%`,
           }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
         />
       </div>
 
@@ -318,7 +317,7 @@ export function ProcessTimeline({ color = "lime-200" }) {
             onHover={setHoveredStep}
             isHovered={hoveredStep === index}
             color={color}
-            bgColor={`${color}`}
+            bgColor={color}
           />
         ))}
       </div>
@@ -328,31 +327,36 @@ export function ProcessTimeline({ color = "lime-200" }) {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-scren bg-black overflow-hidden">
-      {/* Subtle background effect */}
-      <div className="absolute inset-0 opacity-20">
+    <section className="relative min-h-screen bg-black overflow-hidden">
+      {/* Apple-style subtle background effect */}
+      <div className="absolute inset-0 opacity-30">
         <motion.div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(132,204,22,0.1),transparent_70%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(50,215,75,0.08),transparent_70%)]"
           animate={{
             background: [
-              "radial-gradient(circle_at_50%_120%,rgba(132,204,22,0.1),transparent_70%)",
-              "radial-gradient(circle_at_30%_100%,rgba(132,204,22,0.15),transparent_70%)",
-              "radial-gradient(circle_at_70%_110%,rgba(132,204,22,0.1),transparent_70%)",
-              "radial-gradient(circle_at_50%_120%,rgba(132,204,22,0.1),transparent_70%)",
+              "radial-gradient(circle_at_50%_120%,rgba(50,215,75,0.08),transparent_70%)",
+              "radial-gradient(circle_at_30%_100%,rgba(50,215,75,0.12),transparent_70%)",
+              "radial-gradient(circle_at_70%_110%,rgba(50,215,75,0.08),transparent_70%)",
+              "radial-gradient(circle_at_50%_120%,rgba(50,215,75,0.08),transparent_70%)",
             ],
           }}
           transition={{
-            duration: 20,
+            duration: 25,
             repeat: Infinity,
             ease: "easeInOut",
           }}
         />
       </div>
 
-      <div className="relative z-10 flex flex-col justify-center min-h-screen pt-24 ">
-        <div className="flex-1 flex flex-col justify-center space-y-20">
+      {/* Apple-style grid pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      </div>
+
+      <div className="relative z-10 flex flex-col justify-center min-h-screen pt-20">
+        <div className="flex-1 flex flex-col justify-center space-y-20 py-12">
           <HeroContent />
-          <ProcessTimeline color="white" />
+          <ProcessTimeline color="#32d74b" />
         </div>
       </div>
     </section>
