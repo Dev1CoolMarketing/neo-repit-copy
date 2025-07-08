@@ -151,66 +151,81 @@ function Nav({ onBookClick }) {
 
 function HeroContent() {
   return (
-    <div className="text-center space-y-12 px-6 max-w-5xl mx-auto">
-      {/* Apple Fitness-style Hero Title */}
+    <div className="text-center px-6 max-w-6xl mx-auto">
+      {/* Bold Apple Fitness-style Hero with Growth Factor twist */}
       <motion.div
-        className="space-y-8"
-        initial={{ opacity: 0, y: 30 }}
+        className="space-y-6"
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
       >
+        {/* Main headline with growth factor emphasis */}
         <motion.h1
-          className="text-5xl md:text-6xl lg:text-7xl font-[700] tracking-tight text-white leading-[0.9] max-w-4xl mx-auto"
-          initial={{ opacity: 0, scale: 0.95 }}
+          className="text-6xl md:text-8xl lg:text-9xl font-[800] tracking-tight text-white leading-[0.85]"
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            delay: 0.2,
-            duration: 1.2,
+            delay: 0.3,
+            duration: 1.5,
             ease: "easeOut",
           }}
         >
-          Restore your hair.
+          GROWTH
           <br />
-          <span className="text-[#32d74b]">Naturally.</span>
+          <span className="text-[#32d74b] relative">
+            FACTORS
+            {/* Subtle glow effect for growth factors */}
+            <motion.div
+              className="absolute inset-0 text-[#32d74b] blur-lg opacity-30"
+              animate={{
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              FACTORS
+            </motion.div>
+          </span>
         </motion.h1>
         
+        {/* Powerful subtitle */}
         <motion.p
-          className="text-2xl md:text-3xl text-white/90 font-[400] leading-relaxed tracking-tight max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-2xl md:text-3xl lg:text-4xl text-white font-[600] leading-tight max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          transition={{ delay: 0.8, duration: 1 }}
         >
-          FDA-approved microneedling with PRP growth factors. 
-          <br className="hidden md:block" />
-          <span className="text-[#32d74b]">89% success rate</span> in clinical trials.
+          Your body's natural healing power.
+          <br />
+          <span className="text-white/70 font-[400]">Amplified by science.</span>
         </motion.p>
       </motion.div>
 
-      {/* Apple-style CTA */}
+      {/* Clean CTA section */}
       <motion.div
-        className="space-y-6"
+        className="mt-16 space-y-4"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.0, duration: 1 }}
+        transition={{ delay: 1.2, duration: 1 }}
       >
         <motion.button
-          className="bg-[#32d74b] text-black font-[600] text-lg px-8 py-4 rounded-full hover:bg-[#2fb943] transition-all duration-300 shadow-lg hover:shadow-xl"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
+          className="bg-[#32d74b] text-black font-[700] text-xl px-12 py-5 rounded-full hover:bg-[#2fb943] transition-all duration-300 shadow-2xl"
+          whileHover={{ scale: 1.03, boxShadow: "0 25px 50px rgba(50,215,75,0.3)" }}
+          whileTap={{ scale: 0.97 }}
         >
-          Book Free Assessment
+          Start Your Journey
         </motion.button>
-
+        
         <motion.p
-          className="text-lg text-white/70 font-[400]"
+          className="text-[#32d74b] text-lg font-[500]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.4, duration: 0.6 }}
+          transition={{ delay: 1.6, duration: 0.8 }}
         >
-          <span className="text-[#32d74b]">$500 value</span> • No obligation consultation
+          89% success rate • FDA-approved
         </motion.p>
       </motion.div>
     </div>
@@ -263,82 +278,64 @@ function ProcessStep({
 export function ProcessTimeline() {
   const [activeStep, setActiveStep] = useState(0);
 
-  const steps = [
-    { label: "Assessment" },
-    { label: "Preparation" },
-    { label: "Treatment" },
-    { label: "Recovery" },
-    { label: "Results" },
-  ];
+  const steps = ["ASSESS", "EXTRACT", "DELIVER", "HEAL", "GROW"];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 2500);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <motion.div
-      className="px-6 max-w-4xl mx-auto"
-      initial={{ opacity: 0, y: 20 }}
+      className="px-6 max-w-5xl mx-auto"
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.6, duration: 0.8 }}
+      transition={{ delay: 1.8, duration: 1 }}
     >
-      {/* Apple Fitness-style minimal progress bar */}
-      <div className="relative mb-12">
-        <motion.div
-          className="w-full h-1 bg-white/10 rounded-full overflow-hidden"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 2.0, duration: 1.0 }}
+      {/* Bold step display */}
+      <motion.div
+        className="text-center mb-8"
+        key={activeStep}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.h2
+          className="text-4xl md:text-6xl font-[800] text-[#32d74b] mb-2 tracking-tight"
+          animate={{ 
+            scale: [1, 1.02, 1],
+            textShadow: [
+              "0 0 20px rgba(50,215,75,0.3)",
+              "0 0 40px rgba(50,215,75,0.5)",
+              "0 0 20px rgba(50,215,75,0.3)"
+            ]
+          }}
+          transition={{ duration: 2, repeat: Infinity }}
         >
-          <motion.div
-            className="h-full bg-[#32d74b] rounded-full origin-left"
-            animate={{
-              scaleX: (activeStep + 1) / steps.length,
-            }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-          />
-        </motion.div>
-      </div>
+          {steps[activeStep]}
+        </motion.h2>
+      </motion.div>
 
-      {/* Apple-style minimal step indicators */}
-      <div className="flex justify-between items-center max-w-2xl mx-auto">
-        {steps.map((step, index) => (
-          <ProcessStep
+      {/* Ultra-minimal progress indicators */}
+      <div className="flex justify-center items-center space-x-4">
+        {steps.map((_, index) => (
+          <motion.div
             key={index}
-            label={step.label}
-            isActive={activeStep === index}
-            index={index}
+            className={`h-1 rounded-full transition-all duration-700 ${
+              index === activeStep 
+                ? "bg-[#32d74b] w-12 shadow-lg shadow-[#32d74b]/50" 
+                : "bg-white/20 w-4"
+            }`}
+            animate={{
+              width: index === activeStep ? 48 : 16,
+              backgroundColor: index === activeStep ? "#32d74b" : "rgba(255,255,255,0.2)"
+            }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           />
         ))}
       </div>
-
-      {/* Apple-style current step highlight */}
-      <motion.div
-        className="text-center mt-12"
-        key={activeStep}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -10 }}
-        transition={{ duration: 0.5 }}
-      >
-        <motion.h3
-          className="text-2xl font-[600] text-[#32d74b] mb-2"
-          animate={{ scale: [0.98, 1, 0.98] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          {steps[activeStep].label}
-        </motion.h3>
-        <p className="text-lg text-white/80 max-w-md mx-auto">
-          {activeStep === 0 && "Advanced dermoscopic analysis"}
-          {activeStep === 1 && "PRP extraction & concentration"}
-          {activeStep === 2 && "Precision microneedling delivery"}
-          {activeStep === 3 && "Professional aftercare protocol"}
-          {activeStep === 4 && "Hair density improvement"}
-        </p>
-      </motion.div>
     </motion.div>
   );
 }
@@ -346,35 +343,55 @@ export function ProcessTimeline() {
 function HeroSection() {
   return (
     <section className="relative min-h-screen bg-black overflow-hidden">
-      {/* Apple-style subtle background effect */}
-      <div className="absolute inset-0 opacity-30">
+      {/* Dynamic growth factor-inspired background */}
+      <div className="absolute inset-0">
         <motion.div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(50,215,75,0.08),transparent_70%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(50,215,75,0.15),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(50,215,75,0.08),transparent_50%)]"
           animate={{
             background: [
-              "radial-gradient(circle_at_50%_120%,rgba(50,215,75,0.08),transparent_70%)",
-              "radial-gradient(circle_at_30%_100%,rgba(50,215,75,0.12),transparent_70%)",
-              "radial-gradient(circle_at_70%_110%,rgba(50,215,75,0.08),transparent_70%)",
-              "radial-gradient(circle_at_50%_120%,rgba(50,215,75,0.08),transparent_70%)",
+              "radial-gradient(circle_at_30%_40%,rgba(50,215,75,0.15),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(50,215,75,0.08),transparent_50%)",
+              "radial-gradient(circle_at_70%_30%,rgba(50,215,75,0.12),transparent_50%),radial-gradient(circle_at_30%_70%,rgba(50,215,75,0.10),transparent_50%)",
+              "radial-gradient(circle_at_50%_20%,rgba(50,215,75,0.18),transparent_50%),radial-gradient(circle_at_50%_80%,rgba(50,215,75,0.06),transparent_50%)",
+              "radial-gradient(circle_at_30%_40%,rgba(50,215,75,0.15),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(50,215,75,0.08),transparent_50%)",
             ],
           }}
           transition={{
-            duration: 25,
+            duration: 30,
             repeat: Infinity,
             ease: "easeInOut",
           }}
         />
       </div>
 
-      {/* Apple-style grid pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      {/* Floating growth factor particles */}
+      <div className="absolute inset-0 opacity-20">
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-[#32d74b] rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.2, 0.8, 0.2],
+              scale: [1, 1.5, 1],
+            }}
+            transition={{
+              duration: 4 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 4,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
       </div>
 
       <div className="relative z-10 flex flex-col justify-center min-h-screen pt-20">
-        <div className="flex-1 flex flex-col justify-center space-y-20 py-12">
+        <div className="flex-1 flex flex-col justify-center space-y-24 py-12">
           <HeroContent />
-          <ProcessTimeline color="#32d74b" />
+          <ProcessTimeline />
         </div>
       </div>
     </section>
