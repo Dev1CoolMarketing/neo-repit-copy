@@ -11,7 +11,7 @@ import TreatmentsPremium from "@/pages/treatments-premium";
 import ComponentExportPage from "@/pages/component-export";
 import NotFound from "@/pages/not-found";
 import Fue from "@/pages/fue";
-import GrowthFactors from "@/pages/growth-factors2";
+import GrowthFactors from "@/pages/growth-factors";
 import ImageGeneratorPage from "@/pages/image-generator";
 import GrowthFactorsImagesPage from "@/pages/growth-factors-images";
 function Router() {
