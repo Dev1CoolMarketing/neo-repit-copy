@@ -25,7 +25,7 @@ export default function FueStyleTreatmentCard({
 
   return (
     <motion.div 
-      className="bg-white rounded-[18px] shadow-sm overflow-hidden border border-gray-100"
+      className="bg-white rounded-3xl shadow-lgsoft overflow-hidden border border-gray-100"
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
     >
@@ -45,8 +45,8 @@ export default function FueStyleTreatmentCard({
               <div className="space-y-3 mb-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="bg-[#A87B23]/10 rounded-full p-1 mt-1 flex-shrink-0">
-                      <div className="w-2 h-2 bg-[#A87B23] rounded-full"></div>
+                    <div className="bg-accent/10 rounded-full p-1 mt-1 flex-shrink-0">
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
                     </div>
                     <span className="text-gray-700 text-sm leading-relaxed">
                       {feature}
@@ -59,7 +59,7 @@ export default function FueStyleTreatmentCard({
             {/* Learn More Button */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex items-center gap-2 text-[#A87B23] font-bold text-md hover:text-[#8B6B1F] transition-colors duration-200"
+              className="flex items-center gap-2 text-accent font-bold text-md hover:text-accent/80 transition-colors duration-200"
               whileHover={{ x: 2 }}
               transition={{ duration: 0.2 }}
             >

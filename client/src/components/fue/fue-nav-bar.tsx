@@ -49,7 +49,7 @@ export default function FueNavBar() {
   const [location] = useLocation();
   const pathName = usePathname();
   const generateLinks = (linksArray: any) => {
-    return linksArray.map((link: any) => {
+    return linksArray.map((link: any, index: number) => {
       let linkType = null;
       switch (link.type) {
         case "anchor":
@@ -83,7 +83,7 @@ export default function FueNavBar() {
           break;
         case "dropdown":
           linkType = (
-            <div>
+            <div key={`dropdown-${index}`}>
               <div
                 className="text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide flex flex-row items-center z-10 bg-black cursor-pointer "
                 onClick={() => {
