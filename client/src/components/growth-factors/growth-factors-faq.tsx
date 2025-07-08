@@ -1,5 +1,5 @@
 
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 
