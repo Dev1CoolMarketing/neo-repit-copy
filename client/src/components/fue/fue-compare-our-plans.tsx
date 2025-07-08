@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "../../styles/fue.compare-our-plans.module.css";
 
 export default function FueCompareOurPlans() {

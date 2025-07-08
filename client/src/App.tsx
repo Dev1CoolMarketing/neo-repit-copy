@@ -1,5 +1,5 @@
 import { Switch, Route, useLocation } from "wouter";
-import { queryClient } from "./lib/queryClient";
+import { queryClient } from "@/lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +14,7 @@ import Fue from "@/pages/fue";
 import GrowthFactors from "@/pages/growth-factors";
 import ImageGeneratorPage from "@/pages/image-generator";
 import GrowthFactorsImagesPage from "@/pages/growth-factors-images";
+
 function Router() {
   const [location] = useLocation();
   

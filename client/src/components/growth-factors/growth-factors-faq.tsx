@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import { useState, useRef } from "react";
 import { ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-
-import React, { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 export default function GrowthFactorsFAQ() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -50,8 +47,10 @@ export default function GrowthFactorsFAQ() {
       question: "What should I do before and after treatment?",
       answer:
         "Before treatment: Stay hydrated, eat iron-rich foods, avoid blood thinners for 1 week if medically safe, and wash hair with gentle shampoo. Don't drink alcohol 24 hours prior. After treatment: Keep scalp clean but avoid harsh scrubbing for 48 hours, use gentle, sulfate-free shampoo, avoid direct sun exposure for 24 hours, and follow up as scheduled.",
-    }
-  ];:
+    },
+    {
+      question: "Who is an ideal candidate for Growth Factors therapy?",
+      answer:
         "Ideal candidates have early to moderate hair loss with viable follicles (not completely bald areas). This includes male/female pattern baldness, thinning hair, and some cases of alopecia areata. You're likely a good candidate if you've experienced hair loss within the past few years. We assess candidacy during your comprehensive consultation using advanced dermoscopic analysis.",
     },
     {
@@ -127,7 +126,7 @@ export default function GrowthFactorsFAQ() {
           </motion.p>
         </motion.div>
 
-        <div className="space-y-4">
+        <motion.div className="space-y-4">
           {faqItems.map((faq, index) => (
             <motion.div
               key={index}

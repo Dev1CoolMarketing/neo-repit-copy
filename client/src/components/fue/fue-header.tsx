@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "../../styles/fue.module.css";
 import shinyFolliclePath from "@assets/shinyfollicle.png";
 import { motion } from "framer-motion";

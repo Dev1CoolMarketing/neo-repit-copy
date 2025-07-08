@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { smoothScrollTo } from '@/lib/utils';
 
 // Quiz questions and answers

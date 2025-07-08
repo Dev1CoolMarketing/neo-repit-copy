@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { CheckCircle2, CalendarCheck, UserCheck, Sparkles, ArrowRight } from 'lucide-react';
 import { smoothScrollTo } from '@/lib/utils';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';

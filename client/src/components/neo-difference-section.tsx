@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { smoothScrollTo } from "@/lib/utils";
 import styles from "@/styles/Frame_82.module.css";
 import {

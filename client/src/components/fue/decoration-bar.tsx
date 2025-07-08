@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "../styles/Rectangle.module.css";
 
 export default function Rectangle() {

@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "../../styles/fue-expert-consultations.module.css";
 
 export default function FueExpertConsultations() {

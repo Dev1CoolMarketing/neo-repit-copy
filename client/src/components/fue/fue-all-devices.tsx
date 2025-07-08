@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "../../styles/fue.all-devices.module.css";
 
 export default function FueAllDevices() {

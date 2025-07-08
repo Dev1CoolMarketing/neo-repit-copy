@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TestimonialCard from "@/components/ui/testimonial-card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useMotionValue } from "framer-motion";

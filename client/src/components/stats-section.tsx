@@ -1,4 +1,4 @@
-import React from "react";
+
 import { smoothScrollTo } from "@/lib/utils";
 
 const stats = [

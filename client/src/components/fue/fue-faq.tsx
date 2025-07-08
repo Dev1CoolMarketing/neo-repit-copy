@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "../../styles/fue.module.css";
 import { Button } from "@/components/ui/button";
 

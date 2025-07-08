@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import HeroImage from "@/components/ui/hero-image";
 import BeforeAfterSlider from "@/components/ui/before-after-slider-new";
 import { ArrowRight, Check, ArrowDownCircle, Play } from "lucide-react";

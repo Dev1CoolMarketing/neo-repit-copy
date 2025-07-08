@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { MapPin, Phone, ArrowRight } from 'lucide-react';
 import { smoothScrollTo } from '@/lib/utils';
 
