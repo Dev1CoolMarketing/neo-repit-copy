@@ -10,6 +10,7 @@ interface FueStyleTreatmentCardProps {
   image?: string;
   gradient?: string;
   learnMoreContent?: string;
+  featured?: boolean;
 }
 
 export default function FueStyleTreatmentCard({ 
@@ -19,20 +20,23 @@ export default function FueStyleTreatmentCard({
   features = [],
   image,
   gradient = "from-[#0071e3] to-[#005bb5]",
-  learnMoreContent
+  learnMoreContent,
+  featured = false
 }: FueStyleTreatmentCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <motion.div 
-      className="bg-white rounded-3xl shadow-lgsoft overflow-hidden border border-gray-100"
+      className={`bg-white rounded-3xl shadow-lgsoft overflow-hidden border border-gray-100 ${
+        featured ? 'lg:col-span-2 min-h-[580px]' : ''
+      }`}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
     >
       <div className="flex flex-col min-h-[460px] relative">
         {/* Content section */}
-        <div className="flex-1 p-8">
-          <div className="max-w-md">
+        <div className={`flex-1 p-8 ${featured ? 'lg:w-1/2 lg:pr-0' : ''}`}>
+          <div className={featured ? 'max-w-lg' : 'max-w-md'}>
             <h3 className="text-2xl font-semibold text-black leading-tight mb-4 tracking-[-0.057px]">
               {title}
             </h3>
@@ -90,15 +94,30 @@ export default function FueStyleTreatmentCard({
         </div>
 
         {/* Apple-style floating image section */}
-        <div className="flex-shrink-0 p-8 pt-0">
-          <div className="w-full h-48 rounded-xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center relative">
+        <div className={`flex-shrink-0 p-8 pt-0 ${featured ? 'lg:absolute lg:right-8 lg:top-8 lg:w-1/2 lg:h-[calc(100%-4rem)]' : ''}`}>
+          <div className={`w-full rounded-xl overflow-hidden flex items-center justify-center relative ${
+            featured 
+              ? 'h-full bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-2xl' 
+              : 'h-48 bg-gradient-to-br from-gray-50 to-gray-100'
+          }`}>
             {image ? (
               <motion.img
                 src={image}
                 alt={`${title} illustration`}
-                className="w-full h-full object-contain"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                className={`object-contain ${
+                  featured 
+                    ? 'w-4/5 h-4/5 drop-shadow-2xl filter saturate-110' 
+                    : 'w-full h-full'
+                }`}
+                whileHover={{ 
+                  scale: featured ? 1.05 : 1.02,
+                  rotateY: featured ? 5 : 0,
+                  rotateX: featured ? -2 : 0
+                }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                style={{
+                  filter: featured ? 'drop-shadow(0 25px 50px rgba(0,0,0,0.15))' : 'none'
+                }}
               />
             ) : (
               <motion.div

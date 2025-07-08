@@ -688,7 +688,9 @@ function ProcessSection() {
         "Androgenetic staging", 
         "Response prediction",
       ],
-      learnMoreContent: "Our comprehensive assessment utilizes state-of-the-art dermoscopic imaging to create detailed follicular maps. We analyze hair density, caliber variations, and miniaturization patterns to develop personalized treatment protocols. This thorough evaluation ensures optimal outcomes tailored to your specific hair restoration needs."
+      learnMoreContent: "Our comprehensive assessment utilizes state-of-the-art dermoscopic imaging to create detailed follicular maps. We analyze hair density, caliber variations, and miniaturization patterns to develop personalized treatment protocols. This thorough evaluation ensures optimal outcomes tailored to your specific hair restoration needs.",
+      image: "@assets/66F01987-4F54-4A36-B770-0806AA31AE24_1751966280504.png",
+      featured: true
     },
     {
       title: "PRP Preparation",
@@ -699,7 +701,9 @@ function ProcessSection() {
         "Dual-spin protocol",
         "500K platelets/μL",
       ],
-      learnMoreContent: "Our specialized dual-spin centrifugation protocol maximizes platelet concentration while preserving growth factor integrity. The 60ml blood draw is processed using FDA-approved techniques to achieve therapeutic platelet concentrations of 500,000+ platelets per microliter, significantly higher than baseline levels."
+      learnMoreContent: "Our specialized dual-spin centrifugation protocol maximizes platelet concentration while preserving growth factor integrity. The 60ml blood draw is processed using FDA-approved techniques to achieve therapeutic platelet concentrations of 500,000+ platelets per microliter, significantly higher than baseline levels.",
+      image: "@assets/715D4C1D-9DD8-4F92-877A-16505BC39FC9_1751966394883.png",
+      featured: true
     },
     {
       title: "Microneedling Application", 
@@ -747,6 +751,8 @@ function ProcessSection() {
               title={step.title}
               features={step.features}
               learnMoreContent={step.learnMoreContent}
+              image={step.image}
+              featured={step.featured}
             >
               {step.description}
             </FueStyleTreatmentCard>
@@ -762,6 +768,8 @@ function ProcessSection() {
               title={step.title}
               features={step.features}
               learnMoreContent={step.learnMoreContent}
+              image={step.image}
+              featured={step.featured}
             >
               {step.description}
             </FueStyleTreatmentCard>
