@@ -120,6 +120,13 @@ This is a modern, premium hair restoration website for Dr. Neo, built with a ful
 
 ## Recent Changes
 
+### Growth Factors Page Routing Fix
+- **Fixed routing issue**: Updated App.tsx to use the correct growth-factors2.tsx page instead of the older growth-factors.tsx
+- **Design consistency**: Now shows the modern Apple-style Growth Factors page with proper animations
+- **User experience**: Resolved design mix-up that was showing outdated page version
+
+## Previous Changes
+
 ### Medical Image Generation System
 - **MedicalImageGenerator class**: Professional AI image generation for medical equipment
 - **API endpoints**: `/api/generate-medical-images` and `/api/generate-hair-restoration-set`
