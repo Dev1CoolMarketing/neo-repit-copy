@@ -229,7 +229,7 @@ function ProcessStep({
   color = "lime-200",
   bgColor = "lime-200",
 }) {
-  console.log("THIS IS COLOR", color);
+  // console.log("THIS IS COLOR", color);
   return (
     <motion.div
       className="flex flex-col items-center space-y-4 cursor-pointer"
@@ -280,7 +280,7 @@ export function ProcessTimeline({ color = "lime-200" }) {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-  console.log("THIS IS COLOR I NN TIMELNE", color);
+  // console.log("THIS IS COLOR I NN TIMELNE", color);
   return (
     <motion.div
       className="px-6 max-w-4xl mx-auto"
@@ -501,7 +501,7 @@ export function TimelineStep({
   return (
     <motion.div
       ref={ref}
-      className="relative bg-white"
+      className="relative bg-[#f5f5f7]"
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{
@@ -526,7 +526,7 @@ export function TimelineStep({
 
         {/* Active progress line */}
         <motion.div
-          className="absolute left-0 top-0 w-px bg-lime-600 h-full"
+          className="absolute left-0 top-0 w-px bg-accent h-full"
           initial={{ scaleY: 0 }}
           animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
           style={{ transformOrigin: "top" }}
@@ -563,7 +563,7 @@ export function TimelineStep({
 
             {/* Step number */}
             <motion.div
-              className="absolute -top-3 -right-3 w-8 h-8 bg-lime-600 rounded-full 
+              className="absolute -top-3 -right-3 w-8 h-8 bg-accent rounded-full 
                          flex items-center justify-center text-white font-bold text-sm
                          shadow-lg"
               initial={{ scale: 0 }}
@@ -664,9 +664,9 @@ export function TimelineStep({
             duration: 0.8,
           }}
         >
-          <div className="w-6 h-6 rounded-full bg-white border-2 border-lime-600 shadow-lg">
+          <div className="w-6 h-6 rounded-full bg-white border-2 border-accent shadow-lgsoft">
             <motion.div
-              className="w-2 h-2 rounded-full bg-lime-600 mx-auto mt-1"
+              className="w-2 h-2 rounded-full bg-accent mx-auto mt-1"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
@@ -789,7 +789,7 @@ function ApplePricingCard({ plan, isPopular = false, index }) {
       {isPopular && (
         <motion.div
           className="absolute -top-3 left-1/2 transform -translate-x-1/2 
-                     bg-lime-600 text-white px-4 py-1 rounded-full 
+                     bg-accent text-white px-4 py-1 rounded-full 
                      text-xs font-medium z-20"
           initial={{ scale: 0, y: 20 }}
           animate={{ scale: 1, y: 0 }}
@@ -876,8 +876,8 @@ function ApplePricingCard({ plan, isPopular = false, index }) {
           >
             {plan.features.map((feature, featureIndex) => (
               <div key={featureIndex} className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-4 h-4 rounded-full bg-lime-100 flex items-center justify-center mt-0.5">
-                  <CheckIcon className="w-2.5 h-2.5 text-lime-600" />
+                <div className="flex-shrink-0 w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center mt-0.5">
+                  <CheckIcon className="w-2.5 h-2.5 text-accent" />
                 </div>
                 <span className="text-sm text-gray-700">{feature}</span>
               </div>
@@ -888,7 +888,7 @@ function ApplePricingCard({ plan, isPopular = false, index }) {
           <motion.button
             className={`w-full py-3 px-4 rounded-xl font-medium transition-all duration-300 ${
               isPopular
-                ? "bg-lime-600 text-white hover:bg-lime-700"
+                ? "bg-accent text-white hover:bg-accent/90"
                 : "bg-gray-100 text-gray-900 hover:bg-gray-200"
             }`}
             whileHover={{ scale: 1.02 }}
@@ -1064,7 +1064,7 @@ function AppleTestimonial({ name, review, result, index }) {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ delay: index * 0.2 + 0.7, duration: 0.6 }}
       >
-        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center border border-gray-200">
+        <div className="w-12 h-12 bg-gray-100 rounded-3xl flex items-center justify-center border border-gray-200 shadow-lgsoft">
           <span className="text-gray-600 font-semibold text-lg">
             {name.charAt(0)}
           </span>
@@ -1162,7 +1162,7 @@ function ResultsSection() {
             </div>
 
             <motion.button
-              className="bg-lime-600 text-white font-semibold text-lg py-4 px-12 rounded-full hover:bg-lime-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-accent text-white font-semibold text-lg py-4 px-12 rounded-full hover:bg-accent/90 transition-all duration-300 shadow-lgsoft hover:shadow-xl"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, y: 20 }}
@@ -1314,8 +1314,8 @@ function AppleContactForm() {
 
               <motion.button
                 type="submit"
-                className="w-full bg-lime-600 text-white font-semibold text-lg py-4 px-8 
-                          rounded-2xl hover:bg-lime-700 transition-all duration-300 
+                className="w-full bg-accent text-white font-semibold text-lg py-4 px-8 
+                          rounded-2xl hover:bg-accent/90 transition-all duration-300 
                           shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
