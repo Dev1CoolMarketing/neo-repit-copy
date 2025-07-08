@@ -64,7 +64,6 @@ export default function GrowthFactors() {
         </section>
         {/* HOW IT WORKS END */}
         
-        <GrowthFactorsHowItWorks />
         <GrowthFactorsFAQ />
       </main>
       <SiteFooter />
