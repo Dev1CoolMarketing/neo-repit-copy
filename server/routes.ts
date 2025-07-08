@@ -4,6 +4,7 @@ import { sendEmail } from "./service/emailService";
 import { mcpClient } from "./mcp-client";
 import { generatePremiumHairFollicle } from "./ai-image-generator";
 import { generateAvatarSet } from "./avatar-generator";
+import { medicalImageGenerator, MedicalImageRequest } from "./medical-image-generator";
 
 interface ContactFormData {
   firstName: string;
@@ -222,6 +223,50 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error("Error importing HTML to Figma:", error);
       return res.status(500).json({
         message: "Failed to import HTML to Figma. Please try again later."
+      });
+    }
+  });
+
+  // Medical image generation endpoints
+  app.post("/api/generate-medical-images", async (req, res) => {
+    try {
+      const request: MedicalImageRequest = req.body;
+      
+      // Validate required fields
+      if (!request.deviceType || !request.style) {
+        return res.status(400).json({
+          message: "Device type and style are required"
+        });
+      }
+
+      const images = await medicalImageGenerator.generateMedicalImages(request);
+      
+      return res.status(200).json({
+        message: "Medical images generated successfully",
+        images
+      });
+
+    } catch (error) {
+      console.error("Error generating medical images:", error);
+      return res.status(500).json({
+        message: "Failed to generate medical images. Please try again later."
+      });
+    }
+  });
+
+  app.post("/api/generate-hair-restoration-set", async (req, res) => {
+    try {
+      const imageSet = await medicalImageGenerator.generateHairRestorationSet();
+      
+      return res.status(200).json({
+        message: "Hair restoration image set generated successfully",
+        images: imageSet
+      });
+
+    } catch (error) {
+      console.error("Error generating hair restoration image set:", error);
+      return res.status(500).json({
+        message: "Failed to generate hair restoration image set. Please try again later."
       });
     }
   });
