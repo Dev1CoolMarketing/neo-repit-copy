@@ -170,7 +170,7 @@ export default function GrowthFactorsFAQ() {
               </motion.div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           className="text-center mt-12"
@@ -192,7 +192,7 @@ export default function GrowthFactorsFAQ() {
       </div>
     </section>
   );
-}v>
+}
 
         <motion.div 
           className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100"
