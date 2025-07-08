@@ -94,72 +94,53 @@ export default function FueStyleTreatmentCard({
         </div>
 
         {/* Apple-style floating image section */}
-        <div className={`flex-shrink-0 p-8 pt-0 ${featured ? 'lg:absolute lg:right-8 lg:top-8 lg:w-1/2 lg:h-[calc(100%-4rem)]' : ''}`}>
-          <div className={`w-full rounded-xl overflow-hidden flex items-center justify-center relative ${
-            featured 
-              ? 'h-full bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-2xl' 
-              : 'h-48 bg-gradient-to-br from-gray-50 to-gray-100'
-          }`}>
-            {image ? (
+        <div className={`flex-shrink-0 ${featured ? 'lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full lg:pointer-events-none' : 'p-8 pt-0'}`}>
+          {featured ? (
+            // Featured: Device floats directly on card background with no container
+            <div className="w-full h-full flex items-center justify-end pr-8 relative">
               <motion.img
                 src={image}
                 alt={`${title} illustration`}
-                className={`object-contain ${
-                  featured 
-                    ? 'w-4/5 h-4/5 drop-shadow-2xl filter saturate-110' 
-                    : 'w-full h-full'
-                }`}
+                className="w-3/4 h-auto object-contain max-h-[80%]"
                 whileHover={{ 
-                  scale: featured ? 1.05 : 1.02,
-                  rotateY: featured ? 5 : 0,
-                  rotateX: featured ? -2 : 0
+                  scale: 1.08,
+                  rotateY: 8,
+                  rotateX: -3,
+                  rotateZ: 2
                 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 style={{
-                  filter: featured ? 'drop-shadow(0 25px 50px rgba(0,0,0,0.15))' : 'none'
+                  filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.25)) drop-shadow(0 10px 20px rgba(0,0,0,0.15))',
+                  transformStyle: 'preserve-3d'
                 }}
               />
-            ) : (
-              <motion.div
-                className="w-32 h-32 bg-gradient-to-br from-white to-gray-200 rounded-2xl shadow-lg flex items-center justify-center border border-gray-200"
-                whileHover={{ 
-                  scale: 1.05,
-                  rotate: 2,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-gray-300 to-gray-400 rounded-xl opacity-50"></div>
-              </motion.div>
-            )}
-            
-            {/* Floating elements for Apple-style effect */}
-            <motion.div
-              className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full opacity-60"
-              animate={{
-                y: [0, -8, 0],
-                opacity: [0.6, 0.8, 0.6]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <motion.div
-              className="absolute bottom-6 left-6 w-2 h-2 bg-purple-400 rounded-full opacity-50"
-              animate={{
-                y: [0, -6, 0],
-                opacity: [0.5, 0.7, 0.5]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-            />
-          </div>
+            </div>
+          ) : (
+            // Regular cards: Keep existing container design
+            <div className="w-full h-48 rounded-xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center relative">
+              {image ? (
+                <motion.img
+                  src={image}
+                  alt={`${title} illustration`}
+                  className="w-full h-full object-contain"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                />
+              ) : (
+                <motion.div
+                  className="w-32 h-32 bg-gradient-to-br from-white to-gray-200 rounded-2xl shadow-lg flex items-center justify-center border border-gray-200"
+                  whileHover={{ 
+                    scale: 1.05,
+                    rotate: 2,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-gray-300 to-gray-400 rounded-xl opacity-50"></div>
+                </motion.div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
