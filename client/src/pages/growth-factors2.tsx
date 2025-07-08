@@ -685,10 +685,10 @@ function ProcessSection() {
         "Advanced trichoscopy and digital scalp analysis using dermoscopic technology to evaluate follicular miniaturization patterns.",
       features: [
         "Digital follicular mapping",
-        "Androgenetic staging",
+        "Androgenetic staging", 
         "Response prediction",
       ],
-      gradient: "from-[#0071e3] to-[#005bb5]"
+      learnMoreContent: "Our comprehensive assessment utilizes state-of-the-art dermoscopic imaging to create detailed follicular maps. We analyze hair density, caliber variations, and miniaturization patterns to develop personalized treatment protocols. This thorough evaluation ensures optimal outcomes tailored to your specific hair restoration needs."
     },
     {
       title: "PRP Preparation",
@@ -699,10 +699,10 @@ function ProcessSection() {
         "Dual-spin protocol",
         "500K platelets/μL",
       ],
-      gradient: "from-[#ba62fc] to-[#9f4df7]"
+      learnMoreContent: "Our specialized dual-spin centrifugation protocol maximizes platelet concentration while preserving growth factor integrity. The 60ml blood draw is processed using FDA-approved techniques to achieve therapeutic platelet concentrations of 500,000+ platelets per microliter, significantly higher than baseline levels."
     },
     {
-      title: "Microneedling Application",
+      title: "Microneedling Application", 
       description:
         "FDA-cleared 1.5mm microneedling creates 16,000 micro-channels per cm² for enhanced PRP penetration.",
       features: [
@@ -710,7 +710,7 @@ function ProcessSection() {
         "16K channels/cm²",
         "Immediate PRP application",
       ],
-      gradient: "from-[#A87B23] to-[#FAE151]"
+      learnMoreContent: "The precise 1.5mm needle depth creates optimal micro-channels for growth factor delivery directly to hair follicles. Our technique generates 16,000 channels per square centimeter, maximizing PRP absorption while minimizing discomfort. Immediate application ensures maximum bioavailability of growth factors."
     },
     {
       title: "Recovery & Results",
@@ -721,7 +721,7 @@ function ProcessSection() {
         "Progress photography",
         "Custom aftercare",
       ],
-      gradient: "from-[#ff6b6b] to-[#ee5a52]"
+      learnMoreContent: "Recovery typically involves minimal downtime with most patients returning to normal activities within 24-48 hours. Our structured monitoring protocol includes progress photography and follow-up assessments to track hair growth initiation, which typically begins at 4-6 weeks with visible improvements at 3-6 months."
     },
   ];
 
@@ -746,7 +746,7 @@ function ProcessSection() {
               step={index + 1} 
               title={step.title}
               features={step.features}
-              gradient={step.gradient}
+              learnMoreContent={step.learnMoreContent}
             >
               {step.description}
             </FueStyleTreatmentCard>
@@ -761,7 +761,7 @@ function ProcessSection() {
               step={index + 1} 
               title={step.title}
               features={step.features}
-              gradient={step.gradient}
+              learnMoreContent={step.learnMoreContent}
             >
               {step.description}
             </FueStyleTreatmentCard>
