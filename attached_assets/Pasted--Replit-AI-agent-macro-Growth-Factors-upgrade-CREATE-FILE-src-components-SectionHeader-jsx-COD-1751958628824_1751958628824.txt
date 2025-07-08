@@ -1,0 +1,65 @@
+# Replit AI agent macro – Growth Factors upgrade
+CREATE FILE src/components/SectionHeader.jsx <<'CODE'
+export default function SectionHeader({ title, subtitle, align = "center" }) {
+  return (
+    <header className={`text-${align} mb-10`}>
+      <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{title}</h2>
+      {subtitle && (
+        <p className="text-lg md:text-xl text-slate-600 mt-2 max-w-2xl mx-auto">
+          {subtitle}
+        </p>
+      )}
+    </header>
+  );
+}
+CODE
+
+CREATE FILE src/components/TreatmentStepCard.jsx <<'CODE'
+export default function TreatmentStepCard({ step, title, children }) {
+  return (
+    <div className="bg-white shadow-md rounded-xl p-6">
+      <h3 className="text-xl font-semibold text-slate-800 mb-2">
+        <span className="mr-2 text-emerald-600">{step}.</span>{title}
+      </h3>
+      <p className="text-slate-600">{children}</p>
+    </div>
+  );
+}
+CODE
+
+EDIT FILE src/pages/growth-factors.jsx REPLACE <!-- HOW IT WORKS START --> <!-- HOW IT WORKS END --> WITH <<'CODE'
+import SectionHeader from "@/components/SectionHeader";
+import TreatmentStepCard from "@/components/TreatmentStepCard";
+
+const steps = [
+  { title: "Consultation", copy: "Provider checks scalp + plan." },
+  { title: "Preparation",  copy: "Growth factors isolated via centrifuge." },
+  { title: "Application",  copy: "Microneedling / injections boost follicles." }
+];
+
+<section className="py-16 bg-white">
+  <div className="max-w-4xl mx-auto px-6">
+    <SectionHeader title="How It Works" subtitle="Growth Factor Therapy rundown" />
+    <div className="space-y-6">
+      {steps.map((s, i) => (
+        <TreatmentStepCard key={i} step={i + 1} title={s.title}>
+          {s.copy}
+        </TreatmentStepCard>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section className="py-16 bg-slate-50">
+  <div className="max-w-3xl mx-auto px-6 text-center">
+    <SectionHeader
+      title="When Will I See Results?"
+      subtitle="Reduced shedding 4–6 wks • fuller density 3–6 mo"
+      align="center"
+    />
+    <a href="/booking" className="inline-block bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition">
+      book your consult
+    </a>
+  </div>
+</section>
+CODE
