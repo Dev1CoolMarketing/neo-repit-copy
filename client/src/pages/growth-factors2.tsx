@@ -17,6 +17,8 @@ import dermatoscopeImg from "@assets/66F01987-4F54-4A36-B770-0806AA31AE24_175196
 import prpTubeImg from "@assets/715D4C1D-9DD8-4F92-877A-16505BC39FC9_1751966394883.png";
 import microneedlingPenImg from "@assets/699A977B-D602-4DE4-90D7-4B61A9565492_1751972967388.png";
 import recoveryTrackerImg from "@assets/DB46019A-08E7-4A57-AF2B-478B6D57F6C9_1751973693083.png";
+import GrowthFactorsFAQ from "../components/growth-factors/growth-factors-faq";
+import SiteFooter from "@/components/site-footer";
 
 function DrNeoLogo() {
   return (
@@ -1455,60 +1457,7 @@ function AppleContactForm() {
   );
 }
 
-function Footer() {
-  return (
-    <motion.footer
-      className="bg-gray-900 py-16"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <motion.div
-          className="space-y-8"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <DrNeoLogo />
-          <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            Dr. Neo Hair Restoration Clinic - Board-certified specialists in
-            evidence-based microneedling + PRP therapy with 2,400+ successful
-            treatments.
-          </p>
-          <div className="flex justify-center space-x-8 text-gray-400">
-            <motion.a
-              href="#"
-              className="hover:text-lime-400 transition-colors duration-200"
-              whileHover={{ scale: 1.05 }}
-            >
-              Privacy
-            </motion.a>
-            <motion.a
-              href="#"
-              className="hover:text-lime-400 transition-colors duration-200"
-              whileHover={{ scale: 1.05 }}
-            >
-              Terms
-            </motion.a>
-            <motion.a
-              href="#"
-              className="hover:text-lime-400 transition-colors duration-200"
-              whileHover={{ scale: 1.05 }}
-            >
-              Contact
-            </motion.a>
-          </div>
-          <p className="text-gray-500 text-sm">
-            © 2024 Dr. Neo Hair Restoration Clinic. All rights reserved.
-          </p>
-        </motion.div>
-      </div>
-    </motion.footer>
-  );
-}
+
 
 export default function App() {
   const contactRef = useRef(null);
@@ -1530,7 +1479,8 @@ export default function App() {
         <AppleContactForm />
       </div> */}
       <FueResults />
-      <Footer />
+      <GrowthFactorsFAQ />
+      <SiteFooter />
     </div>
   );
 }
