@@ -93,15 +93,7 @@ const GrowthFactorsHowItWorks = () => {
                       animationIconClasses="transition-transform duration-300"
                       cardTextClasses="text-md font-bold text-medium-gray"
                     >
-                      <div className="text-sm text-gray-600 mt-2">
-                        <h4 className="font-semibold mb-2">What to Expect:</h4>
-                        <ul className="list-disc list-inside space-y-1">
-                          <li>Professional consultation and assessment</li>
-                          <li>Comfortable treatment environment</li>
-                          <li>Personalized treatment plan</li>
-                          <li>Follow-up progress monitoring</li>
-                        </ul>
-                      </div>
+                      <div>THIS IS WHERE ALL THE INFORMATION WILL GO</div>
                     </HiddenCard>
                   </div>
                 </div>
