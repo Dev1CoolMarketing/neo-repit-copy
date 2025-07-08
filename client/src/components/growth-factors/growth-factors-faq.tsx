@@ -7,44 +7,59 @@ export default function GrowthFactorsFAQ() {
   
   const faqItems = [
     {
-      question: "What are Growth Factors and how do they work for hair loss?",
+      question: "What exactly are Growth Factors and how do they restore hair?",
       answer:
-        "Growth Factors therapy, also known as PRP (Platelet-Rich Plasma), uses concentrated platelets from your own blood. These platelets contain powerful growth factors that stimulate hair follicles, improve blood circulation to the scalp, and promote natural hair regrowth. The treatment harnesses your body's natural healing mechanisms to restore hair.",
+        "Growth Factors therapy uses concentrated platelets from your own blood, containing powerful growth factors at 5x normal concentration. These growth factors stimulate dermal papilla cells, which control hair growth cycles. Clinical studies show this triggers hair follicle regeneration, extends the growth phase, and increases hair density by up to 70%. The treatment harnesses your body's natural healing mechanisms - completely natural and safe.",
     },
     {
-      question: "How long does the Growth Factors treatment take?",
+      question: "What results can I realistically expect and when?",
       answer:
-        "The entire process typically takes 30-45 minutes. This includes blood draw (5-10 minutes), PRP processing (15-20 minutes), and the injection procedure (10-15 minutes). Most patients can return to their normal activities immediately after treatment.",
+        "Clinical data shows 84% of patients experience positive results, with average improvements of 25-46 hairs per cm². You may notice hair texture improvement within 2-4 weeks, with visible growth starting at 6-8 weeks. Significant results appear at 3-4 months, with peak benefits at 6 months. Most patients see 70-90% improvement in hair density over 6-12 months.",
     },
     {
-      question: "When will I see results from Growth Factors therapy?",
+      question: "Am I a good candidate for Growth Factors therapy?",
       answer:
-        "Initial improvements may be noticed within 6-8 weeks, with more significant results visible at 3-4 months. Optimal results are typically achieved after 6-12 months and may continue improving with follow-up treatments. Results vary based on individual factors and the extent of hair loss.",
+        "Ideal candidates have early to moderate hair loss with viable follicles (not completely bald areas). This includes male/female pattern baldness, thinning hair, and some cases of alopecia areata. You're likely a good candidate if you've experienced hair loss within the past few years. We assess candidacy during your comprehensive consultation using advanced dermoscopic analysis.",
     },
     {
-      question: "Is Growth Factors treatment painful?",
+      question: "How does the microneedling + PRP combination work?",
       answer:
-        "Most patients experience minimal discomfort. The blood draw is similar to routine lab work, and the scalp injections are performed with very fine needles. Local anesthetic can be applied to ensure comfort. Any mild tenderness typically resolves within 24-48 hours.",
+        "Precision 1.5mm microneedling creates 16,000 micro-channels per cm², triggering natural healing response and collagen production. PRP is immediately applied, allowing concentrated growth factors to penetrate directly to hair follicles - increasing absorption by up to 1000x compared to topical application alone. This combination maximizes bioavailability and treatment effectiveness.",
     },
     {
-      question: "How many Growth Factors sessions will I need?",
+      question: "What does the treatment process involve?",
       answer:
-        "Most patients benefit from an initial series of 3-4 treatments spaced 4-6 weeks apart, followed by maintenance sessions every 6-12 months. The exact number depends on your individual hair loss pattern, response to treatment, and aesthetic goals.",
+        "The 45-60 minute process includes: (1) 60ml blood draw and dual-spin centrifugation to concentrate platelets, (2) topical numbing for comfort, (3) precise 1.5mm microneedling across treatment areas, (4) immediate PRP application while channels remain open. Most patients find it surprisingly comfortable and return to normal activities the same day.",
     },
     {
-      question: "Who is a good candidate for Growth Factors therapy?",
+      question: "How many sessions will I need and how often?",
       answer:
-        "Growth Factors therapy is suitable for both men and women experiencing various types of hair loss, including androgenetic alopecia, thinning hair, and early-stage hair loss. It's particularly effective for those who want a natural, non-surgical approach. A consultation will determine if you're a good candidate.",
+        "Our protocol typically requires 3-4 sessions spaced 4-6 weeks apart for optimal results. Clinical studies show 79.6% of patients achieve good to excellent results with this schedule. After initial series, maintenance treatments every 6-12 months help sustain results. We customize the protocol based on your specific hair loss pattern and response.",
     },
     {
       question: "Are there any side effects or risks?",
       answer:
-        "Since Growth Factors therapy uses your own blood, the risk of allergic reactions or adverse effects is extremely low. Some patients may experience mild swelling, redness, or tenderness at injection sites for 24-48 hours. Serious complications are very rare.",
+        "Growth Factors therapy has an excellent safety profile since we use your own blood. Common temporary effects include mild redness and tenderness (21% of patients), usually resolving within 24-48 hours. Serious complications are extremely rare. The treatment is FDA-approved and considered one of the safest hair restoration options available.",
     },
     {
-      question: "Can Growth Factors be combined with other hair restoration treatments?",
+      question: "How does this compare to hair transplant surgery?",
       answer:
-        "Yes, Growth Factors therapy can complement other treatments like hair transplants, microneedling, or topical therapies. Many patients combine PRP with other treatments for enhanced results. Your treatment plan will be customized based on your specific needs and goals.",
+        "Growth Factors therapy stimulates your existing follicles rather than relocating them. It's ideal for early-moderate hair loss, requires no surgery or downtime, costs significantly less, and works well as a standalone treatment or complement to transplant. Hair transplant is better for advanced hair loss with large bald areas.",
+    },
+    {
+      question: "Will the results be permanent?",
+      answer:
+        "Results typically last 12-24 months before gradual decline. Since hair loss is a progressive condition, maintenance treatments every 6-12 months help sustain improvements. Many patients find the natural approach preferable to daily medications with potential side effects. Long-term studies show sustained benefits with proper maintenance.",
+    },
+    {
+      question: "What should I expect during recovery?",
+      answer:
+        "Recovery is minimal with most patients returning to normal activities immediately. Avoid washing your scalp for 24 hours post-treatment. You may experience mild redness and tenderness for 24-48 hours - this is normal and indicates the healing process is working. No special aftercare products are needed, though we may recommend gentle hair care practices.",
+    },
+    {
+      question: "Can Growth Factors be combined with other treatments?",
+      answer:
+        "Absolutely. Growth Factors therapy works excellently alongside hair transplants (before and after surgery), topical minoxidil, and other hair restoration approaches. Many patients combine treatments for enhanced results. We often recommend Growth Factors as preparation before hair transplant surgery to optimize follicle health and post-surgical healing.",
     },
   ];
 
@@ -53,37 +68,70 @@ export default function GrowthFactorsFAQ() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#F8F9FA] to-white px-5 py-24 md:py-32">
+    <section className="bg-gradient-to-b from-gray-50 via-white to-gray-50 px-5 py-24 md:py-32">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#2D5A27] to-[#5B8A52] bg-clip-text text-transparent">
+        <motion.div 
+          className="text-center space-y-6 mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="text-4xl md:text-5xl lg:text-6xl font-[800] text-black tracking-tight"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
             Frequently Asked Questions
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Get comprehensive answers about Growth Factors therapy for hair restoration
-          </p>
-        </div>
+          </motion.h2>
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto font-[500] leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            Evidence-based answers about Growth Factors therapy from clinical research and patient outcomes
+          </motion.p>
+        </motion.div>
 
-        <div className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
+        <motion.div 
+          className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           {faqItems.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="border-b border-gray-200 last:border-b-0"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
             >
-              <button
+              <motion.button
                 className="w-full p-6 md:p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-[#F8F9FA] hover:to-[#E8F5E8] transition-all duration-300 group"
                 onClick={() => toggleFaq(index)}
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
               >
-                <span className="text-base md:text-lg font-semibold text-black pr-4 group-hover:text-[#2D5A27] transition-colors">
+                <span className="text-base md:text-lg font-[600] text-black pr-4 group-hover:text-[#32d74b] transition-colors">
                   {item.question}
                 </span>
                 <motion.div
-                  animate={{ rotate: openFaq === index ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
+                  animate={{ 
+                    rotate: openFaq === index ? 180 : 0,
+                    scale: openFaq === index ? 1.1 : 1 
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-[#2D5A27] transition-colors" />
+                  <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-[#32d74b] transition-colors" />
                 </motion.div>
-              </button>
+              </motion.button>
               
               <AnimatePresence>
                 {openFaq === index && (
@@ -95,8 +143,8 @@ export default function GrowthFactorsFAQ() {
                     className="overflow-hidden"
                   >
                     <div className="px-6 md:px-8 pb-6 md:pb-8">
-                      <div className="bg-gradient-to-r from-[#F8F9FA] to-[#E8F5E8] rounded-xl p-4 md:p-6 border-l-4 border-[#2D5A27]">
-                        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      <div className="bg-gradient-to-r from-[#F8F9FA] to-[#E8F5E8] rounded-xl p-4 md:p-6 border-l-4 border-[#32d74b]">
+                        <p className="text-base md:text-lg text-gray-700 leading-relaxed font-[400]">
                           {item.answer}
                         </p>
                       </div>
@@ -104,23 +152,49 @@ export default function GrowthFactorsFAQ() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-[#2D5A27] to-[#5B8A52] rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
+        <motion.div 
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="bg-gradient-to-br from-[#32d74b] to-[#28a745] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+            <motion.h3 
+              className="text-3xl md:text-4xl font-[800] mb-6 tracking-tight"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               Still Have Questions?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
+            </motion.h3>
+            <motion.p 
+              className="text-xl md:text-2xl mb-8 text-white/90 font-[500] leading-relaxed max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               Our hair restoration specialists are here to provide personalized answers and guidance.
-            </p>
-            <button className="bg-white text-[#2D5A27] hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-colors duration-300">
+            </motion.p>
+            <motion.button 
+              className="bg-white text-[#32d74b] px-10 py-4 rounded-2xl font-[600] text-lg hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Schedule Free Consultation
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
