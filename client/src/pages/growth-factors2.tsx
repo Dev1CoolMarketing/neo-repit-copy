@@ -12,6 +12,7 @@ import {
 } from "../components/growth-factors/timeline-icons";
 import FueResults from "@/components/fue/fue-results-from-real-patients";
 import FueNavBar from "@/components/fue/fue-nav-bar";
+import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
 
 function DrNeoLogo() {
   return (
@@ -682,87 +683,88 @@ function ProcessSection() {
       title: "Comprehensive Assessment",
       description:
         "Advanced trichoscopy and digital scalp analysis using dermoscopic technology to evaluate follicular miniaturization patterns.",
-      IconComponent: AssessmentIcon,
       features: [
         "Digital follicular mapping",
         "Androgenetic staging",
         "Response prediction",
       ],
+      gradient: "from-[#0071e3] to-[#005bb5]"
     },
     {
       title: "PRP Preparation",
       description:
         "Autologous platelet-rich plasma extraction using dual-spin centrifugation to achieve optimal growth factor concentration.",
-      IconComponent: PreparationIcon,
       features: [
         "60ml blood collection",
         "Dual-spin protocol",
         "500K platelets/μL",
       ],
+      gradient: "from-[#ba62fc] to-[#9f4df7]"
     },
     {
       title: "Microneedling Application",
       description:
         "FDA-cleared 1.5mm microneedling creates 16,000 micro-channels per cm² for enhanced PRP penetration.",
-      IconComponent: TreatmentIcon,
       features: [
         "1.5mm needle depth",
         "16K channels/cm²",
         "Immediate PRP application",
       ],
+      gradient: "from-[#A87B23] to-[#FAE151]"
     },
     {
       title: "Recovery & Results",
       description:
         "Structured healing protocol with progress monitoring. Hair growth initiation typically begins at 4-6 weeks.",
-      IconComponent: RecoveryIcon,
       features: [
         "24-48hr recovery",
         "Progress photography",
         "Custom aftercare",
       ],
+      gradient: "from-[#ff6b6b] to-[#ee5a52]"
     },
   ];
 
   return (
-    <section id="treatment" className="bg-white py-32 md:-48 overflow-hidden">
+    <section id="treatment" className="bg-[#F3F4F6] py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
-        <AnimatedSection className="text-center mb-24">
-          <motion.h2
-            className="text-center w-full text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] font-normal leading-[1.1] tracking-[-0.04em pb-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
+        <div className="text-center mb-12">
+          <h2 className="text-center bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent w-full text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] font-normal leading-[1.1] tracking-[-0.04em] pb-6">
             How It Works
-          </motion.h2>
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            A precise, evidence-based protocol refined through 2,400+ successful treatments
+          </p>
+        </div>
 
-          <motion.p
-            className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 1 }}
-            viewport={{ once: true }}
-          >
-            A precise, evidence-based protocol refined through 2,400+ successful
-            treatments
-          </motion.p>
-        </AnimatedSection>
-
-        {/* Timeline flow */}
-        <div className="relative">
+        {/* Mobile Layout - Stacked Cards */}
+        <div className="block md:hidden space-y-6">
           {steps.map((step, index) => (
-            <TimelineStep
-              key={index}
+            <FueStyleTreatmentCard 
+              key={index} 
+              step={index + 1} 
               title={step.title}
-              description={step.description}
-              IconComponent={step.IconComponent}
               features={step.features}
-              index={index}
-              isLast={index === steps.length - 1}
-            />
+              gradient={step.gradient}
+            >
+              {step.description}
+            </FueStyleTreatmentCard>
+          ))}
+        </div>
+
+        {/* Desktop Layout - Grid */}
+        <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {steps.map((step, index) => (
+            <FueStyleTreatmentCard 
+              key={index} 
+              step={index + 1} 
+              title={step.title}
+              features={step.features}
+              gradient={step.gradient}
+            >
+              {step.description}
+            </FueStyleTreatmentCard>
           ))}
         </div>
       </div>
