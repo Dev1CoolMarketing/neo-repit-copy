@@ -5,7 +5,7 @@ import GrowthFactorsFAQ from "@/components/growth-factors/growth-factors-faq";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import SectionHeader from "@/components/SectionHeader";
-import TreatmentStepCard from "@/components/TreatmentStepCard";
+import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
 import { useEffect } from "react";
 import { initFadeInAnimations } from "@/lib/utils";
 
@@ -24,9 +24,36 @@ export default function GrowthFactors() {
   }, []);
 
   const steps = [
-    { title: "Consultation", copy: "Provider checks scalp + plan." },
-    { title: "Preparation", copy: "Growth factors isolated via centrifuge." },
-    { title: "Application", copy: "Microneedling / injections boost follicles." }
+    { 
+      title: "Comprehensive Assessment", 
+      copy: "Advanced trichoscopy and digital scalp analysis using dermoscopic technology to evaluate follicular miniaturization patterns.",
+      features: [
+        "Digital follicular mapping",
+        "Androgenetic staging",
+        "Response prediction"
+      ],
+      gradient: "from-[#0071e3] to-[#005bb5]"
+    },
+    { 
+      title: "Growth Factor Isolation", 
+      copy: "Specialized centrifugation process to concentrate your body's natural growth factors for maximum therapeutic benefit.",
+      features: [
+        "Platelet-rich plasma extraction",
+        "Growth factor concentration",
+        "Quality assessment"
+      ],
+      gradient: "from-[#ba62fc] to-[#9f4df7]"
+    },
+    { 
+      title: "Precision Application", 
+      copy: "Targeted microneedling and injection techniques to deliver growth factors directly to hair follicles for optimal results.",
+      features: [
+        "Microneedling therapy",
+        "Follicular injection",
+        "Scalp stimulation"
+      ],
+      gradient: "from-[#A87B23] to-[#FAE151]"
+    }
   ];
 
   return (
@@ -37,14 +64,44 @@ export default function GrowthFactors() {
         {/* <GrowthFactorsReasons /> */}
         
         {/* HOW IT WORKS START */}
-        <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-6">
-            <SectionHeader title="How It Works" subtitle="Growth Factor Therapy rundown" />
-            <div className="space-y-6">
+        <section className="py-16 bg-[#F3F4F6]">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-center bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent w-full text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] font-normal leading-[1.1] tracking-[-0.04em] pb-6">
+                How It Works
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Growth Factor Therapy rundown
+              </p>
+            </div>
+            
+            {/* Mobile Layout - Stacked Cards */}
+            <div className="block md:hidden space-y-6">
               {steps.map((s, i) => (
-                <TreatmentStepCard key={i} step={i + 1} title={s.title}>
+                <FueStyleTreatmentCard 
+                  key={i} 
+                  step={i + 1} 
+                  title={s.title}
+                  features={s.features}
+                  gradient={s.gradient}
+                >
                   {s.copy}
-                </TreatmentStepCard>
+                </FueStyleTreatmentCard>
+              ))}
+            </div>
+
+            {/* Desktop Layout - Grid */}
+            <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+              {steps.map((s, i) => (
+                <FueStyleTreatmentCard 
+                  key={i} 
+                  step={i + 1} 
+                  title={s.title}
+                  features={s.features}
+                  gradient={s.gradient}
+                >
+                  {s.copy}
+                </FueStyleTreatmentCard>
               ))}
             </div>
           </div>
