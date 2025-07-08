@@ -13,6 +13,7 @@ import NotFound from "@/pages/not-found";
 import Fue from "@/pages/fue";
 import GrowthFactors from "@/pages/growth-factors";
 import ImageGeneratorPage from "@/pages/image-generator";
+import GrowthFactorsImagesPage from "@/pages/growth-factors-images";
 function Router() {
   const [location] = useLocation();
   
@@ -39,6 +40,7 @@ function Router() {
       <Route path="/fue" component={Fue} />
       <Route path="/growth-factors" component={GrowthFactors} />
       <Route path="/image-generator" component={ImageGeneratorPage} />
+      <Route path="/growth-factors-images" component={GrowthFactorsImagesPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
