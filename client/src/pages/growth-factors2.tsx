@@ -720,6 +720,9 @@ export function TimelineStep({
 }
 
 function ProcessSection() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  
   const steps = [
     {
       title: "Comprehensive Assessment",
@@ -776,51 +779,100 @@ function ProcessSection() {
   ];
 
   return (
-    <section id="treatment" className="bg-[#F3F4F6] py-16 overflow-hidden">
+    <section id="treatment" className="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-center bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent w-full text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] font-normal leading-[1.1] tracking-[-0.04em] pb-6">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="text-4xl md:text-5xl lg:text-6xl font-[800] text-black mb-6 tracking-tight"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
             How It Works
-          </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            A precise, evidence-based protocol refined through 2,400+ successful treatments
-          </p>
-        </div>
+          </motion.h2>
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-[500]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            Our comprehensive Growth Factors protocol combines advanced medical technology 
+            with precision delivery for optimal hair restoration results.
+          </motion.p>
+        </motion.div>
 
         {/* Mobile Layout - Stacked Cards */}
-        <div className="block md:hidden space-y-6">
+        <motion.div 
+          className="block md:hidden space-y-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
           {steps.map((step, index) => (
-            <FueStyleTreatmentCard 
-              key={index} 
-              step={index + 1} 
-              title={step.title}
-              features={step.features}
-              learnMoreContent={step.learnMoreContent}
-              image={step.image}
-              featured={step.featured}
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              {step.description}
-            </FueStyleTreatmentCard>
+              <FueStyleTreatmentCard 
+                step={index + 1} 
+                title={step.title}
+                features={step.features}
+                learnMoreContent={step.learnMoreContent}
+                image={step.image}
+                featured={step.featured}
+              >
+                {step.description}
+              </FueStyleTreatmentCard>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Desktop Layout - Grid */}
-        <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <motion.div 
+          className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           {steps.map((step, index) => (
-            <FueStyleTreatmentCard 
-              key={index} 
-              step={index + 1} 
-              title={step.title}
-              features={step.features}
-              learnMoreContent={step.learnMoreContent}
-              image={step.image}
-              featured={step.featured}
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 0.3 + index * 0.15,
+                ease: "easeOut"
+              }}
             >
-              {step.description}
-            </FueStyleTreatmentCard>
+              <FueStyleTreatmentCard 
+                step={index + 1} 
+                title={step.title}
+                features={step.features}
+                learnMoreContent={step.learnMoreContent}
+                image={step.image}
+                featured={step.featured}
+              >
+                {step.description}
+              </FueStyleTreatmentCard>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -27,45 +27,67 @@ export default function FueStyleTreatmentCard({
 
   return (
     <motion.div 
-      className={`bg-white rounded-3xl shadow-lgsoft overflow-hidden border border-gray-100 ${
+      className={`bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 ${
         featured ? 'lg:col-span-2 min-h-[580px]' : ''
       }`}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.3 }}
+      whileHover={{ y: -6, scale: 1.01 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
     >
       <div className="flex flex-col min-h-[460px] relative">
         {/* Content section */}
         <div className={`flex-1 p-8 ${featured ? 'lg:w-1/2 lg:ml-[50%] lg:pr-0' : ''}`}>
-          <div className={featured ? 'max-w-lg' : 'max-w-md'}>
-            <h3 className="text-2xl font-semibold text-black leading-tight mb-4 tracking-[-0.057px]">
+          <motion.div 
+            className={featured ? 'max-w-lg' : 'max-w-md'}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="text-2xl font-[700] text-black leading-tight mb-4 tracking-[-0.02em]">
               {title}
             </h3>
-            <p className="text-lg font-[600] text-gray-500 leading-[23px] tracking-[-0.057px] mb-6">
+            <p className="text-lg font-[500] text-gray-600 leading-[1.4] tracking-[-0.01em] mb-6">
               {children}
             </p>
             
             {/* Features list */}
             {features.length > 0 && (
-              <div className="space-y-3 mb-6">
+              <motion.div 
+                className="space-y-3 mb-6"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
                 {features.map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="bg-accent/10 rounded-full p-1 mt-1 flex-shrink-0">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
+                  <motion.div 
+                    key={index} 
+                    className="flex items-start gap-3"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                  >
+                    <div className="bg-[#32d74b]/10 rounded-full p-1 mt-1 flex-shrink-0">
+                      <div className="w-2 h-2 bg-[#32d74b] rounded-full"></div>
                     </div>
-                    <span className="text-gray-700 text-sm leading-relaxed">
+                    <span className="text-gray-700 text-sm font-[500] leading-relaxed">
                       {feature}
                     </span>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             )}
 
             {/* Learn More Button */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex items-center gap-2 text-accent font-bold text-md hover:text-accent/80 transition-colors duration-200"
-              whileHover={{ x: 2 }}
+              className="flex items-center gap-2 text-[#32d74b] font-[600] text-md hover:text-[#2fb943] transition-colors duration-200"
+              whileHover={{ x: 3, scale: 1.02 }}
               transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >
               <span>Learn More</span>
               <motion.div
@@ -83,14 +105,14 @@ export default function FueStyleTreatmentCard({
                 height: isExpanded ? "auto" : 0,
                 opacity: isExpanded ? 1 : 0
               }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <div className="pt-4 text-gray-600 text-sm leading-relaxed">
+              <div className="pt-4 text-gray-600 text-sm leading-relaxed font-[400]">
                 {learnMoreContent || "Additional detailed information about this treatment step will be displayed here. This includes specific protocols, expected outcomes, and important considerations for patients."}
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Apple-style floating image section */}
@@ -102,17 +124,19 @@ export default function FueStyleTreatmentCard({
                 src={image}
                 alt={`${title} illustration`}
                 className="w-full h-auto object-contain max-h-[85%] ml-[-15%]"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 whileHover={{ 
                   scale: title.includes('Recovery') ? 1.03 : 1.05,
                   x: title.includes('Recovery') ? 5 : 10,
                   rotateY: title.includes('Recovery') ? 2 : 3,
-                  rotateZ: title.includes('Recovery') ? 0.5 : 1
+                  rotateZ: title.includes('Recovery') ? 0.5 : 1,
+                  transition: { duration: 0.6, ease: "easeOut" }
                 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
                 style={{
-                  filter: title.includes('Recovery') 
-                    ? 'drop-shadow(0 30px 60px rgba(0,0,0,0.25)) drop-shadow(0 12px 24px rgba(0,0,0,0.15))'
-                    : 'drop-shadow(0 25px 50px rgba(0,0,0,0.2)) drop-shadow(0 8px 16px rgba(0,0,0,0.1))',
+                  filter: 'drop-shadow(0 30px 60px rgba(50,215,75,0.15)) drop-shadow(0 15px 30px rgba(0,0,0,0.2))',
                   transformStyle: 'preserve-3d'
                 }}
               />
