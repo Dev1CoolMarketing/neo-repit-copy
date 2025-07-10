@@ -4,7 +4,7 @@ import { Phone, Calendar, ChevronRight } from "lucide-react";
 
 const GrowthFactorsHeader = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-[#E8F5E8] via-[#F0F8F0] to-[#F8F9FA] overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-[#E8F5E8] via-[#F0F8F0] to-[#F8F9FA] overflow-hidden bg-black">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#2D5A27] rounded-full blur-3xl"></div>

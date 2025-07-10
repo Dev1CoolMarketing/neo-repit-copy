@@ -2,23 +2,20 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 // import imgDrNeoLogo from "@/assets/letterN.png";
 import {
-  AssessmentIcon,
-  PreparationIcon,
-  TreatmentIcon,
-  RecoveryIcon,
-  ResultsIcon,
   CheckIcon,
   StarIcon,
 } from "../components/growth-factors/timeline-icons";
+import styles from "../styles/fue.module.css";
 
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
-import dermatoscopeImg from "@assets/66F01987-4F54-4A36-B770-0806AA31AE24_1751966280504.png";
-import prpTubeImg from "@assets/715D4C1D-9DD8-4F92-877A-16505BC39FC9_1751966394883.png";
-import microneedlingPenImg from "@assets/699A977B-D602-4DE4-90D7-4B61A9565492_1751972967388.png";
-import recoveryTrackerImg from "@assets/DB46019A-08E7-4A57-AF2B-478B6D57F6C9_1751973693083.png";
+import dermatoscopeImg from "@assets/gf-howitworks-step1.png";
+import prpTubeImg from "@assets/gf-hiw2-prptube.png";
+import microneedlingPenImg from "@assets/gf-hiw3-mnpen.png";
+import recoveryTrackerImg from "@assets/gf-howitworks-step4.png";
 import GrowthFactorsFAQ from "../components/growth-factors/growth-factors-faq";
 import SiteFooter from "@/components/site-footer";
+import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 
 function DrNeoLogo() {
   return (
@@ -73,7 +70,7 @@ function BookButton({ onClick }) {
   return (
     <motion.button
       onClick={onClick}
-      className="flex items-center justify-center bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 hover:bg-white/25 transition-all duration-300 shadow-lg"
+      className="flex items-center justify-center bg-black/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 hover:bg-black/25 transition-all duration-300 shadow-lg"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
@@ -104,7 +101,7 @@ function Nav({ onBookClick }) {
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-8 py-4">
+      <div className="max-w-6xl mx-auto md:px-8 py-4">
         <div className="flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -140,7 +137,7 @@ function Nav({ onBookClick }) {
           >
             <BookButton onClick={onBookClick} />
             <motion.button
-              className="p-2 -m-2 hover:bg-white/10 rounded-lg transition-colors duration-200 md:hidden"
+              className="p-2 -m-2 hover:bg-black/10 rounded-lg transition-colors duration-200 md:hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -155,96 +152,157 @@ function Nav({ onBookClick }) {
 
 function HeroContent() {
   return (
-    <div className="text-center px-6 max-w-6xl mx-auto">
-      {/* Bold Apple Fitness-style Hero with Growth Factor twist */}
+    <div className="flex flex-col items-center">
+      <motion.img
+        initial={{ x: 0, y: "40vh", scale: 5.0 }}
+        animate={{ x: 0, y: 0, scale: 1.0 }}
+        transition={{
+          delay: 0.5,
+          duration: 2,
+          ease: "easeIn",
+        }}
+        src={"/assets/FOLLICULES.png"}
+        alt="Advanced Hair Follicle Technology"
+        className="relative z-24 w-20 h-24 h-auto object-contain"
+        loading="eager"
+      />
       <motion.div
-        className="space-y-6"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        initial={{ x: 0, y: "100vh" }}
+        animate={{ x: 0, y: 0, scale: 1.0 }}
+        transition={{
+          delay: 0.5,
+          duration: 2,
+          ease: "easeIn",
+        }}
+        className="flex flex-col jusitify-center items-center gap-5"
       >
-        {/* Main headline with growth factor emphasis */}
-        <motion.h1
-          className="text-6xl md:text-8xl lg:text-9xl font-[800] tracking-tight text-white leading-[0.85]"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            delay: 0.3,
-            duration: 1.5,
-            ease: "easeOut",
-          }}
-        >
-          GROWTH
-          <br />
-          <span className="text-[#32d74b] relative">
-            FACTORS
-            {/* Subtle glow effect for growth factors */}
-            <motion.div
-              className="absolute inset-0 text-[#32d74b] blur-lg opacity-30"
-              animate={{
-                opacity: [0.3, 0.5, 0.3],
-              }}
+        <div className="flex w-full flex-col items-center justify-center gap-5 px-5  ">
+          <div className="flex flex-col items-center w-full">
+            {/* Main headline with growth factor emphasis */}
+            <motion.h1
+              className="text-6xl md:text-8xl lg:text-9xl font-[700] tracking-tight text-black leading-[0.85]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
+                delay: 0.3,
+                duration: 1.5,
+                ease: "easeOut",
               }}
             >
-              FACTORS
-            </motion.div>
-          </span>
-        </motion.h1>
-        
-        {/* Powerful subtitle */}
-        <motion.p
-          className="text-2xl md:text-3xl lg:text-4xl text-white font-[600] leading-tight max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 1 }}
-        >
-          Your body's natural healing power.
-          <br />
-          <span className="text-white/70 font-[400]">Amplified by precision.</span>
-        </motion.p>
-      </motion.div>
-
-      {/* Clean CTA section */}
-      <motion.div
-        className="mt-16 space-y-4"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 1 }}
-      >
-        <motion.button
-          className="bg-[#32d74b] text-black font-[700] text-xl px-12 py-5 rounded-full hover:bg-[#2fb943] transition-all duration-300 shadow-2xl"
-          whileHover={{ 
-            scale: 1.03, 
-            boxShadow: "0 25px 50px rgba(50,215,75,0.4)",
-            y: -2
-          }}
-          whileTap={{ scale: 0.97 }}
-        >
-          Book Free Assessment
-        </motion.button>
-        
-        <motion.p
-          className="text-[#32d74b] text-lg font-[500]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.8 }}
-        >
-          89% success rate • FDA-approved
-        </motion.p>
+              GROWTH
+              <br />
+              <span className="text-[#32d74b] relative">
+                FACTORS
+                {/* Subtle glow effect for growth factors */}
+                <motion.div
+                  className="absolute inset-0 text-[#32d74b] blur-lg opacity-30"
+                  animate={{
+                    opacity: [0.3, 0.5, 0.3],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  FACTORS
+                </motion.div>
+              </span>
+            </motion.h1>
+          </div>
+        </div>
+        <div className=" gap-1 md:text-2xl flex flex-col items-center lg:text-3xl font-[600] px-10">
+          <p
+            className={
+              styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+            }
+          >
+            Stimulates natural hair growth.
+          </p>
+          <p
+            className={
+              styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+            }
+          >
+            No pills. No prescriptions.
+          </p>
+          <p
+            className={
+              styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+            }
+          >
+            Minimally invasive. No downtime.
+          </p>
+          <button
+            className="custom-button-growth-factors w-full text-md md:text-sm font-[700] px-4 text-xl py-2  rounded-full mt-5 text-white"
+            style={{ color: "white" }}
+          >
+            Book Consultation
+          </button>
+        </div>
       </motion.div>
     </div>
+    // <div className="text-center max-w-6xl mx-auto mt-5">
+    //   {/* Bold Apple Fitness-style Hero with Growth Factor twist */}
+    //   <motion.div
+    //     className="space-y-6 flex flex-col items-center w-full"
+    //     initial={{ opacity: 0, y: 40 }}
+    //     animate={{ opacity: 1, y: 0 }}
+    //     transition={{ duration: 1.2, ease: "easeOut" }}
+    //   >
+    //     <motion.img
+    //       src={"/assets/FOLLICULES.png"}
+    //       alt="Advanced Hair Follicle Technology"
+    //       className="relative z-24 w-20 h-24 h-auto object-contain"
+    //       loading="eager"
+    //     />
+
+    //     {/* Powerful subtitle */}
+    //     <div className=" gap-1 md:text-2xl flex flex-col items-center lg:text-3xl font-[600] px-10">
+    //       <p
+    //         className={
+    //           styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+    //         }
+    //       >
+    //         Advanced FUE technology.
+    //       </p>
+    //       <p
+    //         className={
+    //           styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+    //         }
+    //       >
+    //         Natural results.
+    //       </p>
+    //       <p
+    //         className={
+    //           styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+    //         }
+    //       >
+    //         Restored confidence.
+    //       </p>
+    //       <div className=" p-4  mt-5 custom-button-fue py-3 rounded-full md:w-fit mx-5 mb-10 max-w-sm">
+    //         <div>
+    //           <span className="text-md md:text-sm text-white font-[700]">
+    //             Book Consultation
+    //           </span>
+    //         </div>
+    //       </div>
+    //     </div>
+
+    //     {/* <motion.p
+    //       className="text-[#32d74b] text-lg font-[500]"
+    //       initial={{ opacity: 0 }}
+    //       animate={{ opacity: 1 }}
+    //       transition={{ delay: 1.6, duration: 0.8 }}
+    //     >
+    //       89% success rate
+    //     </motion.p> */}
+    //   </motion.div>
+    // </div>
   );
 }
 
-function ProcessStep({
-  label,
-  isActive = false,
-  index,
-}) {
+function ProcessStep({ label, isActive = false, index }) {
   return (
     <motion.div
       className="flex flex-col items-center space-y-3 text-center"
@@ -257,7 +315,7 @@ function ProcessStep({
         className={`w-12 h-12 rounded-full flex items-center justify-center text-base font-[600] transition-all duration-700 ${
           isActive
             ? "bg-[#32d74b] text-black shadow-lg shadow-[#32d74b]/30"
-            : "bg-white/15 text-white/60 backdrop-blur-sm"
+            : "bg-black/15 text-white/60 backdrop-blur-sm"
         }`}
         animate={{
           scale: isActive ? 1.1 : 1,
@@ -267,7 +325,7 @@ function ProcessStep({
       >
         {index + 1}
       </motion.div>
-      
+
       {/* Minimal label */}
       <motion.span
         className={`text-sm font-[500] transition-all duration-700 ${
@@ -312,7 +370,7 @@ export function ProcessTimeline() {
       >
         <motion.h2
           className="text-4xl md:text-6xl font-[800] text-[#32d74b] mb-2 tracking-tight"
-          animate={{ 
+          animate={{
             scale: [1, 1.01, 1],
           }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
@@ -327,13 +385,14 @@ export function ProcessTimeline() {
           <motion.div
             key={index}
             className={`h-1 rounded-full transition-all duration-700 ${
-              index === activeStep 
-                ? "bg-[#32d74b] w-12 shadow-lg shadow-[#32d74b]/50" 
+              index === activeStep
+                ? "bg-[#32d74b] w-12 shadow-lg shadow-[#32d74b]/50"
                 : "bg-white/20 w-4"
             }`}
             animate={{
               width: index === activeStep ? 48 : 16,
-              backgroundColor: index === activeStep ? "#32d74b" : "rgba(255,255,255,0.2)"
+              backgroundColor:
+                index === activeStep ? "#32d74b" : "rgba(255,255,255,0.2)",
             }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           />
@@ -345,58 +404,8 @@ export function ProcessTimeline() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden">
-      {/* Dynamic growth factor-inspired background */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(50,215,75,0.15),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(50,215,75,0.08),transparent_50%)]"
-          animate={{
-            background: [
-              "radial-gradient(circle_at_30%_40%,rgba(50,215,75,0.15),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(50,215,75,0.08),transparent_50%)",
-              "radial-gradient(circle_at_70%_30%,rgba(50,215,75,0.12),transparent_50%),radial-gradient(circle_at_30%_70%,rgba(50,215,75,0.10),transparent_50%)",
-              "radial-gradient(circle_at_50%_20%,rgba(50,215,75,0.18),transparent_50%),radial-gradient(circle_at_50%_80%,rgba(50,215,75,0.06),transparent_50%)",
-              "radial-gradient(circle_at_30%_40%,rgba(50,215,75,0.15),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(50,215,75,0.08),transparent_50%)",
-            ],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-
-      {/* Floating growth factor particles */}
-      <div className="absolute inset-0 opacity-20">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-[#32d74b] rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.2, 0.8, 0.2],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 4,
-              repeat: Infinity,
-              delay: Math.random() * 4,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative z-10 flex flex-col justify-center min-h-screen pt-20">
-        <div className="flex-1 flex flex-col justify-center space-y-24 py-12">
-          <HeroContent />
-          <ProcessTimeline />
-        </div>
-      </div>
+    <section className="w-full bg-white flex min-h-screen flex-col justify-center items-center  md:mt-20 ">
+      <HeroContent />
     </section>
   );
 }
@@ -435,20 +444,20 @@ function BenefitCard({ title, description, highlight, statistic, index }) {
       }}
     >
       <motion.h3
-        className="text-[26px] md:text-3xl lg:text-4xl text-white leading-tight max-w-2xl mx-auto"
+        className="text-[26px] md:text-3xl lg:text-4xl text-black leading-tight max-w-2xl mx-auto"
         whileHover={{ scale: 1.01 }}
         transition={{ duration: 0.3 }}
       >
-        <span className="text-lime-400 font-semibold">{highlight}</span>
+        <span className="text-[#32d74b] font-semibold">{highlight}</span>
         <br />
-        <span className="text-white">{title}</span>
+        <span className="text-black">{title}</span>
       </motion.h3>
-      <p className="text-xl text-white/80 leading-relaxed max-w-xl mx-auto">
+      <p className="text-xl text-black/80 leading-relaxed max-w-xl mx-auto">
         {description}
       </p>
       {statistic && (
         <div className="pt-8">
-          <span className="text-lime-400 font-semibold text-lg">
+          <span className="text-[#32d74b] font-semibold text-lg">
             {statistic}
           </span>
         </div>
@@ -483,11 +492,11 @@ function BenefitsSection() {
   ];
 
   return (
-    <section className="bg-black py-24 md:py-32">
-      <div className="max-w-4xl mx-auto px-6">
+    <section className="bg-white py-24 md:py-32">
+      <div className="max-w-4xl mx-auto section-content">
         <AnimatedSection className="text-center mb-20">
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-8"
+            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -496,7 +505,7 @@ function BenefitsSection() {
             Clinical Evidence
           </motion.h2>
           <motion.p
-            className="text-lg text-white/80 leading-relaxed max-w-2xl mx-auto"
+            className="text-lg text-black/80 leading-relaxed max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -506,16 +515,19 @@ function BenefitsSection() {
           </motion.p>
         </AnimatedSection>
 
-        <div className="space-y-16">
+        <div className="w-full flex flex-col items-center justify-center gap-12">
           {benefits.map((benefit, index) => (
-            <BenefitCard
-              key={index}
-              title={benefit.title}
-              description={benefit.description}
-              highlight={benefit.highlight}
-              statistic={benefit.statistic}
-              index={index}
-            />
+            <FadeInOnScroll
+              key={`reason-${index}`}
+              className="flex flex-col section-content"
+            >
+              <span className="text-[26px] font-bold text-center text-[#32d74b]">
+                {benefit.highlight}
+              </span>{" "}
+              <span className="text-[26px] font-bold text-center">
+                {benefit.description}
+              </span>
+            </FadeInOnScroll>
           ))}
         </div>
       </div>
@@ -597,7 +609,7 @@ export function TimelineStep({
           >
             {/* Icon background */}
             <div
-              className="w-24 h-24 bg-white rounded-3xl 
+              className="w-24 h-24 bg-black rounded-3xl 
                             flex items-center justify-center shadow-xl
                             border border-gray-100 group-hover:shadow-2xl
                             transition-all duration-500"
@@ -640,7 +652,7 @@ export function TimelineStep({
 
         {/* Content */}
         <motion.div
-          className={`space-y-6 bg-white z-10 border md:border-none md:bg-none  md:shadow-none border-gray-400 shadow-xl rounded-xl p-6 text-center lg:text-left ${isLeft ? "lg:order-2" : "lg:order-1"}`}
+          className={`space-y-6 bg-black z-10 border md:border-none md:bg-none  md:shadow-none border-gray-400 shadow-xl rounded-xl p-6 text-center lg:text-left ${isLeft ? "lg:order-2" : "lg:order-1"}`}
           initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
           animate={
             isInView
@@ -708,7 +720,7 @@ export function TimelineStep({
             duration: 0.8,
           }}
         >
-          <div className="w-6 h-6 rounded-full bg-white border-2 border-accent shadow-lgsoft">
+          <div className="w-6 h-6 rounded-full bg-black border-2 border-accent shadow-lgsoft">
             <motion.div
               className="w-2 h-2 rounded-full bg-accent mx-auto mt-1"
               animate={{ scale: [1, 1.2, 1] }}
@@ -724,7 +736,7 @@ export function TimelineStep({
 function ProcessSection() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-  
+
   const steps = [
     {
       title: "Comprehensive Assessment",
@@ -732,12 +744,13 @@ function ProcessSection() {
         "Advanced trichoscopy and digital scalp analysis using dermoscopic technology to evaluate follicular miniaturization patterns.",
       features: [
         "Digital follicular mapping",
-        "Androgenetic staging", 
+        "Androgenetic staging",
         "Response prediction",
       ],
-      learnMoreContent: "Our comprehensive assessment utilizes state-of-the-art dermoscopic imaging to create detailed follicular maps. We analyze hair density, caliber variations, and miniaturization patterns to develop personalized treatment protocols. This thorough evaluation ensures optimal outcomes tailored to your specific hair restoration needs.",
+      learnMoreContent:
+        "Our comprehensive assessment utilizes state-of-the-art dermoscopic imaging to create detailed follicular maps. We analyze hair density, caliber variations, and miniaturization patterns to develop personalized treatment protocols. This thorough evaluation ensures optimal outcomes tailored to your specific hair restoration needs.",
       image: dermatoscopeImg,
-      featured: true
+      featured: true,
     },
     {
       title: "PRP Preparation",
@@ -748,12 +761,13 @@ function ProcessSection() {
         "Dual-spin protocol",
         "500K platelets/μL",
       ],
-      learnMoreContent: "Our specialized dual-spin centrifugation protocol maximizes platelet concentration while preserving growth factor integrity. The 60ml blood draw is processed using FDA-approved techniques to achieve therapeutic platelet concentrations of 500,000+ platelets per microliter, significantly higher than baseline levels.",
+      learnMoreContent:
+        "Our specialized dual-spin centrifugation protocol maximizes platelet concentration while preserving growth factor integrity. The 60ml blood draw is processed using FDA-approved techniques to achieve therapeutic platelet concentrations of 500,000+ platelets per microliter, significantly higher than baseline levels.",
       image: prpTubeImg,
-      featured: true
+      featured: true,
     },
     {
-      title: "Microneedling Application", 
+      title: "Microneedling Application",
       description:
         "FDA-cleared 1.5mm microneedling creates 16,000 micro-channels per cm² for enhanced PRP penetration.",
       features: [
@@ -761,9 +775,10 @@ function ProcessSection() {
         "16K channels/cm²",
         "Immediate PRP application",
       ],
-      learnMoreContent: "The precise 1.5mm needle depth creates optimal micro-channels for growth factor delivery directly to hair follicles. Our technique generates 16,000 channels per square centimeter, maximizing PRP absorption while minimizing discomfort. Immediate application ensures maximum bioavailability of growth factors.",
+      learnMoreContent:
+        "The precise 1.5mm needle depth creates optimal micro-channels for growth factor delivery directly to hair follicles. Our technique generates 16,000 channels per square centimeter, maximizing PRP absorption while minimizing discomfort. Immediate application ensures maximum bioavailability of growth factors.",
       image: microneedlingPenImg,
-      featured: true
+      featured: true,
     },
     {
       title: "Recovery & Results",
@@ -774,25 +789,28 @@ function ProcessSection() {
         "AI progress tracking",
         "70%+ density improvement",
       ],
-      learnMoreContent: "Our proprietary Recovery Tracker app provides real-time monitoring of your hair restoration journey. Using advanced AI analysis, we track density improvements, growth patterns, and treatment effectiveness. Most patients experience 70%+ hair density improvements within 6 months, with progress visible as early as 4-6 weeks.",
+      learnMoreContent:
+        "Our proprietary Recovery Tracker app provides real-time monitoring of your hair restoration journey. Using advanced AI analysis, we track density improvements, growth patterns, and treatment effectiveness. Most patients experience 70%+ hair density improvements within 6 months, with progress visible as early as 4-6 weeks.",
       image: recoveryTrackerImg,
-      featured: true
+      featured: true,
     },
   ];
 
   return (
-    <section id="treatment" className="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-24 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section Header */}
-        <motion.div 
+    <section
+      id="treatment"
+      className="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-24 overflow-hidden"
+    >
+      <div className="section-content">
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-[800] text-black mb-6 tracking-tight"
+          <motion.h2
+            className="text-4xl md:text-5xl lg:text-6xl font-[700] text-black mb-6 tracking-tight"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -800,20 +818,21 @@ function ProcessSection() {
           >
             How It Works
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-[500]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Our comprehensive Growth Factors protocol combines advanced medical technology 
-            with precision delivery for optimal hair restoration results.
+            Our comprehensive Growth Factors protocol combines advanced medical
+            technology with precision delivery for optimal hair restoration
+            results.
           </motion.p>
         </motion.div>
 
         {/* Mobile Layout - Stacked Cards */}
-        <motion.div 
+        <motion.div
           className="block md:hidden space-y-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -828,13 +847,15 @@ function ProcessSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <FueStyleTreatmentCard 
-                step={index + 1} 
+              <FueStyleTreatmentCard
+                step={index + 1}
                 title={step.title}
                 features={step.features}
                 learnMoreContent={step.learnMoreContent}
                 image={step.image}
                 featured={step.featured}
+                inverse={index < 2}
+                alignLeft={true}
               >
                 {step.description}
               </FueStyleTreatmentCard>
@@ -843,8 +864,8 @@ function ProcessSection() {
         </motion.div>
 
         {/* Desktop Layout - Grid */}
-        <motion.div 
-          className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-8"
+        <motion.div
+          className="hidden md:grid grid-cols-12 gap-5"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -856,14 +877,15 @@ function ProcessSection() {
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
-                duration: 0.8, 
+              transition={{
+                duration: 0.8,
                 delay: 0.3 + index * 0.15,
-                ease: "easeOut"
+                ease: "easeOut",
               }}
+              className={`col-span-12 ${index < 2 ? `md:col-span-6` : `md:col-span-12`}`}
             >
-              <FueStyleTreatmentCard 
-                step={index + 1} 
+              <FueStyleTreatmentCard
+                step={index + 1}
                 title={step.title}
                 features={step.features}
                 learnMoreContent={step.learnMoreContent}
@@ -913,7 +935,7 @@ function ApplePricingCard({ plan, isPopular = false, index }) {
 
       {/* Card container */}
       <motion.div
-        className="relative bg-white rounded-2xl p-6 border border-gray-200 
+        className="relative bg-black rounded-2xl p-6 border border-gray-200 
                    hover:shadow-lg transition-all duration-300 h-full"
         whileHover={{
           y: -4,
@@ -1067,7 +1089,7 @@ function PricingSection() {
 
   return (
     <section className="bg-gray-50 py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto ">
         <AnimatedSection className="text-center mb-16">
           <motion.h2
             className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4"
@@ -1155,7 +1177,7 @@ function AppleTestimonial({ name, review, result, index }) {
 
       {/* Result highlight */}
       <motion.div
-        className="inline-block bg-lime-50 border border-lime-200 rounded-2xl px-6 py-4"
+        className="inline-block bg-lime-50 border border-lime-200 rounded-2xl  py-4"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={
           isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
@@ -1208,8 +1230,8 @@ function TestimonialsSection() {
   ];
 
   return (
-    <section className="bg-white py-32 md:py-48">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-black py-32 md:py-48">
+      <div className="max-w-6xl mx-auto">
         <AnimatedSection className="text-center mb-24">
           <motion.h2
             className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-8 leading-tight"
@@ -1244,7 +1266,7 @@ function TestimonialsSection() {
 function ResultsSection() {
   return (
     <section id="results" className="bg-gray-50 py-32 md:py-48">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto ">
         <AnimatedSection>
           <div className="text-center space-y-12">
             <div className="space-y-6">
@@ -1363,8 +1385,8 @@ function AppleContactForm() {
   );
 
   return (
-    <section className="bg-white py-32 md:py-48">
-      <div className="max-w-2xl mx-auto px-6">
+    <section className="bg-black py-32 md:py-48">
+      <div className="max-w-2xl mx-auto ">
         <AnimatedSection>
           <motion.div
             className="text-center mb-16"
@@ -1457,8 +1479,6 @@ function AppleContactForm() {
   );
 }
 
-
-
 export default function App() {
   const contactRef = useRef(null);
 
@@ -1467,7 +1487,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-black min-h-screen">
       <FueNavBar />
       <HeroSection />
       <BenefitsSection />
@@ -1478,7 +1498,7 @@ export default function App() {
       {/* <div ref={contactRef}>
         <AppleContactForm />
       </div> */}
-      <GrowthFactorsFAQ />
+      {/* <GrowthFactorsFAQ /> */}
       <SiteFooter />
     </div>
   );

@@ -2,6 +2,11 @@ import { motion } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import HiddenCard from "../ui/hidden-card";
 import AnimatedImage from "../ui/animtated-image";
+import FueStyleTreatmentCard from "../FueStyleTreatmentCard";
+import procedureImg from "@assets/fue-hiw2-procedure.png";
+import prpTubeImg from "@assets/gf-hiw2-prptube.png";
+import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.png";
+import followUpConsultationImg from "@assets/fue-howitworks-step4.png";
 
 const HowItWorks = () => {
   const processDetails = [
@@ -17,21 +22,21 @@ const HowItWorks = () => {
       title: "Procedure Day",
       description:
         'First, it is important to note we call it "Procedure Day" because the duration of a Dr. Neo transplantation session ranges from 4 to 10 hours and depends on the number of grafts (follicular units) we harvest and implant that particular day.',
-      image: "assets/fue/procedure_day.png",
+      image: procedureImg,
       alt: "Hand Transplanting a hair follicle with Dr.Neo Tweezers",
     },
     {
       title: "Recovery & Regrowth",
       description:
         "There's typically very little pain or discomfort after the NeoGraft procedure. You may experience some tenderness around the donor site, but this is a normal part of the healing process and should subside in a few days. You may also experience a slight amount of drainage for the first day after your procedure, but this is minimal.",
-      image: "/assets/fue/recovery_&_regrowth.png",
+      image: recoveryAndRegrowthImg,
       alt: "Two spray bottles of The Rinse and The Spritz from Dr.Neo",
     },
     {
       title: "Follow-Up Consultation",
       description:
         "We encourage all of our NeoGraft patients to schedule a follow up consultation to analyze results we achieved and determine if additional sessions would be beneficial.",
-      image: "/assets/fue/follow_up_consultation.png",
+      image: followUpConsultationImg,
       alt: "Ipad image showing follow up consultation",
     },
   ];
@@ -69,49 +74,47 @@ const HowItWorks = () => {
       {/* How It Works Section */}
       <section className="bg-light-gray px-5 py-16 md:py-12">
         <div className="container mx-auto max-w-md md:max-w-5xl">
-          <div className="text-center mb-8 md:mb-20 flex flex-col items-center">
-            <h2 className="text-center bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent w-full text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] font-normal leading-[1.1] tracking-[-0.04em pb-6">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl lg:text-6xl font-[700] text-black mb-6 tracking-tight"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               How It Works
-              <br />
-            </h2>
-            {/* <div className="w-20 h-1 rounded-full bg-gradient-to-l from-[#625046] to-[#C8B68F] mt-5"></div> */}
-
-            <div />
-          </div>
+            </motion.h2>
+          </motion.div>
 
           {/* Mobile Layout - Stacked Cards */}
           <div className="block md:hidden space-y-6">
             {processDetails.map((detail, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-sm">
-                <div className="space-y- p-8 pb-0 ">
-                  <h3 className="text-xl font-[700] text-black leading-tight mb-2">
-                    {detail.title}
-                  </h3>
-                  <p className="text-lg font-[600] text-[#86868B] leading-relaxed">
-                    {detail.description}
-                  </p>
-                  <div className="mt-4">
-                    <HiddenCard
-                      cardText="Learn More"
-                      showCardIconInitial={<Plus className="h-4" />}
-                      showCardIconFinal={<Minus className="h-4" />}
-                      animationIconClasses="transition-transform duration-300"
-                      cardTextClasses="text-md font-bold text-medium-gray"
-                    >
-                      <div>THIS IS WHERE ALL THE INFORMATION WILL GO </div>
-                    </HiddenCard>
-                  </div>
-                </div>
-                <div className="w-full pl-10 bg-light-gray rounded-2xl flex items-center justify-center max-h-[450px]">
-                  <AnimatedImage
-                    initial={detail.initial}
-                    animate={detail.animate}
-                    transition={detail.transition}
-                    image={detail.image}
-                    alt={detail.alt}
-                  />
-                </div>
-              </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <FueStyleTreatmentCard
+                  step={index + 1}
+                  title={detail.title}
+                  features={[]}
+                  image={detail.image}
+                  featured={true}
+                  color={"#FC8310"}
+                  inverse={index > 1}
+                  alignLeft={false}
+                >
+                  {detail.description}
+                </FueStyleTreatmentCard>
+              </motion.div>
             ))}
           </div>
 

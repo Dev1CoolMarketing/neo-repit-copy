@@ -183,10 +183,10 @@ export default function FueNavBar() {
     <header
       id="site-header"
       className={cn(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-in-out",
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-850 ease-in-out",
         isScrolled
-          ? "bg-black shadow-lg lg:bg-white/95 lg:backdrop-blur-xl md:shadow-sm"
-          : "bg-transparent backdrop-blur-sm lg:bg-white",
+          ? "bg-black shadow-lg backdrop-blur-sm bg-opacity-90 lg:backdrop-blur-xl md:shadow-sm"
+          : "bg-black backdrop-blur-sm",
       )}
     >
       {/* Mobile header */}
@@ -316,7 +316,19 @@ export default function FueNavBar() {
           </div>
         </div>
       </div>
-
+      {/* <div
+        className={`flex flex-row justify-between items-center px-4  text-[19px] lg:text-[21px] py-2
+      ${
+        isScrolled
+          ? "bg-gray-500 pg-opacity-1 bg-opacity-50 backdrop-blur-lg"
+          : "bg-transparent backdrop-blur-sm bg-opacity-10"
+      }`}
+      >
+        <div className="text-white">Dr.NEO</div>
+        <Link href="/" className="cta-button-mobile">
+          <span>Book free assessment</span>
+        </Link>
+      </div> */}
       {/* Mobile Navigation - Enhanced with clear CTA */}
       {isMenuOpen && (
         <nav className="md:hidden p-4 sm:p-5 bg-black border-t border-[#C8B68F]/20 shadow-md">

@@ -1,4 +1,3 @@
-
 import styles from "../../styles/fue.module.css";
 import { FadeInOnScroll } from "../ui/FadeInOnScroll";
 export default function FueReasons() {
@@ -28,11 +27,11 @@ export default function FueReasons() {
     ];
     return (
         <div className="w-full flex flex-col justify-center items-center py-20">
-            <div className="px-5 w-full flex flex-col items-center justify-center gap-9">
+            <div className="\w-full flex flex-col items-center justify-center gap-9">
                 {fueReasons.map((item, index) => (
                     <FadeInOnScroll
                         key={`reason-${index}`}
-                        className="flex flex-col w-3/4"
+                        className="flex flex-col section-content"
                     >
                         <span className="text-[26px] font-bold text-center text-[#FC8310]">
                             {item.highlight}

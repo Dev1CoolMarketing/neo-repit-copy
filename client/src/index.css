@@ -9,14 +9,95 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ================================
+   SF Pro Display Font Variants
+================================ */
+
+/* Thin Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYTHINITALIC.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Ultra Light Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYULTRALIGHTITALIC.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYLIGHTITALIC.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYREGULAR.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYMEDIUM.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYBOLDITALIC.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYBOLD.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Heavy Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYHEAVYITALIC.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Black Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYBLACKITALIC.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+
 /* Apply Inter font globally */
 @layer base {
   * {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'SF Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'SF Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     font-optical-sizing: auto;
   }
@@ -37,15 +118,81 @@
   h4,
   h5,
   h6 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'SF Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 }
 
 
 
+h1 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
 
 
+
+.cta-button-mobile {
+  display: inline-block;
+  background: #32d74b;
+  color: #000;
+  padding: 4px 11px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3333733333;
+  min-width: 45px;
+}
+
+.section-content {
+  width: 87.5vw;
+  margin: auto;
+  background-color: transparents;
+}
+
+
+.cta-button {
+  display: inline-block;
+  background: #32d74b;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content-padding {
+  padding-left: 16px;
+  padding-right: 16px
+}
+
+.card {
+  background: #1A1F22;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+ol {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.sticky-footer {
+  position: sticky;
+  bottom: 0;
+  background: #0E1316;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid #333;
+}
 
 .custom-button {
   background-color: #F5BD02;
@@ -75,7 +222,7 @@
 }
 
 .custom-button-fue:hover {
-  background-color: #FC8310;
+  background-color: #F5BD02;
   color: #836F10;
 }
 
@@ -92,7 +239,7 @@
 }
 
 .custom-button-growth-factors {
-  background-color: #84CC16;
+  background-color: #32d74b;
   color: #100a03;
 }
 

@@ -14,24 +14,25 @@ import Fue from "@/pages/fue";
 import GrowthFactors from "@/pages/growth-factors2";
 import ImageGeneratorPage from "@/pages/image-generator";
 import GrowthFactorsImagesPage from "@/pages/growth-factors-images";
+import HairHotlinePage from "./pages/hairhotline";
 
 function Router() {
   const [location] = useLocation();
-  
+
   // Initialize animations and lazy loading on route change
   useEffect(() => {
     const cleanupAnimations = initFadeInAnimations();
     const cleanupLazyLoading = initLazyImageLoading();
-    
+
     // Scroll to top on route change
     window.scrollTo(0, 0);
-    
+
     return () => {
       cleanupAnimations();
       cleanupLazyLoading();
     };
   }, [location]);
-  
+
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -40,8 +41,13 @@ function Router() {
       <Route path="/component-export" component={ComponentExportPage} />
       <Route path="/fue" component={Fue} />
       <Route path="/growth-factors" component={GrowthFactors} />
+      <Route path="/hair-hotline" component={HairHotlinePage} />
+
       <Route path="/image-generator" component={ImageGeneratorPage} />
-      <Route path="/growth-factors-images" component={GrowthFactorsImagesPage} />
+      <Route
+        path="/growth-factors-images"
+        component={GrowthFactorsImagesPage}
+      />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

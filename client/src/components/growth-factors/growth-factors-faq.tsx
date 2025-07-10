@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
@@ -7,7 +6,7 @@ export default function GrowthFactorsFAQ() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-  
+
   const faqItems = [
     {
       question: "What exactly are Growth Factors and how do they restore hair?",
@@ -101,29 +100,35 @@ export default function GrowthFactorsFAQ() {
   };
 
   return (
-    <section ref={sectionRef} className="bg-gradient-to-b from-gray-50 via-white to-gray-50 px-5 py-24 md:py-32">
-      <div className="container mx-auto max-w-4xl">
-        <motion.div 
+    <section
+      ref={sectionRef}
+      className="bg-gradient-to-b from-gray-50 via-white to-gray-50 px-5 py-24 md:py-32"
+    >
+      <div className=" mx-auto section-content">
+        <motion.div
           className="text-center space-y-6 mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl lg:text-6xl font-[800] text-black tracking-tight"
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            animate={
+              isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+            }
             transition={{ duration: 1, delay: 0.2 }}
           >
             Frequently Asked Questions
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto font-[500] leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Evidence-based answers about Growth Factors therapy from clinical research and patient outcomes
+            Evidence-based answers about Growth Factors therapy from clinical
+            research and patient outcomes
           </motion.p>
         </motion.div>
 
@@ -148,17 +153,27 @@ export default function GrowthFactorsFAQ() {
                   transition={{ duration: 0.3 }}
                   className="flex-shrink-0"
                 >
-                  <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <svg
+                    className="w-6 h-6 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </motion.div>
               </button>
-              
+
               <motion.div
                 initial={false}
                 animate={{
                   height: openFaq === index ? "auto" : 0,
-                  opacity: openFaq === index ? 1 : 0
+                  opacity: openFaq === index ? 1 : 0,
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"

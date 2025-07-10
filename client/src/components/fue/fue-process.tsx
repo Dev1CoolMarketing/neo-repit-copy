@@ -1,4 +1,3 @@
-
 import styles from "../../styles/fue.module.css";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
@@ -34,21 +33,25 @@ export default function FueProcess() {
           <Button className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
             Watch process videos
           </Button>
-
           {/* Video Mock-up */}
           <div className="bg-black rounded-[48px] p-2 shadow-2xl max-w-56 mx-auto">
             <div className="bg-white rounded-[40px] overflow-hidden">
               <div className="bg-black h-8 flex items-center justify-center rounded-t-[40px]">
                 <div className="w-20 h-1 bg-white rounded-full" />
               </div>
-              <div className="bg-gradient-to-b from-gray-800 to-gray-600 h-96 flex items-center justify-center relative">
-                <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
-                  <Play className="w-3 h-4 text-black ml-1" />
-                </div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-semibold">FUE Process</p>
-                  <p className="text-xs opacity-80">Step-by-step guide</p>
-                </div>
+
+              <div className="bg-gradient-to-b from-gray-800 to-gray-600 h-96 flex items-center justify-center relative overflow-hidden">
+                {/* Video Goes Here */}
+
+                <video
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="/assets/video/NEO 3.mov" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
