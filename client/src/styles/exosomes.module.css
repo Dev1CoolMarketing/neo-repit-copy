@@ -1,0 +1,71 @@
+
+/* Exosomes Page Styles - Based on Figma Import */
+
+:root {
+  --color-gold: #A87B23;
+  --color-gold-dark: #625046;
+  --color-yellow: #FAE151;
+  --color-white-solid: #fff;
+  --color-grey-95: #f2f2f2;
+  --color-grey-96: #f5f5f7;
+  --color-black-solid: #000;
+  --color-black-56: #0000008f;
+  --color-black-72: #000000b8;
+  --font-family-sf-pro-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-sf-pro-text: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.exosomes-hero-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 0%,
+    var(--color-yellow) 62%,
+    var(--color-gold-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.exosomes-cta-background {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold) 0%,
+    var(--color-yellow) 50%,
+    var(--color-gold-dark) 100%
+  );
+}
+
+.exosomes-feature-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.exosomes-feature-card:hover {
+  transform: translateY(-2px);
+}
+
+.exosomes-icon {
+  filter: drop-shadow(0 2px 4px rgba(168, 123, 35, 0.2));
+}
+
+.exosomes-text-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 0%,
+    var(--color-yellow) 61%,
+    var(--color-gold-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .exosomes-hero-title {
+    font-size: clamp(36px, 8vw, 48px);
+  }
+  
+  .exosomes-section-title {
+    font-size: clamp(40px, 6vw, 64px);
+  }
+}

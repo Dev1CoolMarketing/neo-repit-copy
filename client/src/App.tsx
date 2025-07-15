@@ -8,13 +8,15 @@ import { initFadeInAnimations, initLazyImageLoading } from "@/lib/utils";
 import Home from "@/pages/home";
 import VIPMembership from "@/pages/vip-membership";
 import TreatmentsPremium from "@/pages/treatments-premium";
-import ComponentExportPage from "@/pages/component-export";
-import NotFound from "@/pages/not-found";
 import Fue from "@/pages/fue";
 import GrowthFactors from "@/pages/growth-factors2";
 import ImageGeneratorPage from "@/pages/image-generator";
 import GrowthFactorsImagesPage from "@/pages/growth-factors-images";
 import HairHotlinePage from "./pages/hairhotline";
+import GrowthFactors2Page from '@/pages/growth-factors2';
+import ExosomesPage from '@/pages/exosomes';
+import ComponentExportPage from '@/pages/component-export';
+import NotFound from "@/pages/not-found";
 
 function Router() {
   const [location] = useLocation();
@@ -38,8 +40,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/vip-membership" component={VIPMembership} />
       <Route path="/treatments" component={TreatmentsPremium} />
-      <Route path="/component-export" component={ComponentExportPage} />
-      <Route path="/fue" component={Fue} />
+       <Route path="/fue" component={Fue} />
       <Route path="/growth-factors" component={GrowthFactors} />
       <Route path="/hair-hotline" component={HairHotlinePage} />
 
@@ -48,6 +49,9 @@ function Router() {
         path="/growth-factors-images"
         component={GrowthFactorsImagesPage}
       />
+       <Route path="/growth-factors2" component={GrowthFactors2Page} />
+        <Route path="/exosomes" component={ExosomesPage} />
+        <Route path="/component-export" component={ComponentExportPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
