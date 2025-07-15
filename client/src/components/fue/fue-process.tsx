@@ -33,6 +33,14 @@ export default function FueProcess() {
           <Button className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
             Watch process videos
           </Button>
+          <div className="device device-iphone-x">
+            <div className="device-frame"></div>
+            <div className="device-stripe"></div>
+            <div className="device-header"></div>
+            <div className="device-sensors"></div>
+            <div className="device-btns"></div>
+            <div className="device-power"></div>
+          </div>
           {/* Video Mock-up */}
           <div className="bg-black rounded-[48px] p-2 shadow-2xl max-w-56 mx-auto">
             <div className="bg-white rounded-[40px] overflow-hidden">

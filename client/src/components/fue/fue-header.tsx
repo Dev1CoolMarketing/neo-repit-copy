@@ -16,10 +16,12 @@ export default function FueHeader() {
             duration: 2,
             ease: "easeIn",
           }}
-          src={shinyFolliclePath}
+          decoding="async"
+          fetchpriority="high"
+          src={'/assets/shinyfo'}
           alt="Advanced Hair Follicle Technology"
           className="relative z-24 w-20 h-24 h-auto object-contain"
-          loading="eager"
+          loading="lazy"
         />
         <motion.div
           initial={{ x: 0, y: "100vh" }}
@@ -28,6 +30,11 @@ export default function FueHeader() {
             delay: 0.5,
             duration: 2,
             ease: "easeIn",
+          }}
+          style={{
+            willChange: "transform, opacity",
+            backfaceVisibility: "hidden",
+            transform: "translateZ(0)", // force GPU layer
           }}
           className="flex flex-col jusitify-center items-center gap-5"
         >

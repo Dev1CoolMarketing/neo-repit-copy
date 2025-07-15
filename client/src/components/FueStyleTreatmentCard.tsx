@@ -30,6 +30,24 @@ export default function FueStyleTreatmentCard({
   inverse = true, // Inverse True = White Background Black Text // Inverse False = Black Background White Text
 }: FueStyleTreatmentCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  function hexToRgba(hex, alpha = 1) {
+    hex = hex.replace("#", "");
+    if (hex.length === 3)
+      hex = hex
+        .split("")
+        .map((c) => c + c)
+        .join("");
+    const bigint = parseInt(hex, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  // Example usage:
+
+  const lightShadowColor = hexToRgba(color, 0.15);
 
   return (
     <motion.div
@@ -100,7 +118,7 @@ export default function FueStyleTreatmentCard({
             {/* Learn More Button */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
-              className={`flex items-center gap-2 text-[${color}] font-[600] text-md hover:brightness-150 transition-colors duration-200`}
+              className={`flex items-center gap-2 text-[${color}] font-[600] text-md hover:brightness- transition-colors duration-200`}
               whileHover={{ x: 3, scale: 1.02 }}
               transition={{ duration: 0.2 }}
               initial={{ opacity: 0, y: 10 }}
@@ -160,8 +178,7 @@ export default function FueStyleTreatmentCard({
                     transition: { duration: 0.6, ease: "easeOut" },
                   }}
                   style={{
-                    filter:
-                      "drop-shadow(0 30px 60px rgba(50,215,75,0.15)) drop-shadow(0 15px 30px rgba(0,0,0,0.2))",
+                    filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
                     transformStyle: "preserve-3d",
                   }}
                 />
@@ -185,8 +202,8 @@ export default function FueStyleTreatmentCard({
                     transition: { duration: 0.6, ease: "easeOut" },
                   }}
                   style={{
-                    filter:
-                      "drop-shadow(0 30px 60px rgba(50,215,75,0.15)) drop-shadow(0 15px 30px rgba(0,0,0,0.2))",
+                    filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
+
                     transformStyle: "preserve-3d",
                   }}
                 />
