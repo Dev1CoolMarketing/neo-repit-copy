@@ -1,0 +1,1651 @@
+Implement the following design in React. Use the following files generated from a Figma design as a specification and guide:
+
+```src/styles/Main.module.css
+.Main_11_18148 {
+  flex-flow: row;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  width: 390px;
+  height: 9277.95px;
+  display: flex;
+}
+.Section_11_18149 {
+  background: var(--color-grey-96, #f5f5f7);
+  flex-direction: column;
+  align-items: center;
+  width: 390px;
+  height: 1313.94px;
+  padding-top: 40px;
+  display: flex;
+  overflow: hidden;
+}
+.Container_11_18150 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 341.25px;
+  display: flex;
+}
+.Container_11_18151 {
+  width: 100%;
+  height: 553.4px;
+}
+.Heading_1Margin_11_18152 {
+  flex-direction: column;
+  align-items: center;
+  padding: 7.75px 12.617px 22.25px;
+  display: inline-flex;
+}
+.Heading_1HealthyFinancesFamilyStyle_11_18153 {
+  text-align: center;
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-40, 40px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-44, 44px);
+  background: linear-gradient(
+    90deg,
+    var(--color-violet-72, #c17ff0) 0%,
+    var(--color-rose-66, #df73a5) 62%,
+    var(--color-orange-60, #f5a53b) 100%,
+    var(--color-yellow-58, #f1c235) 100%,
+    var(--color-yellow-46, #abcc21) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+.Margin_11_18154 {
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8.4px;
+  display: inline-flex;
+}
+.Container_11_18155 {
+  max-width: var(--width-480, 480px);
+  width: 341.25px;
+  height: 100px;
+}
+.WithAppleCardFamily_11_18156 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  text-align: center;
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 219.56px;
+  height: 25px;
+  display: inline-block;
+}
+.Component_17_11_18158 {
+  justify-content: center;
+  align-items: flex-start;
+  display: inline-flex;
+}
+.Text_11_13802 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  text-align: center;
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: 12.6px;
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-15, 15px);
+  display: inline-block;
+}
+.YouCan_11_18160 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  text-align: center;
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 76.658px;
+  height: 25px;
+  display: inline-block;
+}
+.ShareAppleCardWithACoOwner_11_18161 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  text-align: center;
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 320.795px;
+  height: 25px;
+  display: inline-block;
+}
+.AndAddUpToFourParticipantsToOneEasyToManageAccount_11_18162 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  text-align: center;
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 304.66px;
+  height: 50px;
+  display: inline-block;
+}
+.FigureMargin_11_18163 {
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  width: 341.25px;
+  height: 327px;
+  padding: 30px 341.25px 0 0;
+  display: flex;
+}
+.Figure_11_18164 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 630px;
+  height: 297px;
+}
+.Background_11_18165 {
+  background: var(--color-white-solid, #fff);
+  align-items: flex-start;
+  width: 100%;
+  padding: 70px 24.37px 70px 24.38px;
+  display: flex;
+}
+.Container_11_18166 {
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--item-spacing--12, -12px);
+  flex-direction: column;
+  flex: 1 0 0;
+  width: 100%;
+  padding: 0 65px 0 32.492px;
+  display: flex;
+}
+.Margin_11_18168 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 208.2px;
+  padding-bottom: 40px;
+  display: flex;
+}
+.Container_11_18169 {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.Container_11_18170 {
+  width: 100%;
+  height: 168.2px;
+}
+.Component_2_11_18171 {
+  flex-shrink: 0;
+  width: 58px;
+  height: 36.703px;
+}
+.Vector_11_13642 {
+  opacity: var(--opacity-100, 1);
+  flex-shrink: 0;
+  width: 57.994px;
+  height: 44.044px;
+}
+.Group_11_13643 {
+  opacity: var(--opacity-100, 1);
+  flex-shrink: 0;
+  width: 60.342px;
+  height: 41.26px;
+}
+.Container_11_18179 {
+  flex-shrink: 0;
+  width: 243.76px;
+  height: 112px;
+}
+.CoOwners_11_18180 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-28, 28px);
+  letter-spacing: var(--letter-spacing-0_22, 0.216px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 129.029px;
+  height: 28px;
+  display: inline-block;
+}
+.Component_18_11_18181 {
+  align-items: flex-start;
+  display: inline-flex;
+}
+.Text_11_13806 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: 14.4px;
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-16_8, 16.8px);
+  letter-spacing: var(--letter-spacing-0_22, 0.216px);
+  display: inline-block;
+}
+.ManageTheAccountTogetherAndBuildCreditAsEquals_11_18183 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-28, 28px);
+  letter-spacing: var(--letter-spacing-0_22, 0.216px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 227.07px;
+  height: 84px;
+  display: inline-block;
+}
+.Component_18_11_18184 {
+  align-items: flex-start;
+  display: inline-flex;
+}
+.Margin_11_18186 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 211.84px;
+  padding-bottom: 40px;
+  display: flex;
+}
+.Container_11_18187 {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.Container_11_18188 {
+  align-items: flex-start;
+  gap: var(--item-spacing-7_51, 7.51px);
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+.Component_2_11_18190 {
+  width: 40px;
+  height: 52.344px;
+}
+.Container_11_18193 {
+  width: 100%;
+  height: 112px;
+}
+.Participants_11_18194 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-28, 28px);
+  letter-spacing: var(--letter-spacing-0_22, 0.216px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 134.494px;
+  height: 28px;
+  display: inline-block;
+}
+.Component_18_11_18195 {
+  align-items: flex-start;
+  display: inline-flex;
+}
+.Age_18_11_18197 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-28, 28px);
+  letter-spacing: var(--letter-spacing-0_22, 0.216px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 79.122px;
+  height: 28px;
+  display: inline-block;
+}
+.AndOverCanBuildTheirOwnCreditHistory_11_18198 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-28, 28px);
+  letter-spacing: var(--letter-spacing-0_22, 0.216px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 201.28px;
+  height: 84px;
+  display: inline-block;
+}
+.Component_18_11_18199 {
+  align-items: flex-start;
+  display: inline-flex;
+}
+.Margin_11_18201 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 184.5px;
+  padding-bottom: 40px;
+  display: flex;
+}
+.Container_11_18202 {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.Container_11_18203 {
+  align-items: flex-start;
+  gap: var(--item-spacing-7_5, 7.5px);
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+.Component_2_11_18205 {
+  width: 36px;
+  height: 53px;
+}
+.Container_11_18208 {
+  width: 100%;
+  height: 84px;
+}
+.EveryoneGetsUpTo_3DailyCashBackOnTheirPurchases_11_18209 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-28, 28px);
+  letter-spacing: var(--letter-spacing-0_22, 0.216px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 219.22px;
+  height: 84px;
+  display: inline-block;
+}
+.Component_18_11_18210 {
+  align-items: flex-start;
+  display: inline-flex;
+}
+.Section_11_18212 {
+  align-items: center;
+  gap: var(--item-spacing-40, 40px);
+  background: var(--color-grey-96, #f5f5f7);
+  flex-direction: column;
+  width: 390px;
+  padding: 70px 0;
+  display: flex;
+}
+.Container_11_18213 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 341.25px;
+  display: flex;
+}
+.Heading_2_11_18214 {
+  max-width: var(--width-341_25, 341.25px);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.TwoKindsOfUsersTheRightFitForEveryone_11_18215 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-48, 48px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  letter-spacing: var(--letter-spacing--0_14, -0.144px);
+  line-height: 52px;
+  display: inline-block;
+}
+.Container_11_18216 {
+  max-width: var(--width-584, 584px);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 23px;
+  display: flex;
+}
+.Margin_11_18218 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 10px;
+  display: flex;
+}
+.Background_11_18219 {
+  background: var(--color-white-solid, #fff);
+  border-radius: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 50px 55px;
+  display: flex;
+}
+.Heading_3_11_18220 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.CoOwners_11_18221 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-28, 28px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-32, 32px);
+  display: inline-block;
+}
+.Margin_11_18222 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 7px 0 30px;
+  display: flex;
+}
+.Container_11_18223 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.ShareEqualBenefitsAndResponsibilitiesForTheAccount_11_18224 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-29, 29px);
+  display: inline-block;
+}
+.Container_11_18225 {
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.Margin_11_18226 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 10px;
+  display: flex;
+}
+.Container_11_18227 {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: center;
+  display: flex;
+}
+.FigureMargin_11_18228 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 87px;
+  height: 107px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.Figure_11_18229 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 87px;
+  height: 87px;
+}
+.CharleneAdult_11_18230 {
+  color: var(--www-apple-com-gray, #929292);
+  text-align: center;
+  font-family: var(--font-family-Font-1, "SF Pro Text");
+  font-size: var(--font-size-17, 17px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing--0_37, -0.374px);
+  display: inline-block;
+}
+.Container_11_18231 {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.FigureMargin_11_18232 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 87px;
+  height: 107px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.Figure_11_18233 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 87px;
+  height: 87px;
+}
+.EltonAdult_11_18234 {
+  color: var(--www-apple-com-gray, #929292);
+  text-align: center;
+  font-family: var(--font-family-Font-1, "SF Pro Text");
+  font-size: var(--font-size-17, 17px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing--0_37, -0.374px);
+  display: inline-block;
+}
+.Background_11_18235 {
+  background: var(--color-white-solid, #fff);
+  border-radius: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 50px 55px;
+  display: flex;
+}
+.Heading_3_11_18236 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.Participants_11_18237 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-28, 28px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-32, 32px);
+  display: inline-block;
+}
+.Margin_11_18238 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 7px 0 30px;
+  display: flex;
+}
+.Container_11_18239 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.Age_13AndOlderCanSpendWithinLimitsAndGetDailyCash_11_18240 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-29, 29px);
+  display: inline-block;
+}
+.Container_11_18241 {
+  align-items: flex-start;
+  width: 281px;
+  display: flex;
+}
+.Margin_11_18242 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 10px;
+  display: flex;
+}
+.Container_11_18243 {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: center;
+  display: flex;
+}
+.FigureMargin_11_18244 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 87px;
+  height: 107px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.Figure_11_18245 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 87px;
+  height: 87px;
+}
+.GinoAge_15_11_18246 {
+  color: var(--www-apple-com-gray, #929292);
+  text-align: center;
+  font-family: var(--font-family-Font-1, "SF Pro Text");
+  font-size: var(--font-size-17, 17px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing--0_37, -0.374px);
+  display: inline-block;
+}
+.Margin_11_18247 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 10px;
+  display: flex;
+}
+.Container_11_18248 {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-items: center;
+  display: flex;
+}
+.FigureMargin_11_18249 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 87px;
+  height: 107px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.Figure_11_18250 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 87px;
+  height: 87px;
+}
+.YishuangAdult_11_18251 {
+  color: var(--www-apple-com-gray, #929292);
+  text-align: center;
+  font-family: var(--font-family-Font-1, "SF Pro Text");
+  font-size: var(--font-size-17, 17px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing--0_37, -0.374px);
+  display: inline-block;
+}
+.Container_11_18252 {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.FigureMargin_11_18253 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 87px;
+  height: 107px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.Figure_11_18254 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 87px;
+  height: 87px;
+}
+.RacineAdult_11_18255 {
+  color: var(--www-apple-com-gray, #929292);
+  text-align: center;
+  font-family: var(--font-family-Font-1, "SF Pro Text");
+  font-size: var(--font-size-17, 17px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing--0_37, -0.374px);
+  display: inline-block;
+}
+.Section_11_18256 {
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  width: 390px;
+  height: 1794px;
+  display: flex;
+  position: relative;
+}
+.Image_11_18260 {
+  background: #d3d3d3 url(<path-to-image>) -205.335px 0/205.3% 100% no-repeat;
+  flex-shrink: 0;
+  width: 100%;
+  height: 780px;
+  overflow: hidden;
+}
+.Gradient_11_18261 {
+  background: linear-gradient(
+    0deg,
+    var(--color-white-0, #fff0) 0%,
+    var(--color-white-solid, #fff) 0%
+  );
+  width: 390px;
+  height: 1794px;
+  position: absolute;
+}
+.Section_11_18262 {
+  flex-shrink: 0;
+  width: 390px;
+  height: 4774px;
+  overflow: hidden;
+}
+.Container_11_18263 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 341.25px;
+  padding: 70px 21.34px 0 21.32px;
+  display: flex;
+}
+.Heading_2_11_18264 {
+  max-width: var(--width-341_25, 341.25px);
+  align-items: flex-start;
+  width: 298.59px;
+  display: flex;
+}
+.CoOwnersAreEqualPartners_11_18265 {
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-40, 40px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-44, 44px);
+  background: linear-gradient(
+    90deg,
+    var(--color-violet-72, #c17ff0) 0%,
+    var(--color-rose-66, #df73a5) 61%,
+    var(--color-orange-60, #f5a53b) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+.Container_11_18266 {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 298.59px;
+  padding-top: 50px;
+  display: flex;
+}
+.Container_11_18267 {
+  max-width: var(--width-298_59, 298.59px);
+  align-items: flex-start;
+  gap: var(--item-spacing--30, -30px);
+  flex-direction: column;
+  flex: 1 0 0;
+  width: 100%;
+  display: flex;
+}
+.Container_11_18270 {
+  width: 100%;
+  height: 744px;
+}
+.Container_11_18271 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 293.59px;
+  display: flex;
+}
+.ItSEasyToAddYourPartnerSpouseOrOtherAdultFromYourFamilySharingGroupAsACoOwnerEvenIfTheyDonTHaveTheirOwnAppleCardYet_11_18272 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  display: inline-block;
+}
+.Container_11_18274 {
+  max-width: var(--width-220, 220px);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 220px;
+  display: flex;
+  position: relative;
+}
+.Figure_11_18275 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  border-radius: 12px;
+  width: 198px;
+  height: 426px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.Figure_11_18276 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  width: 394px;
+  height: 554px;
+}
+.Container_11_18277 {
+  width: 100%;
+  height: 744px;
+}
+.Container_11_18278 {
+  flex-shrink: 0;
+  width: 293.59px;
+  height: 150px;
+}
+.AppleCardFamilyAllowsTwoPartnersToMergeCreditLines_11_18279 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 276.77px;
+  height: 50px;
+  display: inline-block;
+}
+.Component_19_11_18280 {
+  align-items: flex-start;
+  display: inline-flex;
+}
+.Text_11_13811 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: 12.6px;
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-15, 15px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  display: inline-block;
+}
+.ToFormASingleCoOwnedAccountManageThatAccountTogetherAndBuildCreditAsEquals_11_18282 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 286.38px;
+  height: 100px;
+  display: inline-block;
+}
+.Container_11_18283 {
+  max-width: var(--width-220, 220px);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 220px;
+  display: flex;
+  position: relative;
+}
+.Figure_11_18284 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  border-radius: 12px;
+  width: 198px;
+  height: 426px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.Figure_11_18285 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  width: 394px;
+  height: 554px;
+}
+.Container_11_18286 {
+  width: 100%;
+  height: 769px;
+}
+.Container_11_18287 {
+  flex-shrink: 0;
+  width: 293.59px;
+  height: 175px;
+}
+.BothCoOwnersCanViewAndManageTheAccountSeeEachMemberSActivityRouteTheirDailyCashToIndividualSavingsAccounts_11_18288 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 286.96px;
+  height: 125px;
+  display: inline-block;
+}
+.Component_19_11_18289 {
+  align-items: flex-start;
+  display: inline-flex;
+}
+.AndSet_11_18291 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 74.424px;
+  height: 25px;
+  display: inline-block;
+}
+.LimitsOnParticipantsSpending_11_18292 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 202.05px;
+  height: 50px;
+  display: inline-block;
+}
+.Component_19_11_18293 {
+  align-items: flex-start;
+  display: inline-flex;
+}
+.Container_11_18295 {
+  max-width: var(--width-220, 220px);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 220px;
+  display: flex;
+  position: relative;
+}
+.Figure_11_18296 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  border-radius: 12px;
+  width: 198px;
+  height: 426px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.Figure_11_18297 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  width: 394px;
+  height: 554px;
+}
+.Container_11_18298 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 341.25px;
+  padding: 0 21.34px 0 21.32px;
+  display: flex;
+}
+.Heading_2_11_18299 {
+  max-width: var(--width-341_25, 341.25px);
+  align-items: flex-start;
+  width: 298.59px;
+  display: flex;
+}
+.ParticipantsLearnHealthyFinancialHabits_11_18300 {
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-40, 40px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-44, 44px);
+  background: linear-gradient(
+    90deg,
+    var(--color-violet-72, #c17ff0) 0%,
+    var(--color-rose-66, #df73a5) 61%,
+    var(--color-orange-60, #f5a53b) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+.Container_11_18301 {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 298.59px;
+  padding-top: 50px;
+  display: flex;
+}
+.Container_11_18302 {
+  max-width: var(--width-298_59, 298.59px);
+  align-items: flex-start;
+  gap: var(--item-spacing--30, -30px);
+  flex-direction: column;
+  flex: 1 0 0;
+  width: 100%;
+  display: flex;
+}
+.Container_11_18303 {
+  width: 100%;
+  height: 769px;
+}
+.Container_11_18304 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 293.59px;
+  display: flex;
+}
+.AnyoneAge_13OrOlderInYourFamilySharingGroupCanBeAddedToYourCardAsAParticipantTheOwnerSCreditLimitOrCoOwnersCombinedCreditLimitCanBeExtendedToAllParticipants_11_18305 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  display: inline-block;
+}
+.Container_11_18306 {
+  max-width: var(--width-220, 220px);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 220px;
+  display: flex;
+  position: relative;
+}
+.Figure_11_18307 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  border-radius: 12px;
+  width: 198px;
+  height: 426px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.Figure_11_18308 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  width: 394px;
+  height: 554px;
+}
+.Container_11_18309 {
+  width: 100%;
+  height: 769px;
+}
+.Container_11_18310 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 293.59px;
+  display: flex;
+}
+.ToHelpParticipantsLearnToUseCreditResponsiblyCoOwnersCanSetSpendingLimitsAndReceiveRealTimeNotificationsParticipants_18AndOverCanEvenBuildTheirOwnCredit_11_18311 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  display: inline-block;
+}
+.Container_11_18312 {
+  max-width: var(--width-220, 220px);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 220px;
+  display: flex;
+  position: relative;
+}
+.Figure_11_18313 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  border-radius: 12px;
+  width: 198px;
+  height: 426px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.Figure_11_18314 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  width: 394px;
+  height: 554px;
+}
+.Container_11_18315 {
+  width: 100%;
+  height: 769px;
+}
+.Container_11_18316 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 293.59px;
+  display: flex;
+}
+.FamilyMembersCanUseTheirAppleCardAnywhereMastercardIsAcceptedAndUnlikeWithOtherCardsCanAutomaticallyReceiveDailyCashBackOnTheirOwnPurchases_11_18317 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-21, 21px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-25, 25px);
+  letter-spacing: var(--letter-spacing-0_23, 0.231px);
+  display: inline-block;
+}
+.Container_11_18318 {
+  max-width: var(--width-220, 220px);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 220px;
+  display: flex;
+  position: relative;
+}
+.Figure_11_18319 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  border-radius: 12px;
+  width: 198px;
+  height: 426px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.Figure_11_18320 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  width: 394px;
+  height: 554px;
+}
+.Section_11_18321 {
+  background: var(--color-grey-96, #f5f5f7);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 390px;
+  padding: 0 24.37px 0 24.38px;
+  display: flex;
+}
+.Container_11_18322 {
+  max-width: var(--width-341_25, 341.25px);
+  align-items: center;
+  gap: var(--item-spacing-40, 40px);
+  flex-direction: column;
+  width: 100%;
+  padding: 70px 0;
+  display: flex;
+}
+.Heading_2_11_18323 {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+.StartSharing_11_18324 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  text-align: center;
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-48, 48px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  letter-spacing: var(--letter-spacing--0_14, -0.144px);
+  max-height: 52.01px;
+  line-height: 52px;
+  display: inline-block;
+}
+.Container_11_18325 {
+  max-width: var(--width-280, 280px);
+  align-items: flex-start;
+  gap: var(--item-spacing-10, 10px);
+  flex-direction: column;
+  width: 280px;
+  display: flex;
+}
+.Component_5_11_18327 {
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 355px;
+  display: flex;
+  position: relative;
+}
+.OverlayShadow_11_13751 {
+  background: var(--color-white-02, #fff0);
+  border-radius: 12px;
+  width: 280px;
+  height: 355px;
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 4px 12px 40px 6px #00000017;
+}
+.Background_11_13752 {
+  background: var(--color-white-solid, #fff);
+  border-radius: 12px;
+  width: 280px;
+  height: 355px;
+  position: absolute;
+}
+.Heading_3HowToShareAppleCardWithACoOwner_11_13753 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-40, 40px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-44, 44px);
+  flex-direction: column;
+  justify-content: center;
+  width: 203.15px;
+  height: 223.5px;
+  display: inline-block;
+  position: absolute;
+  bottom: 63.5px;
+  left: 23px;
+}
+.LinkWatchTheFilmHowToShareYourAppleCardWithACoOwnerMaskGroup_11_13754 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.LinkWatchTheFilmHowToShareYourAppleCardWithACoOwnerMask_11_13755 {
+  background: radial-gradient(
+    70.71% 70.71% at 50% 50%,
+    var(--color-white-solid, #fff) 0%,
+    var(--color-black-solid, #000) 100%
+  );
+  height: 355px;
+}
+.Component_5_11_18333 {
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+}
+.OverlayShadow_11_13757 {
+  background: var(--color-white-02, #fff0);
+  border-radius: 12px;
+  width: 280px;
+  height: 355px;
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 4px 12px 40px 6px #00000017;
+}
+.Background_11_13758 {
+  background: var(--color-white-solid, #fff);
+  border-radius: 12px;
+  width: 280px;
+  height: 355px;
+  position: absolute;
+}
+.Heading_3HowToShareAppleCardWithAParticipant_11_13759 {
+  color: var(--www-apple-com-black, var(--color-black-solid, #000));
+  font-family: var(--font-family-Font-2, "SF Pro Display");
+  font-size: var(--font-size-40, 40px);
+  font-style: normal;
+  font-weight: var(--font-weight-600, 600);
+  line-height: var(--line-height-44, 44px);
+  flex-direction: column;
+  justify-content: center;
+  width: 203.15px;
+  height: 223.5px;
+  display: inline-block;
+  position: absolute;
+  bottom: 63.5px;
+  left: 23px;
+}
+.LinkWatchTheFilmHowToShareYourAppleCardWithAParticipantMaskGroup_11_13760 {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.LinkWatchTheFilmHowToShareYourAppleCardWithAParticipantMask_11_13761 {
+  background: radial-gradient(
+    70.71% 70.71% at 50% 50%,
+    var(--color-white-solid, #fff) 0%,
+    var(--color-black-solid, #000) 100%
+  );
+  height: 355px;
+}
+
+```
+
+---
+
+```src/components/assets/Vector.tsx
+import React from 'react';
+export default function Vector() {
+  return ;
+}
+```
+
+---
+
+```src/components/assets/Group.tsx
+import React from 'react';
+export default function Group() {
+  return <svg width="62" height="42" viewBox="0 0 62 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.4051 34.7816H46.5232C50.6861 34.7816 52.478 32.774 52.478 30.0546C52.478 24.1976 45.653 16.6382 34.9577 16.6382C24.2856 16.6382 17.4375 24.1976 17.4375 30.0546C17.4375 32.774 19.2422 34.7816 23.4051 34.7816Z" fill="white"/>
+<path d="M50.2609 41.2581C56.2681 41.2581 61.2487 36.275 61.2487 30.2575C61.2487 24.2275 56.3037 19.2598 50.2609 19.2598C44.2412 19.2598 39.2734 24.2378 39.2734 30.2575C39.2734 36.3029 44.2284 41.2581 50.2609 41.2581Z" fill="white"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/assets/Component_2.tsx
+import React from 'react';
+export default function Component_2() {
+  return ;
+}
+```
+
+---
+
+```src/components/Main.tsx
+import React from 'react';
+import styles from '../styles/Main.module.css';
+import Vector from './assets/Vector';
+import Group from './assets/Group';
+import Component_2 from './assets/Component_2';
+
+export default function Main() {
+  return (
+    <div className={styles.Main_11_18148} data-figma-node="11:18148">
+      <div className={styles.Section_11_18149} data-figma-node="11:18149">
+        <div className={styles.Container_11_18150} data-figma-node="11:18150">
+          <div className={styles.Container_11_18151} data-figma-node="11:18151">
+            <div className={styles.Heading_1Margin_11_18152} data-figma-node="11:18152"><span className={styles.Heading_1HealthyFinancesFamilyStyle_11_18153} data-figma-node="11:18153">Healthy finances.
+                Family style.</span></div>
+            <div className={styles.Margin_11_18154} data-figma-node="11:18154">
+              <div className={styles.Container_11_18155} data-figma-node="11:18155"><span className={styles.WithAppleCardFamily_11_18156} data-figma-node="11:18156">With Apple&#xA0;Card Family,</span>
+                <div className={styles.Component_17_11_18158} data-figma-node="11:18158"><span className={styles.Text_11_13802} data-figma-node="11:13802">1</span></div><span className={styles.YouCan_11_18160} data-figma-node="11:18160"> you can</span><span className={styles.ShareAppleCardWithACoOwner_11_18161} data-figma-node="11:18161">share Apple&#xA0;Card with a Co&#x2011;Owner</span><span className={styles.AndAddUpToFourParticipantsToOneEasyToManageAccount_11_18162} data-figma-node="11:18162">and add up to four Participants to
+                  one easy-to-manage&#xA0;account.</span>
+              </div>
+            </div>
+            <div className={styles.FigureMargin_11_18163} data-figma-node="11:18163">
+              <div className={styles.Figure_11_18164} data-figma-node="11:18164"></div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.Background_11_18165} data-figma-node="11:18165">
+          <div className={styles.Container_11_18166} data-figma-node="11:18166">
+            <div className={styles.Margin_11_18168} data-figma-node="11:18168">
+              <div className={styles.Container_11_18169} data-figma-node="11:18169">
+                <div className={styles.Container_11_18170} data-figma-node="11:18170">
+                  <div className={styles.Component_2_11_18171} data-figma-node="11:18171">
+                    <div className={styles.Vector_11_13642}>
+                      <Vector data-figma-node="11:13642" />
+                    </div>
+                    <div className={styles.Group_11_13643}>
+                      <Group data-figma-node="11:13643" />
+                    </div>
+                  </div>
+                  <div className={styles.Container_11_18179} data-figma-node="11:18179"><span className={styles.CoOwners_11_18180} data-figma-node="11:18180">Co&#x2011;Owners</span>
+                    <div className={styles.Component_18_11_18181} data-figma-node="11:18181"><span className={styles.Text_11_13806} data-figma-node="11:13806">2</span></div><span className={styles.ManageTheAccountTogetherAndBuildCreditAsEquals_11_18183} data-figma-node="11:18183">manage&#xA0;the account
+                      together and build
+                      credit as&#xA0;equals.</span>
+                    <div className={styles.Component_18_11_18184} data-figma-node="11:18184"><span className={styles.Text_11_13806} data-figma-node="11:13806">3</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.Margin_11_18186} data-figma-node="11:18186">
+              <div className={styles.Container_11_18187} data-figma-node="11:18187">
+                <div className={styles.Container_11_18188} data-figma-node="11:18188">
+                  <div className={styles.Component_2_11_18190}>
+                    <Component_2 data-figma-node="11:18190" />
+                  </div>
+                  <div className={styles.Container_11_18193} data-figma-node="11:18193"><span className={styles.Participants_11_18194} data-figma-node="11:18194">Participants</span>
+                    <div className={styles.Component_18_11_18195} data-figma-node="11:18195"><span className={styles.Text_11_13806} data-figma-node="11:13806">4</span></div><span className={styles.Age_18_11_18197} data-figma-node="11:18197"> age 18</span><span className={styles.AndOverCanBuildTheirOwnCreditHistory_11_18198} data-figma-node="11:18198">and over can build
+                      their own credit
+                      history.</span>
+                    <div className={styles.Component_18_11_18199} data-figma-node="11:18199"><span className={styles.Text_11_13806} data-figma-node="11:13806">5</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.Margin_11_18201} data-figma-node="11:18201">
+              <div className={styles.Container_11_18202} data-figma-node="11:18202">
+                <div className={styles.Container_11_18203} data-figma-node="11:18203">
+                  <div className={styles.Component_2_11_18205}>
+                    <Component_2 data-figma-node="11:18205" />
+                  </div>
+                  <div className={styles.Container_11_18208} data-figma-node="11:18208"><span className={styles.EveryoneGetsUpTo_3DailyCashBackOnTheirPurchases_11_18209} data-figma-node="11:18209">Everyone gets up to
+                      3% Daily&#xA0;Cash back
+                      on&#xA0;their purchases.</span>
+                    <div className={styles.Component_18_11_18210} data-figma-node="11:18210"><span className={styles.Text_11_13806} data-figma-node="11:13806">6</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.Section_11_18212} data-figma-node="11:18212">
+        <div className={styles.Container_11_18213} data-figma-node="11:18213">
+          <div className={styles.Heading_2_11_18214} data-figma-node="11:18214"><span className={styles.TwoKindsOfUsersTheRightFitForEveryone_11_18215} data-figma-node="11:18215">Two kinds
+              of users.
+              The&#xA0;right&#xA0;fit
+              for&#xA0;everyone.</span></div>
+        </div>
+        <div className={styles.Container_11_18216} data-figma-node="11:18216">
+          <div className={styles.Margin_11_18218} data-figma-node="11:18218">
+            <div className={styles.Background_11_18219} data-figma-node="11:18219">
+              <div className={styles.Heading_3_11_18220} data-figma-node="11:18220"><span className={styles.CoOwners_11_18221} data-figma-node="11:18221">Co&#x2011;Owners</span></div>
+              <div className={styles.Margin_11_18222} data-figma-node="11:18222">
+                <div className={styles.Container_11_18223} data-figma-node="11:18223"><span className={styles.ShareEqualBenefitsAndResponsibilitiesForTheAccount_11_18224} data-figma-node="11:18224">share equal benefits and
+                    responsibilities for
+                    the&#xA0;account.</span></div>
+              </div>
+              <div className={styles.Container_11_18225} data-figma-node="11:18225">
+                <div className={styles.Margin_11_18226} data-figma-node="11:18226">
+                  <div className={styles.Container_11_18227} data-figma-node="11:18227">
+                    <div className={styles.FigureMargin_11_18228} data-figma-node="11:18228">
+                      <div className={styles.Figure_11_18229} data-figma-node="11:18229"></div>
+                    </div><span className={styles.CharleneAdult_11_18230} data-figma-node="11:18230">Charlene
+                      Adult</span>
+                  </div>
+                </div>
+                <div className={styles.Container_11_18231} data-figma-node="11:18231">
+                  <div className={styles.FigureMargin_11_18232} data-figma-node="11:18232">
+                    <div className={styles.Figure_11_18233} data-figma-node="11:18233"></div>
+                  </div><span className={styles.EltonAdult_11_18234} data-figma-node="11:18234">Elton
+                    Adult</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.Background_11_18235} data-figma-node="11:18235">
+            <div className={styles.Heading_3_11_18236} data-figma-node="11:18236"><span className={styles.Participants_11_18237} data-figma-node="11:18237">Participants</span></div>
+            <div className={styles.Margin_11_18238} data-figma-node="11:18238">
+              <div className={styles.Container_11_18239} data-figma-node="11:18239"><span className={styles.Age_13AndOlderCanSpendWithinLimitsAndGetDailyCash_11_18240} data-figma-node="11:18240">age 13 and older can
+                  spend within limits and
+                  get Daily&#xA0;Cash.</span></div>
+            </div>
+            <div className={styles.Container_11_18241} data-figma-node="11:18241">
+              <div className={styles.Margin_11_18242} data-figma-node="11:18242">
+                <div className={styles.Container_11_18243} data-figma-node="11:18243">
+                  <div className={styles.FigureMargin_11_18244} data-figma-node="11:18244">
+                    <div className={styles.Figure_11_18245} data-figma-node="11:18245"></div>
+                  </div><span className={styles.GinoAge_15_11_18246} data-figma-node="11:18246">Gino
+                    Age 15</span>
+                </div>
+              </div>
+              <div className={styles.Margin_11_18247} data-figma-node="11:18247">
+                <div className={styles.Container_11_18248} data-figma-node="11:18248">
+                  <div className={styles.FigureMargin_11_18249} data-figma-node="11:18249">
+                    <div className={styles.Figure_11_18250} data-figma-node="11:18250"></div>
+                  </div><span className={styles.YishuangAdult_11_18251} data-figma-node="11:18251">Yishuang
+                    Adult</span>
+                </div>
+              </div>
+              <div className={styles.Container_11_18252} data-figma-node="11:18252">
+                <div className={styles.FigureMargin_11_18253} data-figma-node="11:18253">
+                  <div className={styles.Figure_11_18254} data-figma-node="11:18254"></div>
+                </div><span className={styles.RacineAdult_11_18255} data-figma-node="11:18255">Racine
+                  Adult</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.Section_11_18256} data-figma-node="11:18256">
+        <div className={styles.Image_11_18260} data-figma-node="11:18260"></div>
+        <div className={styles.Gradient_11_18261} data-figma-node="11:18261"></div>
+      </div>
+      <div className={styles.Section_11_18262} data-figma-node="11:18262">
+        <div className={styles.Container_11_18263} data-figma-node="11:18263">
+          <div className={styles.Heading_2_11_18264} data-figma-node="11:18264"><span className={styles.CoOwnersAreEqualPartners_11_18265} data-figma-node="11:18265">Co&#x2011;Owners are
+              equal partners.</span></div>
+          <div className={styles.Container_11_18266} data-figma-node="11:18266">
+            <div className={styles.Container_11_18267} data-figma-node="11:18267">
+              <div className={styles.Container_11_18270} data-figma-node="11:18270">
+                <div className={styles.Container_11_18271} data-figma-node="11:18271"><span className={styles.ItSEasyToAddYourPartnerSpouseOrOtherAdultFromYourFamilySharingGroupAsACoOwnerEvenIfTheyDonTHaveTheirOwnAppleCardYet_11_18272} data-figma-node="11:18272">It&#x2019;s easy to add your partner,
+                    spouse, or other adult from
+                    your Family Sharing group
+                    as&#xA0;a&#xA0;Co&#x2011;Owner &#x2014; even if they
+                    don&#x2019;t have their own
+                    Apple&#xA0;Card yet.</span></div>
+                <div className={styles.Container_11_18274} data-figma-node="11:18274">
+                  <div className={styles.Figure_11_18275} data-figma-node="11:18275"></div>
+                  <div className={styles.Figure_11_18276} data-figma-node="11:18276"></div>
+                </div>
+              </div>
+              <div className={styles.Container_11_18277} data-figma-node="11:18277">
+                <div className={styles.Container_11_18278} data-figma-node="11:18278"><span className={styles.AppleCardFamilyAllowsTwoPartnersToMergeCreditLines_11_18279} data-figma-node="11:18279">Apple&#xA0;Card&#xA0;Family allows two
+                    partners to merge credit lines</span>
+                  <div className={styles.Component_19_11_18280} data-figma-node="11:18280"><span className={styles.Text_11_13811} data-figma-node="11:13811">7</span></div><span className={styles.ToFormASingleCoOwnedAccountManageThatAccountTogetherAndBuildCreditAsEquals_11_18282} data-figma-node="11:18282">to form a single co-owned
+                    account, manage that account
+                    together, and build credit
+                    as&#xA0;equals.</span>
+                </div>
+                <div className={styles.Container_11_18283} data-figma-node="11:18283">
+                  <div className={styles.Figure_11_18284} data-figma-node="11:18284"></div>
+                  <div className={styles.Figure_11_18285} data-figma-node="11:18285"></div>
+                </div>
+              </div>
+              <div className={styles.Container_11_18286} data-figma-node="11:18286">
+                <div className={styles.Container_11_18287} data-figma-node="11:18287"><span className={styles.BothCoOwnersCanViewAndManageTheAccountSeeEachMemberSActivityRouteTheirDailyCashToIndividualSavingsAccounts_11_18288} data-figma-node="11:18288">Both Co&#x2011;Owners can view and
+                    manage the account, see each
+                    member&#x2019;s activity, route their
+                    Daily Cash to individual
+                    Savings accounts,</span>
+                  <div className={styles.Component_19_11_18289} data-figma-node="11:18289"><span className={styles.Text_11_13811} data-figma-node="11:13811">8</span></div><span className={styles.AndSet_11_18291} data-figma-node="11:18291"> and set</span><span className={styles.LimitsOnParticipantsSpending_11_18292} data-figma-node="11:18292">limits on Participants&#x2019;
+                    spending.</span>
+                  <div className={styles.Component_19_11_18293} data-figma-node="11:18293"><span className={styles.Text_11_13811} data-figma-node="11:13811">9</span></div>
+                </div>
+                <div className={styles.Container_11_18295} data-figma-node="11:18295">
+                  <div className={styles.Figure_11_18296} data-figma-node="11:18296"></div>
+                  <div className={styles.Figure_11_18297} data-figma-node="11:18297"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.Container_11_18298} data-figma-node="11:18298">
+          <div className={styles.Heading_2_11_18299} data-figma-node="11:18299"><span className={styles.ParticipantsLearnHealthyFinancialHabits_11_18300} data-figma-node="11:18300">Participants
+              learn healthy
+              financial habits.</span></div>
+          <div className={styles.Container_11_18301} data-figma-node="11:18301">
+            <div className={styles.Container_11_18302} data-figma-node="11:18302">
+              <div className={styles.Container_11_18303} data-figma-node="11:18303">
+                <div className={styles.Container_11_18304} data-figma-node="11:18304"><span className={styles.AnyoneAge_13OrOlderInYourFamilySharingGroupCanBeAddedToYourCardAsAParticipantTheOwnerSCreditLimitOrCoOwnersCombinedCreditLimitCanBeExtendedToAllParticipants_11_18305} data-figma-node="11:18305">Anyone age 13 or older in
+                    your&#xA0;Family Sharing group can
+                    be added to your card as a
+                    Participant. The Owner&#x2019;s credit
+                    limit or Co&#x2011;Owners&#x2019; combined
+                    credit limit can be extended to
+                    all&#xA0;Participants.</span></div>
+                <div className={styles.Container_11_18306} data-figma-node="11:18306">
+                  <div className={styles.Figure_11_18307} data-figma-node="11:18307"></div>
+                  <div className={styles.Figure_11_18308} data-figma-node="11:18308"></div>
+                </div>
+              </div>
+              <div className={styles.Container_11_18309} data-figma-node="11:18309">
+                <div className={styles.Container_11_18310} data-figma-node="11:18310"><span className={styles.ToHelpParticipantsLearnToUseCreditResponsiblyCoOwnersCanSetSpendingLimitsAndReceiveRealTimeNotificationsParticipants_18AndOverCanEvenBuildTheirOwnCredit_11_18311} data-figma-node="11:18311">To help Participants learn to
+                    use credit responsibly,
+                    Co&#x2011;Owners can set spending
+                    limits and receive real-time
+                    notifications. Participants 18
+                    and&#xA0;over can even&#xA0;build their
+                    own&#xA0;credit.</span></div>
+                <div className={styles.Container_11_18312} data-figma-node="11:18312">
+                  <div className={styles.Figure_11_18313} data-figma-node="11:18313"></div>
+                  <div className={styles.Figure_11_18314} data-figma-node="11:18314"></div>
+                </div>
+              </div>
+              <div className={styles.Container_11_18315} data-figma-node="11:18315">
+                <div className={styles.Container_11_18316} data-figma-node="11:18316"><span className={styles.FamilyMembersCanUseTheirAppleCardAnywhereMastercardIsAcceptedAndUnlikeWithOtherCardsCanAutomaticallyReceiveDailyCashBackOnTheirOwnPurchases_11_18317} data-figma-node="11:18317">Family members can use their
+                    Apple&#xA0;Card anywhere
+                    Mastercard is accepted and,
+                    unlike with other cards, can
+                    automatically receive
+                    Daily&#xA0;Cash back on their
+                    own&#xA0;purchases.</span></div>
+                <div className={styles.Container_11_18318} data-figma-node="11:18318">
+                  <div className={styles.Figure_11_18319} data-figma-node="11:18319"></div>
+                  <div className={styles.Figure_11_18320} data-figma-node="11:18320"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.Section_11_18321} data-figma-node="11:18321">
+        <div className={styles.Container_11_18322} data-figma-node="11:18322">
+          <div className={styles.Heading_2_11_18323} data-figma-node="11:18323"><span className={styles.StartSharing_11_18324} data-figma-node="11:18324">Start&#xA0;sharing.</span></div>
+          <div className={styles.Container_11_18325} data-figma-node="11:18325">
+            <div className={styles.Component_5_11_18327} data-figma-node="11:18327">
+              <div className={styles.OverlayShadow_11_13751} data-figma-node="11:13751"></div>
+              <div className={styles.Background_11_13752} data-figma-node="11:13752"></div><span className={styles.Heading_3HowToShareAppleCardWithACoOwner_11_13753} data-figma-node="11:13753">How to
+                share
+                Apple&#xA0;Card
+                with a
+                Co&#x2011;Owner</span>
+              <div className={styles.LinkWatchTheFilmHowToShareYourAppleCardWithACoOwnerMaskGroup_11_13754} data-figma-node="11:13754">
+                <div className={styles.LinkWatchTheFilmHowToShareYourAppleCardWithACoOwnerMask_11_13755} data-figma-node="11:13755"></div>
+              </div>
+            </div>
+            <div className={styles.Component_5_11_18333} data-figma-node="11:18333">
+              <div className={styles.OverlayShadow_11_13757} data-figma-node="11:13757"></div>
+              <div className={styles.Background_11_13758} data-figma-node="11:13758"></div><span className={styles.Heading_3HowToShareAppleCardWithAParticipant_11_13759} data-figma-node="11:13759">How to
+                share
+                Apple&#xA0;Card
+                with a
+                Participant</span>
+              <div className={styles.LinkWatchTheFilmHowToShareYourAppleCardWithAParticipantMaskGroup_11_13760} data-figma-node="11:13760">
+                <div className={styles.LinkWatchTheFilmHowToShareYourAppleCardWithAParticipantMask_11_13761} data-figma-node="11:13761"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
