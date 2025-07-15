@@ -1,4 +1,3 @@
-import styles from "../../styles/fue.module.css";
 import shinyFolliclePath from "@assets/shinyfollicle.png";
 import { motion } from "framer-motion";
 import { ProcessTimeline } from "@/pages/growth-factors2";
@@ -16,9 +15,11 @@ export default function FueHeader() {
             duration: 2,
             ease: "easeIn",
           }}
-          src={"/assets/fue/shinyfollicle.png"}
+          src={"/assets/fue/shinyfollicle.webp"}
           alt="Advanced Hair Follicle Technology"
           className="relative z-24 w-20 h-24 h-auto object-contain"
+          loading="eager"
+          fetchPriority="high"
         />
         <motion.div
           initial={{ x: 0, y: "100vh" }}
@@ -56,27 +57,9 @@ export default function FueHeader() {
             </div>
           </div>
           <div className=" gap-1 md:text-2xl flex flex-col items-center lg:text-3xl font-[600] px-5">
-            <p
-              className={
-                styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
-              }
-            >
-              Advanced FUE technology.
-            </p>
-            <p
-              className={
-                styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
-              }
-            >
-              Natural results.
-            </p>
-            <p
-              className={
-                styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
-              }
-            >
-              Restored confidence.
-            </p>
+            <p className="">Advanced FUE technology.</p>
+            <p className="">Natural results.</p>
+            <p className="">Restored confidence.</p>
             <button
               className="custom-button-fue w-full px-4 text-md  font-[700] text-xl py-2 rounded-full mt-5 text-white"
               style={{ color: "white" }}
