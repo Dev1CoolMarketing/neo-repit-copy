@@ -12,7 +12,7 @@ export default function FueHeader() {
           initial={{ x: 0, y: "40vh", scale: 3.0 }}
           animate={{ x: 0, y: 0, scale: 1.0 }}
           transition={{
-            delay: 0.5,
+            delay: 0.7,
             duration: 2,
             ease: "easeIn",
           }}
@@ -25,7 +25,7 @@ export default function FueHeader() {
           initial={{ x: 0, y: "100vh" }}
           animate={{ x: 0, y: 0, scale: 1.0 }}
           transition={{
-            delay: 0.5,
+            delay: 0.7,
             duration: 2,
             ease: "easeIn",
           }}

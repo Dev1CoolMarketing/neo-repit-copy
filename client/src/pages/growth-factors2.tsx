@@ -157,7 +157,7 @@ function HeroContent() {
         initial={{ x: 0, y: "40vh", scale: 5.0 }}
         animate={{ x: 0, y: 0, scale: 1.0 }}
         transition={{
-          delay: 0.5,
+          delay: 0.7,
           duration: 2,
           ease: "easeIn",
         }}
@@ -170,7 +170,7 @@ function HeroContent() {
         initial={{ x: 0, y: "100vh" }}
         animate={{ x: 0, y: 0, scale: 1.0 }}
         transition={{
-          delay: 0.5,
+          delay: 0.7,
           duration: 2,
           ease: "easeIn",
         }}

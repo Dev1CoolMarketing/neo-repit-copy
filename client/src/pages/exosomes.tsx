@@ -113,7 +113,9 @@ export const ExosomesDesign = (): JSX.Element => {
 
                 <div className={styles.heroImage}>
                   <div className={styles.heroImagePlaceholder}>
-                    🧬 Cellular Regeneration
+                    <div style={{ fontSize: '48px', marginBottom: '16px' }}>🧬</div>
+                    <div style={{ fontSize: '24px', fontWeight: '600' }}>Cellular Regeneration</div>
+                    <div style={{ fontSize: '18px', color: '#666', marginTop: '8px' }}>Advanced Exosome Therapy</div>
                   </div>
                 </div>
               </div>
@@ -219,9 +221,12 @@ export const ExosomesDesign = (): JSX.Element => {
                   <div className={styles.phoneContainer}>
                     <div className={styles.phoneScreen}>
                       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-                        <div style={{ fontSize: '32px' }}>📱</div>
-                        <div style={{ textAlign: 'center', fontSize: '16px', fontWeight: '600' }}>
+                        <div style={{ fontSize: '40px' }}>📱</div>
+                        <div style={{ textAlign: 'center', fontSize: '18px', fontWeight: '600', color: '#333' }}>
                           {item.phoneContent}
+                        </div>
+                        <div style={{ textAlign: 'center', fontSize: '14px', color: '#666', marginTop: '8px' }}>
+                          Dr. Neo Hair Restoration
                         </div>
                       </div>
                     </div>
