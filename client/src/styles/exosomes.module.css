@@ -13,8 +13,109 @@
   --color-black-72: #000000b8;
   --font-family-sf-pro-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-sf-pro-text: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+  --item-spacing-75: 75px;
+  --width-927_66: 927.664px;
 }
 
+/* Main Container Styles from Figma */
+.wLight_2_39096 {
+  background: var(--color-white-solid, #fff);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.Body_2_39097 {
+  background: var(--color-white-solid, #fff);
+  flex-flow: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  width: 768px;
+  height: 8684.93px;
+  display: flex;
+}
+
+.Main_2_39098 {
+  flex-flow: row;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  width: 768px;
+  height: 6598.05px;
+  display: flex;
+}
+
+.Section_2_39099 {
+  flex-direction: column;
+  align-items: center;
+  width: 768px;
+  height: 1603.27px;
+  padding: 75px 0 25px;
+  display: flex;
+  overflow: hidden;
+}
+
+.Container_2_39100 {
+  align-items: flex-start;
+  gap: var(--item-spacing-75, 75px);
+  flex-direction: column;
+  width: 692px;
+  display: flex;
+}
+
+.Container_2_39101 {
+  width: 100%;
+  height: 776px;
+}
+
+.Heading_1Margin_2_39102 {
+  max-width: var(--width-927_66, 927.664px);
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  display: flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Body_2_39097 {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+  }
+  
+  .Main_2_39098 {
+    width: 100%;
+    height: auto;
+  }
+  
+  .Section_2_39099 {
+    width: 100%;
+    height: auto;
+    padding: 50px 0 25px;
+  }
+  
+  .Container_2_39100 {
+    width: 100%;
+    gap: 50px;
+  }
+  
+  .Container_2_39101 {
+    height: auto;
+  }
+}
+
+/* Gradient text effects */
 .exosomes-hero-gradient {
   background: linear-gradient(
     90deg,
@@ -58,14 +159,4 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-@media (max-width: 768px) {
-  .exosomes-hero-title {
-    font-size: clamp(36px, 8vw, 48px);
-  }
-  
-  .exosomes-section-title {
-    font-size: clamp(40px, 6vw, 64px);
-  }
 }
