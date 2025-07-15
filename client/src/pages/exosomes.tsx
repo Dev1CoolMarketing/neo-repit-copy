@@ -1,282 +1,191 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import styles from '@/styles/exosomes.module.css';
 
-// Component for exosome icons
-function ExosomeIcon() {
-  return (
-    <svg width="51" height="75" viewBox="0 0 51 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="25.5" cy="37.5" r="20" fill="var(--color-gold)" stroke="var(--color-gold-dark)" strokeWidth="2"/>
-      <circle cx="25.5" cy="37.5" r="12" fill="none" stroke="var(--color-gold-dark)" strokeWidth="1" strokeDasharray="2,2"/>
-      <circle cx="25.5" cy="37.5" r="6" fill="var(--color-gold-dark)"/>
-    </svg>
-  );
-}
-
 export default function ExosomesPage() {
   return (
-    <div className={styles.wLight_2_39096}>
-      <div className={styles.Body_2_39097}>
-        <main className={styles.Main_2_39098}>
-          
-          {/* Hero Section */}
-          <section className={styles.Section_2_39099}>
-            <div className={styles.Container_2_39100}>
-              
-              {/* Main Content Container */}
-              <div className={styles.Container_2_39101}>
-                
-                {/* Heading Section */}
-                <div className={styles.Heading_1Margin_2_39102}>
-                  <div className="flex flex-col justify-center items-start w-full h-[352px] px-0 py-4">
-                    <div className="flex flex-col items-start w-full">
-                      <h1 className="text-[clamp(48px,8vw,80px)] font-semibold leading-[1.05] tracking-[-1.2px] bg-gradient-to-r from-[#A87B23] via-[#FAE151] to-[#625046] bg-clip-text text-transparent">
-                        Revolutionary Exosomes
-                        Treatment for Enhanced
-                        Healing & Regeneration
-                      </h1>
-                    </div>
-                  </div>
-                  
-                  {/* Subtitle */}
-                  <div className="flex flex-col justify-center items-start w-full h-[76px] px-0 py-5">
-                    <div className="w-full">
-                      <p className="text-black text-2xl font-semibold leading-7 text-left w-full max-w-[381px]">
-                        Harness the power of cellular regeneration with our advanced exosomes therapy
-                      </p>
-                      <div className="inline-flex items-start">
-                        <span className="text-black text-xs font-semibold leading-4 tracking-[-0.36px]">*</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Hero Image */}
-                  <div className="flex flex-col items-start w-full h-[348px] px-0 py-[62px]">
-                    <div 
-                      className="w-full h-[286px] bg-center bg-cover bg-no-repeat rounded-lg"
-                      style={{
-                        backgroundImage: 'linear-gradient(rgba(168, 123, 35, 0.1), rgba(168, 123, 35, 0.1)), url(/assets/MICRONEEDLING PEN 3D MODEL 1.png)',
-                        backgroundColor: '#f5f5f7'
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Features Grid */}
-              <div className="w-full h-[652px]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                  
-                  {/* Feature 1 */}
-                  <div className="flex flex-col justify-center items-start w-full h-[308px] p-6 border-none shadow-sm bg-white rounded-lg">
-                    <div className="flex flex-col items-start gap-[30px] w-full">
-                      <div className="w-full h-1 bg-[#f2f2f2]"></div>
-                      <div className="flex flex-col items-start gap-4 w-full">
-                        <ExosomeIcon />
-                        <div className="flex flex-col items-start w-full">
-                          <h3 className="text-black text-[32px] font-semibold leading-9 tracking-[0.128px]">
-                            Stem Cell Derived Exosomes
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Feature 2 */}
-                  <div className="flex flex-col justify-center items-start w-full h-[308px] p-6 border-none shadow-sm bg-white rounded-lg">
-                    <div className="flex flex-col items-start gap-[30px] w-full">
-                      <div className="w-full h-1 bg-[#f2f2f2]"></div>
-                      <div className="flex flex-col items-start gap-4 w-full">
-                        <ExosomeIcon />
-                        <div className="flex flex-col items-start w-full">
-                          <h3 className="text-black text-[32px] font-semibold leading-9 tracking-[0.128px]">
-                            Accelerated Hair Growth
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Feature 3 */}
-                  <div className="flex flex-col justify-center items-start w-full h-[343px] p-6 border-none shadow-sm bg-white rounded-lg">
-                    <div className="flex flex-col items-start gap-[30px] w-full">
-                      <div className="w-full h-1 bg-[#f2f2f2]"></div>
-                      <div className="flex flex-col items-start gap-4 w-full">
-                        <ExosomeIcon />
-                        <div className="w-full h-[144px]">
-                          <h3 className="text-black text-[32px] font-semibold leading-9 tracking-[0.128px] flex flex-col justify-center w-full h-full">
-                            Enhanced Follicle Health & Vitality
-                          </h3>
-                          <div className="inline-flex items-start">
-                            <span className="text-black text-xs font-semibold leading-4 tracking-[-0.12px]">**</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Feature 4 */}
-                  <div className="flex flex-col justify-center items-start w-full h-[343px] p-6 border-none shadow-sm bg-white rounded-lg">
-                    <div className="flex flex-col items-start gap-[30px] w-full">
-                      <div className="w-full h-1 bg-[#f2f2f2]"></div>
-                      <div className="flex flex-col items-start gap-4 w-full">
-                        <ExosomeIcon />
-                        <div className="flex flex-col items-start w-full">
-                          <h3 className="text-black text-[32px] font-semibold leading-9 tracking-[0.128px]">
-                            Minimally Invasive Procedure
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Mobile First */}
+      <section className="relative h-screen flex flex-col">
+        {/* Background with gold gradient and white overlay */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            background: 'linear-gradient(135deg, #D4B76A 0%, #FAE151 50%, #D4B76A 100%)'
+          }}
+        />
+
+        {/* White geometric overlay */}
+        <div 
+          className="absolute inset-0 z-10"
+          style={{
+            background: `
+              polygon(0 0, 100% 0, 100% 60%, 75% 80%, 0 100%),
+              linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%)
+            `,
+            clipPath: 'polygon(0 0, 100% 0, 100% 60%, 75% 80%, 0 100%)'
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative z-20 flex-1 flex flex-col justify-center px-6 pt-20">
+          <div className="max-w-sm mx-auto text-left">
+            <h1 className="text-5xl font-bold leading-tight mb-6">
+              <span className="block text-black">Transform Your</span>
+              <span className="block text-black">Hair with</span>
+              <span className="block text-black">Exosomes</span>
+            </h1>
+
+            <div className="mt-auto mb-12">
+              <Button 
+                className="bg-black text-white rounded-full px-6 py-3 text-sm font-medium hover:bg-gray-800 transition-colors"
+              >
+                Book Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom text overlay */}
+        <div className="absolute bottom-8 left-6 right-6 z-30">
+          <p className="text-black text-base font-medium">
+            Schedule your personalized consultation and discover the future of hair restoration
+          </p>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-sm mx-auto space-y-8">
+
+          {/* Feature 1 */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div className="w-full h-1 bg-gray-100 mb-6"></div>
+            <div className="w-12 h-12 bg-gradient-to-r from-[#A87B23] to-[#FAE151] rounded-full mb-4 flex items-center justify-center">
+              <div className="w-6 h-6 bg-white rounded-full"></div>
+            </div>
+            <h3 className="text-2xl font-semibold text-black mb-2">
+              Stem Cell Derived Exosomes
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Advanced cellular regeneration technology
+            </p>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div className="w-full h-1 bg-gray-100 mb-6"></div>
+            <div className="w-12 h-12 bg-gradient-to-r from-[#A87B23] to-[#FAE151] rounded-full mb-4 flex items-center justify-center">
+              <div className="w-6 h-6 bg-white rounded-full"></div>
+            </div>
+            <h3 className="text-2xl font-semibold text-black mb-2">
+              Accelerated Hair Growth
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Promotes natural follicle regeneration
+            </p>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div className="w-full h-1 bg-gray-100 mb-6"></div>
+            <div className="w-12 h-12 bg-gradient-to-r from-[#A87B23] to-[#FAE151] rounded-full mb-4 flex items-center justify-center">
+              <div className="w-6 h-6 bg-white rounded-full"></div>
+            </div>
+            <h3 className="text-2xl font-semibold text-black mb-2">
+              Enhanced Follicle Health & Vitality
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Comprehensive scalp rejuvenation
+            </p>
+          </div>
+
+          {/* Feature 4 */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div className="w-full h-1 bg-gray-100 mb-6"></div>
+            <div className="w-12 h-12 bg-gradient-to-r from-[#A87B23] to-[#FAE151] rounded-full mb-4 flex items-center justify-center">
+              <div className="w-6 h-6 bg-white rounded-full"></div>
+            </div>
+            <h3 className="text-2xl font-semibold text-black mb-2">
+              Minimally Invasive Procedure
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Quick recovery with maximum results
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section 
+        className="py-20 px-6 text-center"
+        style={{
+          background: 'linear-gradient(135deg, #A87B23 0%, #FAE151 50%, #625046 100%)'
+        }}
+      >
+        <div className="max-w-sm mx-auto">
+          <h2 className="text-4xl font-bold text-black mb-8 leading-tight">
+            Transform Your Hair with Exosomes
+          </h2>
+
+          <Button className="bg-white text-black rounded-full px-8 py-4 text-base font-medium hover:bg-gray-100 transition-colors mb-8">
+            Book Consultation
+          </Button>
+
+          <div className="w-16 h-16 bg-white rounded-full mx-auto mb-6 flex items-center justify-center">
+            <span className="text-black font-bold text-xl">N</span>
+          </div>
+
+          <p className="text-black text-base font-medium">
+            Schedule your personalized consultation and discover the future of hair restoration
+          </p>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-sm mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#A87B23] via-[#FAE151] to-[#625046] bg-clip-text text-transparent">
+            How Does Exosomes Treatment Work?
+          </h2>
+
+          <div className="space-y-12">
+            <div className="bg-white rounded-2xl p-6 shadow-sm">
+              <div className="w-full h-48 bg-gray-200 rounded-lg mb-6"></div>
+              <h3 className="text-xl font-semibold text-black mb-4">
+                Exosomes are extracted from stem cells and prepared for treatment
+              </h3>
+              <p className="text-gray-600 text-sm mb-6">
+                Our advanced laboratory techniques ensure the highest quality exosomes for optimal therapeutic results.
+              </p>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-gray-200 rounded-full flex-shrink-0"></div>
+                <p className="text-black text-sm font-medium">
+                  Administered via precise injection into treatment areas
+                </p>
               </div>
             </div>
-          </section>
-          
-          {/* CTA Section */}
-          <section className="relative flex flex-col items-start w-full h-[1536px]">
-            <div 
-              className="flex justify-center items-center w-full h-[1536px] px-0 py-[520px]"
-              style={{
-                background: 'linear-gradient(135deg, #A87B23 0%, #FAE151 50%, #625046 100%)'
-              }}
-            >
-              <div className="w-[692px] h-[570px]">
-                <div className="flex flex-wrap justify-center items-start w-[692px]">
-                  <div className="flex flex-col items-start max-w-[576px] w-[576px]">
-                    <div className="flex flex-col items-center w-full">
-                      <h2 className="text-black text-center text-[72px] font-semibold leading-[76px] tracking-[-0.864px]">
-                        Transform Your Hair with Exosomes
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-wrap justify-center items-start w-[692px] mt-8">
-                  <Button className="min-w-[62px] bg-white border-0 rounded-full flex flex-col items-center px-4 py-2 hover:bg-gray-50">
-                    <span className="text-black text-center text-sm font-normal leading-[18px] tracking-[-0.224px]">
-                      Book Consultation
-                    </span>
-                  </Button>
-                </div>
-                <div 
-                  className="w-[78px] h-[78px] bg-center bg-cover bg-no-repeat rounded-full mx-auto mt-8"
-                  style={{
-                    backgroundImage: 'url(/assets/NEO LOGO WHITE.png)',
-                    backgroundColor: '#d3d3d3'
-                  }}
-                />
-                <div className="flex flex-wrap justify-center items-start w-[692px] min-h-[84px] mt-6">
-                  <div className="flex flex-col items-start max-w-[519px] w-[519px]">
-                    <div className="w-full h-[56px]">
-                      <h3 className="text-black text-center text-2xl font-semibold leading-7 tracking-[0.216px] flex flex-col justify-center w-full h-7">
-                        Schedule your personalized consultation
-                      </h3>
-                      <p className="text-black text-center text-2xl font-semibold leading-7 tracking-[0.216px] flex flex-col justify-center w-full h-7">
-                        and discover the future of hair restoration
-                      </p>
-                      <div className="justify-center items-start inline-flex">
-                        <span className="text-black text-center text-[14.4px] font-semibold leading-[16.8px] tracking-[0.216px]">
-                          ***
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          {/* How It Works Section */}
-          <section className="bg-[#f5f5f7] flex flex-col items-center w-full">
-            <div className="flex flex-col items-center w-[692px] px-0 py-[100px]">
-              <div className="flex flex-col items-center max-w-[576px] w-[576px]">
-                <h2 className="text-center text-[64px] font-semibold leading-[68px] tracking-[-0.576px] bg-gradient-to-r from-[#A87B23] via-[#FAE151] to-[#625046] bg-clip-text text-transparent">
-                  How Does Exosomes Treatment Work?
-                </h2>
-              </div>
-              
-              {/* Process Steps */}
-              <div className="flex flex-wrap justify-start items-start gap-0 w-full min-h-[2593px] pt-[75px]">
-                <div className="flex flex-col items-start w-[288px] max-w-[320px] h-[646px]">
-                  <div className="relative flex flex-col items-start w-[460px]">
-                    {/* Process image placeholder */}
-                    <div className="bg-[#d3d3d3] rounded-lg w-[460px] h-[646px] bg-center bg-cover bg-no-repeat" />
-                  </div>
-                </div>
-                
-                <div className="flex flex-col justify-center items-start max-w-[403px] w-[403px]">
-                  <div className="flex flex-col items-start max-w-[346px] w-full px-0 py-8">
-                    <div className="flex flex-col justify-center items-start gap-4 w-full">
-                      <div className="flex flex-col items-start w-[346px]">
-                        <h3 className="text-black text-[40px] font-semibold leading-[44px]">
-                          Exosomes are extracted from stem cells and prepared for treatment
-                        </h3>
-                      </div>
-                      <div className="flex justify-start items-start gap-0 w-[341px] h-[100px]">
-                        <p className="text-black text-[21px] font-semibold leading-[25px] flex flex-col justify-center w-[315px] h-[100px]">
-                          Our advanced laboratory techniques ensure the highest quality exosomes for optimal therapeutic results.
-                        </p>
-                        <div className="inline-flex items-start">
-                          <span className="text-black text-[12.6px] font-semibold leading-[15px]">†</span>
-                        </div>
-                      </div>
-                      
-                      {/* Treatment Steps */}
-                      <div className="flex items-center">
-                        <div className="flex flex-col items-start w-[56px] h-[41px] pr-[15px]">
-                          <div className="bg-[#d3d3d3] w-[41px] h-[41px] bg-center bg-cover bg-no-repeat rounded-full" />
-                        </div>
-                        <div className="flex flex-col items-start pr-10">
-                          <div className="relative flex flex-col items-start pr-5">
-                            <p className="text-black tracking-[-0.51px] text-[17px] font-semibold leading-[22px]">
-                              Administered via precise injection into treatment areas
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          {/* Footer Disclaimers */}
-          <section className="min-w-[320px] bg-[#f5f5f7] flex flex-col items-start w-full overflow-hidden">
-            <div className="max-w-[1012px] w-full">
-              <div className="border-b border-[#00000029] flex flex-col items-start w-full px-0 py-4">
-                <div className="flex flex-col items-start w-full pb-2">
-                  <span className="text-[#0000008f] text-xs font-normal leading-4 tracking-[-0.12px]">
-                    *** Individual results may vary. Consultation required to determine treatment suitability.
-                  </span>
-                </div>
-                
-                <div className="flex flex-col items-start w-full px-4">
-                  <div className="w-full space-y-4">
-                    <p className="text-[#0000008f] text-xs font-normal leading-4 tracking-[-0.12px] w-full">
-                      * Exosomes therapy is an innovative regenerative treatment that uses naturally occurring cellular messengers to promote healing and tissue regeneration. 
-                      This treatment is designed to enhance hair follicle health and stimulate natural growth processes. Results may vary based on individual factors including age, 
-                      health status, and extent of hair loss. Treatment protocols are customized for each patient following comprehensive evaluation.
-                    </p>
-                    
-                    <p className="text-[#0000008f] text-xs font-normal leading-4 tracking-[-0.12px] w-full">
-                      ** Clinical studies have shown promising results for exosomes in promoting hair growth and follicle regeneration. However, individual outcomes may differ. 
-                      Multiple treatment sessions may be required for optimal results. Our medical team will provide detailed information about expected outcomes during your consultation.
-                    </p>
-                    
-                    <p className="text-[#0000008f] text-xs font-normal leading-4 tracking-[-0.12px] w-full">
-                      † All exosomes used in treatment are sourced from FDA-compliant laboratories and meet stringent quality standards. Treatment is performed in a clinical setting 
-                      by licensed medical professionals. Potential side effects and contraindications will be discussed during consultation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Disclaimers */}
+      <section className="py-8 px-6 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-sm mx-auto">
+          <div className="space-y-4 text-xs text-gray-500">
+            <p>
+              * Exosomes therapy is an innovative regenerative treatment that uses naturally occurring cellular messengers to promote healing and tissue regeneration.
+            </p>
+            <p>
+              ** Individual results may vary. Consultation required to determine treatment suitability.
+            </p>
+            <p>
+              † All exosomes used in treatment are sourced from FDA-compliant laboratories and meet stringent quality standards.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
