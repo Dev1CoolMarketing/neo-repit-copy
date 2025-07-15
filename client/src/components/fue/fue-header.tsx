@@ -1,22 +1,91 @@
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import styles from "../../styles/fue.module.css";
+import shinyFolliclePath from "@assets/shinyfollicle.png";
+import { motion } from "framer-motion";
+import { ProcessTimeline } from "@/pages/growth-factors2";
+import HeroAnimateWrapper from "../ui/hero-animate-wrapper";
 
 export default function FueHeader() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f5f5f7] to-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#A87B23] via-[#FAE151] to-[#625046] bg-clip-text text-transparent">
-            FUE Hair Transplant
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Advanced follicular unit extraction for natural-looking results
-          </p>
-          <Button className="bg-gradient-to-r from-[#A87B23] to-[#FAE151] text-black font-semibold px-8 py-4 rounded-full text-lg hover:opacity-90 transition-opacity">
-            Book Consultation
-          </Button>
-        </div>
+    <section className="w-full flex min-h-screen flex-col justify-center items-center  md:mt-20 ">
+      <div className="flex flex-col justify-center items-center">
+        <motion.img
+          initial={{ x: 0, y: "40vh", scale: 3.0 }}
+          animate={{ x: 0, y: 0, scale: 1.0 }}
+          transition={{
+            delay: 0.5,
+            duration: 2,
+            ease: "easeIn",
+          }}
+          src={"/assets/fue/shinyfollicle.png?format=webp;avif;png&quality=70"}
+          alt="Advanced Hair Follicle Technology"
+          className="relative z-24 w-20 h-24 h-auto object-contain"
+          loading="eager"
+        />
+        <motion.div
+          initial={{ x: 0, y: "100vh" }}
+          animate={{ x: 0, y: 0, scale: 1.0 }}
+          transition={{
+            delay: 0.5,
+            duration: 2,
+            ease: "easeIn",
+          }}
+          style={{
+            willChange: "transform, opacity",
+            backfaceVisibility: "hidden",
+            transform: "translateZ(0)", // force GPU layer
+          }}
+          className="flex flex-col jusitify-center items-center gap-5"
+        >
+          <div className="flex w-full flex-col items-center justify-center gap-5 px-5  ">
+            <div className="flex flex-col items-center w-full">
+              <motion.h1
+                className="text-6xl md:text-8xl lg:text-9xl text-center font-[700] tracking-tight text-black leading-[0.85]"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.3,
+                  duration: 1.5,
+                  ease: "easeOut",
+                }}
+              >
+                FUE
+                <p className="text-xl text-[#FC8310] font-[600] tracking-wide font-bold text-center bg-gradient-to-r from-[#FC8310] to-[#c8b68f] bg-clip-text text-transparent">
+                  HAIR TRANSPLANT
+                  {/* Subtle glow effect for growth factors */}
+                </p>
+              </motion.h1>
+            </div>
+          </div>
+          <div className=" gap-1 md:text-2xl flex flex-col items-center lg:text-3xl font-[600] px-5">
+            <p
+              className={
+                styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+              }
+            >
+              Advanced FUE technology.
+            </p>
+            <p
+              className={
+                styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+              }
+            >
+              Natural results.
+            </p>
+            <p
+              className={
+                styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
+              }
+            >
+              Restored confidence.
+            </p>
+            <button
+              className="custom-button-fue w-full px-4 text-md  font-[700] text-xl py-2 rounded-full mt-5 text-white"
+              style={{ color: "white" }}
+            >
+              Book Consultation
+            </button>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

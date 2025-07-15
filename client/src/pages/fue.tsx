@@ -30,7 +30,7 @@ export default function Fue() {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      {/* <main className="flex1">
+       <main className="flex1">
         <FueHeader />
         <FueReasons />
         <FueHowItWorks />
@@ -39,11 +39,8 @@ export default function Fue() {
         <TestimonialsSectionPremium />
         <FueResults />
 
-        <FueExpertConsultations />
-        <FuePersonalized />
-        <FueAllDevices />
-        <FueCompareOurPlans />
-      </main> */}
+
+      </main> 
       <SiteFooter />
     </div>
 

@@ -1,59 +1,56 @@
 import React from "react";
-import styles from "../styles/ExosomesDesign.module.css";
-import FueNavBar from "@/components/fue/fue-nav-bar";
-import SiteFooter from "@/components/site-footer";
-import { ArrowUpRight } from "lucide-react";
+import styles from "../styles/FigmaDesign.module.css";
 
-export const ExosomesDesign = (): JSX.Element => {
+export const FigmaDesign = (): JSX.Element => {
   // Data for the features section
   const features = [
     {
       id: 1,
-      title: "With Exosome Therapy,",
-      description: "you can harness advanced cellular communication to restore hair follicle vitality and promote natural regrowth.",
-      icon: "🧬",
+      title: "With Apple Card Family,",
+      description: "you can share Apple Card with a Co‑Owner and add up to four Participants to one easy-to-manage account.",
+      icon: "💳",
       hasSuper: true
     },
     {
       id: 2,
-      title: "Cellular Activators",
-      description: "contain powerful growth factors and proteins that activate dormant hair follicle stem cells.",
-      icon: "⚡",
+      title: "Co‑Owners",
+      description: "manage the account together and build credit as equals.",
+      icon: "👥",
       hasSuper: true
     },
     {
       id: 3,
-      title: "Anti-Inflammatory Properties",
-      description: "reduce scalp inflammation and create an optimal environment for hair follicle health.",
-      icon: "🛡️",
+      title: "Participants age 18",
+      description: "and over can build their own credit history.",
+      icon: "👤",
       hasSuper: true
     },
     {
       id: 4,
-      title: "Everyone experiences",
-      description: "enhanced follicle function, improved blood flow, and natural hair cycle renewal.",
-      icon: "✨",
+      title: "Everyone gets up to",
+      description: "3% Daily Cash back on their purchases.",
+      icon: "💰",
       hasSuper: true
     }
   ];
 
-  // Data for treatment types
-  const treatmentTypes = [
+  // Data for user types
+  const userTypes = [
     {
-      title: "Primary Treatment",
-      description: "receive targeted exosome therapy with comprehensive cellular regeneration.",
+      title: "Co‑Owners",
+      description: "share equal benefits and responsibilities for the account.",
       users: [
-        { name: "Dr. Thompson", type: "Specialist", avatar: "👨‍⚕️" },
-        { name: "Sarah Chen", type: "Patient", avatar: "👩‍💼" }
+        { name: "Charlene", type: "Adult", avatar: "👩‍💼" },
+        { name: "Elton", type: "Adult", avatar: "👨‍💼" }
       ]
     },
     {
-      title: "Maintenance Sessions",
-      description: "ongoing treatments to sustain cellular activity and optimize results.",
+      title: "Participants",
+      description: "age 13 and older can spend within limits and get Daily Cash.",
       users: [
-        { name: "Michael", type: "6 months", avatar: "👨‍💼" },
-        { name: "Jennifer", type: "1 year", avatar: "👩‍🦰" },
-        { name: "David", type: "2 years", avatar: "👨‍🦲" }
+        { name: "Gino", type: "Age 15", avatar: "👦" },
+        { name: "Yishuang", type: "Adult", avatar: "👩" },
+        { name: "Racine", type: "Adult", avatar: "👨" }
       ]
     }
   ];
@@ -61,26 +58,25 @@ export const ExosomesDesign = (): JSX.Element => {
   // Data for details section
   const detailItems = [
     {
-      text: "It's easy to begin your exosome therapy journey with a comprehensive consultation — even if you haven't tried cellular regeneration treatments before.",
-      phoneContent: "Consultation"
+      text: "It's easy to add your partner, spouse, or other adult from your Family Sharing group as a Co‑Owner — even if they don't have their own Apple Card yet.",
+      phoneContent: "Setup Screen"
     },
     {
-      text: "Exosome therapy delivers concentrated growth factors and signaling molecules directly to hair follicles, creating an optimal environment for natural regeneration.",
-      phoneContent: "Treatment Process",
+      text: "Apple Card Family allows two partners to merge credit lines to form a single co-owned account, manage that account together, and build credit as equals.",
+      phoneContent: "Credit Lines",
       hasSuper: true,
-      superNumber: "1"
+      superNumber: "7"
     },
     {
-      text: "Our specialists can monitor your progress, adjust treatment protocols, and ensure optimal cellular communication for sustained hair follicle health.",
-      phoneContent: "Progress Tracking",
+      text: "Both Co‑Owners can view and manage the account, see each member's activity, route their Daily Cash to individual Savings accounts, and set limits on Participants' spending.",
+      phoneContent: "Management",
       hasSuper: true,
-      superNumbers: ["2", "3"]
+      superNumbers: ["8", "9"]
     }
   ];
 
   return (
     <div className={styles.wLight}>
-      <FueNavBar />
       <div className={styles.body}>
         <main className={styles.main}>
           {/* Hero Section */}
@@ -89,31 +85,31 @@ export const ExosomesDesign = (): JSX.Element => {
               <div className={styles.heroContent}>
                 <div className={styles.headingMargin}>
                   <h1 className={styles.mainHeading}>
-                    Cellular regeneration.
+                    Healthy finances.
                     <br />
-                    Scientific precision.
+                    Family style.
                   </h1>
                 </div>
 
                 <div className={styles.subHeading}>
                   <p className={styles.subHeadingText}>
-                    <span>With Exosome Therapy,</span>
+                    <span>With Apple Card Family,</span>
                     <sup className={styles.superscript}>1</sup>
                     <span> you can</span>
                   </p>
                   <p className={styles.subHeadingText}>
-                    harness advanced cellular communication
+                    share Apple Card with a Co‑Owner
                   </p>
                   <p className={styles.subHeadingText}>
-                    to restore hair follicle vitality and
+                    and add up to four Participants to
                     <br />
-                    promote natural regrowth.
+                    one easy-to-manage account.
                   </p>
                 </div>
 
                 <div className={styles.heroImage}>
                   <div className={styles.heroImagePlaceholder}>
-                    🧬 Cellular Regeneration
+                    🏠 Family
                   </div>
                 </div>
               </div>
@@ -147,13 +143,13 @@ export const ExosomesDesign = (): JSX.Element => {
             </div>
           </section>
 
-          {/* Treatment Types Section */}
+          {/* User Types Section */}
           <section className={styles.userTypesSection}>
             <div className={styles.container}>
               <h2 className={styles.userTypesTitle}>
-                Two treatment
+                Two kinds
                 <br />
-                approaches.
+                of users.
                 <br />
                 The right fit
                 <br />
@@ -162,7 +158,7 @@ export const ExosomesDesign = (): JSX.Element => {
             </div>
 
             <div className={styles.userTypesContainer}>
-              {treatmentTypes.map((type, index) => (
+              {userTypes.map((type, index) => (
                 <div key={index} className={styles.userTypeCard}>
                   <h3 className={styles.userTypeTitle}>
                     {type.title}
@@ -196,9 +192,9 @@ export const ExosomesDesign = (): JSX.Element => {
           <section className={styles.detailsSection}>
             <div className={styles.detailsContainer}>
               <h2 className={styles.detailsTitle}>
-                Specialists are
+                Co‑Owners are
                 <br />
-                your partners.
+                equal partners.
               </h2>
 
               {detailItems.map((item, index) => (
@@ -218,12 +214,7 @@ export const ExosomesDesign = (): JSX.Element => {
 
                   <div className={styles.phoneContainer}>
                     <div className={styles.phoneScreen}>
-                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-                        <div style={{ fontSize: '32px' }}>📱</div>
-                        <div style={{ textAlign: 'center', fontSize: '16px', fontWeight: '600' }}>
-                          {item.phoneContent}
-                        </div>
-                      </div>
+                      📱 {item.phoneContent}
                     </div>
                     <div className={styles.phoneDevice}></div>
                   </div>
@@ -231,32 +222,8 @@ export const ExosomesDesign = (): JSX.Element => {
               ))}
             </div>
           </section>
-
-          {/* CTA Section */}
-          <section className={styles.ctaSection}>
-            <div className={styles.container}>
-              <h2 className={styles.ctaTitle}>
-                Start your cellular
-                <br />
-                renewal journey.
-              </h2>
-              
-              <div className={styles.ctaButtons}>
-                <button className={styles.ctaButton}>
-                  Schedule Consultation
-                  <ArrowUpRight size={20} />
-                </button>
-                <button className={styles.ctaButtonSecondary}>
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </section>
         </main>
       </div>
-      <SiteFooter />
     </div>
   );
 };
-
-export default ExosomesDesign;
