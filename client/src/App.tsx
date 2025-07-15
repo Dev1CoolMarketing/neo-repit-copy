@@ -15,6 +15,7 @@ import GrowthFactorsImagesPage from "@/pages/growth-factors-images";
 import HairHotlinePage from "./pages/hairhotline";
 import GrowthFactors2Page from '@/pages/growth-factors2';
 import ExosomesDesign from '@/pages/exosomes';
+import MicroneedlingDesign from '@/pages/microneedling';
 import ComponentExportPage from '@/pages/component-export';
 import NotFound from "@/pages/not-found";
 
@@ -51,6 +52,7 @@ function Router() {
       />
        <Route path="/growth-factors2" component={GrowthFactors2Page} />
         <Route path="/exosomes" component={ExosomesDesign} />
+        <Route path="/microneedling" component={MicroneedlingDesign} />
         <Route path="/component-export" component={ComponentExportPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />

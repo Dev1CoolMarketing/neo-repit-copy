@@ -174,6 +174,11 @@ function HeroContent() {
           duration: 2,
           ease: "easeIn",
         }}
+        style={{
+          willChange: "transform, opacity",
+          backfaceVisibility: "hidden",
+          transform: "translateZ(0)", // force GPU layer
+        }}
         className="flex flex-col jusitify-center items-center gap-5"
       >
         <div className="flex w-full flex-col items-center justify-center gap-5 px-5  ">
@@ -191,9 +196,11 @@ function HeroContent() {
             >
               GROWTH
               <br />
-              <span className="text-[#32d74b] relative">
+              <p className="text-6xl md:text-8xl text-[#32d74b] font-[600] tracking-wide font-bold text-center bg-gradient-to-r from-[#32d74b] to-[#c8b68f] bg-clip-text text-transparent">
+                FACTORS {/* Subtle glow effect for growth factors */}
+              </p>
+              {/* <span className="text-[#32d74b] relative">
                 FACTORS
-                {/* Subtle glow effect for growth factors */}
                 <motion.div
                   className="absolute inset-0 text-[#32d74b] blur-lg opacity-30"
                   animate={{
@@ -207,7 +214,7 @@ function HeroContent() {
                 >
                   FACTORS
                 </motion.div>
-              </span>
+              </span> */}
             </motion.h1>
           </div>
         </div>
@@ -234,7 +241,7 @@ function HeroContent() {
             Minimally invasive. No downtime.
           </p>
           <button
-            className="custom-button-growth-factors w-full text-md md:text-sm font-[700] px-4 text-xl py-2  rounded-full mt-5 text-white"
+            className="custom-button-growth-factors w-full text-md md:text-sm font-[500] px-4 text-lg py-2  rounded-full mt-5 text-white"
             style={{ color: "white" }}
           >
             Book Consultation
@@ -493,34 +500,10 @@ function BenefitsSection() {
 
   return (
     <section className="bg-white py-24 md:py-32">
-      <div className="max-w-4xl mx-auto section-content">
-        <AnimatedSection className="text-center mb-20">
-          <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            Clinical Evidence
-          </motion.h2>
-          <motion.p
-            className="text-lg text-black/80 leading-relaxed max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            Peer-reviewed research validating microneedling + PRP therapy
-          </motion.p>
-        </AnimatedSection>
-
+      <div className="max-w-4xl lg:max-w-6xl mx-auto section-content">
         <div className="w-full flex flex-col items-center justify-center gap-12">
           {benefits.map((benefit, index) => (
-            <FadeInOnScroll
-              key={`reason-${index}`}
-              className="flex flex-col section-content"
-            >
+            <FadeInOnScroll key={`reason-${index}`} className="flex flex-col ">
               <span className="text-[26px] font-bold text-center text-[#32d74b]">
                 {benefit.highlight}
               </span>{" "}
