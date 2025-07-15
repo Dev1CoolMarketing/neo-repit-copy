@@ -29,20 +29,16 @@ export default function Fue() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <SiteHeader />
-       <main className="flex1">
-        <FueHeader />
-        <FueReasons />
-        <FueHowItWorks />
-        <FueProcess />
-        <Frame_81 />
-        <TestimonialsSectionPremium />
-        <FueResults />
+      <FueNavBar />
+      <FueHeader />
+      <FueReasons />
+      <FueHowItWorks />
+      <FueProcess />
+      <Frame_81 />
+      <TestimonialsSectionPremium />
+      <FueResults />
 
-
-      </main> 
       <SiteFooter />
     </div>
-
   );
 }

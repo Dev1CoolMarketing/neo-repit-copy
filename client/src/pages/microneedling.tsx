@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/MicroneedlingDesign.module.css";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import SiteFooter from "@/components/site-footer";
 import { ArrowUpRight } from "lucide-react";
+import { initFadeInAnimations } from "@/lib/utils";
 
 export const MicroneedlingDesign = (): JSX.Element => {
   // Data for the features section
@@ -78,8 +79,21 @@ export const MicroneedlingDesign = (): JSX.Element => {
     }
   ];
 
+  useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+
+    // Initialize fade-in animations
+    const cleanup = initFadeInAnimations();
+
+    // Add title to the page
+    document.title = "Microneedling Therapy | Dr. NEO Hair Restoration";
+
+    return cleanup;
+  }, []);
+
   return (
-    <div className={styles.wLight}>
+    <div className="flex min-h-screen flex-col">
       <FueNavBar />
       <div className={styles.body}>
         <main className={styles.main}>
@@ -126,7 +140,7 @@ export const MicroneedlingDesign = (): JSX.Element => {
           <section className={styles.featuresSection}>
             <div className={styles.featuresContainer}>
               {features.map((feature, index) => (
-                <div key={feature.id} className={styles.featureItem}>
+                <div key={feature.id} className={`${styles.featureItem} fade-in`}>
                   {index === 0 && (
                     <div className={styles.featureIcon}>
                       {feature.icon}
