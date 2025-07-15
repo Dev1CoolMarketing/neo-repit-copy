@@ -9,19 +9,16 @@ export default function FueHeader() {
     <section className="w-full flex min-h-screen flex-col justify-center items-center  md:mt-20 ">
       <div className="flex flex-col justify-center items-center">
         <motion.img
-          initial={{ x: 0, y: "40vh", scale: 5.0 }}
+          initial={{ x: 0, y: "40vh", scale: 3.0 }}
           animate={{ x: 0, y: 0, scale: 1.0 }}
           transition={{
             delay: 0.5,
             duration: 2,
             ease: "easeIn",
           }}
-          decoding="async"
-          fetchpriority="high"
-          src={'/assets/shinyfo'}
+          src={"/assets/fue/shinyfollicle.png"}
           alt="Advanced Hair Follicle Technology"
           className="relative z-24 w-20 h-24 h-auto object-contain"
-          loading="lazy"
         />
         <motion.div
           initial={{ x: 0, y: "100vh" }}
