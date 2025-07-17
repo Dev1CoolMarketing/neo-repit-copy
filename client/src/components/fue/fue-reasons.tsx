@@ -33,7 +33,7 @@ export default function FueReasons() {
                         key={`reason-${index}`}
                         className="flex flex-col section-content"
                     >
-                        <span className="text-[26px] font-bold text-center text-[#FC8310]">
+                        <span className="text-[26px] font-bold text-center apple-gradient-sierra-blue">
                             {item.highlight}
                         </span>{" "}
                         <span className="text-[26px] font-bold text-center">

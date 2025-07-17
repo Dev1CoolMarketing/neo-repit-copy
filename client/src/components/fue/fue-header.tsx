@@ -50,8 +50,8 @@ export default function FueHeader() {
               >
                 <p className="pb-3">FUE</p>
                 <p
-                  className="text-4xl md:text-8xl text-[#FC8310] font-[600] tracking-wide font-bold text-center 
-                   leading-[1.05] font-[600] tracking-[-0.02em] m-0 bg-gradient-to-r from-[#FC8310] via-[#F69A97] to-[#EDE342] bg-clip-text text-transparent"
+                  className="text-4xl md:text-8xl apple-gradient-sierra-blue font-[600] tracking-wide font-bold text-center 
+                   leading-[1.05] font-[600] tracking-[-0.02em] m-0"
                 >
                   HAIR TRANSPLANT
                 </p>

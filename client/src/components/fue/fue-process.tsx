@@ -12,7 +12,7 @@ export default function FueProcess() {
             {["P", "R", "O", "C", "E", "S", "S"].map((letter, index) => (
               <div
                 key={index}
-                className="w-12 h-12 bg-[#FC8310] rounded-lg flex items-center justify-center shadow-lg"
+                className="w-12 h-12 bg-[#007AFF] rounded-lg flex items-center justify-center shadow-lg"
               >
                 <span className="text-sm font-semibold text-white">
                   {letter}
