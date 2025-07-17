@@ -123,6 +123,9 @@ html {
   }
 }
 
+.height-header {
+  height: 100vh
+}
 
 
 h1 {
@@ -168,6 +171,7 @@ h2 {
   text-decoration: none;
   font-weight: bold;
 }
+
 
 .content-padding {
   padding-left: 16px;
@@ -240,6 +244,11 @@ ol {
 
 .custom-button-growth-factors {
   background-color: #32d74b;
+  color: #100a03;
+}
+
+.custom-button-hypersomes {
+  background-color: #c17ff0;
   color: #100a03;
 }
 

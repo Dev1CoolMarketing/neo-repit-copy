@@ -13,6 +13,8 @@ import FueCompareOurPlans from "@/components/fue/fue-compare-our-plans";
 import FueResults from "@/components/fue/fue-results-from-real-patients";
 import Frame_81 from "@/components/Frame_81";
 import TestimonialsSectionPremium from "@/components/testimonials-section-premium";
+import FueNavBar from "@/components/fue/fue-nav-bar";
+
 export default function Fue() {
   useEffect(() => {
     // Scroll to top on route change

@@ -4,6 +4,8 @@ import FueNavBar from "@/components/fue/fue-nav-bar";
 import SiteFooter from "@/components/site-footer";
 import { ArrowUpRight } from "lucide-react";
 import { initFadeInAnimations } from "@/lib/utils";
+import ExosomesHeader from "@/components/exosomes/exosomes-header";
+import ExosomesReasons from "@/components/exosomes/exosomes-reasons";
 
 export const ExosomesDesign = (): JSX.Element => {
   // Data for the features section
@@ -11,72 +13,78 @@ export const ExosomesDesign = (): JSX.Element => {
     {
       id: 1,
       title: "With Exosome Therapy,",
-      description: "you can harness advanced cellular communication to restore hair follicle vitality and promote natural regrowth.",
+      description:
+        "you can harness advanced cellular communication to restore hair follicle vitality and promote natural regrowth.",
       icon: "🧬",
-      hasSuper: true
+      hasSuper: true,
     },
     {
       id: 2,
       title: "Cellular Activators",
-      description: "contain powerful growth factors and proteins that activate dormant hair follicle stem cells.",
+      description:
+        "contain powerful growth factors and proteins that activate dormant hair follicle stem cells.",
       icon: "⚡",
-      hasSuper: true
+      hasSuper: true,
     },
     {
       id: 3,
       title: "Anti-Inflammatory Properties",
-      description: "reduce scalp inflammation and create an optimal environment for hair follicle health.",
+      description:
+        "reduce scalp inflammation and create an optimal environment for hair follicle health.",
       icon: "🛡️",
-      hasSuper: true
+      hasSuper: true,
     },
     {
       id: 4,
       title: "Everyone experiences",
-      description: "enhanced follicle function, improved blood flow, and natural hair cycle renewal.",
+      description:
+        "enhanced follicle function, improved blood flow, and natural hair cycle renewal.",
       icon: "✨",
-      hasSuper: true
-    }
+      hasSuper: true,
+    },
   ];
 
   // Data for treatment types
   const treatmentTypes = [
     {
       title: "Primary Treatment",
-      description: "receive targeted exosome therapy with comprehensive cellular regeneration.",
+      description:
+        "receive targeted exosome therapy with comprehensive cellular regeneration.",
       users: [
         { name: "Dr. Thompson", type: "Specialist", avatar: "👨‍⚕️" },
-        { name: "Sarah Chen", type: "Patient", avatar: "👩‍💼" }
-      ]
+        { name: "Sarah Chen", type: "Patient", avatar: "👩‍💼" },
+      ],
     },
     {
       title: "Maintenance Sessions",
-      description: "ongoing treatments to sustain cellular activity and optimize results.",
+      description:
+        "ongoing treatments to sustain cellular activity and optimize results.",
       users: [
         { name: "Michael", type: "6 months", avatar: "👨‍💼" },
         { name: "Jennifer", type: "1 year", avatar: "👩‍🦰" },
-        { name: "David", type: "2 years", avatar: "👨‍🦲" }
-      ]
-    }
+        { name: "David", type: "2 years", avatar: "👨‍🦲" },
+      ],
+    },
   ];
 
   // Data for details section
   const detailItems = [
     {
       text: "It's easy to begin your exosome therapy journey with a comprehensive consultation — even if you haven't tried cellular regeneration treatments before.",
-      phoneContent: "Consultation"
+      phoneContent: "Consultation",
     },
     {
       text: "Exosome therapy delivers concentrated growth factors and signaling molecules directly to hair follicles, creating an optimal environment for natural regeneration.",
       phoneContent: "Treatment Process",
       hasSuper: true,
-      superNumber: "1"
+      superNumber: "1",
     },
     {
       text: "Our specialists can monitor your progress, adjust treatment protocols, and ensure optimal cellular communication for sustained hair follicle health.",
       phoneContent: "Progress Tracking",
       hasSuper: true,
-      superNumbers: ["2", "3"]
-    }
+      superNumbers: ["2", "3"],
+    },
   ];
 
   useEffect(() => {
@@ -95,6 +103,8 @@ export const ExosomesDesign = (): JSX.Element => {
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
+      <ExosomesHeader />
+      <ExosomesReasons />
       <div className={styles.body}>
         <main className={styles.main}>
           {/* Hero Section */}
@@ -128,8 +138,12 @@ export const ExosomesDesign = (): JSX.Element => {
                 <div className={styles.heroImage}>
                   <div className={styles.heroImagePlaceholder}>
                     <div className={styles.heroImageIcon}>🧬</div>
-                    <div className={styles.heroImageTitle}>Cellular Regeneration</div>
-                    <div className={styles.heroImageSubtitle}>Advanced Exosome Therapy</div>
+                    <div className={styles.heroImageTitle}>
+                      Cellular Regeneration
+                    </div>
+                    <div className={styles.heroImageSubtitle}>
+                      Advanced Exosome Therapy
+                    </div>
                   </div>
                 </div>
               </div>
@@ -140,13 +154,14 @@ export const ExosomesDesign = (): JSX.Element => {
           <section className={styles.featuresSection}>
             <div className={styles.featuresContainer}>
               {features.map((feature, index) => (
-                <div key={feature.id} className={`${styles.featureItem} fade-in`}>
+                <div
+                  key={feature.id}
+                  className={`${styles.featureItem} fade-in`}
+                >
                   {index === 0 && (
-                    <div className={styles.featureIcon}>
-                      {feature.icon}
-                    </div>
+                    <div className={styles.featureIcon}>{feature.icon}</div>
                   )}
-                  
+
                   <div>
                     <h2 className={styles.featureTitle}>
                       {feature.title}
@@ -180,10 +195,8 @@ export const ExosomesDesign = (): JSX.Element => {
             <div className={styles.userTypesContainer}>
               {treatmentTypes.map((type, index) => (
                 <div key={index} className={styles.userTypeCard}>
-                  <h3 className={styles.userTypeTitle}>
-                    {type.title}
-                  </h3>
-                  
+                  <h3 className={styles.userTypeTitle}>{type.title}</h3>
+
                   <p className={styles.userTypeDescription}>
                     {type.description}
                   </p>
@@ -191,15 +204,9 @@ export const ExosomesDesign = (): JSX.Element => {
                   <div className={styles.userAvatars}>
                     {type.users.map((user, userIndex) => (
                       <div key={userIndex} className={styles.avatarContainer}>
-                        <div className={styles.avatar}>
-                          {user.avatar}
-                        </div>
-                        <p className={styles.avatarName}>
-                          {user.name}
-                        </p>
-                        <p className={styles.avatarType}>
-                          {user.type}
-                        </p>
+                        <div className={styles.avatar}>{user.avatar}</div>
+                        <p className={styles.avatarName}>{user.name}</p>
+                        <p className={styles.avatarType}>{user.type}</p>
                       </div>
                     ))}
                   </div>
@@ -222,12 +229,18 @@ export const ExosomesDesign = (): JSX.Element => {
                   <p className={styles.detailText}>
                     {item.text}
                     {item.hasSuper && item.superNumber && (
-                      <sup className={styles.superscript}>{item.superNumber}</sup>
+                      <sup className={styles.superscript}>
+                        {item.superNumber}
+                      </sup>
                     )}
                     {item.hasSuper && item.superNumbers && (
                       <>
-                        <sup className={styles.superscript}>{item.superNumbers[0]}</sup>
-                        <sup className={styles.superscript}>{item.superNumbers[1]}</sup>
+                        <sup className={styles.superscript}>
+                          {item.superNumbers[0]}
+                        </sup>
+                        <sup className={styles.superscript}>
+                          {item.superNumbers[1]}
+                        </sup>
                       </>
                     )}
                   </p>
@@ -259,7 +272,7 @@ export const ExosomesDesign = (): JSX.Element => {
                 <br />
                 renewal journey.
               </h2>
-              
+
               <div className={styles.ctaButtons}>
                 <button className={styles.ctaButton}>
                   Schedule Consultation

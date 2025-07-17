@@ -21,7 +21,7 @@ const navLinks = [
       },
       {
         name: "Follicular Hypersomes™",
-        href: "/hypersomes",
+        href: "/exosomes",
         type: "link",
       },
       {

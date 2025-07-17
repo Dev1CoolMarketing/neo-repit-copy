@@ -16,6 +16,7 @@ import recoveryTrackerImg from "@assets/gf-howitworks-step4.png";
 import GrowthFactorsFAQ from "../components/growth-factors/growth-factors-faq";
 import SiteFooter from "@/components/site-footer";
 import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
+import GrowthFactorsHeader from "@/components/growth-factors/growth-factors-header";
 
 function DrNeoLogo() {
   return (
@@ -196,7 +197,7 @@ function HeroContent() {
             >
               GROWTH
               <br />
-              <p className="text-6xl md:text-8xl text-[#32d74b] font-[600] tracking-wide font-bold text-center bg-gradient-to-r from-[#32d74b] to-[#c8b68f] bg-clip-text text-transparent">
+              <p className="text-6xl md:text-8xl text-[#32d74b] font-[600] tracking-wide font-bold text-center leading-[1.05] font-[600] tracking-[-0.02em] m-0 bg-gradient-to-r from-[#32d74b] via-[#F69A97] to-[#05C9F9] bg-clip-text text-transparent">
                 FACTORS {/* Subtle glow effect for growth factors */}
               </p>
               {/* <span className="text-[#32d74b] relative">
@@ -1472,6 +1473,7 @@ export default function App() {
   return (
     <div className="bg-black min-h-screen">
       <FueNavBar />
+      {/* <GrowthFactorsHeader /> */}
       <HeroSection />
       <BenefitsSection />
       <ProcessSection />

@@ -1,14 +1,12 @@
 import styles from "../../styles/fue.module.css";
-import shinyFolliclePath from "@assets/shinyfollicle.png";
-import { motion } from "framer-motion";
-import { ProcessTimeline } from "@/pages/growth-factors2";
-import HeroAnimateWrapper from "../ui/hero-animate-wrapper";
 
-export default function GrowthFactorsHeader() {
+import { motion } from "framer-motion";
+
+export default function ExosomesHeader() {
   return (
-    <section className="w-full flex min-h-screen flex-col bg-white justify-center items-center  md:mt-20 ">
+    <section className="w-full flex min-h-screen flex-col justify-center items-center  md:mt-20 ">
       <div className="flex flex-col justify-center items-center header-height">
-        <motion.img
+        <motion.div
           initial={{ x: 0, y: "40vh", scale: 3.0 }}
           animate={{ x: 0, y: 0, scale: 1.0 }}
           transition={{
@@ -16,11 +14,10 @@ export default function GrowthFactorsHeader() {
             duration: 2,
             ease: "easeIn",
           }}
-          src={"/assets/FOLLICULES.png"}
-          alt="Advanced Hair Follicle Technology"
-          className="relative z-24 w-20 h-24 h-auto object-contain"
-          loading="eager"
-        />
+          className="flex flex-row justify-center relative z-24 text-5xl h-auto object-contain"
+        >
+          {"🧬"}
+        </motion.div>
         <motion.div
           initial={{ x: 0, y: "100vh" }}
           animate={{ x: 0, y: 0, scale: 1.0 }}
@@ -37,7 +34,7 @@ export default function GrowthFactorsHeader() {
           className="flex flex-col jusitify-center items-center gap-5"
         >
           <div className="flex w-full flex-col items-center justify-center gap-5 px-5  ">
-            <div className="flex flex-col items-center w-full">
+            <div className="flex flex-col items-center w-full ">
               <motion.h1
                 className="text-6xl md:text-8xl lg:text-9xl text-center font-[700] tracking-tight text-black leading-[0.85] pb-5"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -48,9 +45,12 @@ export default function GrowthFactorsHeader() {
                   ease: "easeOut",
                 }}
               >
-                <p className="pb-0">Growth</p>
-                <p className="text-6xl md:text-8xl text-[#32d74b] font-[600] tracking-wide font-bold text-center leading-[1.05] font-[600] tracking-[-0.02em] m-0 bg-gradient-to-r from-[#32d74b] via-[#E5F61B] to-[#05C9F9] bg-clip-text text-transparent">
-                  Factors
+                <p className="pb-3"> FOLLICULAR </p>
+                <p
+                  className="text-4xl md:text-8xl text-[#] font-[600] tracking-wide font-bold text-center 
+                   leading-[1.05] font-[600] tracking-[-0.02em] m-0 bg-gradient-to-r from-[#c17ff0] via-[#df73a5] to-[#f5a53b] bg-clip-text text-transparent"
+                >
+                  HYPERSOMES™
                 </p>
               </motion.h1>
             </div>
@@ -61,24 +61,24 @@ export default function GrowthFactorsHeader() {
                 styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
               }
             >
-              Stimulates natural hair growth.
+              Cellular regeneration.
             </p>
             <p
               className={
                 styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
               }
             >
-              No pills. No prescriptions.
+              Scientific precision.
             </p>
             <p
               className={
                 styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
               }
             >
-              Minimally invasive. No downtime.
+              Promote natural regrowth.
             </p>
             <button
-              className="custom-button-growth-factors w-full px-4 text-md  font-[500] text-lg py-2 rounded-full mt-5 text-white"
+              className="custom-button-hypersomes w-full px-4 text-md  font-[500] text-lg py-2 rounded-full mt-5 text-white"
               style={{ color: "white" }}
             >
               Book Consultation
