@@ -321,9 +321,9 @@ button[class*="primary"]:hover {
     --secondary: 27 17% 33%;
     /* #625046 - brown */
     --secondary-foreground: 0 0% 98%;
-    --accent: 39 67% 39%;
-    /* #A87B23 - gold */
-    --accent-foreground: 24 9.8% 10%;
+    --accent: 213 100% 50%;
+    /* #007AFF - Apple blue */
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;
     --ring: 20 14.3% 4.1%;
@@ -369,7 +369,7 @@ button[class*="primary"]:hover {
     --primary-foreground: 0 0% 10%;
     --secondary: 27 17% 33%;
     --secondary-foreground: 0 0% 98%;
-    --accent: 39 67% 39%;
+    --accent: 213 100% 50%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
