@@ -48,7 +48,7 @@ export default function ExosomesHeader() {
                 <p className="pb-3"> FOLLICULAR </p>
                 <p
                   className="text-4xl md:text-8xl text-[#] font-[600] tracking-wide font-bold text-center 
-                   leading-[1.05] font-[600] tracking-[-0.02em] m-0 treatment-headline-gradient treatment-exo-primary"
+                   leading-[1.05] font-[600] tracking-[-0.02em] m-0 treatment-headline-gradient treatment-exo-hero"
                 >
                   HYPERSOMES™
                 </p>
