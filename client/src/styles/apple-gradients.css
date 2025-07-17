@@ -490,9 +490,9 @@
 .treatment-fue-shimmer {
   background: linear-gradient(90deg, 
     #2C5530 0%, 
-    #FFFFFF 25%, 
+    rgba(255, 255, 255, 0.9) 25%, 
     #7BA428 50%, 
-    #FFFFFF 75%, 
+    rgba(255, 255, 255, 0.9) 75%, 
     #A4D65E 100%
   );
   background-size: 200% 100%;
@@ -506,9 +506,9 @@
 .treatment-growth-shimmer {
   background: linear-gradient(90deg, 
     #8B2635 0%, 
-    #FFFFFF 25%, 
+    rgba(255, 255, 255, 0.9) 25%, 
     #E63946 50%, 
-    #FFFFFF 75%, 
+    rgba(255, 255, 255, 0.9) 75%, 
     #FF6B6B 100%
   );
   background-size: 200% 100%;
@@ -522,9 +522,9 @@
 .treatment-micro-shimmer {
   background: linear-gradient(90deg, 
     #003566 0%, 
-    #FFFFFF 25%, 
+    rgba(255, 255, 255, 0.9) 25%, 
     #00B4D8 50%, 
-    #FFFFFF 75%, 
+    rgba(255, 255, 255, 0.9) 75%, 
     #90E0EF 100%
   );
   background-size: 200% 100%;
@@ -538,9 +538,9 @@
 .treatment-exo-shimmer {
   background: linear-gradient(90deg, 
     #4C3957 0%, 
-    #FFFFFF 25%, 
+    rgba(255, 255, 255, 0.9) 25%, 
     #A663CC 50%, 
-    #FFFFFF 75%, 
+    rgba(255, 255, 255, 0.9) 75%, 
     #C9A9DD 100%
   );
   background-size: 200% 100%;
@@ -568,6 +568,371 @@
   filter: hue-rotate(280deg) saturate(1.15);
 }
 
+/* =======================
+   PREMIUM ACCENT TEXT GRADIENTS
+   (Similar to Exosomes Style)
+   ======================= */
+
+/* FUE Accent Text Gradients */
+.fue-accent-text {
+  background: linear-gradient(135deg, 
+    #2C5530 0%, 
+    #52734D 30%, 
+    #7BA428 60%, 
+    #A4D65E 85%, 
+    rgba(164, 214, 94, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.1) brightness(1.05);
+}
+
+.fue-accent-text-soft {
+  background: linear-gradient(135deg, 
+    rgba(44, 85, 48, 0.9) 0%, 
+    rgba(82, 115, 77, 1) 25%, 
+    rgba(123, 164, 40, 1) 55%, 
+    rgba(164, 214, 94, 0.95) 80%, 
+    rgba(180, 230, 120, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.fue-accent-text-premium {
+  background: linear-gradient(135deg, 
+    #1B4332 0%, 
+    #2D5016 20%, 
+    #40916C 40%, 
+    #52B788 60%, 
+    #74C69D 80%, 
+    #95D5B2 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.15) contrast(1.1);
+}
+
+/* Growth Factors Accent Text Gradients */
+.growth-accent-text {
+  background: linear-gradient(135deg, 
+    #8B2635 0%, 
+    #A4161A 30%, 
+    #E63946 60%, 
+    #FF6B6B 85%, 
+    rgba(255, 107, 107, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.1) brightness(1.05);
+}
+
+.growth-accent-text-soft {
+  background: linear-gradient(135deg, 
+    rgba(139, 38, 53, 0.9) 0%, 
+    rgba(164, 22, 26, 1) 25%, 
+    rgba(230, 57, 70, 1) 55%, 
+    rgba(255, 107, 107, 0.95) 80%, 
+    rgba(255, 133, 133, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.growth-accent-text-premium {
+  background: linear-gradient(135deg, 
+    #6F1D1B 0%, 
+    #A4161A 20%, 
+    #C9184A 40%, 
+    #E63946 60%, 
+    #FF758F 80%, 
+    #FFB3BA 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.15) contrast(1.1);
+}
+
+/* Microneedling Accent Text Gradients */
+.micro-accent-text {
+  background: linear-gradient(135deg, 
+    #003566 0%, 
+    #023E8A 30%, 
+    #00B4D8 60%, 
+    #90E0EF 85%, 
+    rgba(144, 224, 239, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.1) brightness(1.05);
+}
+
+.micro-accent-text-soft {
+  background: linear-gradient(135deg, 
+    rgba(0, 53, 102, 0.9) 0%, 
+    rgba(2, 62, 138, 1) 25%, 
+    rgba(0, 180, 216, 1) 55%, 
+    rgba(144, 224, 239, 0.95) 80%, 
+    rgba(202, 240, 248, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.micro-accent-text-premium {
+  background: linear-gradient(135deg, 
+    #001D3D 0%, 
+    #003566 20%, 
+    #0077B6 40%, 
+    #48CAE4 60%, 
+    #ADE8F4 80%, 
+    #CAF0F8 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.15) contrast(1.1);
+}
+
+/* Exosomes Accent Text Gradients (Enhanced) */
+.exo-accent-text {
+  background: linear-gradient(135deg, 
+    #4C3957 0%, 
+    #5B2C87 30%, 
+    #A663CC 60%, 
+    #C9A9DD 85%, 
+    rgba(201, 169, 221, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.1) brightness(1.05);
+}
+
+.exo-accent-text-soft {
+  background: linear-gradient(135deg, 
+    rgba(76, 57, 87, 0.9) 0%, 
+    rgba(91, 44, 135, 1) 25%, 
+    rgba(166, 99, 204, 1) 55%, 
+    rgba(201, 169, 221, 0.95) 80%, 
+    rgba(224, 170, 255, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.exo-accent-text-premium {
+  background: linear-gradient(135deg, 
+    #3C1642 0%, 
+    #4C3957 20%, 
+    #7209B7 40%, 
+    #A663CC 60%, 
+    #E0AAFF 80%, 
+    #F0D6FF 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.15) contrast(1.1);
+}
+
+/* =======================
+   REFINED SIGNATURE TREATMENT GRADIENTS
+   ======================= */
+
+/* Apple-Style Refined FUE Collection */
+.fue-signature-refined {
+  background: linear-gradient(135deg, 
+    rgba(27, 67, 50, 0.95) 0%,
+    rgba(44, 85, 48, 1) 15%,
+    rgba(74, 124, 89, 1) 35%,
+    rgba(123, 164, 40, 1) 60%,
+    rgba(164, 214, 94, 1) 80%,
+    rgba(180, 230, 120, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.2) contrast(1.05) brightness(1.02);
+}
+
+.fue-platinum-refined {
+  background: linear-gradient(135deg, 
+    #1B4332 0%,
+    #2D5016 18%,
+    #40916C 35%,
+    #52B788 52%,
+    #74C69D 70%,
+    #95D5B2 85%,
+    rgba(149, 213, 178, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.15) brightness(1.03);
+}
+
+/* Apple-Style Refined Growth Factors Collection */
+.growth-signature-refined {
+  background: linear-gradient(135deg, 
+    rgba(111, 29, 27, 0.95) 0%,
+    rgba(139, 38, 53, 1) 15%,
+    rgba(164, 22, 26, 1) 35%,
+    rgba(230, 57, 70, 1) 60%,
+    rgba(255, 107, 107, 1) 80%,
+    rgba(255, 133, 133, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.2) contrast(1.05) brightness(1.02);
+}
+
+.growth-platinum-refined {
+  background: linear-gradient(135deg, 
+    #6F1D1B 0%,
+    #A4161A 18%,
+    #C9184A 35%,
+    #E63946 52%,
+    #FF758F 70%,
+    #FFB3BA 85%,
+    rgba(255, 179, 186, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.15) brightness(1.03);
+}
+
+/* Apple-Style Refined Microneedling Collection */
+.micro-signature-refined {
+  background: linear-gradient(135deg, 
+    rgba(0, 29, 61, 0.95) 0%,
+    rgba(0, 53, 102, 1) 15%,
+    rgba(0, 119, 182, 1) 35%,
+    rgba(0, 180, 216, 1) 60%,
+    rgba(144, 224, 239, 1) 80%,
+    rgba(202, 240, 248, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.2) contrast(1.05) brightness(1.02);
+}
+
+.micro-platinum-refined {
+  background: linear-gradient(135deg, 
+    #001D3D 0%,
+    #003566 18%,
+    #0077B6 35%,
+    #48CAE4 52%,
+    #ADE8F4 70%,
+    #CAF0F8 85%,
+    rgba(202, 240, 248, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.15) brightness(1.03);
+}
+
+/* Apple-Style Refined Exosomes Collection */
+.exo-signature-refined {
+  background: linear-gradient(135deg, 
+    rgba(60, 22, 66, 0.95) 0%,
+    rgba(76, 57, 87, 1) 15%,
+    rgba(114, 9, 183, 1) 35%,
+    rgba(166, 99, 204, 1) 60%,
+    rgba(201, 169, 221, 1) 80%,
+    rgba(224, 170, 255, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.2) contrast(1.05) brightness(1.02);
+}
+
+.exo-platinum-refined {
+  background: linear-gradient(135deg, 
+    #3C1642 0%,
+    #4C3957 18%,
+    #7209B7 35%,
+    #A663CC 52%,
+    #E0AAFF 70%,
+    #F0D6FF 85%,
+    rgba(240, 214, 255, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.15) brightness(1.03);
+}
+
+/* Premium Cross-Treatment Signature Gradients */
+.signature-comprehensive-refined {
+  background: linear-gradient(135deg, 
+    rgba(44, 85, 48, 0.9) 0%,    /* FUE */
+    rgba(139, 38, 53, 0.95) 18%, /* Growth */
+    rgba(0, 53, 102, 0.9) 35%,   /* Micro */
+    rgba(76, 57, 87, 0.95) 52%,  /* Exo */
+    rgba(250, 225, 81, 1) 70%,   /* Brand Gold */
+    rgba(237, 185, 48, 0.95) 85%,
+    rgba(200, 182, 143, 0.8) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.1) contrast(1.02);
+}
+
+.signature-harmony-refined {
+  background: linear-gradient(135deg, 
+    rgba(123, 164, 40, 0.9) 0%,  /* FUE Light */
+    rgba(230, 57, 70, 0.95) 15%, /* Growth Bright */
+    rgba(0, 180, 216, 0.9) 30%,  /* Micro Cyan */
+    rgba(166, 99, 204, 0.95) 45%, /* Exo Light */
+    rgba(237, 185, 48, 1) 60%,   /* Brand Warm */
+    rgba(250, 225, 81, 0.95) 75%,
+    rgba(200, 182, 143, 0.85) 90%,
+    rgba(244, 222, 183, 0.7) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: saturate(1.05) brightness(1.02);
+}
+
 /* Treatment Typography Combinations */
 .treatment-headline-gradient {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -591,4 +956,29 @@
   font-size: clamp(1.1rem, 2.2vw, 1.4rem);
   line-height: 1.35;
   letter-spacing: 0.005em;
+}
+
+/* Accent Text Typography */
+.accent-text-small {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.accent-text-medium {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 650;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.35;
+  letter-spacing: 0.005em;
+}
+
+.accent-text-large {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2.8vw, 1.75rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }

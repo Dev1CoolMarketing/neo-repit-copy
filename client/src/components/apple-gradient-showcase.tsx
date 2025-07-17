@@ -391,30 +391,238 @@ export const AppleGradientShowcase: React.FC = () => {
           </div>
         </section>
 
+        {/* Premium Accent Text Gradients */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-12 text-gray-900 text-center">Premium Accent Text Gradients</h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Similar to the exosomes accent style, these refined gradients provide cohesive branding across all treatments
+          </p>
+          
+          {/* FUE Accent Text */}
+          <div className="mb-16 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl">
+            <h3 className="text-2xl font-semibold mb-8 text-gray-800">FUE Accent Text Collection</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <span className="fue-accent-text accent-text-large block mb-2">
+                  Natural Results
+                </span>
+                <code className="text-sm text-gray-600">fue-accent-text</code>
+              </div>
+              <div className="text-center">
+                <span className="fue-accent-text-soft accent-text-large block mb-2">
+                  Advanced Extraction
+                </span>
+                <code className="text-sm text-gray-600">fue-accent-text-soft</code>
+              </div>
+              <div className="text-center">
+                <span className="fue-accent-text-premium accent-text-large block mb-2">
+                  Premium FUE
+                </span>
+                <code className="text-sm text-gray-600">fue-accent-text-premium</code>
+              </div>
+            </div>
+          </div>
+
+          {/* Growth Factors Accent Text */}
+          <div className="mb-16 p-8 bg-gradient-to-r from-red-50 to-rose-50 rounded-3xl">
+            <h3 className="text-2xl font-semibold mb-8 text-gray-800">Growth Factors Accent Text</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <span className="growth-accent-text accent-text-large block mb-2">
+                  Regenerative Power
+                </span>
+                <code className="text-sm text-gray-600">growth-accent-text</code>
+              </div>
+              <div className="text-center">
+                <span className="growth-accent-text-soft accent-text-large block mb-2">
+                  Cellular Therapy
+                </span>
+                <code className="text-sm text-gray-600">growth-accent-text-soft</code>
+              </div>
+              <div className="text-center">
+                <span className="growth-accent-text-premium accent-text-large block mb-2">
+                  Premium Growth
+                </span>
+                <code className="text-sm text-gray-600">growth-accent-text-premium</code>
+              </div>
+            </div>
+          </div>
+
+          {/* Microneedling Accent Text */}
+          <div className="mb-16 p-8 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl">
+            <h3 className="text-2xl font-semibold mb-8 text-gray-800">Microneedling Accent Text</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <span className="micro-accent-text accent-text-large block mb-2">
+                  Precision Treatment
+                </span>
+                <code className="text-sm text-gray-600">micro-accent-text</code>
+              </div>
+              <div className="text-center">
+                <span className="micro-accent-text-soft accent-text-large block mb-2">
+                  Collagen Boost
+                </span>
+                <code className="text-sm text-gray-600">micro-accent-text-soft</code>
+              </div>
+              <div className="text-center">
+                <span className="micro-accent-text-premium accent-text-large block mb-2">
+                  Premium Micro
+                </span>
+                <code className="text-sm text-gray-600">micro-accent-text-premium</code>
+              </div>
+            </div>
+          </div>
+
+          {/* Exosomes Accent Text (Enhanced) */}
+          <div className="mb-16 p-8 bg-gradient-to-r from-purple-50 to-violet-50 rounded-3xl">
+            <h3 className="text-2xl font-semibold mb-8 text-gray-800">Exosomes Accent Text (Enhanced)</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <span className="exo-accent-text accent-text-large block mb-2">
+                  Stem Cell Innovation
+                </span>
+                <code className="text-sm text-gray-600">exo-accent-text</code>
+              </div>
+              <div className="text-center">
+                <span className="exo-accent-text-soft accent-text-large block mb-2">
+                  Advanced Therapy
+                </span>
+                <code className="text-sm text-gray-600">exo-accent-text-soft</code>
+              </div>
+              <div className="text-center">
+                <span className="exo-accent-text-premium accent-text-large block mb-2">
+                  Premium Exosomes
+                </span>
+                <code className="text-sm text-gray-600">exo-accent-text-premium</code>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Refined Signature Gradients */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-12 text-gray-900 text-center">Refined Signature Collections</h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Apple-style refined gradients with enhanced blending and cohesive color transitions
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="p-8 bg-gray-50 rounded-3xl text-center">
+              <h3 className="treatment-headline-gradient fue-signature-refined text-4xl font-bold mb-4">
+                FUE Signature Refined
+              </h3>
+              <code className="text-sm text-gray-600">fue-signature-refined</code>
+              <div className="mt-6">
+                <h4 className="treatment-subheadline-gradient fue-platinum-refined text-2xl font-semibold mb-2">
+                  FUE Platinum
+                </h4>
+                <code className="text-sm text-gray-600">fue-platinum-refined</code>
+              </div>
+            </div>
+            
+            <div className="p-8 bg-gray-50 rounded-3xl text-center">
+              <h3 className="treatment-headline-gradient growth-signature-refined text-4xl font-bold mb-4">
+                Growth Signature Refined
+              </h3>
+              <code className="text-sm text-gray-600">growth-signature-refined</code>
+              <div className="mt-6">
+                <h4 className="treatment-subheadline-gradient growth-platinum-refined text-2xl font-semibold mb-2">
+                  Growth Platinum
+                </h4>
+                <code className="text-sm text-gray-600">growth-platinum-refined</code>
+              </div>
+            </div>
+            
+            <div className="p-8 bg-gray-50 rounded-3xl text-center">
+              <h3 className="treatment-headline-gradient micro-signature-refined text-4xl font-bold mb-4">
+                Micro Signature Refined
+              </h3>
+              <code className="text-sm text-gray-600">micro-signature-refined</code>
+              <div className="mt-6">
+                <h4 className="treatment-subheadline-gradient micro-platinum-refined text-2xl font-semibold mb-2">
+                  Micro Platinum
+                </h4>
+                <code className="text-sm text-gray-600">micro-platinum-refined</code>
+              </div>
+            </div>
+            
+            <div className="p-8 bg-gray-50 rounded-3xl text-center">
+              <h3 className="treatment-headline-gradient exo-signature-refined text-4xl font-bold mb-4">
+                Exo Signature Refined
+              </h3>
+              <code className="text-sm text-gray-600">exo-signature-refined</code>
+              <div className="mt-6">
+                <h4 className="treatment-subheadline-gradient exo-platinum-refined text-2xl font-semibold mb-2">
+                  Exo Platinum
+                </h4>
+                <code className="text-sm text-gray-600">exo-platinum-refined</code>
+              </div>
+            </div>
+          </div>
+
+          {/* Cross-Treatment Signatures */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 bg-gradient-to-r from-amber-50 via-orange-50 to-yellow-50 rounded-3xl text-center">
+              <h3 className="treatment-headline-gradient signature-comprehensive-refined text-4xl font-bold mb-4">
+                Comprehensive Refined
+              </h3>
+              <code className="text-sm text-gray-600">signature-comprehensive-refined</code>
+            </div>
+            <div className="p-8 bg-gradient-to-r from-amber-50 via-orange-50 to-yellow-50 rounded-3xl text-center">
+              <h3 className="treatment-headline-gradient signature-harmony-refined text-4xl font-bold mb-4">
+                Harmony Refined
+              </h3>
+              <code className="text-sm text-gray-600">signature-harmony-refined</code>
+            </div>
+          </div>
+        </section>
+
         {/* Usage Examples */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-8 text-gray-900">Treatment Context Examples</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="treatment-headline-gradient treatment-fue-primary mb-4">
+              <h3 className="treatment-headline-gradient fue-signature-refined mb-4">
                 FUE Hair Transplant
               </h3>
-              <p className="treatment-subheadline-gradient treatment-fue-secondary mb-2">
+              <p className="fue-accent-text accent-text-medium mb-2">
                 Advanced follicular extraction
               </p>
-              <span className="treatment-accent-gradient treatment-fue-accent text-lg font-medium">
+              <span className="fue-accent-text-premium accent-text-small">
                 Natural-looking results
               </span>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="treatment-headline-gradient treatment-growth-primary mb-4">
+              <h3 className="treatment-headline-gradient growth-signature-refined mb-4">
                 Growth Factors
               </h3>
-              <p className="treatment-subheadline-gradient treatment-growth-secondary mb-2">
+              <p className="growth-accent-text accent-text-medium mb-2">
                 Regenerative therapy
               </p>
-              <span className="treatment-accent-gradient treatment-growth-accent text-lg font-medium">
+              <span className="growth-accent-text-premium accent-text-small">
                 Stimulate hair growth
+              </span>
+            </div>
+            <div className="p-6 bg-gray-50 rounded-2xl">
+              <h3 className="treatment-headline-gradient micro-signature-refined mb-4">
+                Microneedling
+              </h3>
+              <p className="micro-accent-text accent-text-medium mb-2">
+                Precision treatment
+              </p>
+              <span className="micro-accent-text-premium accent-text-small">
+                Collagen activation
+              </span>
+            </div>
+            <div className="p-6 bg-gray-50 rounded-2xl">
+              <h3 className="treatment-headline-gradient exo-signature-refined mb-4">
+                Exosomes
+              </h3>
+              <p className="exo-accent-text accent-text-medium mb-2">
+                Stem cell innovation
+              </p>
+              <span className="exo-accent-text-premium accent-text-small">
+                Advanced regeneration
               </span>
             </div>
           </div>
