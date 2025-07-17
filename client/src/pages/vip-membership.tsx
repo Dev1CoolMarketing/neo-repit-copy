@@ -4,6 +4,8 @@ import FueNavBar from "@/components/fue/fue-nav-bar";
 import SiteFooter from "@/components/site-footer";
 import { ArrowUpRight, Crown, Star, Shield, Calendar, Phone } from "lucide-react";
 import { initFadeInAnimations } from "@/lib/utils";
+import VIPMembershipCard from "@/components/VIPMembershipCard";
+import VIPCardShowcase from "@/components/VIPCardShowcase";
 
 export const VIPMembershipDesign = (): JSX.Element => {
   // Data for the features section
@@ -132,10 +134,12 @@ export const VIPMembershipDesign = (): JSX.Element => {
                 </div>
 
                 <div className={styles.heroImagePlaceholder}>
-                  <div className={styles.heroImageContent}>
-                    <Shield className="w-24 h-24 text-amber-500" />
-                    <p className={styles.heroImageText}>VIP Experience</p>
-                  </div>
+                  <VIPMembershipCard 
+                    memberName="Dr. Sarah Chen"
+                    membershipLevel="Platinum"
+                    memberSince="2024"
+                    membershipNumber="4751 8392 6147 2850"
+                  />
                 </div>
               </div>
             </div>
@@ -250,6 +254,11 @@ export const VIPMembershipDesign = (): JSX.Element => {
                 </div>
               ))}
             </div>
+          </section>
+
+          {/* Card Showcase Section */}
+          <section className="bg-white">
+            <VIPCardShowcase />
           </section>
 
           {/* CTA Section */}
