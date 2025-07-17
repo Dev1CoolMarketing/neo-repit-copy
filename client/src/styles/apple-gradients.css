@@ -254,3 +254,341 @@
     animation: none;
   }
 }
+
+/* =======================
+   TREATMENT-SPECIFIC GRADIENTS
+   ======================= */
+
+/* FUE Hair Transplant Collection */
+.treatment-fue-primary {
+  background: linear-gradient(135deg, #2C5530 0%, #4A7C59 35%, #7BA428 70%, #A4D65E 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-fue-secondary {
+  background: linear-gradient(135deg, #1B4332 0%, #2D5016 30%, #52734D 65%, #95A472 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-fue-accent {
+  background: linear-gradient(135deg, #40916C 0%, #52B788 50%, #74C69D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-fue-hero {
+  background: linear-gradient(135deg, 
+    rgba(44, 85, 48, 0.9) 0%, 
+    rgba(74, 124, 89, 1) 25%, 
+    rgba(123, 164, 40, 1) 60%, 
+    rgba(164, 214, 94, 1) 85%, 
+    rgba(180, 230, 120, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Growth Factors Collection */
+.treatment-growth-primary {
+  background: linear-gradient(135deg, #8B2635 0%, #B91831 35%, #E63946 70%, #FF6B6B 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-growth-secondary {
+  background: linear-gradient(135deg, #6F1D1B 0%, #A4161A 30%, #C9184A 65%, #FF758F 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-growth-accent {
+  background: linear-gradient(135deg, #D00000 0%, #FF5757 50%, #FF8E85 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-growth-hero {
+  background: linear-gradient(135deg, 
+    rgba(139, 38, 53, 0.9) 0%, 
+    rgba(185, 24, 49, 1) 25%, 
+    rgba(230, 57, 70, 1) 60%, 
+    rgba(255, 107, 107, 1) 85%, 
+    rgba(255, 133, 133, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Microneedling Collection */
+.treatment-micro-primary {
+  background: linear-gradient(135deg, #003566 0%, #0077B6 35%, #00B4D8 70%, #90E0EF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-micro-secondary {
+  background: linear-gradient(135deg, #001D3D 0%, #023E8A 30%, #0096C7 65%, #CAF0F8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-micro-accent {
+  background: linear-gradient(135deg, #0077B6 0%, #48CAE4 50%, #ADE8F4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-micro-hero {
+  background: linear-gradient(135deg, 
+    rgba(0, 53, 102, 0.9) 0%, 
+    rgba(0, 119, 182, 1) 25%, 
+    rgba(0, 180, 216, 1) 60%, 
+    rgba(144, 224, 239, 1) 85%, 
+    rgba(202, 240, 248, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Exosomes Collection */
+.treatment-exo-primary {
+  background: linear-gradient(135deg, #4C3957 0%, #7209B7 35%, #A663CC 70%, #C9A9DD 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-exo-secondary {
+  background: linear-gradient(135deg, #3C1642 0%, #5B2C87 30%, #8E44AD 65%, #D5A6BD 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-exo-accent {
+  background: linear-gradient(135deg, #7209B7 0%, #A663CC 50%, #E0AAFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.treatment-exo-hero {
+  background: linear-gradient(135deg, 
+    rgba(76, 57, 87, 0.9) 0%, 
+    rgba(114, 9, 183, 1) 25%, 
+    rgba(166, 99, 204, 1) 60%, 
+    rgba(201, 169, 221, 1) 85%, 
+    rgba(224, 170, 255, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Premium Signature Multi-Treatment Gradients */
+.signature-comprehensive {
+  background: linear-gradient(135deg, 
+    #2C5530 0%,    /* FUE Green */
+    #8B2635 25%,   /* Growth Red */
+    #003566 50%,   /* Micro Blue */
+    #4C3957 75%,   /* Exo Purple */
+    #FAE151 100%   /* Brand Gold */
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.signature-harmony {
+  background: linear-gradient(135deg, 
+    #7BA428 0%,    /* FUE Light */
+    #E63946 20%,   /* Growth Bright */
+    #00B4D8 40%,   /* Micro Cyan */
+    #A663CC 60%,   /* Exo Light */
+    #EDB930 80%,   /* Brand Warm */
+    #C8B68F 100%   /* Brand Soft */
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Animated Treatment Gradients */
+.treatment-fue-animated {
+  background: linear-gradient(45deg, #2C5530, #7BA428, #A4D65E, #52734D);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 10s ease-in-out infinite;
+}
+
+.treatment-growth-animated {
+  background: linear-gradient(45deg, #8B2635, #E63946, #FF6B6B, #A4161A);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+.treatment-micro-animated {
+  background: linear-gradient(45deg, #003566, #00B4D8, #90E0EF, #0077B6);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 12s ease-in-out infinite;
+}
+
+.treatment-exo-animated {
+  background: linear-gradient(45deg, #4C3957, #A663CC, #C9A9DD, #7209B7);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 9s ease-in-out infinite;
+}
+
+/* Treatment Shimmer Effects */
+.treatment-fue-shimmer {
+  background: linear-gradient(90deg, 
+    #2C5530 0%, 
+    #FFFFFF 25%, 
+    #7BA428 50%, 
+    #FFFFFF 75%, 
+    #A4D65E 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+.treatment-growth-shimmer {
+  background: linear-gradient(90deg, 
+    #8B2635 0%, 
+    #FFFFFF 25%, 
+    #E63946 50%, 
+    #FFFFFF 75%, 
+    #FF6B6B 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer 3.5s ease-in-out infinite;
+}
+
+.treatment-micro-shimmer {
+  background: linear-gradient(90deg, 
+    #003566 0%, 
+    #FFFFFF 25%, 
+    #00B4D8 50%, 
+    #FFFFFF 75%, 
+    #90E0EF 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer 4.5s ease-in-out infinite;
+}
+
+.treatment-exo-shimmer {
+  background: linear-gradient(90deg, 
+    #4C3957 0%, 
+    #FFFFFF 25%, 
+    #A663CC 50%, 
+    #FFFFFF 75%, 
+    #C9A9DD 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer 3.8s ease-in-out infinite;
+}
+
+/* Utility Classes for Treatment Contexts */
+.treatment-fue-context {
+  filter: hue-rotate(120deg) saturate(1.1);
+}
+
+.treatment-growth-context {
+  filter: hue-rotate(0deg) saturate(1.3);
+}
+
+.treatment-micro-context {
+  filter: hue-rotate(200deg) saturate(1.2);
+}
+
+.treatment-exo-context {
+  filter: hue-rotate(280deg) saturate(1.15);
+}
+
+/* Treatment Typography Combinations */
+.treatment-headline-gradient {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.treatment-subheadline-gradient {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.treatment-accent-gradient {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 650;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.35;
+  letter-spacing: 0.005em;
+}
