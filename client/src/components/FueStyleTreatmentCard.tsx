@@ -118,7 +118,7 @@ export default function FueStyleTreatmentCard({
             {/* Learn More Button */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
-              className={`flex items-center gap-2 text-[${color}] font-[600] text-md hover:brightness- transition-colors duration-200`}
+              className="flex items-center gap-2 font-[600] text-md hover:brightness- transition-colors duration-200 text-[#ffffff]"
               whileHover={{ x: 3, scale: 1.02 }}
               transition={{ duration: 0.2 }}
               initial={{ opacity: 0, y: 10 }}
