@@ -15,6 +15,34 @@ html {
 }
 
 /* ================================
+   UNIFIED COLOR TOKEN SYSTEM
+================================ */
+
+:root {
+  /* Text Colors */
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --text-tertiary: #d2d2d7;
+  --text-on-dark: #ffffff;
+  --text-on-light: #000000;
+  
+  /* CTA Colors */
+  --cta-primary: #FAE151;
+  --cta-secondary-blue: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+  --cta-text-on-yellow: #422006;
+  --cta-text-on-blue: #ffffff;
+  
+  /* Treatment Gradients */
+  --gradient-fue: linear-gradient(135deg, #2C5530 0%, #7BA428 60%, #A4D65E 100%);
+  --gradient-growth: linear-gradient(135deg, #8B2635 0%, #E63946 60%, #FF6B6B 100%);
+  --gradient-micro: linear-gradient(135deg, #003566 0%, #00B4D8 60%, #90E0EF 100%);
+  --gradient-exo: linear-gradient(135deg, #4C3957 0%, #7209B7 35%, #A663CC 70%, #C9A9DD 100%);
+  
+  /* Animation Containers */
+  --animation-container-position: relative;
+}
+
+/* ================================
    SF Pro Display Font Variants
 ================================ */
 
