@@ -3,7 +3,8 @@
 
 /* Import animations and design tokens */
 @import './styles/animations.css';
-@import './styles/design-tokens.css';
+@import url('./styles/design-tokens.css');
+@import url('./styles/apple-gradients.css');
 
 @tailwind base;
 @tailwind components;

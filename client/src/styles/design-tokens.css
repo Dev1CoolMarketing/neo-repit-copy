@@ -145,6 +145,13 @@
   --gradient-primary: linear-gradient(135deg, #FAE151 0%, #A87B23 100%);
   --gradient-secondary: linear-gradient(135deg, #625046 0%, #C8B68F 100%);
   --gradient-hero: linear-gradient(135deg, rgba(98, 80, 70, 0.9) 0%, rgba(200, 182, 143, 0.9) 100%);
+  
+  /* Apple-Style Text Gradients */
+  --gradient-text-signature: linear-gradient(135deg, #625046 0%, #A87B23 25%, #FAE151 50%, #EDB930 75%, #C8B68F 100%);
+  --gradient-text-warm: linear-gradient(135deg, #EDB930 0%, #C8B68F 50%, #FAE151 100%);
+  --gradient-text-sunset: linear-gradient(135deg, #625046 0%, #A87B23 50%, #FAE151 100%);
+  --gradient-text-champagne: linear-gradient(135deg, #FAF0DB 0%, #ECC689 50%, #CC7E2C 100%);
+  --gradient-text-bronze: linear-gradient(135deg, #B09981 0%, #94735A 50%, #7B5E4C 100%);
 
   /* Animation */
   --duration-fast: 150ms;

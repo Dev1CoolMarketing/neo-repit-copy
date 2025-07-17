@@ -1,0 +1,256 @@
+
+/* Apple-Style Signature Gradients for Accent Text */
+
+/* Primary Brand Gradients */
+.apple-gradient-primary {
+  background: linear-gradient(135deg, #FAE151 0%, #A87B23 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-warm-gold {
+  background: linear-gradient(135deg, #EDB930 0%, #C8B68F 50%, #FAE151 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-sunset {
+  background: linear-gradient(135deg, #625046 0%, #A87B23 50%, #FAE151 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Apple-Inspired Signature Gradients */
+.apple-gradient-titanium {
+  background: linear-gradient(135deg, #8E8E93 0%, #C7C7CC 50%, #F2F2F7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-pro-max {
+  background: linear-gradient(135deg, #1D1D1F 0%, #6E6E73 50%, #F5F5F7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-midnight {
+  background: linear-gradient(135deg, #000000 0%, #1D1D1F 50%, #424245 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Vibrant Apple Gradients */
+.apple-gradient-sierra-blue {
+  background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 50%, #AFECFE 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-alpine-green {
+  background: linear-gradient(135deg, #30D158 0%, #32D74B 50%, #A3F7BF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-product-red {
+  background: linear-gradient(135deg, #FF3B30 0%, #FF6961 50%, #FFBABA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Animated Gradients */
+.apple-gradient-animated {
+  background: linear-gradient(45deg, #FAE151, #A87B23, #625046, #EDB930);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+.apple-gradient-shimmer {
+  background: linear-gradient(90deg, 
+    #FAE151 0%, 
+    #FFFFFF 25%, 
+    #A87B23 50%, 
+    #FFFFFF 75%, 
+    #FAE151 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Soft Premium Gradients */
+.apple-gradient-soft-gold {
+  background: linear-gradient(135deg, #F4DEB7 0%, #E2A859 50%, #DA9237 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-champagne {
+  background: linear-gradient(135deg, #FAF0DB 0%, #ECC689 50%, #CC7E2C 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-bronze {
+  background: linear-gradient(135deg, #B09981 0%, #94735A 50%, #7B5E4C 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Multi-Stop Signature Gradients */
+.apple-gradient-signature {
+  background: linear-gradient(135deg, 
+    #625046 0%, 
+    #A87B23 25%, 
+    #FAE151 50%, 
+    #EDB930 75%, 
+    #C8B68F 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.apple-gradient-hero-accent {
+  background: linear-gradient(135deg, 
+    rgba(98, 80, 70, 0.9) 0%, 
+    rgba(168, 123, 35, 1) 30%, 
+    rgba(250, 225, 81, 1) 60%, 
+    rgba(237, 185, 48, 1) 80%, 
+    rgba(200, 182, 143, 0.9) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Keyframe Animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Typography Combinations */
+.apple-headline-gradient {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.apple-subheadline-gradient {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.apple-accent-gradient {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+/* Utility Classes for Different Contexts */
+.gradient-on-light {
+  filter: contrast(1.1) saturate(1.2);
+}
+
+.gradient-on-dark {
+  filter: brightness(1.2) saturate(1.1);
+}
+
+.gradient-subtle {
+  opacity: 0.8;
+}
+
+.gradient-bold {
+  filter: contrast(1.3) saturate(1.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .apple-gradient-animated {
+    animation-duration: 6s;
+  }
+  
+  .apple-gradient-shimmer {
+    animation-duration: 2s;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .apple-gradient-primary,
+  .apple-gradient-warm-gold,
+  .apple-gradient-sunset,
+  .apple-gradient-signature,
+  .apple-gradient-hero-accent {
+    background: var(--color-primary-600);
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    color: var(--color-primary-600);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .apple-gradient-animated,
+  .apple-gradient-shimmer {
+    animation: none;
+  }
+}
