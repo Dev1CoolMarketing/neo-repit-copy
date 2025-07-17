@@ -562,11 +562,11 @@
 }
 
 .ctaButtonSecondary {
-  background: transparent;
-  color: var(--www-apple-com-black);
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+  color: white;
+  border: none;
   border-radius: 32px;
-  padding: 14px 30px;
+  padding: 16px 32px;
   font-family: var(--font-family-Font-2);
   font-size: var(--font-size-21);
   font-weight: var(--font-weight-600);
@@ -577,14 +577,14 @@
   align-items: center;
   gap: 8px;
   position: relative;
-  backdrop-filter: blur(20px);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
 }
 
 .ctaButtonSecondary:hover {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #0056D6 0%, #003DB8 100%);
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
 }
 
 .ctaButtonSecondary:active {
