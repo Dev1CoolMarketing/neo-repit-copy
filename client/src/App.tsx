@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect } from "react";
 import { initFadeInAnimations, initLazyImageLoading } from "@/lib/utils";
 import Home from "@/pages/home";
-import VIPMembership from "@/pages/vip-membership";
+import VIPMembershipDesign from "@/pages/vip-membership";
 import TreatmentsPremium from "@/pages/treatments-premium";
 import Fue from "@/pages/fue";
 import GrowthFactors from "@/pages/growth-factors2";
@@ -15,7 +15,7 @@ import GrowthFactorsImagesPage from "@/pages/growth-factors-images";
 import HairHotlinePage from "./pages/hairhotline";
 import GrowthFactors2Page from '@/pages/growth-factors2';
 import ExosomesDesign from '@/pages/exosomes';
-import MicroneedlingDesign from '@/pages/microneedling';
+import { MicroneedlingDesign } from '@/pages/microneedling';
 import ComponentExportPage from '@/pages/component-export';
 import GradientsPage from '@/pages/gradients';
 import NotFound from "@/pages/not-found";
@@ -40,7 +40,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/vip-membership" component={VIPMembership} />
+      <Route path="/vip-membership" component={VIPMembershipDesign} />
       <Route path="/treatments" component={TreatmentsPremium} />
        <Route path="/fue" component={Fue} />
       <Route path="/growth-factors" component={GrowthFactors} />

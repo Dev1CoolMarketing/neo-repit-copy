@@ -1,188 +1,282 @@
-import { useEffect } from "react";
-import { CheckCircle } from "lucide-react";
-import { smoothScrollTo } from "@/lib/utils";
-import SiteHeader from "@/components/site-header";
+import React, { useEffect } from "react";
+import styles from "../styles/VIPMembershipDesign.module.css";
+import FueNavBar from "@/components/fue/fue-nav-bar";
 import SiteFooter from "@/components/site-footer";
-import ContactSection from "@/components/contact-section";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Crown, Star, Shield, Calendar, Phone } from "lucide-react";
+import { initFadeInAnimations } from "@/lib/utils";
 
-// VIP benefits list
-const vipBenefits = [
-  // {
-  //   title: "Priority Scheduling",
-  //   description: "Skip the waitlist with guaranteed appointments within 72 hours."
-  // },
-  // {
-  //   title: "Exclusive Pricing",
-  //   description: "Save up to 25% on maintenance treatments and products."
-  // },
-  // {
-  //   title: "Early Access",
-  //   description: "Be the first to try new innovative treatments and technologies."
-  // },
-  // {
-  //   title: "VIP Support",
-  //   description: "Direct access to our VIP concierge team for personalized care."
-  // }
+export const VIPMembershipDesign = (): JSX.Element => {
+  // Data for the features section
+  const features = [
+    {
+      id: 1,
+      title: "With VIP Membership,",
+      description: "you gain exclusive access to premium treatments, priority scheduling, and personalized hair restoration protocols.",
+      icon: <Crown className="w-8 h-8" />,
+      hasSuper: true
+    },
+    {
+      id: 2,
+      title: "Priority Access",
+      description: "receive preferential scheduling for all treatments, consultations, and follow-up appointments.",
+      icon: <Calendar className="w-8 h-8" />,
+      hasSuper: true
+    },
+    {
+      id: 3,
+      title: "Concierge Service",
+      description: "enjoy dedicated support with personalized treatment coordination and 24/7 medical guidance.",
+      icon: <Phone className="w-8 h-8" />,
+      hasSuper: true
+    },
+    {
+      id: 4,
+      title: "Everyone benefits from",
+      description: "exclusive pricing on premium treatments, complimentary consultations, and access to advanced therapies.",
+      icon: <Star className="w-8 h-8" />,
+      hasSuper: true
+    }
+  ];
 
-  // Priority Access to Care
-  // Say goodbye to waiting weeks—or even months—to get the care you
-  // deserve. As a VIGOR VIP, you’ll receive priority appointments with our
-  // top-tier specialists, immediate access to our most sought-after
-  // services, and ongoing support—without the long delays.
-  // 2. Exclusive Treatments & Services
-  // Gain access to high-demand medical services that are often limited or
-  // unavailable to the general public. These cutting-edge treatments are
-  // reserved exclusively for our VIP members.
-  // 3. Concierge-Level Clinical Oversight
-  // Enjoy more frequent check-ins, deeper clinical insights, and a greater-
-  // degree of direct access to our team of experts. VIGOR VIPs
-  // experience healthcare that’s focused on both addressing specific
-  // concerns and optimizing your overall well-being.
-  // 4. 40% Off Standard Pricing
-  // Members enjoy a 40% discount on standard rates for most of our
-  // services. In most cases, these savings exceed the monthly cost of
-  // membership—making your investment in wellness both smart and rewarding.
-  {
-    title: "Priority Access to Care",
-    description:
-      "Say goodbye to waiting weeks—or even months—to get the care you deserve. As a VIGOR VIP, you’ll receive priority appointments with our top-tier specialists, immediate access to our most sought-after services, and ongoing support—without the long delays.",
-  },
-  {
-    title: "Exclusive Treatments & Services",
-    description:
-      "Gain access to high-demand medical services that are often limited or unavailable to the general public. These cutting-edge treatments are reserved exclusively for our VIP members",
-  },
-  {
-    title: "Concierge-Level Clinical Oversight",
-    description:
-      "Enjoy more frequent check-ins, deeper clinical insights, and a greater-degree of direct access to our team of experts. VIGOR VIPs experience healthcare that’s focused on both addressing specific concerns and optimizing your overall well-being.",
-  },
-  {
-    title: "40% Off Standard Pricing",
-    description:
-      "Members enjoy a 40% discount on standard rates for most of our services. In most cases, these savings exceed the monthly cost of membership—making your investment in wellness both smart and rewarding.",
-  },
-];
+  // Data for membership tiers
+  const membershipTiers = [
+    {
+      title: "Gold Membership",
+      description: "comprehensive access to all standard treatments with priority scheduling and exclusive pricing.",
+      users: [
+        { name: "Dr. Rodriguez", type: "Specialist", avatar: "👨‍⚕️" },
+        { name: "Sarah Chen", type: "Member", avatar: "👩‍💼" }
+      ]
+    },
+    {
+      title: "Platinum Membership",
+      description: "premium tier with concierge service, advanced treatments, and personalized care protocols.",
+      users: [
+        { name: "Michael", type: "2 years", avatar: "👨‍💼" },
+        { name: "Jennifer", type: "3 years", avatar: "👩‍🦰" },
+        { name: "David", type: "5 years", avatar: "👨‍🦲" }
+      ]
+    }
+  ];
 
-export default function VIPMembership() {
+  // Data for details section
+  const detailItems = [
+    {
+      text: "It's easy to begin your VIP membership with a comprehensive consultation — even if you're new to hair restoration treatments.",
+      phoneContent: "Consultation"
+    },
+    {
+      text: "VIP members receive priority access to our most advanced treatments, including exclusive protocols not available to general patients.",
+      phoneContent: "Priority Access",
+      hasSuper: true,
+      superNumber: "1"
+    },
+    {
+      text: "Our concierge team can coordinate your entire treatment journey, from initial consultation to post-procedure care and follow-up.",
+      phoneContent: "Concierge Service",
+      hasSuper: true,
+      superNumber: "2"
+    },
+    {
+      text: "VIP members enjoy significant savings on all treatments, complimentary services, and access to premium facilities.",
+      phoneContent: "Exclusive Benefits",
+      hasSuper: true,
+      superNumbers: ["3", "4"]
+    }
+  ];
+
   useEffect(() => {
-    // Initialize page title
-    document.title = "VIGOR VIP Membership | Dr. NEO";
-
-    // Scroll to top on page load
+    // Scroll to top on route change
     window.scrollTo(0, 0);
+
+    // Initialize fade-in animations
+    const cleanup = initFadeInAnimations();
+
+    // Add title to the page
+    document.title = "VIP Membership | Dr. Neo Hair Restoration";
+
+    return cleanup;
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <SiteHeader />
-      <main className="flex-1">
-        {/* Hero Section for VIP Membership */}
-        <section className="pt-24 pb-16 bg-neutral-900 text-white">
-          <div className="container mx-auto px-6">
-            <div className="inline-block bg-primary/20 text-primary text-sm font-medium px-3 py-1 rounded-full mb-6">
-              Exclusive Program
-            </div>
+    <div className={styles.wLight}>
+      <FueNavBar />
+      <div className={styles.body}>
+        <main className={styles.main}>
+          {/* Hero Section */}
+          <section className={styles.heroSection}>
+            <div className={styles.container}>
+              <div className={styles.heroContent}>
+                <div className={styles.headingMargin}>
+                  <h1 className={styles.mainHeading}>
+                    Exclusive membership.
+                    <br />
+                    Premium experience.
+                  </h1>
+                </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              VIGOR VIP <br />
-              Membership
-            </h2>
+                <div className={styles.subHeading}>
+                  <p className={styles.subHeadingText}>
+                    <span>With VIP Membership,</span>
+                    <sup className={styles.superscript}>1</sup>
+                    <span> you can</span>
+                  </p>
+                  <p className={styles.subHeadingText}>
+                    access premium treatments with priority
+                  </p>
+                  <p className={styles.subHeadingText}>
+                    scheduling and personalized care
+                    <br />
+                    protocols designed for optimal results.
+                  </p>
+                </div>
 
-            <p className="text-lg text-white/80 max-w-2xl mb-12">
-              Join our exclusive membership program and receive priority access
-              to care, exclusive treatments and services, concierge level
-              clinical oversight, and 40% off standard pricing. Be the first to
-              access to new technologies before they're available to the public.
-            </p>
-
-            <div className="space-y-6 mb-12">
-              {vipBenefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="bg-primary/10 p-2 rounded-full mr-4 mt-1">
-                    <CheckCircle className="h-5 w-5 text-primary" />
+                <div className={styles.heroImagePlaceholder}>
+                  <div className={styles.heroImageContent}>
+                    <Shield className="w-24 h-24 text-amber-500" />
+                    <p className={styles.heroImageText}>VIP Experience</p>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">{benefit.title}</h3>
-                    <p className="text-white/60">{benefit.description}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className={styles.featuresSection}>
+            <div className={styles.container}>
+              <div className={styles.featuresGrid}>
+                {features.map((feature, index) => (
+                  <div key={feature.id} className={styles.featureCard}>
+                    <div className={styles.featureIcon}>
+                      {feature.icon}
+                    </div>
+                    <div className={styles.featureContent}>
+                      <h3 className={styles.featureTitle}>
+                        {feature.title}
+                        {feature.hasSuper && (
+                          <sup className={styles.superscript}>{feature.id}</sup>
+                        )}
+                      </h3>
+                      <p className={styles.featureDescription}>
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Membership Tiers Section */}
+          <section className={styles.userTypesSection}>
+            <div className={styles.container}>
+              <h2 className={styles.userTypesTitle}>
+                Membership designed for
+                <br />
+                different needs.
+              </h2>
+
+              <div className={styles.userTypesGrid}>
+                {membershipTiers.map((tier, index) => (
+                  <div key={index} className={styles.userTypeCard}>
+                    <div className={styles.userTypeContent}>
+                      <h3 className={styles.userTypeTitle}>{tier.title}</h3>
+                      <p className={styles.userTypeDescription}>
+                        {tier.description}
+                      </p>
+                      
+                      <div className={styles.userAvatars}>
+                        {tier.users.map((user, userIndex) => (
+                          <div key={userIndex} className={styles.userAvatar}>
+                            <div className={styles.avatarEmoji}>{user.avatar}</div>
+                            <div className={styles.avatarInfo}>
+                              <div className={styles.avatarName}>{user.name}</div>
+                              <div className={styles.avatarType}>{user.type}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Details Section */}
+          <section className={styles.detailsSection}>
+            <div className={styles.detailsContainer}>
+              <h2 className={styles.detailsTitle}>
+                Specialists are
+                <br />
+                your partners.
+              </h2>
+
+              {detailItems.map((item, index) => (
+                <div key={index} className={styles.detailItem}>
+                  <p className={styles.detailText}>
+                    {item.text}
+                    {item.hasSuper && item.superNumber && (
+                      <sup className={styles.superscript}>
+                        {item.superNumber}
+                      </sup>
+                    )}
+                    {item.hasSuper && item.superNumbers && (
+                      <>
+                        <sup className={styles.superscript}>
+                          {item.superNumbers[0]}
+                        </sup>
+                        <sup className={styles.superscript}>
+                          {item.superNumbers[1]}
+                        </sup>
+                      </>
+                    )}
+                  </p>
+
+                  <div className={styles.phoneContainer}>
+                    <div className={styles.phoneScreen}>
+                      <div className={styles.phoneContent}>
+                        <div className={styles.phoneIcon}>👑</div>
+                        <div className={styles.phoneTitle}>
+                          {item.phoneContent}
+                        </div>
+                        <div className={styles.phoneBrand}>
+                          Dr. Neo Hair Restoration
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.phoneDevice}></div>
                   </div>
                 </div>
               ))}
             </div>
+          </section>
 
-            <Button
-              className="bg-primary hover:bg-primary/90 text-neutral-900 px-8 py-6 text-base font-medium"
-              onClick={() => smoothScrollTo("contact")}
-            >
-              Become a VIP Member
-            </Button>
-          </div>
-        </section>
+          {/* CTA Section */}
+          <section className={styles.ctaSection}>
+            <div className={styles.container}>
+              <h2 className={styles.ctaTitle}>
+                Begin your VIP
+                <br />
+                membership journey.
+              </h2>
 
-        {/* Membership Card Section */}
-        <section className="py-16 bg-neutral-800 text-white">
-          <div className="container mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Exclusive Member Benefits
-            </h2>
-
-            <div className="max-w-md mx-auto">
-              {/* VIP Card */}
-              <div className="w-full shadow-lg transform hover:scale-105 transition-transform duration-300 bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg p-6 mb-8">
-                <div className="mb-8">
-                  <h3 className="text-xl font-bold text-primary">VIGOR VIP</h3>
-                  <p className="text-white/60 text-sm">MEMBERSHIP</p>
-                </div>
-                <div className="mb-4 border-t border-neutral-700 pt-4">
-                  <h4 className="text-white/80 text-sm">MEMBER NAME</h4>
-                  <p className="text-white font-medium">JOHN SMITH</p>
-                </div>
-                <div className="mb-4">
-                  <h4 className="text-white/80 text-sm">MEMBER SINCE</h4>
-                  <p className="text-white font-medium">JANUARY 2023</p>
-                </div>
-                <div className="flex justify-between items-center">
-                  <p className="text-white/60 text-xs">
-                    DR. NEO HAIR RESTORATION
-                  </p>
-                  <img
-                    src="/assets/NEO LOGO WHITE.png"
-                    alt="Dr. NEO Logo"
-                    className="h-6"
-                  />
-                </div>
-              </div>
-
-              <div className="text-center mb-8">
-                <p className="text-lg mb-6">
-                  Unlock premium benefits with our VIGOR VIP membership program.
-                  Designed for patients who value convenience, savings, and
-                  exclusive access.
-                </p>
-                <p className="text-white/60">
-                  Membership is limited to ensure personalized service.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <Button
-                  className="bg-primary hover:bg-primary/90 text-neutral-900 px-8 py-6 text-base font-medium"
-                  onClick={() => smoothScrollTo("contact")}
-                >
-                  Apply for Membership
-                </Button>
+              <div className={styles.ctaButtons}>
+                <button className={styles.ctaButton}>
+                  Join VIP Membership
+                  <ArrowUpRight size={20} />
+                </button>
+                <button className={styles.ctaButtonSecondary}>
+                  Learn More
+                </button>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Pricing and FAQs can be added here */}
-
-        {/* Contact Section for membership inquiries */}
-        <ContactSection />
-      </main>
+          </section>
+        </main>
+      </div>
       <SiteFooter />
     </div>
   );
-}
+};
+
+export default VIPMembershipDesign;

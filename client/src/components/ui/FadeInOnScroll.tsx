@@ -27,7 +27,7 @@ export function FadeInOnScroll({
     <motion.div
       ref={ref}
       initial="hidden"
-      className={className}
+      className={`${className} relative`}
       animate={controls}
       transition={{ duration: 0.6, ease: "easeOut" }}
       variants={{
