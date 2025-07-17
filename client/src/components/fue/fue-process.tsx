@@ -12,7 +12,7 @@ export default function FueProcess() {
             {["P", "R", "O", "C", "E", "S", "S"].map((letter, index) => (
               <div
                 key={index}
-                className="w-12 h-12 bg-gradient-to-br from-[#FF375F] to-[#FF6B8A] rounded-lg flex items-center justify-center shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="w-12 h-12 bg-gradient-to-br from-[#8B2635] via-[#A4161A] to-[#E63946] rounded-lg flex items-center justify-center shadow-lg transform hover:scale-105 transition-all duration-300"
               >
                 <span className="text-sm font-semibold text-white">
                   {letter}

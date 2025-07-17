@@ -347,7 +347,7 @@ export default function FueNavBar() {
                 </a>
                 <a
                   href="/#contact"
-                  className="flex items-center justify-center bg-gradient-to-r from-[#FF375F] to-[#FF6B8A] text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white hover:from-[#E8244D] hover:to-[#FF375F] transition-all duration-300"
+                  className="flex items-center justify-center bg-gradient-to-r from-[#8B2635] via-[#A4161A] to-[#E63946] text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white hover:from-[#6F1D1B] hover:to-[#8B2635] transition-all duration-300"
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMenuOpen(false);

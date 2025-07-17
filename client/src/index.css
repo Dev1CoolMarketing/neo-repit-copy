@@ -222,34 +222,34 @@ ol {
 }
 
 .custom-button-fue {
-  background: linear-gradient(135deg, #FF375F 0%, #FF6B8A 100%);
+  background: linear-gradient(135deg, #8B2635 0%, #A4161A 30%, #E63946 60%, #FF6B6B 85%, rgba(255, 107, 107, 0.8) 100%);
   color: white;
   border: none;
-  box-shadow: 0 4px 15px rgba(255, 55, 95, 0.3);
+  box-shadow: 0 4px 15px rgba(139, 38, 53, 0.3);
   transition: all 0.3s ease;
   font-weight: 600;
 }
 
 .custom-button-fue:hover {
-  background: linear-gradient(135deg, #E8244D 0%, #FF375F 100%);
+  background: linear-gradient(135deg, #6F1D1B 0%, #8B2635 30%, #A4161A 60%, #E63946 85%, #FF6B6B 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 55, 95, 0.4);
+  box-shadow: 0 6px 20px rgba(139, 38, 53, 0.4);
 }
 
 .custom-button-outline-fue {
   background-color: white;
-  color: #FF375F;
-  border: 2px solid #FF375F;
+  color: #8B2635;
+  border: 2px solid #8B2635;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .custom-button-outline-fue:hover {
-  background: linear-gradient(135deg, #FF375F 0%, #FF6B8A 100%);
+  background: linear-gradient(135deg, #8B2635 0%, #A4161A 30%, #E63946 60%, #FF6B6B 85%, rgba(255, 107, 107, 0.8) 100%);
   color: white;
-  border: 2px solid #FF375F;
+  border: 2px solid #8B2635;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 55, 95, 0.3);
+  box-shadow: 0 8px 25px rgba(139, 38, 53, 0.3);
 }
 
 .custom-button-growth-factors {

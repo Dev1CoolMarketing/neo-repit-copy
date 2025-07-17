@@ -108,7 +108,7 @@ const HowItWorks = () => {
                   features={[]}
                   image={detail.image}
                   featured={true}
-                  color={"#FF375F"}
+                  color={"#8B2635"}
                   inverse={index > 1}
                   alignLeft={false}
                 >
