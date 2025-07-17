@@ -125,7 +125,7 @@ export default function FueStyleTreatmentCard({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-[#0b84fe]">Learn More</span>
+              <span className="text-[#e92937]">Learn More</span>
               <motion.div
                 animate={{ rotate: isExpanded ? 45 : 0 }}
                 transition={{ duration: 0.3 }}
