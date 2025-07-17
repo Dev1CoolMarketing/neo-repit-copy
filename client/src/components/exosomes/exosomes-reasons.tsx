@@ -43,7 +43,7 @@ export default function ExosomesReasons() {
                         key={`reason-${index}`}
                         className="flex flex-col section-content"
                     >
-                        <span className="text-[26px] font-bold text-center text-[#c17ff0]">
+                        <span className="text-[26px] font-bold text-center exo-accent-text">
                             {item.title}
                         </span>{" "}
                         <span className="text-[26px] font-bold text-center">

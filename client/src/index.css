@@ -267,8 +267,18 @@ ol {
 }
 
 .custom-button-hypersomes {
-  background-color: #c17ff0;
-  color: #100a03;
+  background: linear-gradient(135deg, #4C3957 0%, #5B2C87 30%, #A663CC 60%, #C9A9DD 85%, rgba(201, 169, 221, 0.8) 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(76, 57, 87, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.custom-button-hypersomes:hover {
+  background: linear-gradient(135deg, #3C1642 0%, #4C3957 30%, #7209B7 60%, #A663CC 85%, #C9A9DD 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 57, 87, 0.4);
 }
 
 /* Ensure yellow/gold buttons always have dark brown text */
