@@ -347,7 +347,7 @@ export default function FueNavBar() {
                 </a>
                 <a
                   href="/#contact"
-                  className="flex items-center justify-center bg-[#007AFF] text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white"
+                  className="flex items-center justify-center bg-[#FF3B30] text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white"
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMenuOpen(false);

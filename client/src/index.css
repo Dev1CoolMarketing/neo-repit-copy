@@ -222,29 +222,29 @@ ol {
 }
 
 .custom-button-fue {
-  background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 50%, #AFECFE 100%);
+  background: linear-gradient(135deg, #FF3B30 0%, #FF6961 50%, #FFBABA 100%);
   color: white;
   border: none;
-  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3);
   transition: all 0.3s ease;
 }
 
 .custom-button-fue:hover {
-  background: linear-gradient(135deg, #0056B3 0%, #007AFF 50%, #5AC8FA 100%);
+  background: linear-gradient(135deg, #D70015 0%, #FF3B30 50%, #FF6961 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 59, 48, 0.4);
 }
 
 .custom-button-outline-fue {
   background-color: white;
-  color: #007AFF;
-  border: 2px solid #007AFF;
+  color: #FF3B30;
+  border: 2px solid #FF3B30;
 }
 
 .custom-button-outline-fue:hover {
-  background-color: #F0F8FF;
-  color: #0056B3;
-  border: 2px solid #0056B3;
+  background-color: #FFF5F5;
+  color: #D70015;
+  border: 2px solid #D70015;
 }
 
 .custom-button-growth-factors {
