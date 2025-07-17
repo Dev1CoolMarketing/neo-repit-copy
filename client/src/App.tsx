@@ -17,6 +17,7 @@ import GrowthFactors2Page from '@/pages/growth-factors2';
 import ExosomesDesign from '@/pages/exosomes';
 import MicroneedlingDesign from '@/pages/microneedling';
 import ComponentExportPage from '@/pages/component-export';
+import GradientsPage from '@/pages/gradients';
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -54,6 +55,7 @@ function Router() {
         <Route path="/exosomes" component={ExosomesDesign} />
         <Route path="/microneedling" component={MicroneedlingDesign} />
         <Route path="/component-export" component={ComponentExportPage} />
+        <Route path="/gradients" component={GradientsPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
