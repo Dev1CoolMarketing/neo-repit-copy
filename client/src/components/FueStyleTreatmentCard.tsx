@@ -102,7 +102,7 @@ export default function FueStyleTreatmentCard({
                       className={`bg-[${color}]/10 rounded-full p-1 mt-1 flex-shrink-0`}
                     >
                       <div
-                        className={`w-2 h-2 bg-[${color}] rounded-full`}
+                        className="w-2 h-2 rounded-full bg-[#0b84fe]"
                       ></div>
                     </div>
                     <span
