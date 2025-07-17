@@ -85,8 +85,11 @@ export default function ExosomesHeader() {
               Promote natural regrowth.
             </p>
             <button
-              className="custom-button-hypersomes w-full px-4 text-md  font-[500] text-lg py-2 rounded-full mt-5 text-white"
-              style={{ color: "white" }}
+              className="custom-button-hypersomes w-full px-6 py-4 text-lg font-[600] rounded-full mt-8 text-white hover:text-white transition-all duration-300"
+              style={{ 
+                color: "white",
+                textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
+              }}
             >
               Book Consultation
             </button>
