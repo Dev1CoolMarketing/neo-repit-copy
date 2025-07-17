@@ -122,6 +122,14 @@ This is a modern, premium hair restoration website for Dr. Neo, built with a ful
 
 ## Recent Changes
 
+### Growth Factors Page Apple Blue Gradient Implementation (January 17, 2025)
+- **Applied Apple-style blue gradient**: Replaced neon green accent color (#32d74b) with Apple-inspired sierra blue gradient from gradients page
+- **Updated main headline**: Applied `apple-gradient-sierra-blue` class to "FACTORS" text for cohesive design
+- **Refined interactive elements**: Updated step indicators, progress bars, and highlight text to use consistent blue gradient
+- **Enhanced button styling**: Transformed button from flat green to elegant blue gradient with hover effects and shadow
+- **Improved visual cohesion**: Aligned Growth Factors page with overall site design language while maintaining unique treatment identity
+- **CSS gradient system**: Utilized existing Apple gradient system for consistent brand application across treatment pages
+
 ### Growth Factors Page Routing Fix
 - **Fixed routing issue**: Updated App.tsx to use the correct growth-factors2.tsx page instead of the older growth-factors.tsx
 - **Design consistency**: Now shows the modern Apple-style Growth Factors page with proper animations

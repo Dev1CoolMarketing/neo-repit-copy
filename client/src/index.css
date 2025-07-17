@@ -244,8 +244,17 @@ ol {
 }
 
 .custom-button-growth-factors {
-  background-color: #32d74b;
-  color: #100a03;
+  background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 50%, #AFECFE 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.custom-button-growth-factors:hover {
+  background: linear-gradient(135deg, #0056B3 0%, #007AFF 50%, #5AC8FA 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
 }
 
 .custom-button-hypersomes {

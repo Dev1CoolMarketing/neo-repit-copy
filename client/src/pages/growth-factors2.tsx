@@ -197,25 +197,10 @@ function HeroContent() {
             >
               GROWTH
               <br />
-              <p className="text-6xl md:text-8xl text-[#32d74b] font-[600] tracking-wide font-bold text-center leading-[1.05] font-[600] tracking-[-0.02em] m-0 bg-gradient-to-r from-[#32d74b] via-[#F69A97] to-[#05C9F9] bg-clip-text text-transparent">
+              <p className="text-6xl md:text-8xl apple-gradient-sierra-blue font-[600] tracking-wide font-bold text-center leading-[1.05] font-[600] tracking-[-0.02em] m-0">
                 FACTORS {/* Subtle glow effect for growth factors */}
               </p>
-              {/* <span className="text-[#32d74b] relative">
-                FACTORS
-                <motion.div
-                  className="absolute inset-0 text-[#32d74b] blur-lg opacity-30"
-                  animate={{
-                    opacity: [0.3, 0.5, 0.3],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  FACTORS
-                </motion.div>
-              </span> */}
+
             </motion.h1>
           </div>
         </div>
@@ -322,12 +307,12 @@ function ProcessStep({ label, isActive = false, index }) {
       <motion.div
         className={`w-12 h-12 rounded-full flex items-center justify-center text-base font-[600] transition-all duration-700 ${
           isActive
-            ? "bg-[#32d74b] text-black shadow-lg shadow-[#32d74b]/30"
+            ? "bg-[#007AFF] text-white shadow-lg shadow-[#007AFF]/30"
             : "bg-black/15 text-white/60 backdrop-blur-sm"
         }`}
         animate={{
           scale: isActive ? 1.1 : 1,
-          backgroundColor: isActive ? "#32d74b" : "rgba(255,255,255,0.15)",
+          backgroundColor: isActive ? "#007AFF" : "rgba(255,255,255,0.15)",
         }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
@@ -337,10 +322,10 @@ function ProcessStep({ label, isActive = false, index }) {
       {/* Minimal label */}
       <motion.span
         className={`text-sm font-[500] transition-all duration-700 ${
-          isActive ? "text-[#32d74b]" : "text-white/70"
+          isActive ? "text-[#007AFF]" : "text-white/70"
         }`}
         animate={{
-          color: isActive ? "#32d74b" : "rgba(255,255,255,0.7)",
+          color: isActive ? "#007AFF" : "rgba(255,255,255,0.7)",
         }}
       >
         {label}
@@ -377,7 +362,7 @@ export function ProcessTimeline() {
         transition={{ duration: 0.6 }}
       >
         <motion.h2
-          className="text-4xl md:text-6xl font-[800] text-[#32d74b] mb-2 tracking-tight"
+          className="text-4xl md:text-6xl font-[800] apple-gradient-sierra-blue mb-2 tracking-tight"
           animate={{
             scale: [1, 1.01, 1],
           }}
@@ -394,13 +379,13 @@ export function ProcessTimeline() {
             key={index}
             className={`h-1 rounded-full transition-all duration-700 ${
               index === activeStep
-                ? "bg-[#32d74b] w-12 shadow-lg shadow-[#32d74b]/50"
+                ? "bg-[#007AFF] w-12 shadow-lg shadow-[#007AFF]/50"
                 : "bg-white/20 w-4"
             }`}
             animate={{
               width: index === activeStep ? 48 : 16,
               backgroundColor:
-                index === activeStep ? "#32d74b" : "rgba(255,255,255,0.2)",
+                index === activeStep ? "#007AFF" : "rgba(255,255,255,0.2)",
             }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           />
@@ -456,7 +441,7 @@ function BenefitCard({ title, description, highlight, statistic, index }) {
         whileHover={{ scale: 1.01 }}
         transition={{ duration: 0.3 }}
       >
-        <span className="text-[#32d74b] font-semibold">{highlight}</span>
+        <span className="apple-gradient-sierra-blue font-semibold">{highlight}</span>
         <br />
         <span className="text-black">{title}</span>
       </motion.h3>
@@ -465,7 +450,7 @@ function BenefitCard({ title, description, highlight, statistic, index }) {
       </p>
       {statistic && (
         <div className="pt-8">
-          <span className="text-[#32d74b] font-semibold text-lg">
+          <span className="apple-gradient-sierra-blue font-semibold text-lg">
             {statistic}
           </span>
         </div>
@@ -505,7 +490,7 @@ function BenefitsSection() {
         <div className="w-full flex flex-col items-center justify-center gap-12">
           {benefits.map((benefit, index) => (
             <FadeInOnScroll key={`reason-${index}`} className="flex flex-col ">
-              <span className="text-[26px] font-bold text-center text-[#32d74b]">
+              <span className="text-[26px] font-bold text-center apple-gradient-sierra-blue">
                 {benefit.highlight}
               </span>{" "}
               <span className="text-[26px] font-bold text-center">
