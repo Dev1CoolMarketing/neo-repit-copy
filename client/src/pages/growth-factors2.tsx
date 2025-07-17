@@ -283,7 +283,7 @@ function HeroContent() {
     //     </div>
 
     //     {/* <motion.p
-    //       className="text-[#32d74b] text-lg font-[500]"
+    //       className="apple-gradient-sierra-blue text-lg font-[500]"
     //       initial={{ opacity: 0 }}
     //       animate={{ opacity: 1 }}
     //       transition={{ delay: 1.6, duration: 0.8 }}
@@ -656,7 +656,7 @@ export function TimelineStep({
                 <motion.span
                   key={featureIndex}
                   className="px-4 py-2 bg-gray-100 border border-gray-200 rounded-full 
-                             text-sm text-gray-800 hover:bg-lime-50 hover:border-lime-200 
+                             text-sm text-gray-800 hover:bg-blue-50 hover:border-blue-200 
                              hover:text-gray-900 transition-all duration-300 cursor-default"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={
@@ -1130,7 +1130,7 @@ function AppleTestimonial({ name, review, result, index }) {
       {/* Rating */}
       <div className="flex justify-center space-x-1">
         {[...Array(5)].map((_, i) => (
-          <StarIcon key={i} className="w-5 h-5 text-lime-600" filled={true} />
+          <StarIcon key={i} className="w-5 h-5 text-blue-500" filled={true} />
         ))}
       </div>
 
@@ -1146,14 +1146,14 @@ function AppleTestimonial({ name, review, result, index }) {
 
       {/* Result highlight */}
       <motion.div
-        className="inline-block bg-lime-50 border border-lime-200 rounded-2xl  py-4"
+        className="inline-block bg-blue-50 border border-blue-200 rounded-2xl  py-4"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={
           isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
         }
         transition={{ delay: index * 0.2 + 0.5, duration: 0.6 }}
       >
-        <p className="text-lime-700 font-semibold text-lg">{result}</p>
+        <p className="text-blue-700 font-semibold text-lg">{result}</p>
       </motion.div>
 
       {/* Patient info */}
@@ -1327,7 +1327,7 @@ function AppleContactForm() {
           className={`w-full px-4 py-4 bg-gray-50 border-2 rounded-2xl transition-all duration-300 
                      resize-none focus:outline-none focus:bg-white text-gray-900 placeholder-gray-500 ${
                        focused === name
-                         ? "border-lime-200 shadow-lg shadow-lime-100"
+                         ? "border-blue-200 shadow-lg shadow-blue-100"
                          : "border-gray-200 hover:border-gray-300"
                      }`}
           whileFocus={{ scale: 1.01 }}
@@ -1344,7 +1344,7 @@ function AppleContactForm() {
           className={`w-full px-4 py-4 bg-gray-50 border-2 rounded-2xl transition-all duration-300 
                      focus:outline-none focus:bg-white text-gray-900 placeholder-gray-500 ${
                        focused === name
-                         ? "border-lime-200 shadow-lg shadow-lime-100"
+                         ? "border-blue-200 shadow-lg shadow-blue-100"
                          : "border-gray-200 hover:border-gray-300"
                      }`}
           whileFocus={{ scale: 1.01 }}
