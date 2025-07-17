@@ -69,12 +69,12 @@
 }
 
 .apple-gradient-product-red {
-  background: linear-gradient(135deg, #FF1744 0%, #FF6B6B 25%, #FF8A80 50%, #FFCDD2 75%, #FFEBEE 100%);
+  background: linear-gradient(135deg, #FF375F 0%, #FF6B8A 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  filter: saturate(1.4) contrast(1.2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Animated Gradients */
