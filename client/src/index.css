@@ -301,6 +301,11 @@ button[class*="primary"]:hover {
   ;
 }
 
+/* Blue tint for follicles image to match Apple blue theme */
+.follicles-blue-tint {
+  filter: hue-rotate(200deg) saturate(1.2) brightness(0.9);
+}
+
 
 @layer base {
   :root {

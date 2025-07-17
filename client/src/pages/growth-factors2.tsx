@@ -164,7 +164,7 @@ function HeroContent() {
         }}
         src={"/assets/FOLLICULES.png"}
         alt="Advanced Hair Follicle Technology"
-        className="relative z-24 w-20 h-24 h-auto object-contain"
+        className="relative z-24 w-20 h-24 h-auto object-contain follicles-blue-tint"
         loading="eager"
       />
       <motion.div
