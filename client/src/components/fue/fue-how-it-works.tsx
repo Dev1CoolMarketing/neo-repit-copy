@@ -142,7 +142,7 @@ const HowItWorks = () => {
                       showCardIconInitial={<Plus className="h-4" />}
                       showCardIconFinal={<Minus className="h-4" />}
                       animationIconClasses="transition-transform duration-300"
-                      cardTextClasses="text-md font-bold text-medium-gray"
+                      cardTextClasses="text-md font-bold apple-gradient-product-red"
                     >
                       <div>THIS IS WHERE ALL THE INFORMATION WILL GO </div>
                     </HiddenCard>
@@ -186,7 +186,7 @@ const HowItWorks = () => {
                     showCardIconInitial={<Plus className="h-4" />}
                     showCardIconFinal={<Minus className="h-4" />}
                     animationIconClasses="transition-transform duration-300"
-                    cardTextClasses="text-md font-bold text-medium-gray"
+                    cardTextClasses="text-md font-bold apple-gradient-product-red"
                   >
                     <div>THIS IS WHERE ALL THE INFORMATION WILL GO </div>
                   </HiddenCard>
@@ -229,7 +229,7 @@ const HowItWorks = () => {
                     showCardIconInitial={<Plus className="h-4" />}
                     showCardIconFinal={<Minus className="h-4" />}
                     animationIconClasses="transition-transform duration-300"
-                    cardTextClasses="text-md font-bold text-medium-gray"
+                    cardTextClasses="text-md font-bold apple-gradient-product-red"
                   >
                     <div>THIS IS WHERE ALL THE INFORMATION WILL GO </div>
                   </HiddenCard>
@@ -270,7 +270,7 @@ const HowItWorks = () => {
                       showCardIconInitial={<Plus className="h-4" />}
                       showCardIconFinal={<Minus className="h-4" />}
                       animationIconClasses="transition-transform duration-300"
-                      cardTextClasses="text-md font-bold text-medium-gray"
+                      cardTextClasses="text-md font-bold apple-gradient-product-red"
                     >
                       <div>THIS IS WHERE ALL THE INFORMATION WILL GO </div>
                     </HiddenCard>
