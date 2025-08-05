@@ -5,7 +5,14 @@ import SiteFooter from "@/components/site-footer";
 import { ArrowUpRight } from "lucide-react";
 import { initFadeInAnimations } from "@/lib/utils";
 import ExosomesHeader from "@/components/exosomes/exosomes-header";
+import GenericHeader from "@/components/generic-header";
 import ExosomesReasons from "@/components/exosomes/exosomes-reasons";
+
+const headerDetails = [
+  "Cellular regeneration.",
+  "Scientific precision.",
+  "Promote natural regrowth.",
+];
 
 export const ExosomesDesign = (): JSX.Element => {
   // Data for the features section
@@ -103,7 +110,17 @@ export const ExosomesDesign = (): JSX.Element => {
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
-      <ExosomesHeader />
+      <GenericHeader
+        title1={"Follicular"}
+        title2={"Hypersomes"}
+        details={headerDetails}
+        image={"🧬"}
+        useText={true}
+        gradientClass={
+          "bg-gradient-to-r from-[#c17ff0] via-[#df73a5] to-[#f5a53b] bg-clip-text text-transparent"
+        }
+        gradientButtonClass={"custom-button-hypersomes"}
+      />{" "}
       <ExosomesReasons />
       <div className={styles.body}>
         <main className={styles.main}>
@@ -156,7 +173,7 @@ export const ExosomesDesign = (): JSX.Element => {
               {features.map((feature, index) => (
                 <div
                   key={feature.id}
-                  className={`${styles.featureItem} fade-in`}
+                  className={`${styles.featureItem}  fade-in`}
                 >
                   {index === 0 && (
                     <div className={styles.featureIcon}>{feature.icon}</div>

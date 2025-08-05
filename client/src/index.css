@@ -281,7 +281,7 @@ ol {
 }
 
 .custom-button-growth-factors {
-  background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 50%, #AFECFE 100%);
+  background: linear-gradient(135deg, #5CB270 0%, #89AD5F 50%, #E4A43C 100%);
   color: white;
   border: none;
   box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
@@ -289,7 +289,7 @@ ol {
 }
 
 .custom-button-growth-factors:hover {
-  background: linear-gradient(135deg, #0056B3 0%, #007AFF 50%, #5AC8FA 100%);
+  background: linear-gradient(135deg, #458253 0%, #6F8649 50%, #C48D35 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
 }

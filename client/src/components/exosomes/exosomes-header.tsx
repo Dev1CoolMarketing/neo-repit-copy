@@ -45,19 +45,34 @@ export default function ExosomesHeader() {
                   ease: "easeOut",
                 }}
               >
-                <p className="pb-3"> FOLLICULAR </p>
+                {/* <p className="pb-3"> FOLLICULAR </p> */}
                 <p
                   className="text-4xl md:text-8xl text-[#] font-[600] tracking-wide font-bold text-center 
-                   leading-[1.05] font-[600] tracking-[-0.02em] m-0"
+                   !leading-[1.15] font-[600] tracking-[-0.02em] m-0"
                   style={{
-                    background: 'linear-gradient(90deg, #c17ff0 0%, #df73a5 61%, #f5a53b 100%)',
-                    WebkitTextFillColor: 'transparent',
-                    WebkitBackgroundClip: 'text',
-                    backgroundClip: 'text',
-                    letterSpacing: '-2px'
+                    background:
+                      "linear-gradient(90deg, #c17ff0 0%, #df73a5 61%, #f5a53b 100%)",
+                    WebkitTextFillColor: "transparent",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    letterSpacing: "-2px",
                   }}
                 >
-                  HYPERSOMES™
+                  Follicular
+                </p>
+                <p
+                  className="text-4xl md:text-8xl text-[#] font-[600] tracking-wide font-bold text-center 
+                   !leading-[1.15] font-[600] tracking-[-0.02em] m-0 leading-5"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #c17ff0 0%, #df73a5 61%, #f5a53b 100%)",
+                    WebkitTextFillColor: "transparent",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    letterSpacing: "-2px",
+                  }}
+                >
+                  Hypersomes™
                 </p>
               </motion.h1>
             </div>
@@ -86,9 +101,9 @@ export default function ExosomesHeader() {
             </p>
             <button
               className="custom-button-hypersomes w-full px-6 py-4 text-lg font-[600] rounded-full mt-8 text-white hover:text-white transition-all duration-300"
-              style={{ 
+              style={{
                 color: "white",
-                textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
+                textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)",
               }}
             >
               Book Consultation

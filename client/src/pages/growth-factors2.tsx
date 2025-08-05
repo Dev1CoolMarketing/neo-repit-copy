@@ -6,7 +6,7 @@ import {
   StarIcon,
 } from "../components/growth-factors/timeline-icons";
 import styles from "../styles/fue.module.css";
-
+import GenericHeader from "@/components/generic-header";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
 import dermatoscopeImg from "@assets/gf-howitworks-step1.png";
@@ -17,6 +17,12 @@ import GrowthFactorsFAQ from "../components/growth-factors/growth-factors-faq";
 import SiteFooter from "@/components/site-footer";
 import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 import GrowthFactorsHeader from "@/components/growth-factors/growth-factors-header";
+
+const headerDetails = [
+  "Stimulates natural hair growth.",
+  "No pills. No prescriptions.",
+  "Minimally invasive. No downtime.",
+];
 
 function DrNeoLogo() {
   return (
@@ -66,7 +72,6 @@ function MenuIcon() {
     </div>
   );
 }
-
 function BookButton({ onClick }) {
   return (
     <motion.button
@@ -185,23 +190,12 @@ function HeroContent() {
         <div className="flex w-full flex-col items-center justify-center gap-5 px-5  ">
           <div className="flex flex-col items-center w-full">
             {/* Main headline with growth factor emphasis */}
-            <motion.h1
-              className="text-6xl md:text-8xl lg:text-9xl font-[700] tracking-tight text-black leading-[0.85]"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.3,
-                duration: 1.5,
-                ease: "easeOut",
-              }}
-            >
-              GROWTH
-              <br />
-              <p className="text-6xl md:text-8xl apple-gradient-sierra-blue font-[600] tracking-wide font-bold text-center leading-[1.05] font-[600] tracking-[-0.02em] m-0">
-                FACTORS {/* Subtle glow effect for growth factors */}
-              </p>
-
-            </motion.h1>
+            <p className="text-6xl md:text-8xl apple-gradient-sierra-blue font-[600] tracking-wide font-bold text-center leading-[1.05] font-[600] tracking-[-0.02em] m-0">
+              Growth {/* Subtle glow effect for growth factors */}
+            </p>
+            <p className="text-6xl md:text-8xl apple-gradient-sierra-blue font-[600] tracking-wide font-bold text-center leading-[1.05] font-[600] tracking-[-0.02em] m-0">
+              Factors {/* Subtle glow effect for growth factors */}
+            </p>
           </div>
         </div>
         <div className=" gap-1 md:text-2xl flex flex-col items-center lg:text-3xl font-[600] px-10">
@@ -441,7 +435,9 @@ function BenefitCard({ title, description, highlight, statistic, index }) {
         whileHover={{ scale: 1.01 }}
         transition={{ duration: 0.3 }}
       >
-        <span className="apple-gradient-sierra-blue font-semibold">{highlight}</span>
+        <span className="apple-gradient-sierra-blue font-semibold">
+          {highlight}
+        </span>
         <br />
         <span className="text-black">{title}</span>
       </motion.h3>
@@ -490,7 +486,7 @@ function BenefitsSection() {
         <div className="w-full flex flex-col items-center justify-center gap-12">
           {benefits.map((benefit, index) => (
             <FadeInOnScroll key={`reason-${index}`} className="flex flex-col ">
-              <span className="text-[26px] font-bold text-center apple-gradient-sierra-blue">
+              <span className="text-[26px] font-bold text-center bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent ">
                 {benefit.highlight}
               </span>{" "}
               <span className="text-[26px] font-bold text-center">
@@ -1459,7 +1455,17 @@ export default function App() {
     <div className="bg-black min-h-screen">
       <FueNavBar />
       {/* <GrowthFactorsHeader /> */}
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <GenericHeader
+        title1={"Growth"}
+        title2={"Factors"}
+        details={headerDetails}
+        image={"/assets/FOLLICULES.png"}
+        gradientClass={
+          "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
+        }
+        gradientButtonClass={"custom-button-growth-factors"}
+      />
       <BenefitsSection />
       <ProcessSection />
       {/* <PricingSection />
