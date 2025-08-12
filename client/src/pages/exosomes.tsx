@@ -7,6 +7,7 @@ import { initFadeInAnimations } from "@/lib/utils";
 import ExosomesHeader from "@/components/exosomes/exosomes-header";
 import GenericHeader from "@/components/generic-header";
 import ExosomesReasons from "@/components/exosomes/exosomes-reasons";
+import GenericReasons from "@/components/generic-reasons";
 
 const headerDetails = [
   "Cellular regeneration.",
@@ -106,7 +107,30 @@ export const ExosomesDesign = (): JSX.Element => {
 
     return cleanup;
   }, []);
-
+  const exosomeGradient =
+    "bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC] bg-clip-text text-transparent";
+  const exosomeReasons = [
+    {
+      highlight: "With Exosome Therapy,",
+      description:
+        "you can harness advanced cellular communication to restore hair follicle vitality and promote natural regrowth.",
+    },
+    {
+      highlight: "Cellular Activators",
+      description:
+        "contain powerful growth factors and proteins that activate dormant hair follicle stem cells.",
+    },
+    {
+      highlight: "Anti-Inflammatory Properties",
+      description:
+        "reduce scalp inflammation and create an optimal environment for hair follicle health.",
+    },
+    {
+      highlight: "Everyone experiences",
+      description:
+        "enhanced follicle function, improved blood flow, and natural hair cycle renewal.",
+    },
+  ];
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
@@ -116,12 +140,13 @@ export const ExosomesDesign = (): JSX.Element => {
         details={headerDetails}
         image={"🧬"}
         useText={true}
-        gradientClass={
-          "bg-gradient-to-r from-[#c17ff0] via-[#df73a5] to-[#f5a53b] bg-clip-text text-transparent"
-        }
+        gradientClass={exosomeGradient}
         gradientButtonClass={"custom-button-hypersomes"}
       />{" "}
-      <ExosomesReasons />
+      <GenericReasons
+        reasons={exosomeReasons}
+        gradientClass={exosomeGradient}
+      />
       <div className={styles.body}>
         <main className={styles.main}>
           {/* Hero Section */}

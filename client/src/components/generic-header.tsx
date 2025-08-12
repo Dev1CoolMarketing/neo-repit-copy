@@ -11,9 +11,8 @@ export default function GenericHeader({
   gradientButtonClass,
   useText,
 }: any) {
-  console.log("THIS IS USE TEXT", useText);
   return (
-    <section className="w-full bg-white flex min-h-[60vh] flex-col justify-center items-center  mt-20">
+    <section className="w-full bg-white flex min-h-[60vh] md:min-h-screen flex-col justify-center items-center  mt-20 md:mt-0">
       <div className="flex flex-col justify-center items-center header-height">
         {!useText ? (
           <motion.img
@@ -70,10 +69,10 @@ export default function GenericHeader({
                   ease: "easeOut",
                 }}
               >
-                <p className={`${styles2.mainHeading} font-normal ${gradientClass}`}>
+                <p className={`${styles2.mainHeading}  ${gradientClass}`}>
                   {title1}
                 </p>
-                <p className={`${styles2.mainHeading} font-normal ${gradientClass}`}>
+                <p className={`${styles2.mainHeading}  ${gradientClass}`}>
                   {title2}
                 </p>
               </motion.h1>
@@ -83,9 +82,7 @@ export default function GenericHeader({
             {details.map((item: any) => {
               return (
                 <p
-                  className={`${
-                    styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
-                  }  text-lg lg:text-xl  font-normal`}
+                  className={`subHeadingText`}
                 >
                   {item}
                 </p>

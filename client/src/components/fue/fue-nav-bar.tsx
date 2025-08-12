@@ -95,12 +95,18 @@ export default function FueNavBar() {
                 {link.name}{" "}
                 <ChevronRight
                   className={`
-                              ${typeDropdownOpen === link.name ? "rotate-90" : "rotate-0"}
+                              ${
+                                typeDropdownOpen === link.name
+                                  ? "rotate-90"
+                                  : "rotate-0"
+                              }
                               animate duration-300 h-4 w-4`}
                 />
               </div>
               <div
-                className={`${typeDropdownOpen === link.name ? "block" : "hidden"} text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide pl-4 bg-black md:absolute md:border-white md:border md:px-5`}
+                className={`${
+                  typeDropdownOpen === link.name ? "block" : "hidden"
+                } text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide pl-4 bg-black md:absolute md:border-white md:border md:px-5`}
               >
                 <div className="flex flex-col gap-2">
                   {generateLinks(link.dropdownItems)}
@@ -178,7 +184,7 @@ export default function FueNavBar() {
       window.location.href = href;
     }
   };
-
+  console.log('THIS IS SCROLLED', isScrolled)
   return (
     <header
       id="site-header"
@@ -186,7 +192,9 @@ export default function FueNavBar() {
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-850 ease-in-out",
         isScrolled
           ? "bg-black shadow-lg backdrop-blur-sm bg-opacity-90 lg:backdrop-blur-xl md:shadow-sm"
-          : "bg-black backdrop-blur-sm",
+          : `${
+              pathName === "/" ? "bg-transparent" : "bg-black"
+            } backdrop-blur-sm`
       )}
     >
       {/* Mobile header */}
@@ -194,13 +202,34 @@ export default function FueNavBar() {
         {/* Left Side Icons */}
         <div className="flex items-center">
           <div className="flex justify-center items-center h-full">
-            <Link href="/">
-              <img
-                src="/assets/n-logo.svg"
-                alt="Dr. NEO"
-                className="h-8 w-auto"
-              />
-            </Link>
+            {isScrolled ? (
+              <div
+                     className={`transition-opacity duration-1000 ${
+          isScrolled ? "opacity-100" : "opacity-0"
+        }`}>
+                <Link href="/">
+                  <img
+                    src="/assets/n-logo.svg"
+                    alt="Dr. NEO"
+                    className="h-8 w-auto"
+                  />
+                </Link>
+              </div>
+            ) : (
+              <div 
+               className={`transition-opacity duration-1000 ${
+          isScrolled ? "opacity-0" : "opacity-100"
+        }`}
+              >
+                <Link href="/">
+                  <img
+                    src="/assets/NEO LOGO WHITE.png"
+                    alt="Dr. NEO"
+                    className="h-8 w-auto"
+                  />
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* <Button
@@ -229,7 +258,7 @@ export default function FueNavBar() {
               size="icon"
               className={cn(
                 "p-0  hover:bg-white/20 focus-visible:ring-offset-0 transition-all duration-500",
-                isScrolled ? "text-white" : "text-white drop-shadow-lg",
+                isScrolled ? "text-white" : "text-white drop-shadow-lg"
               )}
             >
               <Phone
@@ -250,7 +279,7 @@ export default function FueNavBar() {
             size="icon"
             className={cn(
               "p-0 hover:bg-white focus-visible:ring-offset-0 transition-all duration-500 ",
-              isScrolled ? "text-white" : "text-white drop-shadow-lg",
+              isScrolled ? "text-white" : "text-white drop-shadow-lg"
             )}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >

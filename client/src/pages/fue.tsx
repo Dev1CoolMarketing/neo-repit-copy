@@ -14,6 +14,39 @@ import FueResults from "@/components/fue/fue-results-from-real-patients";
 import Frame_81 from "@/components/Frame_81";
 import TestimonialsSectionPremium from "@/components/testimonials-section-premium";
 import FueNavBar from "@/components/fue/fue-nav-bar";
+import GenericHeader from "@/components/generic-header";
+import GenericReasons from "@/components/generic-reasons";
+
+const headerDetails = [
+  " Advanced FUE technology.",
+  "Natural results.",
+  "Restored confidence.",
+];
+
+    const fueReasons = [
+        {
+            highlight: "Natural-looking results",
+            description: "with aesthetic appeal and more youthful density",
+        },
+        {
+            highlight: "No visible linear scar",
+            description:
+                "because FUE skips the outdated practice of scalp strip removal",
+        },
+        {
+            highlight: "Quicker recovery",
+            description: " with our minimally invasive approach",
+        },
+        {
+            highlight: "Ultra-popular procedure",
+            description:
+                "because FUE skips the outdated practice of scalp strip removal",
+        },
+        {
+            highlight: "Men, women, hairlines, crowns, eyebrows and beards",
+            description: "-we got you covered",
+        },
+    ];
 
 export default function Fue() {
   useEffect(() => {
@@ -28,12 +61,20 @@ export default function Fue() {
 
     return cleanup;
   }, []);
-
+  const fueGradientClass = "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#111827] bg-clip-text text-transparent"
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
-      <FueHeader />
-      <FueReasons />
+      <GenericHeader  
+              title1={"FUE"}
+        title2={"Hair Transplant"}
+        details={headerDetails}
+        image={"/assets/fue/shinyfollicle.webp"}
+        gradientClass={
+          "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#111827] bg-clip-text text-transparent"
+        }
+        gradientButtonClass={"custom-button-fue"}/>
+      <GenericReasons reasons={fueReasons} gradientClass={fueGradientClass} />
       <FueHowItWorks />
       <FueProcess />
       <Frame_81 />

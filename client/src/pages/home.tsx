@@ -11,6 +11,7 @@ import FaqSection from "@/components/faq-section";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import { initFadeInAnimations } from "@/lib/utils";
+import FueNavBar from "@/components/fue/fue-nav-bar";
 
 export default function Home() {
   useEffect(() => {
@@ -25,7 +26,9 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <SiteHeader />
+      {/* <SiteHeader /> */}
+            <FueNavBar />
+      
       <main className="flex-1">
         {/* Mobile: Use original components, Desktop: Use Apple-inspired enhanced components */}
         <HeroSection />
