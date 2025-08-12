@@ -1,73 +1,51 @@
+// server/index.ts
 import dotenv from "dotenv";
 dotenv.config();
 
-import express, { type Request, Response, NextFunction } from "express";
+import http from "http";
+import app, { attachErrorHandler } from "./app";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-app.use((req, res, next) => {
-  const start = Date.now();
-  const path = req.path;
-  let capturedJsonResponse: Record<string, any> | undefined = undefined;
-
-  const originalResJson = res.json;
-  res.json = function (bodyJson, ...args) {
-    capturedJsonResponse = bodyJson;
-    return originalResJson.apply(res, [bodyJson, ...args]);
-  };
-
-  res.on("finish", () => {
-    const duration = Date.now() - start;
-    if (path.startsWith("/api")) {
-      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
-      if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
-      }
-
-      if (logLine.length > 80) {
-        logLine = logLine.slice(0, 79) + "…";
-      }
-
-      log(logLine);
-    }
-  });
-
-  next();
-});
-
 (async () => {
-  const server = await registerRoutes(app);
+  // Let registerRoutes register all API routes onto `app`.
+  // Your original registerRoutes returned a server; to preserve that behavior,
+  // we accept either an http.Server or void.
+  const maybeServer = await registerRoutes(app);
 
-  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
-    const status = err.status || err.statusCode || 500;
-    const message = err.message || "Internal Server Error";
+  // Attach error handler (non-crashing by default).
+  attachErrorHandler();
 
-    res.status(status).json({ message });
-    throw err;
-  });
-
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
+  // If in development, setup Vite AFTER routes so Vite's catch-all doesn't shadow API routes.
   if (app.get("env") === "development") {
-    await setupVite(app, server);
+    // registerRoutes may have returned a server useful for setupVite (e.g. for websockets)
+    await setupVite(app, maybeServer as http.Server | undefined);
   } else {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
+  // Use provided server (if registerRoutes created it), otherwise create one.
+  const server: http.Server = (maybeServer as http.Server) ?? http.createServer(app);
+
+  const port = process.env.PORT ? Number(process.env.PORT) : 5000;
+
+  server.on("error", (err: any) => {
+    log("Server error: " + (err && err.stack ? err.stack : String(err)));
+    // If it's an EACCES/EADDRINUSE/EADDRNOTAVAIL/ENOTSUP, log helpful note:
+    if (err?.code === "EADDRINUSE") {
+      log(`Port ${port} is already in use.`);
+    } else if (err?.code === "EACCES") {
+      log(`Insufficient privileges to bind to port ${port}.`);
+    } else if (err?.code === "ENOTSUP") {
+      log(`Operation not supported on this socket for ${port}.`);
+    }
+    // do not process.exit() here — keep behavior simple for dev.
+  });
+
   server.listen(
     {
       port,
       host: "0.0.0.0",
-      reusePort: true,
     },
     () => {
       log(`serving on port ${port}`);
