@@ -1,7 +1,7 @@
 
 import { smoothScrollTo } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import shinyFolliclePath from "@assets/shinyfollicle.png";
+import shinyFolliclePath from "@assets/shinyfollicle.webp";
 import { Link } from "wouter";
 export default function Frame_17() {
   // We don't need to detect the desktop card context here - the parent component handles the styling

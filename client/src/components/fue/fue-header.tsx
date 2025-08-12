@@ -1,8 +1,6 @@
 import styles from "../../styles/fue.module.css";
-import shinyFolliclePath from "@assets/shinyfollicle.png";
 import { motion } from "framer-motion";
-import { ProcessTimeline } from "@/pages/growth-factors2";
-import HeroAnimateWrapper from "../ui/hero-animate-wrapper";
+
 
 export default function FueHeader() {
   return (
@@ -16,7 +14,7 @@ export default function FueHeader() {
             duration: 2,
             ease: "easeIn",
           }}
-          src={"/assets/fue/shinyfollicle.png"}
+          src={"/assets/fue/shinyfollicle.webp"}
           alt="Advanced Hair Follicle Technology"
           className="relative z-24 w-20 h-24 h-auto object-contain"
           loading="eager"

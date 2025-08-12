@@ -36,8 +36,8 @@ export default function ExosomesReasons() {
         },
     ];
     return (
-        <div className="w-full flex flex-col justify-center items-center py-20">
-            <div className="\w-full flex flex-col items-center justify-center gap-9">
+        <div className="w-full flex flex-col justify-center items-center py-">
+            <div className="w-full flex flex-col items-center justify-center gap-9">
                 {exosomesResons.map((item, index) => (
                     <FadeInOnScroll
                         key={`reason-${index}`}

@@ -9,14 +9,12 @@ import styles from "../styles/fue.module.css";
 import GenericHeader from "@/components/generic-header";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
-import dermatoscopeImg from "@assets/gf-howitworks-step1.png";
-import prpTubeImg from "@assets/gf-hiw2-prptube.png";
-import microneedlingPenImg from "@assets/gf-hiw3-mnpen.png";
+import dermatoscopeImg from "@assets/gf-howitworks-step1.webp";
+import prpTubeImg from "@assets/gf-hiw2-prptube.webp";
+import microneedlingPenImg from "@assets/gf-hiw3-mnpen.webp";
 import recoveryTrackerImg from "@assets/gf-howitworks-step4.png";
-import GrowthFactorsFAQ from "../components/growth-factors/growth-factors-faq";
 import SiteFooter from "@/components/site-footer";
 import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
-import GrowthFactorsHeader from "@/components/growth-factors/growth-factors-header";
 
 const headerDetails = [
   "Stimulates natural hair growth.",

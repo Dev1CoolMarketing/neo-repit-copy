@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { smoothScrollTo } from "@/lib/utils";
-import goldTweezerPath from "@assets/gold.png";
+import goldTweezerPath from "@assets/gold.webp";
 import hairBrushImage from "@assets/7.png";
 import hairLossImage from "@assets/9.png";
 import ProductModal from "./ui/modal";

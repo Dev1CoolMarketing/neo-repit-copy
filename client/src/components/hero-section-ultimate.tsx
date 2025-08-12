@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import shinyFolliclePath from "@assets/shinyfollicle.png";
+import shinyFolliclePath from "@assets/shinyfollicle.webp";
 
 export function HeroSectionUltimate() {
   const heroRef = useRef<HTMLElement>(null);

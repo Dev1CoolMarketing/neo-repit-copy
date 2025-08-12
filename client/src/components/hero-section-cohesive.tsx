@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import shinyFolliclePath from "@assets/shinyfollicle.png";
+import shinyFolliclePath from "@assets/shinyfollicle.webp";
 
 export function HeroSectionCohesive() {
   const heroRef = useRef<HTMLElement>(null);

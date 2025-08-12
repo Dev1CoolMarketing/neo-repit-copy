@@ -1,8 +1,7 @@
 import styles from "../../styles/fue.module.css";
-import shinyFolliclePath from "@assets/shinyfollicle.png";
+
 import { motion } from "framer-motion";
-import { ProcessTimeline } from "@/pages/growth-factors2";
-import HeroAnimateWrapper from "../ui/hero-animate-wrapper";
+
 
 export default function GrowthFactorsHeader() {
   return (

@@ -3,10 +3,9 @@ import { Plus, Minus } from "lucide-react";
 import HiddenCard from "../ui/hidden-card";
 import AnimatedImage from "../ui/animtated-image";
 import FueStyleTreatmentCard from "../FueStyleTreatmentCard";
-import procedureImg from "@assets/fue-hiw2-procedure.png";
-import prpTubeImg from "@assets/gf-hiw2-prptube.png";
-import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.png";
-import followUpConsultationImg from "@assets/fue-howitworks-step4.png";
+import procedureImg from "@assets/fue-hiw2-procedure.webp";
+import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
+import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
 
 const HowItWorks = () => {
   const processDetails = [
