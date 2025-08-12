@@ -36,7 +36,7 @@ export default function HeroSection() {
             zIndex: 10,
           }}
         >
-          <h1 className={`${styles.Heading}  font-normal mb-4`}>SoCal Advanced Hair Restoration</h1>
+          <h1 className={`${styles.Heading} font-normal mb-4`}>SoCal Advanced Hair Restoration</h1>
 
           <p className={styles.Subheading}>
             Natural Results | Fuller Hairlines | Confident Patients
