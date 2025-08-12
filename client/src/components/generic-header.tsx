@@ -13,7 +13,7 @@ export default function GenericHeader({
 }: any) {
   console.log("THIS IS USE TEXT", useText);
   return (
-    <section className="w-full bg-white flex min-h-[60vh] flex-col justify-center items-center  md:mt-20 ">
+    <section className="w-full bg-white flex min-h-[60vh] flex-col justify-center items-center  mt-20">
       <div className="flex flex-col justify-center items-center header-height">
         {!useText ? (
           <motion.img
