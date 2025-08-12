@@ -83,9 +83,9 @@ export default function GenericHeader({
             {details.map((item: any) => {
               return (
                 <p
-                  className={
+                  className={`${
                     styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
-                  }
+                  }  text-lg lg:text-xl  font-normal`}
                 >
                   {item}
                 </p>
