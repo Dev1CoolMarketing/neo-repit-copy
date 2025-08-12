@@ -1,4 +1,4 @@
-import styles from "..//styles/fue.module.css";
+import styles from "../styles/fue.module.css";
 import { motion } from "framer-motion";
 import styles2 from "../styles/ExosomesDesign.module.css";
 
@@ -61,7 +61,7 @@ export default function GenericHeader({
           <div className="flex w-full flex-col items-center justify-center gap-5 px-5  ">
             <div className="flex flex-col items-center w-full">
               <motion.h1
-                className="text-6xl  md:text-8xl lg:text-9xl text-center font-[700] tracking-tight text-black leading-[0.85] pb-5"
+                className="text-9xl  md:text-8xl lg:text-9xl text-center font-[700] tracking-tight text-black leading-[0.85] pb-5"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{

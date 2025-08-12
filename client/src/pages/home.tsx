@@ -1,12 +1,5 @@
 import { useEffect } from "react";
 import HeroSection from "@/components/hero-section";
-import HeroSectionEnhanced from "@/components/hero-section-enhanced-fixed";
-import { HeroSectionOptimized } from "@/components/hero-section-optimized";
-import { HeroSectionPremium } from "@/components/hero-section-premium";
-import { HeroSectionRefined } from "@/components/hero-section-refined";
-import { HeroSectionCohesive } from "@/components/hero-section-cohesive";
-import { HeroSectionGodMode } from "@/components/hero-section-godmode";
-import { HeroSectionUltimate } from "@/components/hero-section-ultimate";
 import { HeroSectionImmersive } from "@/components/hero-section-immersive";
 import TreatmentsSection from "@/components/treatments-section";
 import TreatmentsSectionEnhanced from "@/components/treatments-section-enhanced";

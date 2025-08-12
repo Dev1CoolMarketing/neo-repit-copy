@@ -37,7 +37,7 @@ export default function HeroSectionEnhanced() {
               className={styles.PrimaryButton}
               onClick={() => smoothScrollTo("contact")}
             >
-              <div className={styles.Group_48_192_60}>Book Consult</div>
+              <div className={styles.Group_48_192_60}>Bookfefe Cofdfdsnsult</div>
             </button>
           </div>
         </div>

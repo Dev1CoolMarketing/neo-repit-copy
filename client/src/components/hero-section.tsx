@@ -36,7 +36,7 @@ export default function HeroSection() {
             zIndex: 10,
           }}
         >
-          <h1 className={styles.Heading}>SoCal Advanced Hair Restoration</h1>
+          <h1 className={`${styles.Heading}  font-normal mb-4`}>SoCal Advanced Hair Restoration</h1>
 
           <p className={styles.Subheading}>
             Natural Results | Fuller Hairlines | Confident Patients
@@ -47,7 +47,7 @@ export default function HeroSection() {
               className={styles.PrimaryButton}
               onClick={() => smoothScrollTo("contact")}
             >
-              <div className={styles.Group_48_192_60}>Book Consult</div>
+              <div className={`${styles.Group_48_192_60} rounded-full`}>Book Consult</div>
             </button>
           </div>
         </div>
