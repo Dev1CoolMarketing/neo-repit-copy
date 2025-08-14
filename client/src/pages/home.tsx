@@ -19,7 +19,7 @@ export default function Home() {
     const cleanup = initFadeInAnimations();
 
     // Add title to the page
-    document.title = "SoCal Advanced Hair Restoration | Dr. NEO";
+    document.title = "Dr. Neo® | NeoGraft Expert";
 
     return cleanup;
   }, []);

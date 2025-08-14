@@ -54,17 +54,17 @@ export default function SiteFooter() {
             </h2>
             
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
-              Board-certified specialists • 8,500+ successful procedures
+              8,500+ successful procedures
             </p>
             
             <motion.button
-              onClick={() => smoothScrollTo(0)}
+              onClick={() => smoothScrollTo('contact')}
               className="group bg-[#FAE151] hover:bg-[#f5d93a] text-black font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ y: -1, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <span className="flex items-center gap-2">
-                Start Consultation
+                Book Consultation
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </span>
             </motion.button>
