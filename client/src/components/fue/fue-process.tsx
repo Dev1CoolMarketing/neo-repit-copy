@@ -1,5 +1,4 @@
 import styles from "../../styles/fue.module.css";
-import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 
 export default function FueProcess() {
@@ -30,9 +29,9 @@ export default function FueProcess() {
             Understand exactly what happens during your treatment.
           </p>
 
-          <Link className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
+          <button className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
             Watch process videos
-          </Link>
+          </button>
           <div className="device device-iphone-x">
             <div className="device-frame"></div>``
             <div className="device-stripe"></div>
