@@ -7,7 +7,6 @@ import pluginSSR from 'vite-plugin-ssr/plugin'
 export default defineConfig({
   plugins: [
     react(),
-    pluginSSR(),
     runtimeErrorOverlay(),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
