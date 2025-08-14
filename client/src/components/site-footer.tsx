@@ -127,11 +127,11 @@ export default function SiteFooter() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Phone className="w-4 h-4 text-[#FAE151]" />
-                  <span>(949) 888-6668</span>
+                  <span>(949) 570-0500</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Mail className="w-4 h-4 text-[#FAE151]" />
-                  <span>info@drneo.com</span>
+                  <span>team@drvigor.com</span>
                 </div>
                 <div className="flex items-start space-x-2 text-gray-300">
                   <MapPin className="w-4 h-4 text-[#FAE151] mt-0.5" />
