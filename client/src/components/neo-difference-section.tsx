@@ -85,7 +85,7 @@ export default function NeoDifferenceSection() {
               setApi={setApi}
               opts={{
                 align: "center",
-                loop: true,
+                loop: false,
                 containScroll: "trimSnaps",
               }}
               className={styles.carousel}
