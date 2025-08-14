@@ -189,7 +189,7 @@ export default function FueNavBar() {
     <header
       id="site-header"
       className={cn(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-850 ease-in-out",
+        "fixed top-0 pl-5 left-0 right-0 z-[100] transition-all duration-850 ease-in-out",
         isScrolled
           ? "bg-black shadow-lg backdrop-blur-sm bg-opacity-90 lg:backdrop-blur-xl md:shadow-sm"
           : `${
@@ -201,58 +201,34 @@ export default function FueNavBar() {
       <div className="md:hidden container mx-auto px-4 flex justify-between items-center h-14">
         {/* Left Side Icons */}
         <div className="flex items-center">
-          <div className="flex justify-center items-center h-full">
-            {isScrolled ? (
-              <div
-                     className={`transition-opacity duration-1000 ${
-          isScrolled ? "opacity-100" : "opacity-0"
-        }`}>
-                <Link href="/">
-                  <img
-                    src="/assets/n-logo.svg"
-                    alt="Dr. NEO"
-                    className="h-8 w-auto"
-                  />
-                </Link>
-              </div>
-            ) : (
-              <div 
-               className={`transition-opacity duration-1000 ${
-          isScrolled ? "opacity-0" : "opacity-100"
-        }`}
-              >
-                <Link href="/">
-                  <img
-                    src="/assets/NEO LOGO WHITE.png"
-                    alt="Dr. NEO"
-                    className="h-8 w-auto"
-                  />
-                </Link>
-              </div>
-            )}
-          </div>
+          <Link
+          href="/"
+          className="flex justify-center items-center h-full">
+              <img
+    src="/assets/NEO LOGO WHITE.png"
+    alt="Dr. NEO"
+    className={`absolute h-8 pl-20 w- transition-opacity duration-700 ${
+      isScrolled ? "opacity-0 scale-75" : "opacity-100 scale-75"
+    }`}
+  />
 
-          {/* <Button
-            variant="ghost"
-            size="icon"
-            className="text-white p-0 hover:bg-white/10 focus-visible:ring-offset-0 focus-visible:ring-white"
-          >
-            <Search
-              className="h-4 w-4 sm:h-5 sm:w-5"
-              style={{
-                filter: "none",
-                transform: "translateZ(0)",
-              }}
-            />
-            <span className="sr-only">Search</span>
-          </Button> */}
+  {/* Dark Logo */}
+  <img
+    src="/assets/n-logo.svg"
+    alt="Dr. NEO"
+    className={`absolute h-8 w-auto transition-opacity duration-700 ${
+      isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-95"
+    }`}
+  />
+          </Link>
+
         </div>
 
         {/* Center Logo - Made clickable for better UX */}
 
         {/* Right Side Phone Icon - Made clickable to call office */}
         <div>
-          <a href="tel:(949) 570-0500">
+          <a href="tel:+19495700500">
             <Button
               variant="ghost"
               size="icon"
@@ -322,7 +298,7 @@ export default function FueNavBar() {
             <div className="flex items-center space-x-4">
               <a
                 href="tel:(949) 570-0500"
-                className="text-[#] text-sm font-medium hidden lg:block"
+                className="text-[#] text-sm fonxt-medium hidden lg:block"
               >
                 (949) 570-0500
               </a>
@@ -367,7 +343,7 @@ export default function FueNavBar() {
             <div className="pt-3 mt-3 border-t border-[#C8B68F]/20">
               <div className="grid grid-cols-2 gap-3">
                 <a
-                  href="tel:(949) 570-0500"
+                  href="tel:+19495700500"
                   className="flex items-center justify-center bg-white/10 text-white rounded-lg py-3 text-sm font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
