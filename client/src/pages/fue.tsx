@@ -66,12 +66,13 @@ export default function Fue() {
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
       <GenericHeader  
-              title1={"FUE"}
-        title2={"Hair Transplant"}
+              title1={"Follicular "}
+        title2={"Unit Extraction"}
+        title3={"Hair Transplant"}
         details={headerDetails}
         image={"/assets/fue/shinyfollicle.webp"}
         gradientClass={
-          "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#111827] bg-clip-text text-transparent"
+          "bg-gradient-to-r from-[#B91C1C] via-[#111827]  to-[#B91C1C] bg-clip-text text-transparent"
         }
         gradientButtonClass={"custom-button-fue"}/>
       <GenericReasons reasons={fueReasons} gradientClass={fueGradientClass} />

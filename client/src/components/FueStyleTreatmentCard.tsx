@@ -145,10 +145,35 @@ export default function FueStyleTreatmentCard({
               className="overflow-hidden"
             >
               <div
-                className={`pt-4 ${inverse ? "text-gray-700" : "text-white"} text-sm leading-relaxed font-[400]`}
+                className={`pt-4 ${inverse ? "text-gray-700" : "text-white"} text-sm leading-relaxed font-[400] flex flex-col gap-5`}
               >
-                {learnMoreContent ||
-                  "Additional detailed information about this treatment step will be displayed here. This includes specific protocols, expected outcomes, and important considerations for patients."}
+                <div className="flex flex-col">
+                <p className="text-red-500">Why FUE?</p>
+                <ul className="list-disc">
+                  <li>No scalpel, no stitches, no linear scar</li>
+                  <li>Fast recovery, natural results</li>
+                 <li>Works for both men and women of all ethnicities</li>
+                </ul>
+                </div>
+                         <div className="flex flex-col">
+                <p className="text-red-500">Why FUE?</p>
+                <ul className="list-disc">
+                  <li>No scalpel, no stitches, no linear scar</li>
+                  <li>Fast recovery, natural results</li>
+                 <li>Works for both men and women of all ethnicities</li>
+                </ul>
+                </div>
+
+                         <div className="flex flex-col">
+                <p className="text-red-500">Why FUE?</p>
+                <ul className="list-disc">
+                  <li>No scalpel, no stitches, no linear scar</li>
+                  <li>Fast recovery, natural results</li>
+                 <li>Works for both men and women of all ethnicities</li>
+                </ul>
+                </div>
+                {/* {learnMoreContent ||
+                  "Additional detailed information about this treatment step will be displayed here. This includes specific protocols, expected outcomes, and important considerations for patients."} */}
               </div>
             </motion.div>
           </motion.div>

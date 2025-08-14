@@ -12,7 +12,7 @@ const HowItWorks = () => {
     {
       title: "Initial Consultation",
       description:
-        "The main goal of the initial consultation is to determine if you are a good candidate for a Dr. Neo hair restoration procedure. The good news is NeoGraft has a proven track-record of delivering excellent hair transplantation results for both men and women of all ethnicities.",
+        "Start your hair restoration journey with a quick, personalized consult. We’ll determine if you’re a good fit for the Dr. Neo® FUE (Follicular Unit Extraction) procedure—one of today’s most advanced, minimally invasive hair transplantation methods.",
       image: "/assets/fue/initial_consultation.png",
       alt: "Initial Consultation Inspection Gadget",
     },

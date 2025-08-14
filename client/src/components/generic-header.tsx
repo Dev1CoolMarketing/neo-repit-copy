@@ -5,6 +5,7 @@ import styles2 from "../styles/ExosomesDesign.module.css";
 export default function GenericHeader({
   title1,
   title2,
+  title3,
   image,
   details,
   gradientClass,
@@ -74,6 +75,9 @@ export default function GenericHeader({
                 </p>
                 <p className={`${styles2.mainHeading}  ${gradientClass}`}>
                   {title2}
+                </p>
+                         <p className={`${styles2.mainHeading}  ${gradientClass}`}>
+                  {title3}
                 </p>
               </motion.h1>
             </div>

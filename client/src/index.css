@@ -250,7 +250,7 @@ ol {
 }
 
 .custom-button-fue {
-  background: linear-gradient(135deg, #B91C1C 0%, #761A20 30%, #331925 60%, #331925 85%, #111827 100%);
+  background-color: #B91C1C;
   color: white;
   border: none;
   box-shadow: 0 4px 15px rgba(139, 38, 53, 0.3);
