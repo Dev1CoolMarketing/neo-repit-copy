@@ -127,15 +127,15 @@ export default function SiteFooter() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Phone className="w-4 h-4 text-[#FAE151]" />
-                  <span>(949) 570-0500</span>
+                  <a href="tel:+1949570500"className="underline cursor-pointer">(949) 570-0500</a>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Mail className="w-4 h-4 text-[#FAE151]" />
-                  <span>team@drvigor.com</span>
+                  <a  href="mailto:team@drvigor.com" className="underline cursor-pointer">team@drvigor.com</a>
                 </div>
                 <div className="flex items-start space-x-2 text-gray-300">
                   <MapPin className="w-4 h-4 text-[#FAE151] mt-0.5" />
-                  <span>Multiple SoCal Locations</span>
+                  <span onClick={()=> smoothScrollTo('contact')} className="underline cursor-pointer">Multiple SoCal Locations</span>
                 </div>
               </div>
             </motion.div>
