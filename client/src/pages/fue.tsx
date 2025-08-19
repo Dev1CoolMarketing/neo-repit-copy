@@ -465,7 +465,7 @@ const fueProcessDetails = [
         // subtitle: "[Every 2–4 weeks]",
         bullets: [
           "<b>Nutrition check</b>: Protein, iron, zinc, vitamin D, biotin",
-          "<b>Scalp Detox</b>Increases growth rate & density",
+          "<b>Scalp Detox</b> increases growth rate & density",
           "<b>Medical hair loss prevention</b> (when appropriate)",
           "<b>Home hair care coaching</b> for optimal daily habits",
         ],
