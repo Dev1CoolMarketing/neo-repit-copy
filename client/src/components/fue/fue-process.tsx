@@ -41,13 +41,13 @@ export default function FueProcess() {
             <div className="device-power"></div>
           </div>
           {/* Video Mock-up */}
-          <div className="bg-black rounded-[48px] p-2 shadow-2xl max-w-56 mx-auto">
+          <div className="bg-black rounded-[48px] p-2 shadow-2xl max-w-72 mx-auto">
             <div className="bg-white rounded-[40px] overflow-hidden">
-              <div className="bg-black h-8 flex items-center justify-center rounded-t-[40px]">
+              <div className="bg-black h-10 flex items-center justify-center rounded-t-[40px]">
                 <div className="w-20 h-1 bg-white rounded-full" />
               </div>
 
-              <div className="bg-gradient-to-b from-gray-800 to-gray-600 h-96 flex items-center justify-center relative overflow-hidden">
+              <div className="bg-gradient-to-b from-gray-800 to-gray-600 h-[35rem] flex items-center justify-center relative overflow-hidden">
                 {/* Video Goes Here */}
 
                 <video

@@ -44,6 +44,8 @@ const GenericHowItWorks = ({processDetails, color}: any) => {
                 <FueStyleTreatmentCard
                   step={index + 1}
                   title={detail.title}
+                  subtitle={detail.subtitle}
+                  subsetTitle={detail.subsetTitle}
                   image={detail.image}
                   featured={true}
                   color={color}

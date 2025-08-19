@@ -5,7 +5,7 @@ import { Plus, Minus } from "lucide-react";
 interface FueStyleTreatmentCardProps {
   step: number;
   title: string;
-  children: ReactNode;
+  children:  string | ReactNode;
   features?: string[];
   image?: string;
   gradient?: string;
@@ -15,6 +15,8 @@ interface FueStyleTreatmentCardProps {
   inverse?: boolean;
   alignLeft?: boolean;
   moreDetails?: any[];
+  subtitle?: string;
+  subsetTitle?: string;
 }
 
 export default function FueStyleTreatmentCard({
@@ -29,6 +31,8 @@ export default function FueStyleTreatmentCard({
   color = "#32d74b",
   alignLeft = true,
   moreDetails = [],
+  subsetTitle = '',
+  subtitle = '',
   inverse = true, // Inverse True = White Background Black Text // Inverse False = Black Background White Text
 }: FueStyleTreatmentCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -64,7 +68,7 @@ export default function FueStyleTreatmentCard({
       <div className="flex flex-col min-h-[460px] relative">
         {/* Content section */}
         <div
-          className={`flex-1 p-8 ${
+          className={`flex-1 p-8 px-8 pb-0 ${
             featured ? "lg:w-1/2 lg:ml-[50%] lg:pr-0" : ""
           }`}
         >
@@ -82,14 +86,24 @@ export default function FueStyleTreatmentCard({
             >
               {title}
             </h3>
+            <p 
+             className={`text-lg font-[700] ${
+                inverse ? "text-black" : "text-white"
+              } text-black leading-tight mb-4 tracking-[-0.02em]"`}
+           dangerouslySetInnerHTML={{__html: subtitle}} ></p>
             <p
               className={`text-lg font-[500] ${
                 inverse ? "text-gray-600" : "text-white"
               } leading-[1.4] tracking-[-0.01em] mb-6`}
-            >
-              {children}
+              dangerouslySetInnerHTML={{__html: children as string}}
+           >
+           
             </p>
-
+        <p 
+             className={`text-lg font-[700] ${
+                inverse ? "text-black" : "text-white"
+              } text-black leading-tight mb-4 tracking-[-0.02em]"`}
+            >{subsetTitle}</p>
             {/* Features list */}
 
             {/* Learn More Button */}
@@ -163,8 +177,10 @@ export default function FueStyleTreatmentCard({
                               delay: 0.5 + index * 0.1, }}
                       >
                                  <h3 className="text-xl font-extrabold">{item.title}</h3>
-                                 <p>{item.subtitle}</p>
-                      {item.bullets.map((bullet, bulletIndex)=>   <motion.div
+                                 <p dangerouslySetInnerHTML={{__html: item.subtitle}}></p>
+                      {item.bullets.map((bullet, bulletIndex)=>  
+                       {
+                        return <motion.div
                             key={bulletIndex}
                             className="flex items-start gap-3"
                             initial={{ opacity: 0, x: -10 }}
@@ -177,24 +193,74 @@ export default function FueStyleTreatmentCard({
                           >
                    
                             <div
-                              className={`ml-5 bg-[${color}]/10 rounded-full p-1 mt-1 flex-shrink-0`}
+                              className={`ml-5 bg-[${color}]/10 rounded-full flex-shrink-0 flex items-center`}
                             >
-                              <div className={`w-2 h-2 rounded-full`} style={{backgroundColor: color}} />
+                             {item.style !== 'number' ? <div className={`w-2 h-2 rounded-full mt-2`} style={{backgroundColor: color}} /> : 
+                             <div style={{color: color}}> {bulletIndex+1}.</div>}
                             </div>
+                            {typeof bullet !== 'string' ?
+                                  <motion.div
+                        className="space-y-3 mb-"
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-30px" }}
+                        transition={{ duration: 0.4,
+                              delay: 0.5 + index * 0.1, }}
+                      >
+                                 <h3 className="text-md font-extrabold">{bullet.title}</h3>
+                             {  bullet.type === 'list' ?  
+                             
+                            bullet.bullets.map((nestedBullet, nestedBulletIndex) => {
+                              return (      <motion.div
+                            key={bulletIndex}
+                            className="flex items-center gap-3"
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                              duration: 0.4,
+                              delay: 0.5 + index * 0.1,
+                            }}
+                          >
+                            <div
+                              className={`ml-5 bg-[${color}]/10 rounded-full p-1 mt-1 flex-shrink-0 flex items-center`}
+                            >
+                             {nestedBullet.style !== 'number' ? <div className={`w-2 h-2 rounded-full`} style={{backgroundColor: color}} /> : 
+                             <div style={{color: color}}> {nestedBullet+1}.</div>}
+                            </div>
+                 
+                            <span
+                              className={`${
+                                inverse ? "text-gray-700" : "text-white"
+                              } text-sm font-[500] leading-relaxed`}
+                              dangerouslySetInnerHTML={{__html: nestedBullet}}
+                            >
+                            </span>
+                          </motion.div>)
+                            }) :
+                            <span> Value </span>
+                            }    
+                      
+                          </motion.div>
+                            
+                            :
                             <span
                               className={`${
                                 inverse ? "text-gray-700" : "text-white"
                               } text-sm font-[500] leading-relaxed`}
                               dangerouslySetInnerHTML={{__html: bullet}}
                             >
-                            </span>
-                          </motion.div>)}
+                            </span>}
+                          </motion.div>})}
                         
   
                       </motion.div>
                     );
                   }
-                  else return <div   dangerouslySetInnerHTML={{__html: item.value}}></div>;
+                  else return <div>
+                    <h2 className="text-2xl font-bold">{item.title}</h2>
+                    <p dangerouslySetInnerHTML={{__html: item.value}}></p>
+                    </div>;
                 })}
               </div>
             </motion.div>

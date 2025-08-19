@@ -19,10 +19,10 @@ export default function GenericReasons({reasons, gradientClass}: GenericReasonPr
                         key={`reason-${index}`}
                         className="flex flex-col section-content"
                     >
-                        <span className={`text-[26px] font-bold text-center ${gradientClass}`}>
+                        <span className={`text-[26.5px] font-bold text-center ${gradientClass}`}>
                             {item.highlight}
                         </span>{" "}
-                        <span className="text-[26px] font-bold text-center">
+                        <span className="text-[26.5px] font-bold text-center">
                             {item.description}
                         </span>
                     </FadeInOnScroll>
