@@ -189,7 +189,7 @@ export default function FueNavBar() {
     <header
       id="site-header"
       className={cn(
-        "fixed top-0 pl-5 left-0 right-0 z-[100] transition-all duration-850 ease-in-out",
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-850 ease-in-out",
         isScrolled
           ? "bg-black shadow-lg backdrop-blur-sm bg-opacity-90 lg:backdrop-blur-xl md:shadow-sm"
           : `${
@@ -198,7 +198,7 @@ export default function FueNavBar() {
       )}
     >
       {/* Mobile header */}
-      <div className="md:hidden container mx-auto px-4 flex justify-between items-center h-14">
+      <div className="md:hidden pl-10 md:pl-0 container mx-auto px-4 flex justify-between items-center h-14">
         {/* Left Side Icons */}
         <div className="flex items-center">
           <Link

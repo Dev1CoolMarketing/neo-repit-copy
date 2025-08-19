@@ -57,7 +57,7 @@ export default function FueProcess() {
                   loop
                   playsInline
                 >
-                  <source src="/assets/video/NEO 3.mov" type="video/mp4" />
+                  <source src="/assets/video/NEO Stinger.mov" type="video/mp4" />
                 </video>
               </div>
             </div>

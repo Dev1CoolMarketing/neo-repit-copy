@@ -7,6 +7,7 @@ import procedureImg from "@assets/fue-hiw2-procedure.webp";
 import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
 import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
 
+
 const HowItWorks = () => {
   const processDetails = [
     {
@@ -119,7 +120,6 @@ const HowItWorks = () => {
 
           {/* Desktop Layout - Apple News Grid */}
           <div className="hidden md:grid grid-cols-2 gap-5 max-w-5xl mx-auto bg">
-            {/* First Card - Full Width */}
             <div className="col-span-2 bg-white rounded-[18px] shadow-sm overflow-hidden">
               <div className="flex min-h-[460px]">
                 <div className="flex-1 p-11 flex flex-col justify-center">
@@ -166,7 +166,7 @@ const HowItWorks = () => {
               </div>
             </div>
 
-            {/* Second Card - Half Width */}
+   
             <div className="bg-white rounded-[18px] shadow-sm overflow-hidden">
               <div className="flex flex-col min-h-[590px] p-11 gap-5">
                 <div className="flex-1">
@@ -208,7 +208,7 @@ const HowItWorks = () => {
               </div>
             </div>
 
-            {/* Third Card - Half Width */}
+
             <div className="bg-white rounded-[18px] shadow-sm overflow-hidden">
               <div className="flex flex-col min-h-[590px] p-11 gap-5">
                 <div className="flex-1">
@@ -251,7 +251,6 @@ const HowItWorks = () => {
               </div>
             </div>
 
-            {/* Fourth Card - Full Width */}
             <div className="col-span-2 bg-white rounded-[18px] shadow-sm overflow-hidden">
               <div className="flex min-h-[460px] items-center">
                 <div className="flex-1 p-11 flex flex-col justify-center">
@@ -276,41 +275,7 @@ const HowItWorks = () => {
                   </div>
                 </div>
                 <div className="flex-1 flex items-center justify-center">
-                  {/* <div className="w-[134px] h-[177px] flex items-center justify-center">
-                    <svg
-                      className="w-[134px] h-[177px] text-red-500"
-                      viewBox="0 0 135 178"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M61.9712 78.3031C56.7961 78.3031 48.7926 72.4365 40.3492 72.646C34.798 72.7819 29.3785 74.3651 24.6271 77.2388C19.8756 80.1125 15.9569 84.1772 13.2588 89.0306C1.69352 109.103 10.2837 138.75 21.6394 155.072C27.1706 163.013 33.6866 171.834 42.3396 171.666C50.7202 171.31 53.7582 166.26 63.8359 166.26C73.9136 166.26 76.6792 171.666 85.4579 171.457C94.2366 171.247 100.124 163.369 105.529 155.344C109.456 149.606 112.519 143.324 114.622 136.697C109.415 134.483 104.972 130.789 101.844 126.074C98.7155 121.359 97.0394 115.83 97.0231 110.171C96.7927 93.5772 110.495 85.6364 111.124 85.2802C108.397 81.4171 104.815 78.2352 100.658 75.9821C96.5011 73.729 91.8801 72.4655 87.1549 72.2898C76.2392 71.4517 67.1252 78.3031 61.9712 78.3031Z"
-                        fill="#F73558"
-                      />
-                      <mask
-                        id="mask0_454_274"
-                        style={{ maskType: "luminance" }}
-                        maskUnits="userSpaceOnUse"
-                        x="0"
-                        y="0"
-                        width="135"
-                        height="178"
-                      >
-                        <path
-                          d="M41.8574 177.952C29.8312 177.952 21.7439 166.344 16.4013 158.655C9.50243 148.362 4.82173 136.746 2.65706 124.545C0.0800171 109.732 1.79805 96.3013 7.81114 85.8881C11.0655 80.0954 15.7661 75.2457 21.4543 71.8121C27.1424 68.3786 33.6236 66.4786 40.2651 66.2978H40.7889C46.1251 66.574 51.3593 67.8684 56.2093 70.1111C58.0491 70.9636 59.983 71.5965 61.9709 71.9968C63.7748 71.5658 65.5352 70.9696 67.2298 70.2158C72.9146 67.6853 79.0301 66.263 85.2481 66.0254C86.0443 66.0254 86.8404 66.0254 87.6366 66.0254C93.3106 66.2211 98.86 67.7423 103.841 70.4674C108.821 73.1924 113.095 77.0456 116.319 81.7186L120.195 87.4176L114.182 90.8747C110.873 92.9129 108.134 95.7547 106.218 99.1358C104.302 102.517 103.273 106.328 103.225 110.214C103.223 114.593 104.493 118.879 106.881 122.55C109.269 126.221 112.671 129.12 116.675 130.893L122.228 132.737L120.572 138.52C118.3 145.806 114.953 152.713 110.641 159.011C105.278 166.868 97.9448 177.638 85.4995 177.868H84.8919C80.6652 177.801 76.5066 176.791 72.7191 174.914C69.9539 173.446 66.882 172.649 63.7518 172.588C60.4022 172.624 57.1054 173.427 54.1141 174.935C50.4925 176.708 46.5536 177.741 42.5279 177.973L41.8574 177.952ZM134.17 0.780273H0.0800171V176.779H134.17V0.780273Z"
-                          fill="white"
-                        />
-                      </mask>
-                      <g mask="url(#mask0_454_274)">
-                        <path
-                          d="M81.4768 90.0368V49.159C81.4559 37.6772 72.1534 28.3745 60.672 28.3535C49.1905 28.3745 39.888 37.6772 39.888 49.159V65.9208"
-                          stroke="#F73558"
-                          strokeWidth="10.4761"
-                          strokeLinecap="round"
-                        />
-                      </g>
-                    </svg>
-                  </div> */}
+          
                   <motion.img
                     src="/assets/fue/follow_up_consultation_desktop.png"
                     alt="Ipad image showing follow up consultation  "
