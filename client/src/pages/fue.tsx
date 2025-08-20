@@ -13,6 +13,7 @@ import procedureImg from "@assets/fue-hiw2-procedure.webp";
 import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
 import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
 import FaqSection from "@/components/faq-section";
+import BadgeGrid from "@/components/badges";
 
 const headerDetails = [
   "Advanced FUE technology.",
@@ -516,6 +517,7 @@ export default function Fue() {
       <TestimonialsSectionPremium />
       {/* <FueResults /> */}
       <FaqSection />
+      <BadgeGrid />
       <SiteFooter />
     </div>
   );
