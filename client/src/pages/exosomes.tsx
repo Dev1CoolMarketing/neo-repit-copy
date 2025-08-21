@@ -111,9 +111,9 @@ export const ExosomesDesign = (): JSX.Element => {
     "bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC] bg-clip-text text-transparent";
   const exosomeReasons = [
     {
-      highlight: "2–3× greater increase",
+      highlight: "2–3× greater",
       description:
-        "in hair density compared to other traditional approaches. ",
+        "hair density versus other traditional approaches. ",
     },
     {
       highlight: "Non-surgical treatment",
@@ -121,14 +121,14 @@ export const ExosomesDesign = (): JSX.Element => {
         "means no scalpels, no incisions, and no linear scar.",
     },
     {
-      highlight: "Stem cell–derived,",
+      highlight: "Stem cell–derived paricles",
       description:
-        "these particles deliver powerful regenerative signals to stimulate dormant follicles.",
+        "send regenerative signals to awaken dormant follicles.",
     },
     {
       highlight: "Growing in popularity,",
       description:
-        "hypersomes are recognized for their advanced regenerative science and proven impact on hair restoration.",
+        "hypersomes apply cell based technology to hair restoration",
     },
         {
       highlight: "30–45 minute sessions ",

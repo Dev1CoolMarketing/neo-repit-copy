@@ -48,6 +48,29 @@ export default function FueNavBar() {
   const [typeDropdownOpen, setTypeDropdownOpen] = useState<string | null>(null);
   const [location] = useLocation();
   const pathName = usePathname();
+
+  const bookConsultColor = {
+    '/fue': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#8B2635] via-[#A4161A] to-[#E63946]'
+    },
+          '/growth-factors': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C]'
+    },
+      '/exosomes': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC]'
+    },
+          '/microneedling': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#007AFF] via-[#00C7BE] to-[#4A90E2]'
+    },
+              '/': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#625046] to-[#c8b68f] '
+    },
+  }
   const generateLinks = (linksArray: any) => {
     return linksArray.map((link: any, index: number) => {
       let linkType = null;
@@ -304,7 +327,7 @@ export default function FueNavBar() {
               </a>
               <button
                 onClick={() => smoothScrollTo("contact")}
-                className="hidden lg:inline-flex items-center justify-center h-10 px-6 text-sm font-medium transition-colors bg-[#141414] text-white rounded-full hover:bg-[#2a2a2a] focus:outline-none focus:ring-4 focus:ring-blue"
+                className={`hidden lg:inline-flex items-center justify-center h-10 px-6 text-sm font-medium transition-colors ${bookConsultColor[pathName]?.mainColor}  text-white rounded-full hover:bg-[#2a2a2a] focus:outline-none focus:ring-4 hover:from-${bookConsultColor[pathName]?.hoverColor} hover:to-${bookConsultColor[pathName]?.hoverColor} focus:ring-blue`}
               >
                 Book Consult
               </button>
@@ -352,7 +375,7 @@ export default function FueNavBar() {
                 </a>
                 <a
                   href="/#contact"
-                  className="flex items-center justify-center bg-gradient-to-r from-[#8B2635] via-[#A4161A] to-[#E63946] text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white hover:from-[#6F1D1B] hover:to-[#8B2635] transition-all duration-300"
+                  className={`flex items-center justify-center ${bookConsultColor[pathName]?.mainColor} text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white hover:from-${bookConsultColor[pathName]?.hoverColor} hover:to-${bookConsultColor[pathName]?.hoverColor} transition-all duration-300`}
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMenuOpen(false);
