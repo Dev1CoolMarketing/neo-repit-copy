@@ -4,7 +4,7 @@ import FueStyleTreatmentCard from "./FueStyleTreatmentCard";
 
 import HiddenCard from "./ui/hidden-card";
 
-const GenericHowItWorks = ({processDetails, color}: any) => {
+const GenericHowItWorks = ({processDetails, color, gradientClass}: any) => {
 
   return (
     <div className="bg-[#F3F4F6]">
@@ -21,13 +21,13 @@ const GenericHowItWorks = ({processDetails, color}: any) => {
             transition={{ duration: 0.8 }}
           >
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-[700] text-black mb-6 tracking-tight"
+              className={` ${gradientClass} text-4xl md:text-5xl lg:text-6xl font-[700] text-black mb-6 tracking-tight`}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              How It Works
+              Redefining the Hair Transplant Experience
             </motion.h2>
           </motion.div>
 
