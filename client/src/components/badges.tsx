@@ -30,7 +30,7 @@ function ensureNine(list: Badge[]): Badge[] {
 }
 
 const BadgeCell: React.FC<{ badge: Badge }> = ({ badge }) => (
-  <figure className="relative aspect-square overflow-hidden rounded-2xl bg-neutral-900 ring-1 ring-white/10 shadow-sm flex items-center justify-center">
+  <figure className="relative aspect-square overflow-hidden rounded-2xl  shadow-sm flex items-center justify-center">
     {badge.src ? (
       <img
         src={badge.src}

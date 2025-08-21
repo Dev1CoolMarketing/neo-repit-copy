@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { smoothScrollTo, NEO_LOGO_WHITE } from "@/lib/utils";
+import BadgeGrid from "./badges";
 
 // Simplified footer data
 const treatments = [
@@ -69,6 +70,8 @@ export default function SiteFooter() {
               </span>
             </motion.button>
           </motion.div>
+                <BadgeGrid />
+
 
           {/* Simplified navigation */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

@@ -517,7 +517,6 @@ export default function Fue() {
       <TestimonialsSectionPremium />
       {/* <FueResults /> */}
       <FaqSection />
-      <BadgeGrid />
       <SiteFooter />
     </div>
   );
