@@ -494,7 +494,7 @@ export default function Fue() {
     return cleanup;
   }, []);
   const fueGradientClass =
-    "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#330000] bg-clip-text text-transparent";
+    "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-transparent";
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
@@ -505,7 +505,7 @@ export default function Fue() {
         details={headerDetails}
         image={"/assets/fue/shinyfollicle.webp"}
         gradientClass={
-          "bg-gradient-to-r from-[#B91C1C] via-[#111827]  to-[#330000] bg-clip-text text-transparent"
+          "bg-gradient-to-r from-[#B91C1C] via-[#111827]  to-[#1D0000] bg-clip-text text-transparent"
         }
         gradientButtonClass={"custom-button-fue"}
       />
