@@ -11,8 +11,8 @@ import GenericReasons from "@/components/generic-reasons";
 
 const headerDetails = [
   "Cellular regeneration.",
-  "Scientific precision.",
-  "Promote natural regrowth.",
+  "Promote natural regrowth .",
+  "Encourages fuller, healthier hair.",
 ];
 
 export const ExosomesDesign = (): JSX.Element => {
