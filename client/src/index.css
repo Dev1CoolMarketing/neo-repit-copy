@@ -306,7 +306,8 @@ ol {
 }
 
 .custom-button-hypersomes {
-  background: linear-gradient(135deg, #9940B6 0%, #4D74C8 61%, #8051BC 100%);
+  background-color:  #4D74C8;
+  /* background: linear-gradient(135deg, #9940B6 0%, #4D74C8 61%, #8051BC 100%); */
   color: white;
   border: none;
   box-shadow: 0 8px 32px rgba(193, 127, 240, 0.4);

@@ -111,24 +111,29 @@ export const ExosomesDesign = (): JSX.Element => {
     "bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC] bg-clip-text text-transparent";
   const exosomeReasons = [
     {
-      highlight: "With Exosome Therapy,",
+      highlight: "2–3× greater increase",
       description:
-        "you can harness advanced cellular communication to restore hair follicle vitality and promote natural regrowth.",
+        "in hair density compared to other traditional approaches. ",
     },
     {
-      highlight: "Cellular Activators",
+      highlight: "Non-surgical treatment",
       description:
-        "contain powerful growth factors and proteins that activate dormant hair follicle stem cells.",
+        "means no scalpels, no incisions, and no linear scar.",
     },
     {
-      highlight: "Anti-Inflammatory Properties",
+      highlight: "Stem cell–derived,",
       description:
-        "reduce scalp inflammation and create an optimal environment for hair follicle health.",
+        "these particles deliver powerful regenerative signals to stimulate dormant follicles.",
     },
     {
-      highlight: "Everyone experiences",
+      highlight: "Growing in popularity,",
       description:
-        "enhanced follicle function, improved blood flow, and natural hair cycle renewal.",
+        "hypersomes are recognized for their advanced regenerative science and proven impact on hair restoration.",
+    },
+        {
+      highlight: "30–45 minute sessions ",
+      description:
+        "performed entirely in-office, with no extended downtime.",
     },
   ];
   return (
@@ -136,7 +141,7 @@ export const ExosomesDesign = (): JSX.Element => {
       <FueNavBar />
       <GenericHeader
         title1={"Follicular"}
-        title2={"Hypersomes"}
+        title2={"Hypersomes™"}
         details={headerDetails}
         image={"🧬"}
         useText={true}
