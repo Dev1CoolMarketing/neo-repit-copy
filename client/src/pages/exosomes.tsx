@@ -291,6 +291,7 @@ export const ExosomesDesign = (): JSX.Element => {
       processDetails={exosomesProcessDetails}
       gradientClass={exosomeGradient}
       color={exsomeColor}
+      title={"Hair Growth with Next-Generation Biologics"}
       />
       <div className={styles.body}>
         <main className={styles.main}>
