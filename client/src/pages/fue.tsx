@@ -103,7 +103,8 @@ const fueProcessDetails = [
       {
         type: "list",
         title: "Why It Matters?",
-        subtitle: "Healthy scalp = better transplant results. <br> This treatment:",
+        subtitle:
+          "Healthy scalp = better transplant results. <br> This treatment:",
         bullets: [
           "Increases blood flow",
           "Activates follicle-supporting stem cells",
@@ -212,26 +213,34 @@ const fueProcessDetails = [
             title: "Donor Area Shave",
             type: "list",
             style: "number",
-            bullets: ["Back/sides of scalp shaved with a zero guard for graft access"],
+            bullets: [
+              "Back/sides of scalp shaved with a zero guard for graft access",
+            ],
           },
           {
             title: "Local Anesthesia",
             type: "list",
             style: "number",
-            bullets: [ "Keeps you comfortable.",  "Some patients may be offered mild sedation."],
+            bullets: [
+              "Keeps you comfortable.",
+              "Some patients may be offered mild sedation.",
+            ],
           },
-                    {
+          {
             title: "Graft Harvesting (FUE)",
             type: "list",
             style: "number",
-            bullets: [   "Technicians use a handheld device to extract <b>individual follicles.</b>", "These grafts (terminal hairs) resist future hair loss.",],
+            bullets: [
+              "Technicians use a handheld device to extract <b>individual follicles.</b>",
+              "These grafts (terminal hairs) resist future hair loss.",
+            ],
           },
-                          {
+          {
             title: "Implantation + Hairline Design",
             type: "list",
             style: "number",
             bullets: [
-              "Grafts placed with care and precision—no linear scar, less downtime, natural results."
+              "Grafts placed with care and precision—no linear scar, less downtime, natural results.",
             ],
           },
         ],
@@ -298,16 +307,16 @@ const fueProcessDetails = [
       {
         type: "list",
         title: "Week 2",
-        bullets: ["Tenderness fades",
+        bullets: [
+          "Tenderness fades",
           "Grafts settle in",
-          "Scabs flake off naturally",],
+          "Scabs flake off naturally",
+        ],
       },
       {
         type: "list",
         title: "Week 3",
-        bullets: [
-          "Most patients resume normal daily activities",
-        ],
+        bullets: ["Most patients resume normal daily activities"],
       },
       {
         type: "list",
@@ -378,35 +387,34 @@ const fueProcessDetails = [
           "Improves scalp health for long-term density",
         ],
       },
-          {
+      {
         type: "list",
         style: "number",
         title: "How It Works",
         bullets: [
-               {
-        type: "list",
-        style: "number",
-        title: "Microneedling",
-        bullets: [
-          "Creates tiny channels in the scalp",
-          "Stimulates collagen and healing response",
-          "Boosts nutrient and oxygen delivery to follicles",
-        ],
-      },
-         {
-        type: "list",
-        style: "number",
-        title: "Growth Factor Therapy",
-        bullets: [
-          "Serum rich in VEGF, PDGF, IGF-1",
-          "Activates follicle-supporting stem cells",
-          "Strengthens and supports hair growth",
-        ],
-      },
+          {
+            type: "list",
+            style: "number",
+            title: "Microneedling",
+            bullets: [
+              "Creates tiny channels in the scalp",
+              "Stimulates collagen and healing response",
+              "Boosts nutrient and oxygen delivery to follicles",
+            ],
+          },
+          {
+            type: "list",
+            style: "number",
+            title: "Growth Factor Therapy",
+            bullets: [
+              "Serum rich in VEGF, PDGF, IGF-1",
+              "Activates follicle-supporting stem cells",
+              "Strengthens and supports hair growth",
+            ],
+          },
         ],
       },
 
-   
       {
         type: "list",
         title: "Why 6 Months?",
@@ -511,7 +519,12 @@ export default function Fue() {
       />
       <GenericReasons reasons={fueReasons} gradientClass={fueGradientClass} />
       {/* <FueHowItWorks /> */}
-      <GenericHowItWorks processDetails={fueProcessDetails} color="#B91C1C" gradientClass={fueGradientClass} />
+      <GenericHowItWorks
+        processDetails={fueProcessDetails}
+        color="#B91C1C"
+        gradientClass={fueGradientClass}
+        title="Redefining the Hair Transplant Experience"
+      />
       <FueProcess />
       <Frame_81 />
       <TestimonialsSectionPremium />

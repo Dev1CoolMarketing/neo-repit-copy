@@ -4,7 +4,7 @@ import FueStyleTreatmentCard from "./FueStyleTreatmentCard";
 
 import HiddenCard from "./ui/hidden-card";
 
-const GenericHowItWorks = ({processDetails, color, gradientClass}: any) => {
+const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) => {
 
   return (
     <div className="bg-[#F3F4F6]">
@@ -27,8 +27,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass}: any) => {
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              Redefining the Hair Transplant Experience
-            </motion.h2>
+{title}            </motion.h2>
           </motion.div>
 
           {/* Mobile Layout - Stacked Cards */}
