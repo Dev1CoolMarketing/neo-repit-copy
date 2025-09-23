@@ -56,7 +56,7 @@ const BadgeGrid: React.FC<BadgeGridProps> = ({ badges = DEFAULT_BADGES, classNam
   const items = ensureNine(badges);
 
   return (
-    <section aria-label="Badge display" className={cn("w-full  bg-black", className)}>
+    <section aria-label="Badge display" className={cn("w-full", className)}>
       <div className="grid grid-cols-3 grid-rows-2 gap-3 h-full w-full p-3">
         {items.map((b, i) => (
           <BadgeCell key={i} badge={b} />)

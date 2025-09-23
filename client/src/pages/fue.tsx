@@ -14,6 +14,7 @@ import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
 import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
 import FaqSection from "@/components/faq-section";
 import BadgeGrid from "@/components/badges";
+import GenericProcess from "@/components/generic-process";
 
 const headerDetails = [
   "Advanced FUE technology.",
@@ -54,6 +55,7 @@ const fueProcessDetails = [
     description:
       "Start your hair restoration journey with a quick, personalized consult. We’ll determine if you’re a good fit for the Dr. Neo® FUE (Follicular Unit Extraction) procedure—one of today’s most advanced, minimally invasive hair transplantation methods.",
     image: "/assets/fue/initial_consultation.png",
+    desktopImage: "/assets/fue/initial_consultation_desktop.png",
     alt: "Initial Consultation Inspection Gadget",
     moreDetails: [
       {
@@ -525,7 +527,14 @@ export default function Fue() {
         gradientClass={fueGradientClass}
         title="Redefining the Hair Transplant Experience"
       />
-      <FueProcess />
+      <GenericProcess
+      title="PROCESS"
+      headline="See our process in action"
+      details="Watch step-by-step videos of our FUE hair transplant procedure.
+            Understand exactly what happens during your treatment."
+      video="/assets/video/NEO Stinger.mov"
+      gradientClass={"bg-gradient-to-br from-[#8B2635] via-[#A4161A] to-[#E63946] "}
+      />
       <Frame_81 />
       <TestimonialsSectionPremium />
       {/* <FueResults /> */}

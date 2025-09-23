@@ -3,6 +3,7 @@ import { Plus, Minus } from "lucide-react";
 import FueStyleTreatmentCard from "./FueStyleTreatmentCard";
 
 import HiddenCard from "./ui/hidden-card";
+import FueStyleTreatmentCardDesktop from "./FueStyleTreatmentCardDesktop";
 
 const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) => {
 
@@ -59,8 +60,33 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
           </div>
 
           {/* Desktop Layout - Apple News Grid */}
-          <div className="hidden md:grid grid-cols-2 gap-5 max-w-5xl mx-auto bg">
-            <div className="col-span-2 bg-white rounded-[18px] shadow-sm overflow-hidden">
+          <div className={`hidden md:grid grid-cols-2 gap-5 max-w-5xl mx-auto bg`}>
+             {processDetails.map((detail, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`col-span-${index % 3  ? '1' : '2'}`}
+              >
+                <FueStyleTreatmentCardDesktop
+                  step={index + 1}
+                  title={detail.title}
+                  subtitle={detail.subtitle}
+                  subsetTitle={detail.subsetTitle}
+                  image={detail.desktopImage || detail.image}
+                  featured={true}
+                  color={color}
+                  inverse={index % 3 !== 0}
+                  alignLeft={index % 3 ? true : false}
+                  moreDetails={detail.moreDetails}
+                >
+                  {detail.description}
+                </FueStyleTreatmentCardDesktop>
+              </motion.div>
+            ))}
+            {/* <div className="col-span-2 bg-white rounded-[18px] shadow-sm overflow-hidden">
               <div className="flex min-h-[460px]">
                 <div className="flex-1 p-11 flex flex-col justify-center">
                   <div className="max-w-[310px]">
@@ -104,8 +130,8 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                   </div>
                 </div>
               </div>
-            </div>
-
+            </div> */}
+{/* 
             <div className="bg-white rounded-[18px] shadow-sm overflow-hidden">
               <div className="flex flex-col min-h-[590px] p-11 gap-5">
                 <div className="flex-1">
@@ -145,9 +171,9 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="bg-white rounded-[18px] shadow-sm overflow-hidden">
+            {/* <div className="bg-white rounded-[18px] shadow-sm overflow-hidden">
               <div className="flex flex-col min-h-[590px] p-11 gap-5">
                 <div className="flex-1">
                   <h3 className="text-2xl font-[600] text-black leading-[25px] tracking-[-0.057px] mb-1">
@@ -187,9 +213,9 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="col-span-2 bg-white rounded-[18px] shadow-sm overflow-hidden">
+            {/* <div className="col-span-2 bg-white rounded-[18px] shadow-sm overflow-hidden">
               <div className="flex min-h-[460px] items-center">
                 <div className="flex-1 p-11 flex flex-col justify-center">
                   <div className="max-w-[333px]">
@@ -223,7 +249,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

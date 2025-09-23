@@ -12,6 +12,7 @@ import GenericHowItWorks from "@/components/generic-how-it-works";
 import procedureImg from "@assets/fue-hiw2-procedure.webp";
 import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
 import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
+import GenericProcess from "@/components/generic-process";
 
 const headerDetails = [
   "Cellular regeneration.",
@@ -293,6 +294,14 @@ export const ExosomesDesign = (): JSX.Element => {
       color={exsomeColor}
       title={"Hair Growth with Next-Generation Biologics"}
       />
+      <GenericProcess
+            title="PROCESS"
+            headline="See our process in action"
+            details="Watch step-by-step videos of our FUE hair transplant procedure.
+                  Understand exactly what happens during your treatment."
+            video="/assets/video/NEO Stinger.mov"
+            gradientClass={"bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC]"}
+            />
       <div className={styles.body}>
         <main className={styles.main}>
           {/* Hero Section */}
