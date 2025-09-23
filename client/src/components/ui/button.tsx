@@ -1,4 +1,4 @@
-import { forwardRef, ElementRef, ComponentPropsWithoutRef, HTMLAttributes, ReactNode } from "react";
+import { forwardRef, ElementRef, ComponentPropsWithoutRef, HTMLAttributes, ReactNode, ButtonHTMLAttributes } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 

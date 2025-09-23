@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { smoothScrollTo, NEO_LOGO_WHITE } from "@/lib/utils";
+import BadgeGrid from "./badges";
 
 // Simplified footer data
 const treatments = [
@@ -54,21 +55,23 @@ export default function SiteFooter() {
             </h2>
             
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
-              Board-certified specialists • 8,500+ successful procedures
+              8,500+ successful procedures
             </p>
             
             <motion.button
-              onClick={() => smoothScrollTo(0)}
+              onClick={() => smoothScrollTo('contact')}
               className="group bg-[#FAE151] hover:bg-[#f5d93a] text-black font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ y: -1, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <span className="flex items-center gap-2">
-                Start Consultation
+                Book Consultation
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </span>
             </motion.button>
           </motion.div>
+                <BadgeGrid />
+
 
           {/* Simplified navigation */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -127,15 +130,15 @@ export default function SiteFooter() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Phone className="w-4 h-4 text-[#FAE151]" />
-                  <span>(949) 888-6668</span>
+                  <a href="tel:+1949570500"className="underline cursor-pointer">(949) 570-0500</a>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Mail className="w-4 h-4 text-[#FAE151]" />
-                  <span>info@drneo.com</span>
+                  <a  href="mailto:team@drvigor.com" className="underline cursor-pointer">team@drvigor.com</a>
                 </div>
                 <div className="flex items-start space-x-2 text-gray-300">
                   <MapPin className="w-4 h-4 text-[#FAE151] mt-0.5" />
-                  <span>Multiple SoCal Locations</span>
+                  <span onClick={()=> smoothScrollTo('contact')} className="underline cursor-pointer">Multiple SoCal Locations</span>
                 </div>
               </div>
             </motion.div>

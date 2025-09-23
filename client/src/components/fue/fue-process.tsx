@@ -1,5 +1,4 @@
 import styles from "../../styles/fue.module.css";
-import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 
 export default function FueProcess() {
@@ -30,11 +29,11 @@ export default function FueProcess() {
             Understand exactly what happens during your treatment.
           </p>
 
-          <Button className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
+          <button className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
             Watch process videos
-          </Button>
+          </button>
           <div className="device device-iphone-x">
-            <div className="device-frame"></div>
+            <div className="device-frame"></div>``
             <div className="device-stripe"></div>
             <div className="device-header"></div>
             <div className="device-sensors"></div>
@@ -42,13 +41,13 @@ export default function FueProcess() {
             <div className="device-power"></div>
           </div>
           {/* Video Mock-up */}
-          <div className="bg-black rounded-[48px] p-2 shadow-2xl max-w-56 mx-auto">
+          <div className="bg-black rounded-[48px] p-2 shadow-2xl max-w-72 mx-auto">
             <div className="bg-white rounded-[40px] overflow-hidden">
-              <div className="bg-black h-8 flex items-center justify-center rounded-t-[40px]">
+              <div className="bg-black h-10 flex items-center justify-center rounded-t-[40px]">
                 <div className="w-20 h-1 bg-white rounded-full" />
               </div>
 
-              <div className="bg-gradient-to-b from-gray-800 to-gray-600 h-96 flex items-center justify-center relative overflow-hidden">
+              <div className="bg-gradient-to-b from-gray-800 to-gray-600 h-[35rem] flex items-center justify-center relative overflow-hidden">
                 {/* Video Goes Here */}
 
                 <video
@@ -58,7 +57,7 @@ export default function FueProcess() {
                   loop
                   playsInline
                 >
-                  <source src="/assets/video/NEO 3.mov" type="video/mp4" />
+                  <source src="/assets/video/NEO Stinger.mov" type="video/mp4" />
                 </video>
               </div>
             </div>

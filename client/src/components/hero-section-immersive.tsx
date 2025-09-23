@@ -6,7 +6,7 @@ import {
   useSpring,
 } from "framer-motion";
 import { useEffect, useRef, useState, useCallback } from "react";
-import shinyFolliclePath from "@assets/shinyfollicle.png";
+import shinyFolliclePath from "@assets/shinyfollicle.webp";
 
 export function HeroSectionImmersive() {
   const containerRef = useRef<HTMLElement>(null);

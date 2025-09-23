@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 const differenceCards = [
   {
     title: "Developed & Performed in the U.S.",
-    location: "Orange County + Coachella Valley + San Diego + LA",
+    location: "Southern California",
     description:
       "At Dr. Neo, every incision, placement, and pattern is designed by a team of US-trained Neo technicians. It's precise work done once, done right.",
     image: irvineSpectrumImg,
@@ -40,7 +40,7 @@ const differenceCards = [
   },
   {
     title: "No Flights. No Risks. No Regrets.",
-    location: "Southern California",
+    location: "Expert Care, No Passport Needed",
     description:
       "Avoid the risks of medical tourism. Our Southern California locations provide world-class care close to home with ongoing support.",
     image: NoFlights,
@@ -57,7 +57,7 @@ export default function NeoDifferenceSection() {
   });
 
   return (
-    <section className="bg-white overflow-hidden py-12 md:py-24">
+    <section className="bg-white overflow-hidden  md:py-24">
       {/* Mobile layout - keep unchanged */}
       <div className="md:hidden">
         <div className={styles.sectionContainer}>
@@ -69,13 +69,12 @@ export default function NeoDifferenceSection() {
             >
               The NEO Difference
             </h2>
-            <Button
-              variant="link"
+            <button
               className="hover:text-[#a87b23] text-md md:text-lg  p-0 ml-2 pt-2 h-auto font-normal text-[#8a6015] transition-colors"
               onClick={() => smoothScrollTo("contact")}
             >
               Book Consult →
-            </Button>
+            </button>
             {/* <p className={styles.sectionDescription}>
               Where Precision Meets Possibility
             </p> */}
@@ -86,7 +85,7 @@ export default function NeoDifferenceSection() {
               setApi={setApi}
               opts={{
                 align: "center",
-                loop: true,
+                loop: false,
                 containScroll: "trimSnaps",
               }}
               className={styles.carousel}

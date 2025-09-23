@@ -9,20 +9,44 @@ import styles from "../styles/fue.module.css";
 import GenericHeader from "@/components/generic-header";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import FueStyleTreatmentCard from "@/components/FueStyleTreatmentCard";
-import dermatoscopeImg from "@assets/gf-howitworks-step1.png";
-import prpTubeImg from "@assets/gf-hiw2-prptube.png";
-import microneedlingPenImg from "@assets/gf-hiw3-mnpen.png";
+import dermatoscopeImg from "@assets/gf-howitworks-step1.webp";
+import prpTubeImg from "@assets/gf-hiw2-prptube.webp";
+import microneedlingPenImg from "@assets/gf-hiw3-mnpen.webp";
 import recoveryTrackerImg from "@assets/gf-howitworks-step4.png";
-import GrowthFactorsFAQ from "../components/growth-factors/growth-factors-faq";
 import SiteFooter from "@/components/site-footer";
 import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
-import GrowthFactorsHeader from "@/components/growth-factors/growth-factors-header";
+import GenericReasons from "@/components/generic-reasons";
+import GenericHowItWorks from "@/components/generic-how-it-works";
+import GFvsHypersomesComparison from "@/components/growth-factors/growth-factor-comparison";
 
 const headerDetails = [
   "Stimulates natural hair growth.",
   "No pills. No prescriptions.",
   "Minimally invasive. No downtime.",
 ];
+  const reasons = [
+    {
+      highlight: "89% success rate",
+      title: "in clinical trials for androgenetic alopecia",
+      description:
+        "FDA-cleared microneedling technology combined with autologous PRP growth factors shows superior results compared to topical treatments alone.",
+      statistic: "Proven in 2,400+ patients",
+    },
+    {
+      highlight: "Zero surgical risk",
+      title: "with 24-48 hour recovery time",
+      description:
+        "Non-invasive outpatient procedure using your body's own healing factors. Return to work the next day with minimal visible effects.",
+      statistic: "<0.1% complication rate",
+    },
+    {
+      highlight: "1000x enhanced absorption",
+      title: "through controlled micro-channel delivery",
+      description:
+        "Medical-grade 1.5mm microneedling creates optimal penetration pathways for concentrated growth factor infiltration into follicular units.",
+      statistic: "Clinically measured increase",
+    },
+  ];
 
 function DrNeoLogo() {
   return (
@@ -455,248 +479,9 @@ function BenefitCard({ title, description, highlight, statistic, index }) {
   );
 }
 
-function BenefitsSection() {
-  const benefits = [
-    {
-      highlight: "89% success rate",
-      title: "in clinical trials for androgenetic alopecia",
-      description:
-        "FDA-cleared microneedling technology combined with autologous PRP growth factors shows superior results compared to topical treatments alone.",
-      statistic: "Proven in 2,400+ patients",
-    },
-    {
-      highlight: "Zero surgical risk",
-      title: "with 24-48 hour recovery time",
-      description:
-        "Non-invasive outpatient procedure using your body's own healing factors. Return to work the next day with minimal visible effects.",
-      statistic: "<0.1% complication rate",
-    },
-    {
-      highlight: "1000x enhanced absorption",
-      title: "through controlled micro-channel delivery",
-      description:
-        "Medical-grade 1.5mm microneedling creates optimal penetration pathways for concentrated growth factor infiltration into follicular units.",
-      statistic: "Clinically measured increase",
-    },
-  ];
-
-  return (
-    <section className="bg-white py-24 md:py-32">
-      <div className="max-w-4xl lg:max-w-6xl mx-auto section-content">
-        <div className="w-full flex flex-col items-center justify-center gap-12">
-          {benefits.map((benefit, index) => (
-            <FadeInOnScroll key={`reason-${index}`} className="flex flex-col ">
-              <span className="text-[26px] font-bold text-center bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent ">
-                {benefit.highlight}
-              </span>{" "}
-              <span className="text-[26px] font-bold text-center">
-                {benefit.description}
-              </span>
-            </FadeInOnScroll>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 // Clean timeline step with proper contrast
-export function TimelineStep({
-  title,
-  description,
-  IconComponent,
-  index,
-  features,
-  isLast,
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
 
-  const y = useTransform(scrollYProgress, [0, 1], [30, -30]);
-  const isLeft = index % 2 === 0;
-
-  return (
-    <motion.div
-      ref={ref}
-      className="relative bg-[#f5f5f7]"
-      initial={{ opacity: 0, y: 60 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-      transition={{
-        delay: index * 0.15,
-        duration: 1,
-        ease: "easeOut",
-      }}
-    >
-      {/* Timeline connector */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px">
-        {/* Main timeline line */}
-        <motion.div
-          className="absolute left-0 top-0 w-px bg-gray-300 h-full"
-          initial={{ scaleY: 0 }}
-          animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
-          style={{ transformOrigin: "top" }}
-          transition={{
-            delay: index * 0.15 + 0.3,
-            duration: 1,
-          }}
-        />
-
-        {/* Active progress line */}
-        <motion.div
-          className="absolute left-0 top-0 w-px bg-accent h-full"
-          initial={{ scaleY: 0 }}
-          animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
-          style={{ transformOrigin: "top" }}
-          transition={{
-            delay: index * 0.15 + 0.8,
-            duration: 1.2,
-          }}
-        />
-      </div>
-
-      {/* Step content */}
-      <div
-        className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-6 md:mb-24 ${isLast ? "mb-0" : ""}`}
-      >
-        {/* Icon container */}
-        <motion.div
-          style={{ y }}
-          className={`flex justify-center lg:justify-${isLeft ? "end" : "start"} ${isLeft ? "lg:order-1" : "lg:order-2"}`}
-        >
-          <motion.div
-            className="relative group"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            {/* Icon background */}
-            <div
-              className="w-24 h-24 bg-black rounded-3xl 
-                            flex items-center justify-center shadow-xl
-                            border border-gray-100 group-hover:shadow-2xl
-                            transition-all duration-500"
-            >
-              <IconComponent isActive={true} isHovered={false} />
-            </div>
-
-            {/* Step number */}
-            <motion.div
-              className="absolute -top-3 -right-3 w-8 h-8 bg-accent rounded-full 
-                         flex items-center justify-center text-white font-bold text-sm
-                         shadow-lg"
-              initial={{ scale: 0 }}
-              animate={isInView ? { scale: 1 } : { scale: 0 }}
-              transition={{
-                delay: index * 0.15 + 0.6,
-                duration: 0.5,
-                type: "spring",
-              }}
-            >
-              {index + 1}
-            </motion.div>
-
-            {/* Connection line to timeline */}
-            <motion.div
-              className={`absolute top-1/2 w-8 h-px bg-gray-300 hidden lg:block
-                         ${isLeft ? "left-full" : "right-full"}`}
-              initial={{ scaleX: 0 }}
-              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-              style={{
-                transformOrigin: isLeft ? "left" : "right",
-              }}
-              transition={{
-                delay: index * 0.15 + 1,
-                duration: 0.8,
-              }}
-            />
-          </motion.div>
-        </motion.div>
-
-        {/* Content */}
-        <motion.div
-          className={`space-y-6 bg-black z-10 border md:border-none md:bg-none  md:shadow-none border-gray-400 shadow-xl rounded-xl p-6 text-center lg:text-left ${isLeft ? "lg:order-2" : "lg:order-1"}`}
-          initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
-          animate={
-            isInView
-              ? { opacity: 1, x: 0 }
-              : { opacity: 0, x: isLeft ? -30 : 30 }
-          }
-          transition={{
-            delay: index * 0.15 + 0.4,
-            duration: 0.8,
-          }}
-        >
-          <h3 className="text-xl md:text-4xl font-semibold text-gray-900 leading-tight">
-            {title}
-          </h3>
-
-          <p className="text-lg text-gray-700 leading-relaxed max-w-lg mx-auto lg:mx-0">
-            {description}
-          </p>
-
-          {/* Feature tags */}
-          {features && (
-            <motion.div
-              className="flex flex-wrap gap-3 justify-center lg:justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{
-                delay: index * 0.15 + 0.7,
-                duration: 0.8,
-              }}
-            >
-              {features.slice(0, 3).map((feature, featureIndex) => (
-                <motion.span
-                  key={featureIndex}
-                  className="px-4 py-2 bg-gray-100 border border-gray-200 rounded-full 
-                             text-sm text-gray-800 hover:bg-blue-50 hover:border-blue-200 
-                             hover:text-gray-900 transition-all duration-300 cursor-default"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={
-                    isInView
-                      ? { opacity: 1, scale: 1 }
-                      : { opacity: 0, scale: 0.8 }
-                  }
-                  transition={{
-                    delay: index * 0.15 + 0.8 + featureIndex * 0.1,
-                    duration: 0.5,
-                  }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {feature}
-                </motion.span>
-              ))}
-            </motion.div>
-          )}
-        </motion.div>
-      </div>
-
-      {/* Connecting flow element */}
-      {!isLast && (
-        <motion.div
-          className="absolute left-1/2 bottom-12 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{
-            delay: index * 0.15 + 1.2,
-            duration: 0.8,
-          }}
-        >
-          <div className="w-6 h-6 rounded-full bg-black border-2 border-accent shadow-lgsoft">
-            <motion.div
-              className="w-2 h-2 rounded-full bg-accent mx-auto mt-1"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
-      )}
-    </motion.div>
-  );
-}
 
 function ProcessSection() {
   const sectionRef = useRef(null);
@@ -1443,16 +1228,151 @@ function AppleContactForm() {
     </section>
   );
 }
+const growthFactorDetails = [
+  {
+    title: "Step 1: Your Growth Factors Consultation",
+    subtitle: "Personalized evaluation for a biologic hair-density boost",
+    description:
+      "Start your journey with a personalized consultation. We’ll determine if Growth Factors — our biologic therapy designed to stimulate follicles and improve hair density — is right for you.",
+    image: dermatoscopeImg,
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "Why Growth Factors?",
+        bullets: [
+          "Derived from your own blood’s regenerative proteins",
+          "Non-surgical and incision-free",
+          "Safe and effective for men and women",
+        ],
+      },
+      {
+        type: "list",
+        title: "What We Evaluate",
+        bullets: [
+          "Your pattern and extent of thinning",
+          "Scalp health and potential for response",
+          "Your goals and expectations",
+        ],
+      },
+      {
+        type: "list",
+        title: "After your consult, you’ll know",
+        bullets: [
+          "If Growth Factors is right for you",
+          "Recommended number of sessions",
+          "Cost of your treatment plan",
+          "What results you can realistically expect",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Step 2: Growth Factors + Microneedling Treatment",
+    subtitle: "Combined in the same session for enhanced delivery",
+    description:
+      "Unlike providers who apply growth factors alone, we combine Microneedling + Growth Factors in a single visit to enhance penetration and efficacy through micro-channels that deliver regenerative proteins deeper into the scalp.",
+    image: prpTubeImg,
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "What’s Involved",
+        bullets: [
+          "Scalp cleansing and preparation",
+          "Microneedling to create controlled micro-channels",
+          "Immediate infusion of concentrated Growth Factors into the scalp",
+          "Soothing serum application and clear aftercare instructions",
+        ],
+      },
+      {
+        type: "list",
+        title: "Why It Matters",
+        bullets: [
+          "Microneedling primes the scalp for maximum delivery",
+          "Growth Factors support follicle signaling and circulation",
+          "The combination encourages new growth and strengthens existing strands",
+          "Session typically 30–45 minutes with no downtime",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Step 3: Recovery & Regrowth",
+    subtitle: "",
+    description:
+      "Expect a quick recovery and a staged improvement in thickness, coverage, and scalp vitality as follicles respond.",
+    image: microneedlingPenImg,
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "Healing & Growth Timeline",
+        bullets: [
+          "Days 1–3: Mild redness or sensitivity, similar to a light sunburn",
+          "Weeks 4–6: Early improvements in scalp vitality and texture",
+          "Weeks 6–12: Noticeable increases in thickness and coverage",
+          "3–6 Months: Progressive improvement with stronger, healthier strands",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Step 4: Optimization Sessions",
+    subtitle: "Reinforce results every 3–6 months",
+    description:
+      "Growth Factors Infusion is most effective as a series. Follow-up sessions every 3–6 months reinforce follicular activity and extend long-term results.",
+    image: recoveryTrackerImg,
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "Why Continue",
+        bullets: [
+          "Sustains follicle signaling and circulation",
+          "Builds on prior gains for thicker coverage",
+          "Helps preserve results over time",
+        ],
+      },
+      {
+        type: "list",
+        title: "Typical Cadence",
+        bullets: [
+          "Series of initial sessions as recommended",
+          "Maintenance every 3–6 months based on goals and response",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Step 5: Ongoing Follicular Maintenance",
+    subtitle: "Protect and extend your results",
+    description:
+      "Keep your results thriving with a tailored plan and professional oversight.",
+    image: "",
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "Your Maintenance Plan May Include",
+        bullets: [
+          "Periodic Growth Factors Infusion maintenance",
+          "Clinical-grade red light therapy",
+          "Nutrition and supplement support",
+          "Preventive medical therapies when appropriate",
+          "Scalp health coaching for daily care",
+        ],
+      },
+    ],
+  },
 
-export default function App() {
-  const contactRef = useRef(null);
+];
 
-  const scrollToContact = () => {
-    contactRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+export default function GrowthFactors() {
 
+  const gfGradientClass ="bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
   return (
-    <div className="bg-black min-h-screen">
+    <div className=" min-h-screen">
       <FueNavBar />
       {/* <GrowthFactorsHeader /> */}
       {/* <HeroSection /> */}
@@ -1466,8 +1386,16 @@ export default function App() {
         }
         gradientButtonClass={"custom-button-growth-factors"}
       />
-      <BenefitsSection />
-      <ProcessSection />
+      <GenericReasons 
+      reasons={reasons} 
+      gradientClass={gfGradientClass}
+/>  
+        <GenericHowItWorks
+        processDetails={growthFactorDetails}
+        
+        />
+      {/* <ProcessSection /> */}
+      <GFvsHypersomesComparison />
       {/* <PricingSection />
       {/* <TestimonialsSection /> */}
       {/* <ResultsSection /> */}

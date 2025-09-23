@@ -48,6 +48,29 @@ export default function FueNavBar() {
   const [typeDropdownOpen, setTypeDropdownOpen] = useState<string | null>(null);
   const [location] = useLocation();
   const pathName = usePathname();
+
+  const bookConsultColor = {
+    '/fue': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#8B2635] via-[#A4161A] to-[#E63946]'
+    },
+          '/growth-factors': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C]'
+    },
+      '/exosomes': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC]'
+    },
+          '/microneedling': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#007AFF] via-[#00C7BE] to-[#4A90E2]'
+    },
+              '/': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#625046] to-[#c8b68f] '
+    },
+  }
   const generateLinks = (linksArray: any) => {
     return linksArray.map((link: any, index: number) => {
       let linkType = null;
@@ -95,12 +118,18 @@ export default function FueNavBar() {
                 {link.name}{" "}
                 <ChevronRight
                   className={`
-                              ${typeDropdownOpen === link.name ? "rotate-90" : "rotate-0"}
+                              ${
+                                typeDropdownOpen === link.name
+                                  ? "rotate-90"
+                                  : "rotate-0"
+                              }
                               animate duration-300 h-4 w-4`}
                 />
               </div>
               <div
-                className={`${typeDropdownOpen === link.name ? "block" : "hidden"} text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide pl-4 bg-black md:absolute md:border-white md:border md:px-5`}
+                className={`${
+                  typeDropdownOpen === link.name ? "block" : "hidden"
+                } text-white hover:text-[#FAE151] font-medium transition-colors py-2 text-sm sm:text-base tracking-wide pl-4 bg-black md:absolute md:border-white md:border md:px-5`}
               >
                 <div className="flex flex-col gap-2">
                   {generateLinks(link.dropdownItems)}
@@ -178,7 +207,7 @@ export default function FueNavBar() {
       window.location.href = href;
     }
   };
-
+  console.log('THIS IS SCROLLED', isScrolled)
   return (
     <header
       id="site-header"
@@ -186,50 +215,49 @@ export default function FueNavBar() {
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-850 ease-in-out",
         isScrolled
           ? "bg-black shadow-lg backdrop-blur-sm bg-opacity-90 lg:backdrop-blur-xl md:shadow-sm"
-          : "bg-black backdrop-blur-sm",
+          : `${
+              pathName === "/" ? "bg-transparent" : "bg-black"
+            } backdrop-blur-sm`
       )}
     >
       {/* Mobile header */}
-      <div className="md:hidden container mx-auto px-4 flex justify-between items-center h-14">
+      <div className="md:hidden pl-10 md:pl-0 container mx-auto px-4 flex justify-between items-center h-14">
         {/* Left Side Icons */}
         <div className="flex items-center">
-          <div className="flex justify-center items-center h-full">
-            <Link href="/">
+          <Link
+          href="/"
+          className="flex justify-center items-center h-full">
               <img
-                src="/assets/n-logo.svg"
-                alt="Dr. NEO"
-                className="h-8 w-auto"
-              />
-            </Link>
-          </div>
+    src="/assets/NEO LOGO WHITE.png"
+    alt="Dr. NEO"
+    className={`absolute h-8 pl-20 w- transition-opacity duration-700 ${
+      isScrolled ? "opacity-0 scale-75" : "opacity-100 scale-75"
+    }`}
+  />
 
-          {/* <Button
-            variant="ghost"
-            size="icon"
-            className="text-white p-0 hover:bg-white/10 focus-visible:ring-offset-0 focus-visible:ring-white"
-          >
-            <Search
-              className="h-4 w-4 sm:h-5 sm:w-5"
-              style={{
-                filter: "none",
-                transform: "translateZ(0)",
-              }}
-            />
-            <span className="sr-only">Search</span>
-          </Button> */}
+  {/* Dark Logo */}
+  <img
+    src="/assets/n-logo.svg"
+    alt="Dr. NEO"
+    className={`absolute h-8 w-auto transition-opacity duration-700 ${
+      isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-95"
+    }`}
+  />
+          </Link>
+
         </div>
 
         {/* Center Logo - Made clickable for better UX */}
 
         {/* Right Side Phone Icon - Made clickable to call office */}
         <div>
-          <a href="tel:(949) 570-0500">
+          <a href="tel:+19495700500">
             <Button
               variant="ghost"
               size="icon"
               className={cn(
                 "p-0  hover:bg-white/20 focus-visible:ring-offset-0 transition-all duration-500",
-                isScrolled ? "text-white" : "text-white drop-shadow-lg",
+                isScrolled ? "text-white" : "text-white drop-shadow-lg"
               )}
             >
               <Phone
@@ -250,7 +278,7 @@ export default function FueNavBar() {
             size="icon"
             className={cn(
               "p-0 hover:bg-white focus-visible:ring-offset-0 transition-all duration-500 ",
-              isScrolled ? "text-white" : "text-white drop-shadow-lg",
+              isScrolled ? "text-white" : "text-white drop-shadow-lg"
             )}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -293,13 +321,13 @@ export default function FueNavBar() {
             <div className="flex items-center space-x-4">
               <a
                 href="tel:(949) 570-0500"
-                className="text-[#] text-sm font-medium hidden lg:block"
+                className="text-[#] text-sm fonxt-medium hidden lg:block"
               >
                 (949) 570-0500
               </a>
               <button
                 onClick={() => smoothScrollTo("contact")}
-                className="hidden lg:inline-flex items-center justify-center h-10 px-6 text-sm font-medium transition-colors bg-[#141414] text-white rounded-full hover:bg-[#2a2a2a] focus:outline-none focus:ring-4 focus:ring-blue"
+                className={`hidden lg:inline-flex items-center justify-center h-10 px-6 text-sm font-medium transition-colors ${bookConsultColor[pathName]?.mainColor}  text-white rounded-full hover:bg-[#2a2a2a] focus:outline-none focus:ring-4 hover:from-${bookConsultColor[pathName]?.hoverColor} hover:to-${bookConsultColor[pathName]?.hoverColor} focus:ring-blue`}
               >
                 Book Consult
               </button>
@@ -338,7 +366,7 @@ export default function FueNavBar() {
             <div className="pt-3 mt-3 border-t border-[#C8B68F]/20">
               <div className="grid grid-cols-2 gap-3">
                 <a
-                  href="tel:(949) 570-0500"
+                  href="tel:+19495700500"
                   className="flex items-center justify-center bg-white/10 text-white rounded-lg py-3 text-sm font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -347,7 +375,7 @@ export default function FueNavBar() {
                 </a>
                 <a
                   href="/#contact"
-                  className="flex items-center justify-center bg-gradient-to-r from-[#8B2635] via-[#A4161A] to-[#E63946] text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white hover:from-[#6F1D1B] hover:to-[#8B2635] transition-all duration-300"
+                  className={`flex items-center justify-center ${bookConsultColor[pathName]?.mainColor} text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white hover:from-${bookConsultColor[pathName]?.hoverColor} hover:to-${bookConsultColor[pathName]?.hoverColor} transition-all duration-300`}
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMenuOpen(false);

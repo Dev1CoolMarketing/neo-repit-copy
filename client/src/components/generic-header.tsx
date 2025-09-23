@@ -1,19 +1,19 @@
-import styles from "..//styles/fue.module.css";
+import styles from "../styles/fue.module.css";
 import { motion } from "framer-motion";
 import styles2 from "../styles/ExosomesDesign.module.css";
 
 export default function GenericHeader({
   title1,
   title2,
+  title3,
   image,
   details,
   gradientClass,
   gradientButtonClass,
   useText,
 }: any) {
-  console.log("THIS IS USE TEXT", useText);
   return (
-    <section className="w-full bg-white flex min-h-screen flex-col justify-center items-center  md:mt-20 ">
+    <section className="w-full bg-white flex min-h-[60vh] md:min-h-screen flex-col justify-center items-center  mt-20 md:mt-0">
       <div className="flex flex-col justify-center items-center header-height">
         {!useText ? (
           <motion.img
@@ -61,7 +61,7 @@ export default function GenericHeader({
           <div className="flex w-full flex-col items-center justify-center gap-5 px-5  ">
             <div className="flex flex-col items-center w-full">
               <motion.h1
-                className="text-6xl  md:text-8xl lg:text-9xl text-center font-[700] tracking-tight text-black leading-[0.85] pb-5"
+                className="text-9xl  md:text-8xl lg:text-9xl text-center font-normal tracking-tight text-black leading-[0.85] pb-5"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -70,11 +70,14 @@ export default function GenericHeader({
                   ease: "easeOut",
                 }}
               >
-                <p className={`${styles2.mainHeading} ${gradientClass}`}>
+                <p className={`${styles2.mainHeading}  ${gradientClass}`}>
                   {title1}
                 </p>
-                <p className={`${styles2.mainHeading} ${gradientClass}`}>
+                <p className={`${styles2.mainHeading}  ${gradientClass}`}>
                   {title2}
+                </p>
+                         <p className={`${styles2.mainHeading}  ${gradientClass}`}>
+                  {title3}
                 </p>
               </motion.h1>
             </div>
@@ -83,9 +86,7 @@ export default function GenericHeader({
             {details.map((item: any) => {
               return (
                 <p
-                  className={
-                    styles.AdvancedFueTechnologyNaturalResultsRestoredConfidence_436_7767
-                  }
+                  className={`subHeadingText`}
                 >
                   {item}
                 </p>

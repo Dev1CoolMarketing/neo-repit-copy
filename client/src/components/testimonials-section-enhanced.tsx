@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Frame_90 from "@/components/Frame_90";
-import { TestimonialAvatar } from "./avatar-testimonials";
 
 export default function TestimonialsSectionEnhanced() {
   return (

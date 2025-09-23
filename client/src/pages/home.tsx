@@ -1,12 +1,5 @@
 import { useEffect } from "react";
 import HeroSection from "@/components/hero-section";
-import HeroSectionEnhanced from "@/components/hero-section-enhanced-fixed";
-import { HeroSectionOptimized } from "@/components/hero-section-optimized";
-import { HeroSectionPremium } from "@/components/hero-section-premium";
-import { HeroSectionRefined } from "@/components/hero-section-refined";
-import { HeroSectionCohesive } from "@/components/hero-section-cohesive";
-import { HeroSectionGodMode } from "@/components/hero-section-godmode";
-import { HeroSectionUltimate } from "@/components/hero-section-ultimate";
 import { HeroSectionImmersive } from "@/components/hero-section-immersive";
 import TreatmentsSection from "@/components/treatments-section";
 import TreatmentsSectionEnhanced from "@/components/treatments-section-enhanced";
@@ -18,6 +11,7 @@ import FaqSection from "@/components/faq-section";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import { initFadeInAnimations } from "@/lib/utils";
+import FueNavBar from "@/components/fue/fue-nav-bar";
 
 export default function Home() {
   useEffect(() => {
@@ -25,14 +19,16 @@ export default function Home() {
     const cleanup = initFadeInAnimations();
 
     // Add title to the page
-    document.title = "SoCal Advanced Hair Restoration | Dr. NEO";
+    document.title = "Dr. Neo® | NeoGraft Expert";
 
     return cleanup;
   }, []);
 
   return (
     <div className="flex min-h-screen flex-col">
-      <SiteHeader />
+      {/* <SiteHeader /> */}
+            <FueNavBar />
+      
       <main className="flex-1">
         {/* Mobile: Use original components, Desktop: Use Apple-inspired enhanced components */}
         <HeroSection />

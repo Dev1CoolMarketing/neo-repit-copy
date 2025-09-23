@@ -10,8 +10,8 @@
   --color-yellow-46: #abcc21;
   --www-apple-com-black: #000;
   --www-apple-com-gray: #929292;
-  --font-family-Font-1: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-family-Font-2: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* --font-family-Font-1: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-Font-2: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; */
   --font-size-17: 17px;
   --font-size-21: 21px;
   --font-size-24: 24px;
@@ -100,19 +100,19 @@
 
 .mainHeading {
   text-align: center;
-  font-family: var(--font-family-Font-2);
   font-size: 64px;
   font-weight: var(--font-weight-600);
   line-height: 1.05;
   background: linear-gradient(
     90deg,
-    var(--color-violet-72) 0%,
-    var(--color-rose-66) 62%,
-    var(--color-orange-60) 100%
+    #9940B6 0%,
+    #4D74C8 62%,
+    #8051BC 100%
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  font-size: 400;
   margin: 0;
   letter-spacing: -2px;
 }
@@ -427,9 +427,9 @@
   line-height: 1.05;
   background: linear-gradient(
     90deg,
-    var(--color-violet-72) 0%,
-    var(--color-rose-66) 61%,
-    var(--color-orange-60) 100%
+    #9940B6 0%,
+    #4D74C8 61%,
+    #8051BC 100%
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -822,7 +822,7 @@
   }
   
   .mainHeading {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.1;
     letter-spacing: -0.8px;
   }

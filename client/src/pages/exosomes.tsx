@@ -4,15 +4,151 @@ import FueNavBar from "@/components/fue/fue-nav-bar";
 import SiteFooter from "@/components/site-footer";
 import { ArrowUpRight } from "lucide-react";
 import { initFadeInAnimations } from "@/lib/utils";
-import ExosomesHeader from "@/components/exosomes/exosomes-header";
+// import ExosomesHeader from "@/components/exosomes/exosomes-header";
 import GenericHeader from "@/components/generic-header";
-import ExosomesReasons from "@/components/exosomes/exosomes-reasons";
+// import ExosomesReasons from "@/components/exosomes/exosomes-reasons";
+import GenericReasons from "@/components/generic-reasons";
+import GenericHowItWorks from "@/components/generic-how-it-works";
+import procedureImg from "@assets/fue-hiw2-procedure.webp";
+import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
+import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
+import GenericProcess from "@/components/generic-process";
 
 const headerDetails = [
   "Cellular regeneration.",
-  "Scientific precision.",
-  "Promote natural regrowth.",
+  "Promote natural regrowth .",
+  "Encourages fuller, healthier hair.",
 ];
+
+const exosomesProcessDetails = [
+  {
+    title: "Step 1: Your Hypersomes Consultation",
+    subtitle: "",
+    description:
+      "Start your journey with a personalized consultation. We’ll determine if you’re a good candidate for Hypersomes® — our stem cell–derived therapy designed to awaken dormant follicles and improve hair density.",
+    image: "/assets/exosomes/hypersomes-consultation.png",
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "Why Hypersomes?",
+        bullets: [
+          "Stem cell–derived, regenerative signals",
+          "Non-surgical and incision-free",
+          "Suitable for men and women at many stages of hair loss",
+        ],
+      },
+      {
+        type: "list",
+        title: "What We Evaluate:",
+        bullets: [
+          "Your pattern and extent of thinning",
+          "Scalp health and potential for response",
+          "Your goals and timeline for results",
+        ],
+      },
+      {
+        type: "list",
+        title: "After your consult, you’ll know:",
+        bullets: [
+          "If Hypersomes is right for you",
+          "Expected number of sessions",
+          "Cost of your treatment plan",
+          "What results you can realistically expect",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Step 2: Hypersomes Infusion",
+    subtitle: "",
+    description:
+      "Unlike many providers who inject alone, we combine Microneedling + Hypersomes Infusion in the same session. This dual approach enhances absorption and significantly improves efficacy.",
+    image: "/assets/exosomes/dropper2.png",
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "What’s Involved",
+        bullets: [
+          "Scalp cleansing and preparation",
+          "Microneedling to create controlled micro-channels",
+          "Immediate infusion of Hypersomes into the scalp",
+          "Soothing serum and aftercare instructions",
+        ],
+      },
+      {
+        type: "list",
+        title: "Why It Matters",
+        bullets: [
+          "Microneedling primes the scalp for maximum infusion",
+          "Hypersomes deliver potent regenerative proteins and growth signals",
+          "The combination activates dormant follicles and supports new growth",
+          "Entire session completed in 30–45 minutes, with no downtime",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Step 3: Recovery & Regrowth",
+    subtitle: "",
+    description: "",
+    image: "/assets/exosomes/recovery-and-regrowth2.png",
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "Timeline",
+        bullets: [
+          "Days 1–3: Mild redness or sensitivity, like a light sunburn",
+          "Weeks 4–6: Early improvements in scalp vitality",
+          "Weeks 6–12: Visible increases in density and thickness",
+          "3–6 Months: Progressive growth, fuller coverage, and stronger strands",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Step 4: Optimization Sessions",
+    subtitle: "",
+    description:
+      "Hypersomes Infusion works best as a series. Follow-up sessions every 3–6 months reinforce regenerative signaling and extend long-term results.",
+    image: "/assets/exosomes/optimization2.png",
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "Optimization Schedule",
+        bullets: [
+          "Schedule follow-up Hypersomes Infusion every 3–6 months to reinforce regenerative signaling and extend results",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Step 5: Ongoing Follicular Maintenance",
+    subtitle: "",
+    description:
+      "Protect your results and keep them thriving with a tailored plan.",
+    image: "/assets/exosomes/redlight2.png",
+    alt: "",
+    moreDetails: [
+      {
+        type: "list",
+        title: "Maintenance Plan",
+        bullets: [
+          "Periodic Hypersomes Infusion maintenance",
+          "Clinical-grade red light therapy",
+          "Nutrition and supplement support",
+          "Preventive medical therapies when appropriate",
+          "Scalp health coaching for daily care",
+        ],
+      },
+    ],
+  },
+];
+
+
 
 export const ExosomesDesign = (): JSX.Element => {
   // Data for the features section
@@ -106,22 +242,66 @@ export const ExosomesDesign = (): JSX.Element => {
 
     return cleanup;
   }, []);
-
+  const exosomeGradient =
+    "bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC] bg-clip-text text-transparent";
+  const exosomeReasons = [
+    {
+      highlight: "2–3× greater",
+      description:
+        "hair density versus other traditional approaches. ",
+    },
+    {
+      highlight: "Non-surgical treatment",
+      description:
+        "means no scalpels, no incisions, and no linear scar.",
+    },
+    {
+      highlight: "Stem cell–derived paricles",
+      description:
+        "send regenerative signals to awaken dormant follicles.",
+    },
+    {
+      highlight: "Growing in popularity,",
+      description:
+        "hypersomes apply cell based technology to hair restoration",
+    },
+        {
+      highlight: "30–45 minute sessions ",
+      description:
+        "performed entirely in-office, with no extended downtime.",
+    },
+  ];
+  const exsomeColor = "#9940B6"
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
       <GenericHeader
         title1={"Follicular"}
-        title2={"Hypersomes"}
+        title2={"Hypersomes™"}
         details={headerDetails}
         image={"🧬"}
         useText={true}
-        gradientClass={
-          "bg-gradient-to-r from-[#c17ff0] via-[#df73a5] to-[#f5a53b] bg-clip-text text-transparent"
-        }
+        gradientClass={exosomeGradient}
         gradientButtonClass={"custom-button-hypersomes"}
       />{" "}
-      <ExosomesReasons />
+      <GenericReasons
+        reasons={exosomeReasons}
+        gradientClass={exosomeGradient}
+      />
+      <GenericHowItWorks
+      processDetails={exosomesProcessDetails}
+      gradientClass={exosomeGradient}
+      color={exsomeColor}
+      title={"Hair Growth with Next-Generation Biologics"}
+      />
+      <GenericProcess
+            title="PROCESS"
+            headline="See our process in action"
+            details="Watch step-by-step videos of our FUE hair transplant procedure.
+                  Understand exactly what happens during your treatment."
+            video="/assets/video/NEO Stinger.mov"
+            gradientClass={"bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC]"}
+            />
       <div className={styles.body}>
         <main className={styles.main}>
           {/* Hero Section */}
