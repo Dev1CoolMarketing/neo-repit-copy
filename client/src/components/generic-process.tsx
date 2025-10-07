@@ -37,16 +37,13 @@ export default function GenericProcess({
             ))}
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-black leading-tight">
-          </h2>
-
           <p className="text-lg text-medium-gray leading-relaxed">
             {headline}
           </p>
 
           <button className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
-            Watch process videos
-          </button>
+            {details}
+           </button>
           <div className="device device-iphone-x">
             <div className="device-frame"></div>
             <div className="device-stripe"></div>

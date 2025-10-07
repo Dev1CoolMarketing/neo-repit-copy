@@ -1372,7 +1372,7 @@ export default function GrowthFactors() {
 
   const gfGradientClass ="bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
   return (
-    <div className=" min-h-screen">
+    <main  id="main-content" className=" min-h-screen">
       <FueNavBar />
       {/* <GrowthFactorsHeader /> */}
       {/* <HeroSection /> */}
@@ -1392,6 +1392,9 @@ export default function GrowthFactors() {
 />  
         <GenericHowItWorks
         processDetails={growthFactorDetails}
+        title="How it Works"
+        gradientClass={gfGradientClass}
+        color="#046706"
         
         />
       {/* <ProcessSection /> */}
@@ -1404,6 +1407,6 @@ export default function GrowthFactors() {
       </div> */}
       {/* <GrowthFactorsFAQ /> */}
       <SiteFooter />
-    </div>
+    </main>
   );
 }

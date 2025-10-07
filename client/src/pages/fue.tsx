@@ -37,7 +37,7 @@ const fueReasons = [
     description: " with our minimally invasive approach",
   },
   {
-    highlight: "Ultra-popular procedure",
+    highlight: "Ultra-popular procedure with thousands performed nationwide",
     description:
       "because FUE skips the outdated practice of scalp strip removal",
   },
@@ -506,7 +506,7 @@ export default function Fue() {
   const fueGradientClass =
     "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-transparent";
   return (
-    <div className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col">
       <FueNavBar />
       <GenericHeader
         title1={"Follicular "}
@@ -540,6 +540,6 @@ export default function Fue() {
       {/* <FueResults /> */}
       <FaqSection />
       <SiteFooter />
-    </div>
+    </main>
   );
 }

@@ -116,7 +116,10 @@ export default function FueStyleTreatmentCardDesktop({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span style={{color}}>Learn More</span>
+              <span 
+               style={{ color, filter: "brightness(1.2)" }}
+
+              className="text-xl">Learn More</span>
               <motion.div
                 animate={{ rotate: isExpanded ? 45 : 0 }}
                 transition={{ duration: 0.3 }}
@@ -258,7 +261,7 @@ export default function FueStyleTreatmentCardDesktop({
                     );
                   }
                   else return <div>
-                    <h2 className="text-2xl font-bold">{item.title}</h2>
+                    {item.title ? <h2 className="text-2xl font-bold">{item.title}</h2> : null}
                     <p dangerouslySetInnerHTML={{__html: item.value}}></p>
                     </div>;
                 })}
