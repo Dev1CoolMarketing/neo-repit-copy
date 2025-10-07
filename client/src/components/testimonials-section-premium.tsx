@@ -43,7 +43,7 @@ export default function TestimonialsSectionPremium() {
               </motion.h2>
 
               <motion.p
-                className="text-[1.125rem] font-normal leading-[1.75] text-[#EDB930] max-w-[600px] mx-auto"
+                className="text-[2rem] font-normal leading-[1.75] text-[#EDB930] max-w-[600px] mx-auto"
                 style={{
                   fontFamily:
                     'Test Söhne, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif',

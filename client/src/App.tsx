@@ -19,6 +19,7 @@ import { MicroneedlingDesign } from '@/pages/microneedling';
 import ComponentExportPage from '@/pages/component-export';
 import GradientsPage from '@/pages/gradients';
 import NotFound from "@/pages/not-found";
+import PrivacyPolicyPage from "./pages/privacy-policy-page";
 
 function Router() {
   const [location] = useLocation();
@@ -56,6 +57,7 @@ function Router() {
         <Route path="/microneedling" component={MicroneedlingDesign} />
         <Route path="/component-export" component={ComponentExportPage} />
         <Route path="/gradients" component={GradientsPage} />
+        <Route path="/privacy-policy" component={PrivacyPolicyPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

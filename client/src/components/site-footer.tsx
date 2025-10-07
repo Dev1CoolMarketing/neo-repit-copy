@@ -23,6 +23,8 @@ const resources = [
   { name: "Before & After Gallery", href: "/#treatments" },
   { name: "Patient Testimonials", href: "/#testimonials" },
   { name: "Educational Resources", href: "/#faq" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+
 ];
 
 export default function SiteFooter() {
@@ -147,7 +149,7 @@ export default function SiteFooter() {
           {/* Social Media & Copyright */}
           <div className="border-t border-gray-800 pt-8 mt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-[#FAE151] transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
@@ -157,7 +159,7 @@ export default function SiteFooter() {
                 <a href="#" className="text-gray-400 hover:text-[#FAE151] transition-colors">
                   <Youtube className="w-5 h-5" />
                 </a>
-              </div>
+              </div> */}
               <div className="text-sm text-gray-400">
                 © 2025 Dr. Neo Hair Restoration. All rights reserved.
               </div>

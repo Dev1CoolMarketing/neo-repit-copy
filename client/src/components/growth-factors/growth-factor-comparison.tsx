@@ -94,6 +94,7 @@ export default function GFvsHypersomesComparison() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
+    
     <MotionConfig reducedMotion={shouldReduceMotion ? "always" : "never"}>
       <section
         aria-labelledby="gf-hs-heading"
@@ -198,61 +199,84 @@ export default function GFvsHypersomesComparison() {
           ))}
         </div>
 
-        {/* Comparison Table */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mt-12 overflow-hidden rounded-3xl border border-black/5 bg-white shadow-xl"
-          role="region"
-          aria-labelledby="gf-hs-table-caption"
-        >
-          <div className="bg-gradient-to-r from-[#5CB270]/15 via-[#89AD5F]/15 to-[#E4A43C]/15 p-4">
-            <p id="gf-hs-table-caption" className="text-sm font-medium text-slate-800">
-              Side‑by‑side comparison
-            </p>
-          </div>
+     {/* Comparison Table */}
+<motion.div
+  initial={{ opacity: 0, y: 24 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  className="mt-12 overflow-hidden rounded-3xl border border-black/5 bg-white shadow-xl"
+  role="region"
+  id="comparison-chart"                 // ✅ fixed typo + stable id
+  aria-labelledby="comparison-chart-title"  // ✅ unique landmark name
+  aria-describedby="gf-hs-table-hint"       // ✅ hook the hint to the landmark
+>
+  <div className="bg-gradient-to-r from-[#5CB270]/15 via-[#89AD5F]/15 to-[#E4A43C]/15 p-4">
+    <p id="comparison-chart-title" className="text-sm font-medium text-slate-800">
+      Side-by-side comparison
+    </p>
+  </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full caption-bottom text-left text-sm">
-              <caption className="sr-only">
-                Comparison of Growth Factors and Hypersomes across mechanism, evidence,
-                density gain, time to results, and best‑fit patients.
-              </caption>
-              <thead className="bg-white">
-                <tr className="border-b border-black/5">
-                  <th scope="col" className="px-4 py-3 text-slate-500 font-medium" />
-                  <th scope="col" className="px-4 py-3 text-base font-semibold text-slate-900">
-                    Growth Factors
-                  </th>
-                  <th scope="col" className="px-4 py-3 text-base font-semibold text-slate-900">
-                    Hypersomes
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON_ROWS.map((row, i) => (
-                  <tr key={row.label} className={i !== COMPARISON_ROWS.length - 1 ? "border-b border-black/5" : ""}>
-                    <th
-                      scope="row"
-                      className="w-[38%] min-w-[220px] bg-slate-50 px-4 py-4 text-slate-700 font-medium"
-                    >
-                      {row.label}
-                    </th>
-                    <td className="px-4 py-4 align-top text-slate-800">{row.growth}</td>
-                    <td className="px-4 py-4 align-top text-slate-800">{row.hypersomes}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </motion.div>
+  {/* 👇 Scroll area: NOT a landmark */}
+  <div
+    className="overflow-x-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5CB270] focus-visible:ring-offset-2 rounded-b-3xl"
+    // role removed; or use role="group" if you want a named container without landmark semantics
+    // role="group" aria-labelledby="comparison-chart-title"
+    tabIndex={0}
+    style={{ WebkitOverflowScrolling: "touch", scrollbarGutter: "stable" }}
+  >
+    <p id="gf-hs-table-hint" className="sr-only">
+      This table scrolls horizontally on small screens. Use arrow keys, Page Up/Down,
+      or Shift + mouse wheel to scroll horizontally.
+    </p>
+
+    <table className="w-full caption-bottom text-left text-sm">
+      <caption className="sr-only">
+        Comparison of Growth Factors and Hypersomes across mechanism, evidence,
+        density gain, time to results, and best-fit patients.
+      </caption>
+      <thead className="bg-white">
+        <tr className="border-b border-black/5">
+          <th scope="col" className="px-4 py-3 text-slate-500 font-medium">
+            <span className="sr-only">Title</span>
+          </th>
+          <th scope="col" className="px-4 py-3 text-base font-semibold text-slate-900">
+            Growth Factors
+          </th>
+          <th scope="col" className="px-4 py-3 text-base font-semibold text-slate-900">
+            Hypersomes
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {COMPARISON_ROWS.map((row, i) => (
+          <tr
+            key={row.label}
+            className={i !== COMPARISON_ROWS.length - 1 ? "border-b border-black/5" : ""}
+          >
+            <th
+              scope="row"
+              className="w-[38%] min-w-[220px] bg-slate-50 px-4 py-4 text-slate-700 font-medium sticky left-0"
+              style={{ zIndex: 1 }}
+            >
+              {row.label}
+            </th>
+            <td className="px-4 py-4 align-top text-slate-800">{row.growth}</td>
+            <td className="px-4 py-4 align-top text-slate-800">{row.hypersomes}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</motion.div>
+
+
 
         {/* Guidance Cards */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {GUIDANCE[0].items.map((item, idx) => (
             <motion.div
+            aria-label="comparison-chart"
               key={item.heading}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}

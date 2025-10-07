@@ -273,7 +273,7 @@ export const ExosomesDesign = (): JSX.Element => {
   ];
   const exsomeColor = "#9940B6"
   return (
-    <div className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col">
       <FueNavBar />
       <GenericHeader
         title1={"Follicular"}
@@ -484,7 +484,7 @@ export const ExosomesDesign = (): JSX.Element => {
         </main>
       </div>
       <SiteFooter />
-    </div>
+    </main>
   );
 };
 

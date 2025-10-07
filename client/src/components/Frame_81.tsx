@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { usePathname } from "wouter/use-browser-location";
+import { smoothScrollTo } from "@/lib/utils";
 
 export default function Frame_81() {
   return (
@@ -89,6 +90,7 @@ export default function Frame_81() {
                 viewport={{ once: true }}
               >
                 {[
+       
                   {
                     name: "Alex Colby",
                     location: "Newport Beach",
@@ -96,17 +98,20 @@ export default function Frame_81() {
                     image: "/assets/ALEX COLBY.png",
                     badge: "GROWTH FACTORS",
                   },
-                  {
-                    name: "Harry Hairless",
-                    location: "Baldwin Park",
-                    age: 23,
-                    image: "/assets/HARRY HAIRLESS.png",
+                             {
+                    name: "Ryan Ziegler",
+                    location: "Palm Desert",
+                    age: 30,
+                    image: "/assets/hairline_heroes/Ryan.png",
+                    badge: "HAIR TRANSPLANT"
                   },
                   {
-                    name: "Ron Foote",
-                    location: "Palm Desert",
-                    age: 53,
-                    image: "/assets/RON FOOTE.png",
+                    name: "Saleem",
+                    location: "Irvine",
+                    age: 30,
+                    image: "/assets/hairline_heroes/saleem.png",
+                                        badge: "HAIR TRANSPLANT"
+
                   },
                 ].map((hero, index) => (
                   <motion.div
@@ -168,6 +173,7 @@ export default function Frame_81() {
                     transition: { duration: 0.3 },
                   }}
                   whileTap={{ scale: 0.98 }}
+                              onClick={() => smoothScrollTo("contact")}
                 >
                   Learn More About Success Stories
                   <ArrowRight

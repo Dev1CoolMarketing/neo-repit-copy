@@ -321,7 +321,7 @@ export default function FueNavBar() {
             <div className="flex items-center space-x-4">
               <a
                 href="tel:(949) 570-0500"
-                className="text-[#] text-sm fonxt-medium hidden lg:block"
+                className="text-[white] text-sm fonxt-medium hidden lg:block"
               >
                 (949) 570-0500
               </a>
