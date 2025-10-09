@@ -1,54 +1,8 @@
-import SiteFooter from "@/components/site-footer";
-import { useEffect } from "react";
-import { initFadeInAnimations } from "@/lib/utils";
-import FueResults from "@/components/fue/fue-results-from-real-patients";
-import Frame_81 from "@/components/Frame_81";
-import TestimonialsSectionPremium from "@/components/testimonials-section-premium";
-import FueNavBar from "@/components/fue/fue-nav-bar";
-import GenericHeader from "@/components/generic-header";
-import GenericReasons from "@/components/generic-reasons";
-import GenericHowItWorks from "@/components/generic-how-it-works";
-import FueProcess from "@/components/fue/fue-process";
 import procedureImg from "@assets/fue-hiw2-procedure.webp";
 import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
 import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
-import FaqSection from "@/components/faq-section";
-import BadgeGrid from "@/components/badges";
-import GenericProcess from "@/components/generic-process";
-import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
 
-const headerDetails = [
-  "Advanced FUE technology.",
-  "Natural results.",
-  "Restored confidence.",
-];
-
-const fueReasons = [
-  {
-    highlight: "Natural-looking results",
-    description: "with aesthetic appeal and more youthful density",
-  },
-  {
-    highlight: "No visible linear scar",
-    description:
-      "because FUE skips the outdated practice of scalp strip removal",
-  },
-  {
-    highlight: "Quicker recovery",
-    description: " with our minimally invasive approach",
-  },
-  {
-    highlight: "Ultra-popular procedure with thousands performed nationwide",
-    description:
-      "because FUE skips the outdated practice of scalp strip removal",
-  },
-  {
-    highlight: "Men, women, hairlines, crowns, eyebrows and beards",
-    description: "-we got you covered",
-  },
-];
-
-const fueProcessDetails = [
+export const microneedlingDetails = [
   {
     // title: "Initial Consultation",
     title: "Step 1: Your FUE Consultation",
@@ -491,57 +445,27 @@ const fueProcessDetails = [
   },
 ];
 
-export default function Fue() {
-  useEffect(() => {
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
-
-    // Initialize fade-in animations
-    const cleanup = initFadeInAnimations();
-
-    // Add title to the page
-    document.title = "SoCal Advanced Hair Restoration | Dr. NEO";
-
-    return cleanup;
-  }, []);
-  const fueGradientClass =
-    "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-tranparent";
-  return (
-    <main className="flex min-h-screen flex-col">
-      <FueNavBar />
-      <GenericHeader
-        title1={"Follicular "}
-        title2={"Unit Extraction"}
-        title3={"Hair Transplant"}
-        details={headerDetails}
-        image={"/assets/fue/shinyfollicle.webp"}
-        gradientClass={
-          "bg-gradient-to-r from-[#B91C1C] via-[#761A20]  to-[#1D0000] bg-clip-text text-transparent"
-        }
-        gradientButtonClass={"custom-button-fue"}
-      />
-      <GenericReasons reasons={fueReasons} gradientClass={fueGradientClass} />
-      {/* <FueHowItWorks /> */}
-      <GenericHowItWorks
-        processDetails={fueProcessDetails}
-        color="#B91C1C"
-        gradientClass={fueGradientClass}
-        title="Redefining the Hair Transplant Experience"
-      />
-      <GenericProcess
-        title="PROCESS"
-        headline="See our process in action"
-        details="Watch step-by-step videos of our FUE hair transplant procedure.
-            Understand exactly what happens during your treatment."
-        video="/assets/video/NEO Stinger.mov"
-        gradientClass={
-          "bg-gradient-to-br from-[#8B2635] via-[#A4161A] to-[#E63946] "
-        }
-      />
-      <HairLineHeroesSlider /> <TestimonialsSectionPremium />
-      {/* <FueResults /> */}
-      <FaqSection />
-      <SiteFooter />
-    </main>
-  );
-}
+export const microneedlingReasons = [
+  {
+    highlight: "Natural-looking results",
+    description: "with aesthetic appeal and more youthful density",
+  },
+  {
+    highlight: "No visible linear scar",
+    description:
+      "because FUE skips the outdated practice of scalp strip removal",
+  },
+  {
+    highlight: "Quicker recovery",
+    description: " with our minimally invasive approach",
+  },
+  {
+    highlight: "Ultra-popular procedure with thousands performed nationwide",
+    description:
+      "because FUE skips the outdated practice of scalp strip removal",
+  },
+  {
+    highlight: "Men, women, hairlines, crowns, eyebrows and beards",
+    description: "-we got you covered",
+  },
+];
