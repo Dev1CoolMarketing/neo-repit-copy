@@ -302,9 +302,8 @@ export const ExosomesDesign = (): JSX.Element => {
             video="/assets/video/NEO Stinger.mov"
             gradientClass={"bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC]"}
             />
-      <div className={styles.body}>
+      {/* <div className={styles.body}>
         <main className={styles.main}>
-          {/* Hero Section */}
           <section className={styles.heroSection}>
             <div className={styles.container}>
               <div className={styles.heroContent}>
@@ -347,7 +346,6 @@ export const ExosomesDesign = (): JSX.Element => {
             </div>
           </section>
 
-          {/* Features Section */}
           <section className={styles.featuresSection}>
             <div className={styles.featuresContainer}>
               {features.map((feature, index) => (
@@ -375,7 +373,6 @@ export const ExosomesDesign = (): JSX.Element => {
             </div>
           </section>
 
-          {/* Treatment Types Section */}
           <section className={styles.userTypesSection}>
             <div className={styles.container}>
               <h2 className={styles.userTypesTitle}>
@@ -412,7 +409,6 @@ export const ExosomesDesign = (): JSX.Element => {
             </div>
           </section>
 
-          {/* Details Section */}
           <section className={styles.detailsSection}>
             <div className={styles.detailsContainer}>
               <h2 className={styles.detailsTitle}>
@@ -461,7 +457,6 @@ export const ExosomesDesign = (): JSX.Element => {
             </div>
           </section>
 
-          {/* CTA Section */}
           <section className={styles.ctaSection}>
             <div className={styles.container}>
               <h2 className={styles.ctaTitle}>
@@ -482,7 +477,7 @@ export const ExosomesDesign = (): JSX.Element => {
             </div>
           </section>
         </main>
-      </div>
+      </div> */}
       <SiteFooter />
     </main>
   );
