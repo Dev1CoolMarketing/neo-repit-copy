@@ -20,6 +20,7 @@ import ComponentExportPage from '@/pages/component-export';
 import GradientsPage from '@/pages/gradients';
 import NotFound from "@/pages/not-found";
 import PrivacyPolicyPage from "./pages/privacy-policy-page";
+import Microneedling from "./pages/microneedling-page";
 
 function Router() {
   const [location] = useLocation();
@@ -54,7 +55,7 @@ function Router() {
       />
        <Route path="/growth-factors2" component={GrowthFactors2Page} />
         <Route path="/exosomes" component={ExosomesDesign} />
-        <Route path="/microneedling" component={MicroneedlingDesign} />
+        <Route path="/microneedling" component={Microneedling} />
         <Route path="/component-export" component={ComponentExportPage} />
         <Route path="/gradients" component={GradientsPage} />
         <Route path="/privacy-policy" component={PrivacyPolicyPage} />
