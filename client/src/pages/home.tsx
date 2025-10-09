@@ -12,6 +12,7 @@ import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import { initFadeInAnimations } from "@/lib/utils";
 import FueNavBar from "@/components/fue/fue-nav-bar";
+import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
 
 export default function Home() {
   useEffect(() => {
@@ -35,7 +36,8 @@ export default function Home() {
         <HeroSectionImmersive />
         <TreatmentsSection />
         <TreatmentsSectionEnhanced />
-        <Frame_81 />
+        {/* <Frame_81 /> */}
+        <HairLineHeroesSlider />
         <TestimonialsSectionPremium />
         <NeoDifferenceSection />
         <ContactSection />

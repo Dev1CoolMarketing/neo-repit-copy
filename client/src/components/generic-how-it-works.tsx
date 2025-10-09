@@ -22,7 +22,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
             transition={{ duration: 0.8 }}
           >
             <motion.h2
-              className={` ${gradientClass} text-4xl md:text-5xl lg:text-6xl font-[700] text-black mb-6 tracking-tight`}
+              className={` ${gradientClass} text-4xl md:text-5xl lg:text-6xl font-[700] text-black mb-6 tracking-tight !leading-tight`}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

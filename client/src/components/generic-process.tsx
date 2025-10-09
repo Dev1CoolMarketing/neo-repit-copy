@@ -7,6 +7,7 @@ type GenericProcessProps = {
     headline: string,
     video: string,
     gradientClass: string,
+    ctaText?: string
 
 }
 
@@ -16,9 +17,8 @@ export default function GenericProcess({
     headline,
     video,
     gradientClass,
+    ctaText = 'Watch process videos'
 }: GenericProcessProps) {
-    console.log('THIS IS TITLE', title);
-    console.log('THIS IS TITLE SPLIT',title.split(''));
   return (
     <section className="bg-white px-5 py-16 md:py-24">
       <div className="container mx-auto max-w-sm md:max-w-4xl">
@@ -37,12 +37,15 @@ export default function GenericProcess({
             ))}
           </div>
 
-          <p className="text-lg text-medium-gray leading-relaxed">
+          <h2 className="text-2xl font-bold text-medium-gray leading-relaxed">
             {headline}
+          </h2>
+          <p>
+            {details}
           </p>
 
           <button className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
-            {details}
+            {ctaText}
            </button>
           <div className="device device-iphone-x">
             <div className="device-frame"></div>
