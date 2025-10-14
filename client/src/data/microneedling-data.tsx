@@ -146,14 +146,14 @@ export const microneedlingReasons = [
   },
   {
     highlight: "Triggers natural collagen and elastin production",
-    description: "for stronger scalp support and healthier follicles",
+    description: "for stronger for stronger scalp support.",
   },
   {
     highlight: "Activates local stem cells and growth pathways",
-    description: "to awaken dormant follicles and encourage regrowth",
+    description: "to awaken dormant follicles.",
   },
   {
     highlight: "30-45 minute in-office sessions",
-    description: "deliver impactful results with minimal downtime",
+    description: "with minimal recovery and no downtime",
   },
 ];
