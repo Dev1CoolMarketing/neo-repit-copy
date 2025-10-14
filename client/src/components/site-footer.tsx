@@ -133,7 +133,7 @@ export default function SiteFooter() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Phone className="w-4 h-4 text-[#FAE151]" />
-                  <a href="tel:+1949570500"className="underline cursor-pointer">(949) 570-0500</a>
+                  <a href="tel:+1949570500"className="underline cursor-pointer">(949) 570-0800</a>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Mail className="w-4 h-4 text-[#FAE151]" />
