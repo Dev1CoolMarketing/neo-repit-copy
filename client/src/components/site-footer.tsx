@@ -23,6 +23,7 @@ const resources = [
   { name: "Before & After Gallery", href: "/#treatments" },
   { name: "Patient Testimonials", href: "/#testimonials" },
   { name: "Educational Resources", href: "/#faq" },
+    { name: "FAQ", href: "/faq" },
     { name: "Privacy Policy", href: "/privacy-policy" },
 
 ];

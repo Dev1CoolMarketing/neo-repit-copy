@@ -117,11 +117,11 @@ export default function TestimonialsSectionPremium() {
                     transition={{ duration: 0.6, delay: 1.2 }}
                     viewport={{ once: true }}
                   >
-                    <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
-                      alt="Michael R."
-                      className="w-16 h-16 mr-5 rounded-full object-cover border-2 border-white shadow-lg"
-                    />
+                           <div className="w-12 h-12 mr-4 rounded-full bg-gradient-to-br from-[#A87B23]/20 to-[#FAE151]/20 flex items-center justify-center border-2 border-white shadow-md">
+                      <span className="text-[#A87B23] font-semibold text-sm">
+                        MR
+                      </span>
+                    </div>
                     <div>
                       <p className="font-semibold text-[#1d1d1f] text-lg">
                         Michael R.
@@ -205,6 +205,7 @@ export default function TestimonialsSectionPremium() {
                   quote:
                     "Professional, caring, and the results speak for themselves. Couldn't be happier.",
                   name: "David L.",
+                  initials: "DL",
                   treatment: "FUE + PRP",
                   image:
                     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80",
@@ -215,6 +216,8 @@ export default function TestimonialsSectionPremium() {
                   quote:
                     "The entire team was amazing. My hair looks better than it has in years.",
                   name: "Jennifer M.",
+                                    initials: "JM",
+
                   treatment: "LLLT Treatment",
                   image:
                     "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80",
@@ -225,6 +228,8 @@ export default function TestimonialsSectionPremium() {
                   quote:
                     "State-of-the-art facility and incredible attention to detail. Highly recommend.",
                   name: "Robert T.",
+                                    initials: "RT",
+
                   treatment: "Consultation",
                   image:
                     "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face&auto=format&q=80",
@@ -294,11 +299,11 @@ export default function TestimonialsSectionPremium() {
                       }}
                       viewport={{ once: true }}
                     >
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-10 h-10 mr-3 rounded-full object-cover border-2 border-white shadow-md"
-                      />
+                         <div className="w-12 h-12 mr-4 rounded-full bg-gradient-to-br from-[#A87B23]/20 to-[#FAE151]/20 flex items-center justify-center border-2 border-white shadow-md">
+                      <span className="text-[#A87B23] font-semibold text-sm">
+                        {testimonial.initials}
+                      </span>
+                    </div>
                       <div>
                         <p className="font-semibold text-[#1d1d1f] text-sm">
                           {testimonial.name}

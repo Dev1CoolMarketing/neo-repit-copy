@@ -273,9 +273,10 @@ export const ExosomesDesign = (): JSX.Element => {
   ];
   const exsomeColor = "#9940B6"
   return (
-    <main className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col">
       <FueNavBar />
-      <GenericHeader
+      <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
+        <GenericHeader
         title1={"Follicular"}
         title2={"Hypersomes™"}
         details={headerDetails}
@@ -302,9 +303,10 @@ export const ExosomesDesign = (): JSX.Element => {
             video="/assets/video/NEO Stinger.mov"
             gradientClass={"bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC]"}
             />
-      <div className={styles.body}>
-        <main className={styles.main}>
-          <section className={styles.heroSection}>
+      </main>
+    {/* <div className={styles.body}>
+      <main className={styles.main}>
+        <section className={styles.heroSection}>
             <div className={styles.container}>
               <div className={styles.heroContent}>
                 <div className={styles.headingMargin}>
@@ -477,9 +479,9 @@ export const ExosomesDesign = (): JSX.Element => {
             </div>
           </section>
         </main>
-      </div>
+      </div> */}
       <SiteFooter />
-    </main>
+    </div>
   );
 };
 

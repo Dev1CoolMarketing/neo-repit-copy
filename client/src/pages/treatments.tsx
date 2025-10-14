@@ -298,6 +298,7 @@ export default function TreatmentsPage() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <SiteHeader />
+      <main id="main-content" tabIndex={-1} className="flex-1 flex flex-col">
 
       {/* Hero Section */}
       <div 
@@ -1091,7 +1092,7 @@ export default function TreatmentsPage() {
           </div>
         </div>
       </div>
-
+      </main>
       <SiteFooter />
     </div>
   );

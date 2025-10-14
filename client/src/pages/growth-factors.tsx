@@ -638,10 +638,12 @@ export default function GrowthFactors() {
   return (
     <div className="min-h-screen bg-white">
       <Nav onBookClick={handleBookClick} />
-      <Hero onBookClick={handleBookClick} />
-      <Timeline />
-      <PricingSection />
-      <GrowthFactorsFAQ />
+      <main id="main-content" tabIndex={-1}>
+        <Hero onBookClick={handleBookClick} />
+        <Timeline />
+        <PricingSection />
+        <GrowthFactorsFAQ />
+      </main>
       <SiteFooter />
     </div>
   );

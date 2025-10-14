@@ -37,9 +37,10 @@ const navLinks = [
     ],
   },
   // { name: "About", href: "/#about", type: "anchor" },
-  { name: "Gallery", href: "/#testimonials", type: "anchor" },
-  { name: "Pricing", href: "/vip-membership", type: "link" },
-  { name: "Locations", href: "/#contact", type: "anchor" },
+  // { name: "Gallery", href: "/#testimonials", type: "anchor" },
+  // { name: "Pricing", href: "/vip-membership", type: "link" },
+  { name: "Locations", href: "/locations", type: "link" },
+  { name: "FAQ", href: "/faq", type: "link" },
 ];
 
 export default function FueNavBar() {
@@ -62,9 +63,13 @@ export default function FueNavBar() {
       hoverColor: '#8B2635',
       mainColor: 'bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC]'
     },
-          '/microneedling': {
+              '/microneedling': {
       hoverColor: '#8B2635',
       mainColor: 'bg-gradient-to-r from-[#007AFF] via-[#00C7BE] to-[#4A90E2]'
+    },
+              '/locations': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#334155]'
     },
               '/': {
       hoverColor: '#8B2635',

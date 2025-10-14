@@ -21,6 +21,9 @@ import GradientsPage from '@/pages/gradients';
 import NotFound from "@/pages/not-found";
 import PrivacyPolicyPage from "./pages/privacy-policy-page";
 import Microneedling from "./pages/microneedling-page";
+import LocationsPage from "@/pages/locations";
+import FAQPage from "@/pages/faq";
+import SkipToMain from "@/components/skip-to-main";
 
 function Router() {
   const [location] = useLocation();
@@ -56,6 +59,8 @@ function Router() {
        <Route path="/growth-factors2" component={GrowthFactors2Page} />
         <Route path="/exosomes" component={ExosomesDesign} />
         <Route path="/microneedling" component={Microneedling} />
+        <Route path="/locations" component={LocationsPage} />
+        <Route path="/faq" component={FAQPage} />
         <Route path="/component-export" component={ComponentExportPage} />
         <Route path="/gradients" component={GradientsPage} />
         <Route path="/privacy-policy" component={PrivacyPolicyPage} />
@@ -69,6 +74,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <SkipToMain />
         <Toaster />
         <Router />
       </TooltipProvider>

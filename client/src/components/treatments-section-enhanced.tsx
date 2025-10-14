@@ -6,6 +6,7 @@ import hairBrushImage from "@assets/7.png";
 import hairLossImage from "@assets/9.png";
 import ProductModal from "./ui/modal";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { navigate } from "wouter/use-browser-location";
 
 // Treatment data with Apple-inspired structure
 const treatments = [
@@ -55,42 +56,10 @@ export default function TreatmentsSectionEnhanced() {
 
       {/* Desktop version - Apple-inspired design with ultra-realistic floating visuals */}
       <div className="hidden md:block">
-        <section id="treatments-section" className="bg-white py-16">
-          <div className="max-w-[1200px] mx-auto px-8">
-            <div className="text-center mb-16">
-              <motion.div
-                className="inline-block mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-[11px] font-medium text-[#625046] uppercase tracking-[0.5px] bg-[#FAE151]/10 px-4 py-2 rounded-full border border-[#FAE151]/20">
-                  Dr. Neo Technology
-                </span>
-              </motion.div>
-
-              <motion.h1
-                className="text-[48px] md:text-[64px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1d1d1f] mb-6"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-              >
-                Advanced Treatments
-              </motion.h1>
-
-              <motion.p
-                className="text-[21px] md:text-2xl font-normal text-[#86868b] max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                Revolutionary hair restoration solutions designed for lasting
-                transformation
-              </motion.p>
-            </div>
-          </div>
+        <section id="treatments-section" className="bg-white pb-16">
+  
           {/* Hero Treatment Section - FUE with floating product visual */}
-          <div className="w-full h-[692px] bg-[#f5f5f7] relative overflow-hidden">
+          <div className="w-full h-[692px] bg-white relative overflow-hidden">
             <div className="absolute inset-0 flex justify-center items-center"></div>
 
             {/* Content overlay */}
@@ -167,11 +136,11 @@ export default function TreatmentsSectionEnhanced() {
             </div>
 
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#f5f5f7] via-[#fafafa] to-[#f0f0f0]" />
+            <div className="absolute inset-0]" />
           </div>
 
           {/* PRP Treatment Section with floating microneedling pen */}
-          <div className="w-full h-[692px] bg-white relative overflow-hidden">
+          <div className="w-full h-[692px] bg-[#f5f5f7] relative overflow-hidden">
             <div className="absolute inset-0 flex justify-center items-center">
               {/* Ultra-realistic floating microneedling pen */}
             </div>
@@ -248,7 +217,7 @@ export default function TreatmentsSectionEnhanced() {
           </div>
 
           {/* Premium Apple-Style Treatment Showcase */}
-          <div className="w-full bg-[#f5f5f7] py-20">
+          <div className="w-full bg-white py-16 lg:py-20">
             <div className="max-w-[1400px] mx-auto px-8">
               {/* Minimal Apple header */}
               <div className="text-center mb-16">
@@ -273,15 +242,15 @@ export default function TreatmentsSectionEnhanced() {
               {/* Apple iPhone-style horizontal scroll showcase */}
               <div className="mb-16 -mx-8 relative">
                 {/* Scroll indicators */}
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+                {/* <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
                   <div className="w-8 h-32 bg-gradient-to-r from-[#f5f5f7] to-transparent"></div>
                 </div>
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
                   <div className="w-8 h-32 bg-gradient-to-l from-[#f5f5f7] to-transparent"></div>
-                </div>
+                </div> */}
 
                 {/* Navigation arrows */}
-                <button
+                {/* <button
                   className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full border border-gray-200/50 flex items-center justify-center hover:bg-white transition-colors"
                   aria-label="Scroll Left"
                   onClick={() => {
@@ -309,7 +278,7 @@ export default function TreatmentsSectionEnhanced() {
                 >
                   <ChevronRight className="w-5 h-5 text-[#86868b]" />
                   <span className="sr-only">Scroll Right</span>
-                </button>
+                </button> */}
 
                 {/* Scroll hint indicator */}
                 <div className="absolute  hidden right-16 top-4 z-20 flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1.5 border border-gray-200/50">
@@ -351,76 +320,43 @@ export default function TreatmentsSectionEnhanced() {
                       boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
                     }}
                   >
-                    {/* Content with consistent padding */}
-                    <div className="p-8">
-                      {/* Brand line with Dr. Neo colors */}
-                      <div className="text-center mb-2">
-                        <span className="text-[11px] font-medium text-[#625046] uppercase tracking-[0.5px]">
+                    <div className="flex h-full flex-col items-center gap-6 p-8 text-center">
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-[11px] font-medium uppercase tracking-[0.5px] text-[#625046]">
                           Dr. Neo Technology
                         </span>
+                        <h2 className="text-[24px] font-semibold leading-[28px] text-[#1d1d1f]">
+                          FUE Hair Transplant
+                        </h2>
                       </div>
-
-                      {/* Product name */}
-                      <h2 className="text-[24px] font-semibold text-[#1d1d1f] mb-8 leading-[28px] text-center h-24 flex items-center justify-center">
-                        FUE Hair Transplant &<br />
-                        FUE Hair Transplant Plus
-                      </h2>
-
-                      {/* Isolated product visual with consistent height */}
-                      <div className="h-[200px] flex items-center justify-center mb-6 relative">
+                      <div className="flex h-[200px] w-full items-center justify-center">
                         <motion.img
                           src={goldTweezerPath}
                           alt="FUE Hair Transplant"
-                          className="w-44 h-44 object-contain group-hover:scale-105 transition-transform duration-500"
+                          className="h-44 w-44 object-contain transition-transform duration-500 group-hover:scale-105"
                           style={{
                             filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.1))",
                           }}
                         />
                       </div>
-
-                      {/* Color options with Dr. Neo brand colors */}
-                      <div className="flex justify-center gap-2 mb-6">
-                        <div className="w-3 h-3 rounded-full bg-[#A87B23] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#625046] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#FAE151] border border-[#d2d2d7]" />
+                      <div className="min-h-[40px] text-[14px] text-[#76767E]">
+                        <p>From $3999 or $41.62/mo. for 24 mo.*</p>
                       </div>
-
-                      {/* Clean pricing with consistent height */}
-                      <div className="text-center mb-4 min-h-[40px]">
-                        <p className="text-[14px] text-[#76767E]">
-                          From $3999 or $41.62/mo. for 24 mo.*
-                        </p>
-                      </div>
-
-                      {/* Dr. Neo brand button - aligned consistently */}
-                      <div className="flex justify-center">
-                        <motion.button
-                          className="px-6 py-2.5 rounded-[980px] text-[14px] font-medium min-w-[80px] custom-button"
-                          whileTap={{ scale: 0.98 }}
-                          onClick={(event) => {
-                            setTriggerElement(event.currentTarget);
-                            handleOpenModal("FUE Hair Transplant");
-                          }}
-                        >
-                          View
-                        </motion.button>
-                        {/* <motion.button
-                          className="text-white px-6 py-2.5 rounded-[980px] text-[14px] font-medium min-w-[80px] custom-button"
-                          whileHover={{ backgroundColor: "#8a6a1f" }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={(event) => {
-                            event.preventDefault();
-                          }}
-                        >
-                          Buy
-                        </motion.button> */}
-                      </div>
+                      <motion.button
+                        className="custom-button px-6 py-2.5 text-[14px] font-medium"
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => {
+                          navigate("/fue");
+                        }}
+                      >
+                        View
+                      </motion.button>
                     </div>
                   </motion.div>
 
                   {/* Follicular Hypersomes™ Card */}
                   <motion.div
-                    className="flex-none w-[280px] bg-white rounded-[18px] border border-[#e5e5e7] overflow-hidden group cursor-pointer"
+                    className="flex-none w-[320px] bg-white rounded-[18px] border border-[#e5e5e7] overflow-hidden group cursor-pointer"
                     tabIndex={0}
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -430,53 +366,41 @@ export default function TreatmentsSectionEnhanced() {
                       boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
                     }}
                   >
-                    <div className="p-8">
-                      <div className="text-center mb-2">
-                        <span className="text-[11px] font-medium text-[#625046] uppercase tracking-[0.5px]">
+                    <div className="flex h-full flex-col items-center gap-6 p-8 text-center">
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-[11px] font-medium uppercase tracking-[0.5px] text-[#625046]">
                           Dr. Neo Technology
                         </span>
+                        <h3 className="text-[24px] font-semibold leading-[28px] text-[#1d1d1f]">
+                          Follicular Hypersomes™
+                        </h3>
                       </div>
 
-                      <h3 className="text-[24px] h-24 font-semibold text-[#1d1d1f] mb-8 leading-[28px] text-center flex items-center ">
-                        Follicular Hypersomes™
-                      </h3>
-
-                      <div className="h-[200px] flex items-center justify-center mb-6">
+                      <div className="flex h-[200px] w-full items-center justify-center">
                         <motion.img
                           src={"/assets/MOIST FOLLICLE.png"}
                           alt="Follicular Hypersomes™"
-                          className="w-40 h-40 object-contain group-hover:scale-105 transition-transform duration-500"
+                          className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-105"
                           style={{
                             filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.1))",
                           }}
                         />
                       </div>
 
-                      <div className="flex justify-center gap-2 mb-6">
-                        <div className="w-3 h-3 rounded-full bg-[#A87B23] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#625046] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#d4af37] border border-[#d2d2d7]" />
+                      <div className="min-h-[40px] text-[14px] text-[#76767E]">
+                        <p>From $1299 or $13.54/mo. for 24 mo.*</p>
                       </div>
 
-                      <div className="text-center mb-4">
-                        <p className="text-[14px] text-[#76767E]">
-                          From $1299 or $13.54/mo. for 24 mo.*
-                        </p>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <motion.button
-                          className=" px-6 py-2 rounded-[980px] text-[14px] font-medium custom-button"
-                          whileTap={{ scale: 0.98 }}
-                          role="button"
-                          onClick={(event) => {
-                            setTriggerElement(event.currentTarget);
-                            handleOpenModal("Follicular Hypersomes™");
-                          }}
-                        >
-                          View
-                        </motion.button>
-                      </div>
+                      <motion.button
+                        className="custom-button px-6 py-2.5 text-[14px] font-medium"
+                        whileTap={{ scale: 0.98 }}
+                        role="button"
+                        onClick={() => {
+                          navigate("/exosomes");
+                        }}
+                      >
+                        View
+                      </motion.button>
                     </div>
                   </motion.div>
 
@@ -492,52 +416,41 @@ export default function TreatmentsSectionEnhanced() {
                       boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
                     }}
                   >
-                    <div className="p-8">
-                      <div className="text-center mb-2">
-                        <span className="text-[11px] font-medium text-[#625046] uppercase tracking-[0.5px]">
+                    <div className="flex h-full flex-col items-center gap-6 p-8 text-center">
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-[11px] font-medium uppercase tracking-[0.5px] text-[#625046]">
                           Dr. Neo Technology
                         </span>
+                        <h3 className="text-[24px] font-semibold leading-[28px] text-[#1d1d1f]">
+                          Growth Factors
+                        </h3>
                       </div>
-                      <h3 className="text-[24px] font-semibold text-[#1d1d1f] mb-8 leading-[28px] text-center  h-24 flex justify-center items-center">
-                        Growth Factors
-                      </h3>
 
-                      <div className="h-[200px] flex items-center justify-center mb-6">
+                      <div className="flex h-[200px] w-full items-center justify-center">
                         <motion.img
                           src={"/assets/FOLLICULES.png"}
                           alt="Injectable Growth Factors"
-                          className="w-40 h-40 object-contain group-hover:scale-105 transition-transform duration-500"
+                          className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-105"
                           style={{
                             filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.1))",
                           }}
                         />
                       </div>
 
-                      <div className="flex justify-center gap-2 mb-6">
-                        <div className="w-3 h-3 rounded-full bg-[#A87B23] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#625046] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#d4af37] border border-[#d2d2d7]" />
+                      <div className="min-h-[40px] text-[14px] text-[#76767E]">
+                        <p>From $699 or $7.29/mo. for 24 mo.*</p>
                       </div>
 
-                      <div className="text-center mb-4 min-h-[40px]">
-                        <p className="text-[14px] text-[#76767E]">
-                          From $699 or $7.29/mo. for 24 mo.*
-                        </p>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <motion.button
-                          className="bg-[#0071e3] px-6 py-2 rounded-[980px] text-[14px] font-medium custom-button"
-                          whileTap={{ scale: 0.98 }}
-                          role="button"
-                          onClick={(event) => {
-                            setTriggerElement(event.currentTarget);
-                            handleOpenModal("Injectable Growth Factors");
-                          }}
-                        >
-                          View
-                        </motion.button>
-                      </div>
+                      <motion.button
+                        className="custom-button px-6 py-2.5 text-[14px] font-medium"
+                        whileTap={{ scale: 0.98 }}
+                        role="button"
+                        onClick={() => {
+                          navigate("/growth-factors");
+                        }}
+                      >
+                        View
+                      </motion.button>
                     </div>
                   </motion.div>
 
@@ -553,58 +466,45 @@ export default function TreatmentsSectionEnhanced() {
                       boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
                     }}
                   >
-                    <div className="p-8">
-                      <div className="text-center mb-2">
-                        <span className="text-[11px] font-medium text-[#625046] uppercase tracking-[0.5px]">
+                    <div className="flex h-full flex-col items-center gap-6 p-8 text-center">
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-[11px] font-medium uppercase tracking-[0.5px] text-[#625046]">
                           Dr. Neo Technology
                         </span>
+                        <h3 className="text-[24px] font-semibold leading-[28px] text-[#1d1d1f]">
+                          Microneedling
+                        </h3>
                       </div>
 
-                      <h3 className="text-[24px] font-semibold text-[#1d1d1f] mb-8 leading-[28px] text-center min-h-[56px]  h-24 flex items-center justify-center">
-                        Microneedling &<br />
-                        Microneedling Plus
-                      </h3>
-
-                      <div className="h-[200px] flex items-center justify-center mb-6">
+                      <div className="flex h-[200px] w-full items-center justify-center">
                         <motion.img
                           src={"/assets/home/micro.png.PNG"}
                           alt="Microneedling Growth Factors"
-                          className="w-44 h-50 object-contain group-hover:scale-105 transition-transform duration-500"
+                          className="h-44 w-44 object-contain transition-transform duration-500 group-hover:scale-105"
                           style={{
                             filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.1))",
                           }}
                         />
                       </div>
 
-                      <div className="flex justify-center gap-2 mb-6">
-                        <div className="w-3 h-3 rounded-full bg-[#A87B23] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#625046] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#FAE151] border border-[#d2d2d7]" />
+                      <div className="min-h-[40px] text-[14px] text-[#76767E]">
+                        <p>From $899 or $9.37/mo. for 24 mo.*</p>
                       </div>
 
-                      <div className="text-center mb-4 min-h-[40px]">
-                        <p className="text-[14px] text-[#76767E]">
-                          From $899 or $9.37/mo. for 24 mo.*
-                        </p>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <motion.button
-                          className="custom-button  px-6 py-2.5 rounded-[980px] text-[14px] font-medium min-w-[80px]"
-                          whileTap={{ scale: 0.98 }}
-                          onClick={(event) => {
-                            setTriggerElement(event.currentTarget);
-                            handleOpenModal("Microneedling");
-                          }}
-                        >
-                          View
-                        </motion.button>
-                      </div>
+                      <motion.button
+                        className="custom-button px-6 py-2.5 text-[14px] font-medium"
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => {
+                          navigate("/microneedling");
+                        }}
+                      >
+                        View
+                      </motion.button>
                     </div>
                   </motion.div>
 
                   {/* Vigor VIP Card */}
-                  <motion.div
+                  {/* <motion.div
                     className="flex-none w-[280px] bg-white rounded-[18px] border border-[#e5e5e7] overflow-hidden group cursor-pointer"
                     tabIndex={0}
                     initial={{ opacity: 0, x: -30 }}
@@ -623,9 +523,7 @@ export default function TreatmentsSectionEnhanced() {
                       </div>
 
                       <h3 className="text-[24px] h-24 font-semibold text-[#1d1d1f] mb-8 leading-[28px] text-center flex items-center justify-center">
-                        Vigor VIP &<br />
-                        Vigor VIP Plus
-                      </h3>
+                        Vigor VIP & </h3>
 
                       <div className="h-[200px] flex items-center justify-center mb-6">
                         <motion.img
@@ -640,11 +538,6 @@ export default function TreatmentsSectionEnhanced() {
                         />
                       </div>
 
-                      <div className="flex justify-center gap-2 mb-6">
-                        <div className="w-3 h-3 rounded-full bg-[#A87B23] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#d4af37] border border-[#d2d2d7]" />
-                        <div className="w-3 h-3 rounded-full bg-[#625046] border border-[#d2d2d7]" />
-                      </div>
 
                       <div className="text-center mb-4">
                         <p className="text-[14px] text-[#76767E]">
@@ -658,7 +551,7 @@ export default function TreatmentsSectionEnhanced() {
                           whileTap={{ scale: 0.98 }}
                           role="button"
                           onClick={(event) => {
-                            setTriggerElement(event.currentTarget);
+                            navigate('/');
                             handleOpenModal("Vigor VIP");
                           }}
                         >
@@ -666,7 +559,7 @@ export default function TreatmentsSectionEnhanced() {
                         </motion.button>
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
 
                   {/* Explore All Card */}
                   {/* <motion.div

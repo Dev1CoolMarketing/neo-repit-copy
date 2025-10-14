@@ -506,9 +506,10 @@ export default function Fue() {
   }, []);
   const fueGradientClass =     "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-transparent";
   return (
-    <main className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col">
       <FueNavBar />
-      <GenericHeader
+      <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
+        <GenericHeader
         title1={"Follicular "}
         title2={"Unit Extraction"}
         title3={"Hair Transplant"}
@@ -545,6 +546,7 @@ export default function Fue() {
       {/* <FueResults /> */}
       <FaqSection />
       <SiteFooter />
-    </main>
+      </main>
+    </div>
   );
 }

@@ -30,7 +30,7 @@ export default function Home() {
       {/* <SiteHeader /> */}
             <FueNavBar />
       
-      <main className="flex-1">
+      <main id="main-content" tabIndex={-1} className="flex-1">
         {/* Mobile: Use original components, Desktop: Use Apple-inspired enhanced components */}
         <HeroSection />
         <HeroSectionImmersive />
