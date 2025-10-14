@@ -275,7 +275,7 @@ export default function FueNavBar() {
                   transform: "translateZ(0)",
                 }}
               />
-              <span className="sr-only">Call us at (949) 570-0500</span>
+              <span className="sr-only">Call us at (949) 570-0800</span>
             </Button>
           </a>
           <Button
@@ -325,10 +325,10 @@ export default function FueNavBar() {
             {/* Action buttons */}
             <div className="flex items-center space-x-4">
               <a
-                href="tel:(949) 570-0500"
+                href="tel:(949) 570-0800"
                 className="text-[white] text-sm fonxt-medium hidden lg:block"
               >
-                (949) 570-0500
+                (949) 570-0800
               </a>
               <button
                 onClick={() => smoothScrollTo("contact")}
