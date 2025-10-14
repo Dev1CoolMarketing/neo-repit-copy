@@ -104,7 +104,7 @@ export const VIPMembershipDesign = (): JSX.Element => {
     <div className={styles.wLight}>
       <FueNavBar />
       <div className={styles.body}>
-        <main className={styles.main}>
+        <main id="main-content" tabIndex={-1} className={styles.main}>
           {/* Hero Section */}
           <section className={styles.heroSection}>
             <div className={styles.container}>

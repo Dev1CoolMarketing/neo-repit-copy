@@ -13,10 +13,12 @@ export default function HairHotlinePage() {
   return (
     <div className="bg-black min-h-screen">
       <FueNavBar />
-      <HotlineHeroSection />
-      <HotlineWhyMen />
-      <HotLineHowItWorks />
-      <HotlineVersus />
+      <main id="main-content" tabIndex={-1}>
+        <HotlineHeroSection />
+        <HotlineWhyMen />
+        <HotLineHowItWorks />
+        <HotlineVersus />
+      </main>
       <SiteFooter />
     </div>
   );

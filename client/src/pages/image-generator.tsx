@@ -1,5 +1,9 @@
 import MedicalImageGenerator from "../components/MedicalImageGenerator";
 
 export default function ImageGeneratorPage() {
-  return <MedicalImageGenerator />;
+  return (
+    <main id="main-content" tabIndex={-1}>
+      <MedicalImageGenerator />
+    </main>
+  );
 }

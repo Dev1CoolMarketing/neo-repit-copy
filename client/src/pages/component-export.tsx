@@ -51,7 +51,7 @@ export default function ComponentExportPage() {
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] py-12">
-      <div className="max-w-4xl mx-auto px-6">
+      <main id="main-content" tabIndex={-1} className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-semibold text-[#1d1d1f] mb-4">
             Component Export Center
@@ -160,7 +160,7 @@ export default function ComponentExportPage() {
             description="Export any specific element by CSS selector"
           />
         </div>
-      </div>
+      </main>
     </div>
   );
 }

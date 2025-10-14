@@ -36,6 +36,7 @@ const navLinks = [
   { name: "Gallery", href: "/#testimonials", type: "anchor" },
   { name: "Pricing", href: "/vip-membership", type: "link" },
   { name: "Locations", href: "/#contact", type: "anchor" },
+  { name: "FAQ", href: "/faq", type: "link" },
 ];
 
 export default function SiteHeader() {

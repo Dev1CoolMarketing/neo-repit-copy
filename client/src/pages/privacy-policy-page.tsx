@@ -5,12 +5,13 @@ import React from 'react'
 
 const PrivacyPolicyPage = () => {
   return (
-    <div className='mt-20'>
-    <PrivacyPolicy heading='Privacy Policy - DR.Neo'/>
-        <SiteFooter />
+    <div className="mt-20 min-h-screen flex flex-col">
+      <main id="main-content" tabIndex={-1} className="flex-1">
+        <PrivacyPolicy heading="Privacy Policy - DR.Neo" />
+      </main>
+      <SiteFooter />
     </div>
-
-  )
+  );
 }
 
 export default PrivacyPolicyPage

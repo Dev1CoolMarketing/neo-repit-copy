@@ -260,7 +260,7 @@ export default function FaqSection() {
       <div className="hidden md:block">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-screen-xl mx-auto">
-            <div className="mb-16">
+            <div className="mb-8">
               <h2 className="text-3xl lg:text-4xl font-normal mb-4 text-[#625046]">
                 Frequently asked questions about
                 <br />
@@ -308,7 +308,7 @@ export default function FaqSection() {
       <div className="hidden md:block">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-screen-xl mx-auto">
-            <div className="mb-16">
+            <div className="mb-8">
               <h2 className="text-3xl lg:text-4xl font-normal mb-4 text-[#625046]">
                 The Procedure
               </h2>
@@ -354,7 +354,7 @@ export default function FaqSection() {
       <div className="hidden md:block">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-screen-xl mx-auto">
-            <div className="mb-16">
+            <div className="mb-8">
               <h2 className="text-3xl lg:text-4xl font-normal text-[#625046]">
                 After The Procedure
               </h2>

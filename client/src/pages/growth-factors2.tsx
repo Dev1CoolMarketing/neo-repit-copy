@@ -1372,8 +1372,9 @@ export default function GrowthFactors() {
 
   const gfGradientClass ="bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
   return (
-    <main  id="main-content" className=" min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <FueNavBar />
+      <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
       {/* <GrowthFactorsHeader /> */}
       {/* <HeroSection /> */}
       <GenericHeader
@@ -1407,6 +1408,7 @@ export default function GrowthFactors() {
       </div> */}
       {/* <GrowthFactorsFAQ /> */}
       <SiteFooter />
-    </main>
+      </main>
+    </div>
   );
 }

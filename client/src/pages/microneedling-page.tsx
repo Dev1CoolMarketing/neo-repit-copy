@@ -33,9 +33,10 @@ export default function Microneedling() {
   const gradientClass =
     "bg-gradient-to-r from-[#007AFF] via-[#00C7BE] to-[#007AFF] bg-clip-text text-transparent";
   return (
-    <main className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col">
       <FueNavBar />
-      <GenericHeader
+      <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
+        <GenericHeader
         title1={"Follicular"}
         title2={"Microneedling"}
         title3={""}
@@ -77,6 +78,7 @@ export default function Microneedling() {
       {/* <FueResults /> */}
       <FaqSection />
       <SiteFooter />
-    </main>
+      </main>
+    </div>
   );
 }
