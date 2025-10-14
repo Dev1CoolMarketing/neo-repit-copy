@@ -504,8 +504,7 @@ export default function Fue() {
 
     return cleanup;
   }, []);
-  const fueGradientClass =
-    "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-tranparent";
+  const fueGradientClass =     "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-transparent";
   return (
     <main className="flex min-h-screen flex-col">
       <FueNavBar />
@@ -520,7 +519,11 @@ export default function Fue() {
         }
         gradientButtonClass={"custom-button-fue"}
       />
-      <GenericReasons reasons={fueReasons} gradientClass={fueGradientClass} />
+      <GenericReasons 
+      reasons={fueReasons} 
+      gradientClass={fueGradientClass}
+       />
+       
       {/* <FueHowItWorks /> */}
       <GenericHowItWorks
         processDetails={fueProcessDetails}
