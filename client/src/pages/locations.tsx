@@ -68,7 +68,7 @@ export default function LocationsPage() {
 
 function Hero() {
   return (
-    <section className="relative isolate flex min-h-[60vh] w-full items-center justify-center overflow-hidden bg-black text-white md:min-h-[70vh]">
+    <section className="relative isolate flex min-h-[80vh] w-full items-center justify-center overflow-hidden bg-black text-white md:min-h-[70vh]">
       <motion.img
         src={heroImage}
         alt="Clinic exterior"

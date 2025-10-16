@@ -117,14 +117,14 @@ export function LocationCard({
               aria-hidden="true"
             />
           </span>
-          <h3
+          <h2
             className={cn(
               "text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl",
               city,
             )}
           >
             {location.title}
-          </h3>
+          </h2>
         </div>
 
         <a
