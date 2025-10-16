@@ -45,7 +45,7 @@ export default function Microneedling() {
         gradientClass={
           "bg-gradient-to-r from-[#007AFF] via-[#00C7BE]  to-[#007AFF] bg-clip-text text-transparent"
         }
-        gradientButtonClass={"bg-[#007AFF]"}
+        gradientButtonClass={"bg-[#0037FF]"}
       />
       <div className="flex justify-center py-8">
         <h2
