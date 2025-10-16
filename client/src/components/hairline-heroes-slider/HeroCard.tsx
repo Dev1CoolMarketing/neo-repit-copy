@@ -26,6 +26,8 @@ type HeroCardProps = {
   mobileOnly?: boolean;    // default true
   /** Optional tiny delay before play when entering view (ms). */
   videoDelayMs?: number;   // default 0 (snappy)
+  /** EXTRA: hold the image before showing video (autoplay only) */
+  imageHoldMs?: number;    // default 1000
 };
 
 export default function HeroCard({
@@ -34,6 +36,7 @@ export default function HeroCard({
   inViewAmount = 0.9,
   mobileOnly = true,
   videoDelayMs = 0,
+  imageHoldMs = 1400, // ← NEW default 1s
 }: HeroCardProps) {
   const cardRef = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -60,17 +63,26 @@ export default function HeroCard({
   // Playback state
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // Reveal gate: we only reveal when BOTH firstFrameReady && allowReveal
+  const [allowReveal, setAllowReveal] = useState(false);
+
   // Refs to avoid effect races
   const rVfcHandle = useRef<number | null>(null);
-  const primedRef = useRef(false);       // first decoded frame revealed already
+  const primedRef = useRef(false);       // first decoded frame detected
   const loadedOnceRef = useRef(false);   // `.load()` called for current src
-  const delayTimer = useRef<number | null>(null);
+  const autoTimerRef = useRef<number | null>(null);   // autoplay combined delay
+  const holdClearRef = useRef<number | null>(null);   // legacy extra clear slot
 
-  const clearDelay = () => {
-    if (delayTimer.current) {
-      clearTimeout(delayTimer.current);
-      delayTimer.current = null;
+  const clearTimer = (ref: React.MutableRefObject<number | null>) => {
+    if (ref.current) {
+      clearTimeout(ref.current);
+      ref.current = null;
     }
+  };
+
+  const clearAllTimers = () => {
+    clearTimer(autoTimerRef);
+    clearTimer(holdClearRef);
   };
 
   const markReadyAndFadeIn = () => {
@@ -98,6 +110,7 @@ export default function HeroCard({
     setIsPlaying(false);
     setShowVideo(false);
     setCanRenderVideo(false);
+    setAllowReveal(false);
     try { v.currentTime = 0; } catch {}
   };
 
@@ -106,20 +119,22 @@ export default function HeroCard({
     setIsPlaying(false);
     setShowVideo(false);
     setCanRenderVideo(false);
+    setAllowReveal(false);
     const v = videoRef.current;
     if (v) {
       try { v.currentTime = 0; } catch {}
     }
   };
 
-  // --- NEW: manual Play should also trigger the fade (desktop & mobile) ---
-  // Prime the first frame, then reveal + play (avoids black flash).
+  // --- Manual Play should also trigger the fade (desktop & mobile) ---
+  // Prime the first frame, then reveal + play (manual ignores the 1s hold to feel responsive).
   const primeThenRevealAndPlay = async () => {
     const v = videoRef.current;
     if (!v) return;
 
-    // If first frame already primed, just reveal & play.
+    // If first frame already primed, allow reveal now and play.
     if (primedRef.current) {
+      setAllowReveal(true);
       if (!canRenderVideo) {
         setFirstFrameReady(true);
         markReadyAndFadeIn();
@@ -128,12 +143,13 @@ export default function HeroCard({
       return;
     }
 
-    const reveal = async () => {
-      if (primedRef.current) return;
-      primedRef.current = true;
-      setFirstFrameReady(true);
-      markReadyAndFadeIn();
-      await safePlay();
+    const allowAndReveal = async () => {
+      if (primedRef.current) {
+        setAllowReveal(true);
+        setFirstFrameReady(true);
+        markReadyAndFadeIn();
+        await safePlay();
+      }
     };
 
     const onLoadedMetadata = () => {
@@ -141,19 +157,22 @@ export default function HeroCard({
     };
 
     if ("requestVideoFrameCallback" in (v as any)) {
-      const id = (v as any).requestVideoFrameCallback(async () => { await reveal(); });
+      const id = (v as any).requestVideoFrameCallback(async () => {
+        primedRef.current = true;
+        await allowAndReveal();
+      });
       rVfcHandle.current = id;
       v.addEventListener("loadedmetadata", onLoadedMetadata, { once: true });
     } else {
       const onSeeked = async () => {
         v.removeEventListener("seeked", onSeeked);
-        await reveal();
+        primedRef.current = true;
+        await allowAndReveal();
       };
       v.addEventListener("loadedmetadata", onLoadedMetadata, { once: true });
       v.addEventListener("seeked", onSeeked);
     }
 
-    // Make sure pipeline is kicked off
     try { v.load(); } catch {}
   };
 
@@ -167,6 +186,7 @@ export default function HeroCard({
       // Optional: fade back immediately on manual pause
       setShowVideo(false);
       setCanRenderVideo(false);
+      setAllowReveal(false);
       return;
     }
 
@@ -184,6 +204,9 @@ export default function HeroCard({
     setShowVideo(false);
     setCanRenderVideo(false);
     setIsPlaying(false);
+    setAllowReveal(false);
+    clearAllTimers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hero.video, hero.videoAvc, hero.videoHevc]);
 
   // Warm the network & decoder early (once per source)
@@ -197,16 +220,17 @@ export default function HeroCard({
     } catch {}
   }, [almostInView, hero.video]);
 
-  // Prime: reveal once the *first decoded frame* exists (for autoplay path)
+  // Prime: detect the *first decoded frame*, but DO NOT reveal yet here.
   useEffect(() => {
     const v = videoRef.current;
     if (!v || !hero.video) return;
 
-    const reveal = () => {
+    const flagPrimed = () => {
       if (primedRef.current) return;
       primedRef.current = true;
       setFirstFrameReady(true);
-      markReadyAndFadeIn();
+      // We don't call markReadyAndFadeIn() here anymore.
+      // Reveal happens only when allowReveal === true.
     };
 
     const onLoadedMetadata = () => {
@@ -215,7 +239,7 @@ export default function HeroCard({
 
     const hasRVFC = "requestVideoFrameCallback" in (v as any);
     if (hasRVFC) {
-      const id = (v as any).requestVideoFrameCallback(() => reveal());
+      const id = (v as any).requestVideoFrameCallback(() => flagPrimed());
       rVfcHandle.current = id;
       v.addEventListener("loadedmetadata", onLoadedMetadata, { once: true });
 
@@ -229,7 +253,7 @@ export default function HeroCard({
     } else {
       const onSeeked = () => {
         v.removeEventListener("seeked", onSeeked);
-        reveal();
+        flagPrimed();
       };
       v.addEventListener("loadedmetadata", onLoadedMetadata, { once: true });
       v.addEventListener("seeked", onSeeked);
@@ -240,7 +264,7 @@ export default function HeroCard({
     }
   }, [hero.video]);
 
-  // Core requirement: play when in view, pause & reset when out of view
+  // Autoplay policy: enter view → wait (videoDelayMs + imageHoldMs) → allow reveal → play
   useEffect(() => {
     const v = videoRef.current;
     if (!v || !hero.video) return;
@@ -250,25 +274,36 @@ export default function HeroCard({
 
     if (!fullyInView || !shouldAuto) {
       // Leaving view (or blocked by mobileOnly): stop immediately
-      clearDelay();
+      clearAllTimers();
       safePauseAndReset();
       return;
     }
 
-    // Entering view: play after optional tiny delay (default 0)
-    clearDelay();
-    delayTimer.current = window.setTimeout(() => {
-      if (v.ended || v.currentTime >= (v.duration || 0)) {
-        try { v.currentTime = 0; } catch {}
+    // Entering view: run combined delay; after that we "allowReveal".
+    clearAllTimers();
+    const combinedDelay = Math.max(0, videoDelayMs) + Math.max(0, imageHoldMs);
+    autoTimerRef.current = window.setTimeout(() => {
+      setAllowReveal(true);
+      // If first frame already ready, reveal now; otherwise the watcher below will reveal.
+      if (firstFrameReady && !canRenderVideo) {
+        markReadyAndFadeIn();
       }
-      if (!canRenderVideo) markReadyAndFadeIn(); // ensure fade layer is visible
+      // Start playback (will be visible once reveal occurs)
       safePlay();
-    }, Math.max(0, videoDelayMs));
+    }, combinedDelay);
 
     return () => {
-      clearDelay();
+      clearAllTimers();
     };
-  }, [fullyInView, hero.video, isMobile, mobileOnly, videoDelayMs, canRenderVideo]);
+    // include all relevant deps
+  }, [fullyInView, hero.video, isMobile, mobileOnly, videoDelayMs, imageHoldMs, firstFrameReady, canRenderVideo]);
+
+  // When BOTH gates are open, reveal the video (used for cases where first frame arrives after hold)
+  useEffect(() => {
+    if (allowReveal && firstFrameReady && !canRenderVideo) {
+      markReadyAndFadeIn();
+    }
+  }, [allowReveal, firstFrameReady, canRenderVideo]);
 
   // 🎨 Crossfade tuning
   const DURATION_IMG_OUT = 0.5;

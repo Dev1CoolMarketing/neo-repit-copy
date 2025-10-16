@@ -19,8 +19,10 @@ import { MicroneedlingDesign } from '@/pages/microneedling';
 import ComponentExportPage from '@/pages/component-export';
 import GradientsPage from '@/pages/gradients';
 import NotFound from "@/pages/not-found";
-import PrivacyPolicyPage from "./pages/privacy-policy-page";
+import AccessibilityPage from "./pages/accessibility/page";
+import PrivacyPolicyPage from "./pages/privacy-policy/page";
 import Microneedling from "./pages/microneedling-page";
+import TermsOfUsePage from "./pages/terms-of-use/page";
 import LocationsPage from "@/pages/locations";
 import FAQPage from "@/pages/faq";
 import SkipToMain from "@/components/skip-to-main";
@@ -63,7 +65,9 @@ function Router() {
         <Route path="/faq" component={FAQPage} />
         <Route path="/component-export" component={ComponentExportPage} />
         <Route path="/gradients" component={GradientsPage} />
+        <Route path="/accessibility" component={AccessibilityPage} />
         <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+        <Route path="/terms-of-use" component={TermsOfUsePage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

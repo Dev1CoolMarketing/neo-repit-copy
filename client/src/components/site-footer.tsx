@@ -9,6 +9,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { smoothScrollTo, NEO_LOGO_WHITE } from "@/lib/utils";
 import BadgeGrid from "./badges";
 
@@ -23,9 +24,13 @@ const resources = [
   { name: "Before & After Gallery", href: "/#treatments" },
   { name: "Patient Testimonials", href: "/#testimonials" },
   { name: "Educational Resources", href: "/#faq" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "FAQ", href: "/faq" },
+];
 
+const legal = [
+  { name: "Accessibility", href: "/accessibility" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Terms of Use", href: "/terms-of-use" },
 ];
 
 export default function SiteFooter() {
@@ -77,7 +82,7 @@ export default function SiteFooter() {
 
 
           {/* Simplified navigation */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Treatments Column */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -109,14 +114,45 @@ export default function SiteFooter() {
             >
               <h3 className="text-lg font-semibold mb-4 text-[#FAE151]">Resources</h3>
               <ul className="space-y-3">
-                {resources.map((item, index) => (
-                  <li key={index}>
-                    <a
+                {resources.map((item) => {
+                  const isHashLink = item.href.includes("#");
+                  const linkClasses =
+                    "text-gray-300 hover:text-[#FAE151] transition-colors duration-300 text-sm";
+
+                  return (
+                    <li key={item.name}>
+                      {isHashLink ? (
+                        <a href={item.href} className={linkClasses}>
+                          {item.name}
+                        </a>
+                      ) : (
+                        <Link href={item.href} className={linkClasses}>
+                          {item.name}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+
+            {/* Legal Column */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+            >
+              <h3 className="text-lg font-semibold mb-4 text-[#FAE151]">Legal</h3>
+              <ul className="space-y-3">
+                {legal.map((item) => (
+                  <li key={item.name}>
+                    <Link
                       href={item.href}
                       className="text-gray-300 hover:text-[#FAE151] transition-colors duration-300 text-sm"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

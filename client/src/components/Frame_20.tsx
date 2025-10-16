@@ -1,6 +1,7 @@
 
 import { smoothScrollTo } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Frame_20() {
   return (
@@ -15,13 +16,12 @@ export default function Frame_20() {
         </p>
 
         <div className="flex flex-wrap gap-4 sm:gap-6 mt-2">
-          <Button
-            variant="link"
+          <Link
             className="hover:text-[#a87b23] text-md md:text-lg  p-0 h-auto font-normal text-[#8a6015] transition-colors"
-            onClick={() => window.open("#", "_blank")}
+            href="/exosomes"
           >
             Learn more →
-          </Button>
+          </Link>
           <Button
             variant="link"
             className="hover:text-[#a87b23] text-md md:text-lg  p-0 h-auto font-normal text-[#8a6015] transition-colors"
