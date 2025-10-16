@@ -1,6 +1,7 @@
 
 import { smoothScrollTo } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Frame_21() {
   return (
@@ -15,13 +16,14 @@ export default function Frame_21() {
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center mb-8">
-          <Button
-            variant="link"
-            className="hover:text-[#a87b23] text-md p-0 h-auto font-normal text-[#8a6015] transition-colors"
-            onClick={() => window.open("#", "_blank")}
-          >
-            Learn more →
-          </Button>
+                <a
+                  className="hover:text-[#a87b23] text-md md:text-lg  p-0 h-auto font-normal text-[#8a6015] transition-colors"
+                  href="https://www.drvigor.com"
+                              onClick={() => smoothScrollTo("contact")}
+
+                >
+                  Learn more →
+                </a>
           <Button
             variant="link"
             className="hover:text-[#a87b23] text-md p-0 h-auto font-normal text-[#8a6015] transition-colors"

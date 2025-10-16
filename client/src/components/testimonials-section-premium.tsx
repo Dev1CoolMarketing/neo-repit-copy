@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Frame_90 from "@/components/Frame_90";
 
 export default function TestimonialsSectionPremium() {
   return (
@@ -17,7 +16,6 @@ export default function TestimonialsSectionPremium() {
             >
               Patient Stories
             </h2>
-            <Frame_90 />
           </div>
         </section>
       </div>
