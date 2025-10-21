@@ -26,31 +26,32 @@ import ContactSection from "@/components/contact-section";
 const headerDetails = [
   "Stimulates natural hair growth.",
   "No pills. No prescriptions.",
-  "Minimally invasive. No downtime.",
+  "Composed entirely of natural agents.",
 ];
-  const reasons = [
-    {
-      highlight: "Zero Surgical Risk ",
-      description:
-       "with minimal downtime."
+const reasons = [
+  {
+    highlight: "5× Greater Effectiveness ",
+    description: "versus other topical treatments alone.",
+  },
+  {
+    highlight: "Long-Term Results,",
+    description:
+      "naturally occurring proteins stimulate continuous regeneration and sustained density.",
+  },
+  {
+    highlight: "Noticeably Fuller Coverage ",
+    description: "and proven density boost",
+  },
+  {
+    highlight: "Visible thickening",
+    description: "in as little as 20 weeks.",
+  },
 
-    },
-    {
-      highlight: "5× Greater Effectiveness ",
-      description:
-        "versus other topical treatments alone.",
-    },
-    {
-      highlight: "Noticeably Fuller Coverage ",
-      description:
-        "and proven density boost",
-    },
-        {
-      highlight: "Visible thickening",
-      description:
-        " in as little as 20 weeks.",
-    },
-  ];
+  {
+    highlight: "Zero Surgical Risk ",
+    description: "with minimal downtime.",
+  },
+];
 
 function DrNeoLogo() {
   return (
@@ -483,9 +484,7 @@ function BenefitCard({ title, description, highlight, statistic, index }) {
   );
 }
 
-
 // Clean timeline step with proper contrast
-
 
 function ProcessSection() {
   const sectionRef = useRef(null);
@@ -635,7 +634,9 @@ function ProcessSection() {
                 delay: 0.3 + index * 0.15,
                 ease: "easeOut",
               }}
-              className={`col-span-12 ${index < 2 ? `md:col-span-6` : `md:col-span-12`}`}
+              className={`col-span-12 ${
+                index < 2 ? `md:col-span-6` : `md:col-span-12`
+              }`}
             >
               <FueStyleTreatmentCard
                 step={index + 1}
@@ -1368,44 +1369,39 @@ const growthFactorDetails = [
       },
     ],
   },
-
 ];
 
 export default function GrowthFactors() {
-
-  const gfGradientClass ="bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
+  const gfGradientClass =
+    "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent";
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
       <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
-      {/* <GrowthFactorsHeader /> */}
-      {/* <HeroSection /> */}
-      <GenericHeader
-        title1={"Growth"}
-        title2={"Factors"}
-        details={headerDetails}
-        image={"/assets/FOLLICULES.png"}
-        gradientClass={
-          "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
-        }
-        gradientButtonClass={"custom-button-growth-factors"}
-      />
-      <GenericReasons 
-      reasons={reasons} 
-      gradientClass={gfGradientClass}
-/>  
-        <GenericHowItWorks
-        processDetails={growthFactorDetails}
-        title="Growth Powered By Your Biology"
-        gradientClass={gfGradientClass}
-        color="#046706"
-        
+        {/* <GrowthFactorsHeader /> */}
+        {/* <HeroSection /> */}
+        <GenericHeader
+          title1={"Growth"}
+          title2={"Factors"}
+          details={headerDetails}
+          image={"/assets/FOLLICULES.png"}
+          gradientClass={
+            "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
+          }
+          gradientButtonClass={"custom-button-growth-factors"}
         />
-      {/* <GFvsHypersomesComparison /> */}
+        <GenericReasons reasons={reasons} gradientClass={gfGradientClass} />
+        <GenericHowItWorks
+          processDetails={growthFactorDetails}
+          title="Growth Powered By Your Biology"
+          gradientClass={gfGradientClass}
+          color="#046706"
+        />
+        {/* <GFvsHypersomesComparison /> */}
         <HairLineHeroesSlider />
         <ContactSection />
-      <GenericFaqSection faqs={fueFaq}/>
-      <SiteFooter />
+        <GenericFaqSection faqs={fueFaq} />
+        <SiteFooter />
       </main>
     </div>
   );
