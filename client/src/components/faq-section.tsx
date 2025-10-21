@@ -2,15 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
-  {
-    question: "Am I a good candidate for NeoGraft?",
-    answer: `NeoGraft® has a track-record of delivering excellent hair transplantation results for both men and women. While most people can get the treatment, <strong>there are some factors that come into play to determine if you’re an ideal candidate.</strong> Taken together, these include:
-‍<strong>i. The number of grafts necessary to produce the desired results
-ii. The density and quality of the donor hair, hair texture, and
-iii. The potential for future hair loss.</strong>
 
-‍Your Dr. Neo hair restoration specialist will be able to help to determine if you are a suitable candidate for the NeoGraft procedure.`,
-  },
   {
     question: "Can Dr. Neo restore hair on both men and women?",
     answer:
@@ -20,16 +12,6 @@ iii. The potential for future hair loss.</strong>
     question: "How is Dr. Neo different?",
     answer:
       "Traditional hair restoration procedures usually employ a technique known as the strip method, which involves surgically removing a strip from the patient’s scalp (the back of the head) to be used as the donor site. This can leave a linear scar. In contrast, Dr. Neo utilizes a variation of the Follicular Unit Extraction (FUE) technique that allows us to harvest individual hair follicles with an automated handheld device. The harvested follicles are known as terminal hair and are naturally resistant to hair loss. During Dr. Neo’s FUE procedure, the harvested grafts are implanted at the site of hair loss, where, over time, they will regrow as healthy, fully functioning hair. <strong>Ultimately, Dr. Neo’s approach to hair transplantation does NOT leave a linear scar, is more comfortable, and requires much less recovery time.</strong>",
-  },
-  {
-    question: "What is an FUE hair transplant?",
-    answer:
-      "FUE stands for <strong>Follicular Unit Extraction.</strong> It is an advanced, minimally invasive hair transplant method that allows for the harvesting of individual follicles from the back of the head (donor area) <strong>without a scalpel or stitches, and therefore leaves no linear scar.</strong>",
-  },
-  {
-    question: "Who performs the NeoGraft procedure?",
-    answer:
-      "A Dr. Neo physician will be involved in making all of the necessary and important decisions, and will supervise every step of your NeoGraft experience. Certified Dr. Neo technicians will assist the physician performing the procedure. These technicians typically have more than five years of hair restoration experience and must be periodically recertified.",
   },
   {
     question: "How much does Dr. Neo cost?",
@@ -178,7 +160,7 @@ export default function FaqSection() {
           </div>
         </div>
       </div>
-      <div className="md:hidden">
+      {/* <div className="md:hidden">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-normal text-center mb-10 bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent">
             The Procedure
@@ -255,7 +237,7 @@ export default function FaqSection() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Desktop version - Hims inspired */}
       <div className="hidden md:block">
         <div className="container mx-auto px-6 lg:px-8">
@@ -305,7 +287,7 @@ export default function FaqSection() {
           </div>
         </div>
       </div>
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-screen-xl mx-auto">
             <div className="mb-8">
@@ -422,7 +404,7 @@ export default function FaqSection() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
