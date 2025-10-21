@@ -14,7 +14,7 @@ export type PolicyConfig = {
     general: string; // e.g., team@drneo.com
     privacy?: string; // optional separate privacy address
   };
-  phone: string; // e.g., 949-570-0800
+  phone: string; // e.g., 949-570-0500
   addressLines: string[]; // mailing address lines
 };
 
@@ -26,7 +26,7 @@ export const DEFAULT_POLICY_CONFIG: PolicyConfig = {
     general: "team@drneo.com",
     privacy: "privacy@drneo.com",
   },
-  phone: "949-570-0800",
+  phone: "949-570-0500",
   addressLines: [
     "Privacy Team, Dr.Neo",
     "16460 Bake Pkwy.",

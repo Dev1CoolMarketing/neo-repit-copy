@@ -41,6 +41,7 @@ const navLinks = [
   // { name: "Pricing", href: "/vip-membership", type: "link" },
   { name: "Locations", href: "/locations", type: "link" },
   { name: "FAQ", href: "/faq", type: "link" },
+  { name: "Contact", href: "/contact", type: "link" },
 ];
 
 export default function FueNavBar() {
@@ -74,6 +75,10 @@ export default function FueNavBar() {
               '/': {
       hoverColor: '#8B2635',
       mainColor: 'bg-gradient-to-r from-[#625046] to-[#c8b68f] '
+    },
+              '/contact': {
+      hoverColor: '#8B2635',
+      mainColor: 'bg-gradient-to-r from-[#625046] to-[#bfa37a]'
     },
   }
   const generateLinks = (linksArray: any) => {
@@ -275,7 +280,7 @@ export default function FueNavBar() {
                   transform: "translateZ(0)",
                 }}
               />
-              <span className="sr-only">Call us at (949) 570-0800</span>
+              <span className="sr-only">Call us at (949) 570-0500</span>
             </Button>
           </a>
           <Button
@@ -325,13 +330,13 @@ export default function FueNavBar() {
             {/* Action buttons */}
             <div className="flex items-center space-x-4">
               <a
-                href="tel:(949) 570-0800"
+                href="tel:(949) 570-0500"
                 className="text-[white] text-sm fonxt-medium hidden lg:block"
               >
-                (949) 570-0800
+                (949) 570-0500
               </a>
               <button
-                onClick={() => smoothScrollTo("contact")}
+                onClick={() => smoothScrollTo("#contact")}
                 className={`hidden lg:inline-flex items-center justify-center h-10 px-6 text-sm font-medium transition-colors ${bookConsultColor[pathName]?.mainColor}  text-white rounded-full hover:bg-[#2a2a2a] focus:outline-none focus:ring-4 hover:from-${bookConsultColor[pathName]?.hoverColor} hover:to-${bookConsultColor[pathName]?.hoverColor} focus:ring-blue`}
               >
                 Book Consult

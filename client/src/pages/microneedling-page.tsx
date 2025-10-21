@@ -9,8 +9,14 @@ import GenericHowItWorks from "@/components/generic-how-it-works";
 
 import FaqSection from "@/components/faq-section";
 import GenericProcess from "@/components/generic-process";
-import { microneedlingDetails, microneedlingReasons } from "@/data/microneedling-data";
+import {
+  microneedlingDetails,
+  microneedlingReasons,
+} from "@/data/microneedling-data";
 import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
+import ContactSection from "@/components/contact-section";
+import GenericFaqSection from "@/components/generic-faq-section";
+import { fueFaq } from "@/data/fue-faq";
 
 const headerDetails = [
   "Stimulates follicle regeneration.",
@@ -31,53 +37,46 @@ export default function Microneedling() {
     return cleanup;
   }, []);
   const gradientClass =
-    "bg-gradient-to-r from-[#007AFF] via-[#00C7BE] to-[#007AFF] bg-clip-text text-transparent";
+    "bg-gradient-to-r from-[#1174DF] via-[#00C7BE] to-[#1174DF] bg-clip-text text-transparent";
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
       <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
         <GenericHeader
-        title1={"Follicular"}
-        title2={"Microneedling"}
-        title3={""}
-        details={headerDetails}
-        image={"/assets/microneedling/Untitled design (4).png"}
-        gradientClass={
-          "bg-gradient-to-r from-[#007AFF] via-[#00C7BE]  to-[#007AFF] bg-clip-text text-transparent"
-        }
-        gradientButtonClass={"bg-[#0037FF]"}
-      />
-      <div className="flex justify-center py-8">
-        <h2
-          className={`text-3xl md:text-4xl font-bold tracking-tight ${gradientClass}`}
-        >
-          Clinical Highlights
-        </h2>
-      </div>
-      <GenericReasons reasons={microneedlingReasons} gradientClass={gradientClass} />
-      {/* <FueHowItWorks /> */}
-      <GenericHowItWorks
-        processDetails={microneedlingDetails}
-        color="#007AFF"
-        gradientClass={gradientClass}
-        title="Follicular Microneedling, Step by Step"
-      />
-      <GenericProcess
-        title="PROCESS"
-        headline="See our process in action"
-        details="Watch step-by-step videos of our FUE hair transplant procedure.
-            Understand exactly what happens during your treatment."
-        video="/assets/video/NEO Stinger.mov"
+          title1={"Follicular"}
+          title2={"Microneedling"}
+          title3={""}
+          details={headerDetails}
+          image={"/assets/microneedling/microneedlingpen.png"}
+          gradientClass={
+            "bg-gradient-to-r from-[#007AFF] via-[#00C7BE]  to-[#007AFF] bg-clip-text text-transparent"
+          }
+          gradientButtonClass={"bg-[#1174DF]"}
+        />
 
-        gradientClass={
-          "bg-gradient-to-br from-[#007AFF] via-[#00C7BE] to-[#007AFF]  "
-        }
-      />
-      <HairLineHeroesSlider />
-      <TestimonialsSectionPremium />
-      {/* <FueResults /> */}
-      <FaqSection />
-      <SiteFooter />
+        <GenericReasons
+          reasons={microneedlingReasons}
+          gradientClass={gradientClass}
+        />
+        {/* <FueHowItWorks /> */}
+        <GenericHowItWorks
+          processDetails={microneedlingDetails}
+          color="#007AFF"
+          gradientClass={gradientClass}
+          title="The Science of Follicule Renewal"
+        />
+        <GenericProcess
+          title="PROCESS"
+          headline="See our process in action"
+          details="Watch step-by-step videos of our FUE hair transplant procedure.
+            Understand exactly what happens during your treatment."
+          video="/assets/video/microneedling.mov"
+          gradientClass={"bg-[#007AFF] "}
+        />
+        <HairLineHeroesSlider />
+        <ContactSection />
+        <GenericFaqSection faqs={fueFaq} />
+        <SiteFooter />
       </main>
     </div>
   );

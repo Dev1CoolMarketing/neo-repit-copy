@@ -1,25 +1,24 @@
 import SiteFooter from "@/components/site-footer";
 import { useEffect } from "react";
 import { initFadeInAnimations } from "@/lib/utils";
-import FueResults from "@/components/fue/fue-results-from-real-patients";
-import Frame_81 from "@/components/Frame_81";
-import TestimonialsSectionPremium from "@/components/testimonials-section-premium";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import GenericHeader from "@/components/generic-header";
 import GenericReasons from "@/components/generic-reasons";
 import GenericHowItWorks from "@/components/generic-how-it-works";
-import FueProcess from "@/components/fue/fue-process";
 import procedureImg from "@assets/fue-hiw2-procedure.webp";
 import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
 import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
-import FaqSection from "@/components/faq-section";
-import BadgeGrid from "@/components/badges";
 import GenericProcess from "@/components/generic-process";
 import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
+import ContactSection from "@/components/contact-section";
+import GenericFaqSection from "@/components/generic-faq-section";
+import { fueFaq } from "@/data/fue-faq";
+import prpTubeImg from "@assets/gf-hiw2-prptube.webp";
+
 
 const headerDetails = [
   "Advanced FUE technology.",
-  "Natural results.",
+  "Natural, lasting results.",
   "Restored confidence.",
 ];
 
@@ -38,9 +37,8 @@ const fueReasons = [
     description: " with our minimally invasive approach",
   },
   {
-    highlight: "Ultra-popular procedure with thousands performed nationwide",
-    description:
-      "because FUE skips the outdated practice of scalp strip removal",
+    highlight: "Ultra-popular procedure ",
+    description: "with thousands performed nationwide",
   },
   {
     highlight: "Men, women, hairlines, crowns, eyebrows and beards",
@@ -100,7 +98,7 @@ const fueProcessDetails = [
     subtitle: "Microneedling + Growth Factors ",
     description:
       "Before your NeoGraft® FUE procedure, we prep your scalp with a powerful combo: Microneedling + Growth Factor Therapy. This boosts circulation, improves healing, and sets the stage for better graft survival.",
-    image: "/assets/fue/initial_consultation.png",
+    image: prpTubeImg,
     alt: "Initial Consultation Inspection Gadget",
     moreDetails: [
       {
@@ -163,7 +161,7 @@ const fueProcessDetails = [
     description:
       "Your FUE Procedure Day is a full-day experience. Sessions typically last <b>4 to 10 hours</b>, depending on how many grafts we harvest and implant.",
     subdescription: "Clear your schedule—you’ll be with us most of the day.",
-    image: procedureImg,
+    image: "/assets/fue/proceduredayprep.png",
     alt: "Hand Transplanting a hair follicle with Dr.Neo Tweezers",
     subsetTitle: "Clear your schedule—you’ll be with us most of the day.",
     moreDetails: [
@@ -445,7 +443,7 @@ const fueProcessDetails = [
     subtitle: "[Protect and Extend Your Results]",
     description:
       "Your Dr. Neo® FUE transplant is an investment—keep it thriving with long-term care and professional oversight.",
-    image: followUpConsultationImg,
+    image: "/assets/fue/health.webp",
     alt: "Ipad image showing follow up consultation",
     moreDetails: [
       {
@@ -504,48 +502,46 @@ export default function Fue() {
 
     return cleanup;
   }, []);
-  const fueGradientClass =     "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-transparent";
+  const fueGradientClass =
+    "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-transparent";
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
       <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
         <GenericHeader
-        title1={"Follicular "}
-        title2={"Unit Extraction"}
-        title3={"Hair Transplant"}
-        details={headerDetails}
-        image={"/assets/fue/shinyfollicle.webp"}
-        gradientClass={
-          "bg-gradient-to-r from-[#B91C1C] via-[#761A20]  to-[#1D0000] bg-clip-text text-transparent"
-        }
-        gradientButtonClass={"custom-button-fue"}
-      />
-      <GenericReasons 
-      reasons={fueReasons} 
-      gradientClass={fueGradientClass}
-       />
-       
-      {/* <FueHowItWorks /> */}
-      <GenericHowItWorks
-        processDetails={fueProcessDetails}
-        color="#B91C1C"
-        gradientClass={fueGradientClass}
-        title="Redefining the Hair Transplant Experience"
-      />
-      <GenericProcess
-        title="PROCESS"
-        headline="See our process in action"
-        details="Watch step-by-step videos of our FUE hair transplant procedure.
+          title1={"Follicular "}
+          title2={"Unit Extraction"}
+          title3={"Hair Transplant"}
+          details={headerDetails}
+          image={"/assets/fue/shinyfollicle.webp"}
+          gradientClass={
+            "bg-gradient-to-r from-[#B91C1C] via-[#761A20]  to-[#1D0000] bg-clip-text text-transparent"
+          }
+          gradientButtonClass={"custom-button-fue"}
+        />
+        <GenericReasons reasons={fueReasons} gradientClass={fueGradientClass} />
+
+        {/* <FueHowItWorks /> */}
+        <GenericHowItWorks
+          processDetails={fueProcessDetails}
+          color="#B91C1C"
+          gradientClass={fueGradientClass}
+          title="Redefining the Hair Transplant Experience"
+        />
+        <GenericProcess
+          title="PROCESS"
+          headline="See our process in action"
+          details="Watch step-by-step videos of our FUE hair transplant procedure.
             Understand exactly what happens during your treatment."
-        video="/assets/video/NEO Stinger.mov"
-        gradientClass={
-          "bg-gradient-to-br from-[#8B2635] via-[#A4161A] to-[#E63946] "
-        }
-      />
-      <HairLineHeroesSlider /> <TestimonialsSectionPremium />
-      {/* <FueResults /> */}
-      <FaqSection />
-      <SiteFooter />
+          video="/assets/video/NEO Stinger.mov"
+          gradientClass={
+            "bg-gradient-to-br from-[#8B2635] via-[#A4161A] to-[#E63946] "
+          }
+        />
+        <HairLineHeroesSlider />
+        <ContactSection />
+        <GenericFaqSection faqs={fueFaq} />
+        <SiteFooter />
       </main>
     </div>
   );

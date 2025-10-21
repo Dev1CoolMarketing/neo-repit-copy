@@ -580,7 +580,7 @@ const TreatmentDetails: FC<TreatmentDetailsProps> = ({
                   <Button
                     variant="outline"
                     className="border-[#a87b23] text-[#a87b23] hover:bg-[#a87b23] hover:text-white font-medium px-8 py-4 h-auto rounded-full transition-all"
-                    onClick={() => window.location.href = `tel:${encodeURIComponent("(949) 570-0800")}`}
+                    onClick={() => window.location.href = `tel:${encodeURIComponent("(949) 570-0500")}`}
                   >
                     Call Us
                   </Button>

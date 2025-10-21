@@ -28,7 +28,7 @@ const differenceCards = [
     title: "Hairlines Built, Not Stamped",
     location: "Natural Looking Results",
     description:
-      "From hairlines to increased density, each follicule  hairline is meticulously implanted to match your unique facial features, age, and personal aesthetic goals for results that look completely natural.",
+      "From hairlines to increased density, each follicle is meticulously implanted to match your unique facial features, age, and personal aesthetic goals for results that look completely natural.",
     image: HairlineImage,
   },
   {

@@ -1,8 +1,13 @@
+import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
+import shinyFolliclePath from "@assets/shinyfollicle.webp";
+import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
+
+
 export const microneedlingDetails = [
   {
     title: "Step 1: Your Microneedling Consultation",    description:
       "Your journey begins with a personalized consultation to assess your scalp health, degree of thinning, and overall hair goals. Your provider will determine whether Follicular Microneedling is best performed alone or as a foundation for Growth Factors or Hypersomes Infusions.",
-    image: "/assets/microneedling/microneedlingpen.png",
+    image: "/assets/fue/initial_consultation.png",
     alt: "Provider discussing microneedling treatment plan",
     moreDetails: [
       {
@@ -71,7 +76,7 @@ export const microneedlingDetails = [
     title: "Step 3: Recovery & Regrowth",
     description:
       "Microneedling requires little to no downtime. Mild redness or sensitivity typically resolves within 24-48 hours, while early signs of improved scalp texture and tone appear within weeks.",
-    image: "/assets/microneedling/microneedlingpen.png",
+    image: shinyFolliclePath,
     alt: "Scalp after microneedling treatment",
     moreDetails: [
       {
@@ -101,7 +106,7 @@ export const microneedlingDetails = [
     subtitle: "Create momentum with strategically timed treatments",
     description:
       "For best results, Follicular Microneedling is performed as a series of treatments spaced 3-6 weeks apart. Maintenance sessions every few months reinforce follicular activity and sustain long-term growth.",
-    image: "/assets/microneedling/microneedlingpen.png",
+    image: followUpConsultationImg,
     alt: "Microneedling appointments planned on a calendar",
     moreDetails: [
 
@@ -118,7 +123,7 @@ export const microneedlingDetails = [
     subtitle: "Keep scalp health and follicular activity thriving",
     description:
       "To preserve results and scalp health, your provider will design a maintenance approach tailored to your goals and hair biology.",
-    image: "/assets/microneedling/microneedlingpen.png",
+    image: recoveryAndRegrowthImg,
     alt: "Tools that support ongoing microneedling maintenance",
     moreDetails: [
       {
@@ -137,23 +142,23 @@ export const microneedlingDetails = [
 
 export const microneedlingReasons = [
   {
-    highlight: "Up to 40% increase in visible hair density",
-    description: "reported after a dedicated treatment series",
+    highlight: "Up to 40% increase",
+    description: "visible hair density.",
   },
   {
-    highlight: "Enhances absorption of biologic therapies",
-    description: "boosting the efficacy of Growth Factors and Hypersomes",
+    highlight: "Enhances absorption of ",
+    description: "biologic therapies.",
   },
   {
     highlight: "Triggers natural collagen and elastin production",
-    description: "for stronger for stronger scalp support.",
+    description: "for stronger scalp support.",
   },
   {
-    highlight: "Activates local stem cells and growth pathways",
+    highlight: "Activates stem cells and growth pathways",
     description: "to awaken dormant follicles.",
   },
   {
-    highlight: "30-45 minute in-office sessions",
-    description: "with minimal recovery and no downtime",
+    highlight: "60 minute sessions",
+    description: "with little to no downtime.",
   },
 ];

@@ -18,7 +18,7 @@ export const DEFAULT_TERMS_CONFIG: TermsConfig = {
   emails: {
     general: "team@drneo.com",
   },
-  phone: "949-570-0800",
+  phone: "949-570-0500",
   addressLines: ["16460 Bake Pkwy.", "Irvine, CA 92618"],
 };
 

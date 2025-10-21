@@ -22,7 +22,7 @@ export default function GenericProcess({
   return (
     <section className="bg-white px-5 py-16 md:py-24">
       <div className="container mx-auto max-w-sm md:max-w-4xl">
-        <div className="text-center space-y-8">
+        <div className="text-center space-y-4">
           {/* Animated PROCESS Letters */}
           <div className="flex justify-center gap-1 mb-8">
             {title.split('').map((letter, index) => (
@@ -40,14 +40,14 @@ export default function GenericProcess({
           <h2 className="text-2xl font-bold text-medium-gray leading-relaxed">
             {headline}
           </h2>
-          <p>
+          <p className="pb-4">
             {details}
           </p>
 
           <button className="w-full bg-black hover:bg-gray-800 text-white py-4 text-lg rounded-full shadow-lg">
             {ctaText}
            </button>
-          <div className="device device-iphone-x">
+          <div className="device device-iphone-x py-3">
             <div className="device-frame"></div>
             <div className="device-stripe"></div>
             <div className="device-header"></div>

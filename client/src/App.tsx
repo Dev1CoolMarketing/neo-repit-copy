@@ -25,6 +25,7 @@ import Microneedling from "./pages/microneedling-page";
 import TermsOfUsePage from "./pages/terms-of-use/page";
 import LocationsPage from "@/pages/locations";
 import FAQPage from "@/pages/faq";
+import ContactPage from "@/pages/contact";
 import SkipToMain from "@/components/skip-to-main";
 
 function Router() {
@@ -68,6 +69,7 @@ function Router() {
         <Route path="/accessibility" component={AccessibilityPage} />
         <Route path="/privacy-policy" component={PrivacyPolicyPage} />
         <Route path="/terms-of-use" component={TermsOfUsePage} />
+        <Route path="/contact" component={ContactPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

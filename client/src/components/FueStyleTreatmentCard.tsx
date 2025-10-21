@@ -1,6 +1,6 @@
 import { useState, ReactNode } from "react";
 import { motion } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 interface FueStyleTreatmentCardProps {
   step: number;
@@ -13,7 +13,6 @@ interface FueStyleTreatmentCardProps {
   featured?: boolean;
   color?: string;
   inverse?: boolean;
-  alignLeft?: boolean;
   moreDetails?: any[];
   subtitle?: string;
   subsetTitle?: string;
@@ -29,7 +28,6 @@ export default function FueStyleTreatmentCard({
   learnMoreContent,
   featured = false,
   color = "#32d74b",
-  alignLeft = true,
   moreDetails = [],
   subsetTitle = '',
   subtitle = '',
@@ -54,6 +52,38 @@ export default function FueStyleTreatmentCard({
   // Example usage:
 
   const lightShadowColor = hexToRgba(color, 0.15);
+  const imageOnLeft = step % 2 === 0;
+  const contentClasses = [
+    "flex-1",
+    featured ? "px-10 py-12 md:px-16 md:py-16" : "p-8 px-8 pb-0",
+    featured
+      ? imageOnLeft
+        ? "md:order-2 md:pl-12 md:pr-20"
+        : "md:order-1 md:pr-12 md:pl-20"
+      : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const imageWrapperClasses = [
+    "flex-shrink-0",
+    featured ? "pl-5 pb-10 md:px-14 md:py-16" : "p-8 pt-0",
+    featured ? "md:w-1/2 md:flex md:items-center" : "",
+    featured ? (imageOnLeft ? "md:order-1" : "md:order-2") : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const featuredImageContainerClasses = [
+    "w-full h-full flex items-center justify-center relative",
+    imageOnLeft ? "md:justify-start" : "md:justify-end",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const featuredImageShiftClass = imageOnLeft ? "md:ml-[-12%]" : "md:mr-[-12%]";
+  const featuredImageInitialX = imageOnLeft ? -30 : 30;
+  const featuredImageHoverX = imageOnLeft ? -10 : 10;
 
   return (
     <motion.div
@@ -65,13 +95,13 @@ export default function FueStyleTreatmentCard({
       whileHover={{ y: -6, scale: 1.01 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="flex flex-col min-h-[460px] relative">
+      <div
+        className={`relative flex flex-col min-h-[460px] ${
+          featured ? "md:flex-row md:items-stretch" : ""
+        }`}
+      >
         {/* Content section */}
-        <div
-          className={`flex-1 p-8 px-8 pb-0 ${
-            featured ? "lg:w-1/2 lg:ml-[50%] lg:pr-0" : ""
-          }`}
-        >
+        <div className={contentClasses}>
           <motion.div
             className={featured ? "max-w-lg" : "max-w-md"}
             initial={{ opacity: 0, y: 20 }}
@@ -268,63 +298,31 @@ export default function FueStyleTreatmentCard({
         </div>
 
         {/* Apple-style floating image section */}
-        <div
-          className={`flex-shrink-0 ${
-            featured
-              ? "lg:absolute lg:left-0 lg:top-0 lg:w-1/2 lg:h-full lg:pointer-events-none lg:overflow-hidden"
-              : "p-8 pt-0"
-          }`}
-        >
+        <div className={imageWrapperClasses}>
           {featured ? (
             // Featured: Device emerges from left edge like Apple product pages
-            alignLeft ? (
-              <div className="w-full h-full flex items-center justify-start relative">
-                <motion.img
-                  src={image}
-                  alt={`${title} illustration`}
-                  className="w-full h-auto object-contain max-h-[85%] ml-[-15%]"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  whileHover={{
-                    scale: title.includes("Recovery") ? 1.03 : 1.05,
-                    x: title.includes("Recovery") ? 5 : 10,
-                    rotateY: title.includes("Recovery") ? 2 : 3,
-                    rotateZ: title.includes("Recovery") ? 0.5 : 1,
-                    transition: { duration: 0.6, ease: "easeOut" },
-                  }}
-                  style={{
-                    filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
-                    transformStyle: "preserve-3d",
-                  }}
-                />
-              </div> // Align Right Image Styles
-            ) : (
-              <div className="w-full h-full flex items-center justify-end relative">
-                <motion.img
-                  src={image}
-                  alt={`${title} illustration`}
-                  className="w-full h-auto object-contain max-h-[85%] mr-[-15%]"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  whileHover={{
-                    scale: title.includes("Recovery") ? 1.03 : 1.05,
-                    x: title.includes("Recovery") ? 5 : 10,
-                    rotateY: title.includes("Recovery") ? 2 : 3,
-                    rotateZ: title.includes("Recovery") ? 0.5 : 1,
-                    transition: { duration: 0.6, ease: "easeOut" },
-                  }}
-                  style={{
-                    filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
-
-                    transformStyle: "preserve-3d",
-                  }}
-                />
-              </div>
-            )
+            <div className={featuredImageContainerClasses}>
+              <motion.img
+                src={image}
+                alt={`${title} illustration`}
+                className={`w-full h-auto object-contain max-h-[85%] ${featuredImageShiftClass}`}
+                initial={{ opacity: 0, x: featuredImageInitialX }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                whileHover={{
+                  scale: title.includes("Recovery") ? 1.03 : 1.05,
+                  x: title.includes("Recovery") ? featuredImageHoverX / 2 : featuredImageHoverX,
+                  rotateY: title.includes("Recovery") ? 2 : 3,
+                  rotateZ: title.includes("Recovery") ? 0.5 : 1,
+                  transition: { duration: 0.6, ease: "easeOut" },
+                }}
+                style={{
+                  // filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
+                  transformStyle: "preserve-3d",
+                }}
+              />
+            </div>
           ) : (
             // Regular cards: Keep existing container design
             <div className="w-full h-48 rounded-xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center relative">

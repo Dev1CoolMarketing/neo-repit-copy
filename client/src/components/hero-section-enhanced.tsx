@@ -32,7 +32,7 @@ export default function HeroSectionEnhanced() {
           <h1 className={styles.Heading}>SoCal Advanced Hair Restoration</h1>
 
           <p className={styles.Subheading}>
-            Natural Results | Fuller Hairlines | Confident Patients
+        Fuller Hairlines | Confident Patients
           </p>
 
           <div className={styles.ButtonGroup}>

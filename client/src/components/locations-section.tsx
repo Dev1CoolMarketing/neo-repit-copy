@@ -32,7 +32,7 @@ export default function LocationsSection() {
                   </div>
                   <div className="text-center">
                     <p className="text-xs uppercase tracking-wider text-neutral-500 mb-1">CALL US</p>
-                    <p className="font-medium text-lg">(949) 570-0800</p>
+                    <p className="font-medium text-lg">(949) 570-0500</p>
                   </div>
                 </div>
               </div>

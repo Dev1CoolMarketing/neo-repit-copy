@@ -18,35 +18,41 @@ import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 import GenericReasons from "@/components/generic-reasons";
 import GenericHowItWorks from "@/components/generic-how-it-works";
 import GFvsHypersomesComparison from "@/components/growth-factors/growth-factor-comparison";
+import GenericFaqSection from "@/components/generic-faq-section";
+import { fueFaq } from "@/data/fue-faq";
+import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
+import ContactSection from "@/components/contact-section";
+import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
 
 const headerDetails = [
   "Stimulates natural hair growth.",
   "No pills. No prescriptions.",
-  "Minimally invasive. No downtime.",
+  "Composed entirely of natural agents.",
 ];
-  const reasons = [
-    {
-      highlight: "89% success rate",
-      title: "in clinical trials for androgenetic alopecia",
-      description:
-        "FDA-cleared microneedling technology combined with autologous PRP growth factors shows superior results compared to topical treatments alone.",
-      statistic: "Proven in 2,400+ patients",
-    },
-    {
-      highlight: "Zero surgical risk",
-      title: "with 24-48 hour recovery time",
-      description:
-        "Non-invasive outpatient procedure using your body's own healing factors. Return to work the next day with minimal visible effects.",
-      statistic: "<0.1% complication rate",
-    },
-    {
-      highlight: "1000x enhanced absorption",
-      title: "through controlled micro-channel delivery",
-      description:
-        "Medical-grade 1.5mm microneedling creates optimal penetration pathways for concentrated growth factor infiltration into follicular units.",
-      statistic: "Clinically measured increase",
-    },
-  ];
+const reasons = [
+  {
+    highlight: "5× Greater Effectiveness ",
+    description: "versus other topical treatments alone.",
+  },
+  {
+    highlight: "Long-Term Results,",
+    description:
+      "naturally occurring proteins stimulate continuous regeneration.",
+  },
+  {
+    highlight: "Noticeably Fuller Coverage ",
+    description: "and proven density boost",
+  },
+  {
+    highlight: "Visible thickening",
+    description: "in as little as 20 weeks.",
+  },
+
+  {
+    highlight: "Zero Surgical Risk ",
+    description: "with minimal downtime.",
+  },
+];
 
 function DrNeoLogo() {
   return (
@@ -479,9 +485,7 @@ function BenefitCard({ title, description, highlight, statistic, index }) {
   );
 }
 
-
 // Clean timeline step with proper contrast
-
 
 function ProcessSection() {
   const sectionRef = useRef(null);
@@ -605,7 +609,6 @@ function ProcessSection() {
                 image={step.image}
                 featured={step.featured}
                 inverse={index < 2}
-                alignLeft={true}
               >
                 {step.description}
               </FueStyleTreatmentCard>
@@ -632,7 +635,9 @@ function ProcessSection() {
                 delay: 0.3 + index * 0.15,
                 ease: "easeOut",
               }}
-              className={`col-span-12 ${index < 2 ? `md:col-span-6` : `md:col-span-12`}`}
+              className={`col-span-12 ${
+                index < 2 ? `md:col-span-6` : `md:col-span-12`
+              }`}
             >
               <FueStyleTreatmentCard
                 step={index + 1}
@@ -1235,7 +1240,7 @@ const growthFactorDetails = [
     description:
       "Start your journey with a personalized consultation. We’ll determine if Growth Factors — our biologic therapy designed to stimulate follicles and improve hair density — is right for you.",
     image: dermatoscopeImg,
-    alt: "",
+    alt: "medical device shown that you can trust us with consultations",
     moreDetails: [
       {
         type: "list",
@@ -1273,7 +1278,7 @@ const growthFactorDetails = [
     description:
       "Unlike providers who apply growth factors alone, we combine Microneedling + Growth Factors in a single visit to enhance penetration and efficacy through micro-channels that deliver regenerative proteins deeper into the scalp.",
     image: prpTubeImg,
-    alt: "",
+    alt: "tube filled with PRP ",
     moreDetails: [
       {
         type: "list",
@@ -1303,7 +1308,7 @@ const growthFactorDetails = [
     description:
       "Expect a quick recovery and a staged improvement in thickness, coverage, and scalp vitality as follicles respond.",
     image: microneedlingPenImg,
-    alt: "",
+    alt: "hair follicule recovery image",
     moreDetails: [
       {
         type: "list",
@@ -1323,7 +1328,7 @@ const growthFactorDetails = [
     description:
       "Growth Factors Infusion is most effective as a series. Follow-up sessions every 3–6 months reinforce follicular activity and extend long-term results.",
     image: recoveryTrackerImg,
-    alt: "",
+    alt: "optimiation sessions clipboard showing how to optimize your growth",
     moreDetails: [
       {
         type: "list",
@@ -1349,8 +1354,8 @@ const growthFactorDetails = [
     subtitle: "Protect and extend your results",
     description:
       "Keep your results thriving with a tailored plan and professional oversight.",
-    image: "",
-    alt: "",
+    image: followUpConsultationImg,
+    alt: "follow up consulation image",
     moreDetails: [
       {
         type: "list",
@@ -1365,49 +1370,39 @@ const growthFactorDetails = [
       },
     ],
   },
-
 ];
 
 export default function GrowthFactors() {
-
-  const gfGradientClass ="bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
+  const gfGradientClass =
+    "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent";
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
       <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col">
-      {/* <GrowthFactorsHeader /> */}
-      {/* <HeroSection /> */}
-      <GenericHeader
-        title1={"Growth"}
-        title2={"Factors"}
-        details={headerDetails}
-        image={"/assets/FOLLICULES.png"}
-        gradientClass={
-          "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
-        }
-        gradientButtonClass={"custom-button-growth-factors"}
-      />
-      <GenericReasons 
-      reasons={reasons} 
-      gradientClass={gfGradientClass}
-/>  
-        <GenericHowItWorks
-        processDetails={growthFactorDetails}
-        title="How it Works"
-        gradientClass={gfGradientClass}
-        color="#046706"
-        
+        {/* <GrowthFactorsHeader /> */}
+        {/* <HeroSection /> */}
+        <GenericHeader
+          title1={"Growth"}
+          title2={"Factors"}
+          details={headerDetails}
+          image={"/assets/FOLLICULES.png"}
+          gradientClass={
+            "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
+          }
+          gradientButtonClass={"custom-button-growth-factors"}
         />
-      {/* <ProcessSection /> */}
-      <GFvsHypersomesComparison />
-      {/* <PricingSection />
-      {/* <TestimonialsSection /> */}
-      {/* <ResultsSection /> */}
-      {/* <div ref={contactRef}>
-        <AppleContactForm />
-      </div> */}
-      {/* <GrowthFactorsFAQ /> */}
-      <SiteFooter />
+        <GenericReasons reasons={reasons} gradientClass={gfGradientClass} />
+        <GenericHowItWorks
+          processDetails={growthFactorDetails}
+          title="Growth Powered By Your Biology"
+          gradientClass={gfGradientClass}
+          color="#046706"
+        />
+        {/* <GFvsHypersomesComparison /> */}
+        <HairLineHeroesSlider />
+        <ContactSection />
+        <GenericFaqSection faqs={fueFaq} />
+        <SiteFooter />
       </main>
     </div>
   );

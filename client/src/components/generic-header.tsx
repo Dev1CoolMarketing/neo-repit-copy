@@ -1,6 +1,7 @@
 import styles from "../styles/fue.module.css";
 import { motion } from "framer-motion";
 import styles2 from "../styles/ExosomesDesign.module.css";
+import { smoothScrollTo } from "@/lib/utils";
 
 export default function GenericHeader({
   title1,
@@ -96,6 +97,7 @@ export default function GenericHeader({
             <button
               className={`${gradientButtonClass} w-full px-4 text-md  font-[500] text-lg py-2 rounded-full mt-5 text-white`}
               style={{ color: "white" }}
+              onClick={()=> smoothScrollTo('contact')}
             >
               Book Consultation
             </button>

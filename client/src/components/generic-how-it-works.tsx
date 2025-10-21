@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
 import FueStyleTreatmentCard from "./FueStyleTreatmentCard";
-
-import HiddenCard from "./ui/hidden-card";
-import FueStyleTreatmentCardDesktop from "./FueStyleTreatmentCardDesktop";
 
 const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) => {
 
@@ -12,7 +8,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
       {/* Promotional Ribbon */}
 
       {/* How It Works Section */}
-      <section className="bg-light-gray px-5 py-16 md:py-12">
+      <section className="bg-light-gray px-6 py-20 md:px-10 md:py-20">
         <div className="container mx-auto max-w-md md:max-w-5xl">
           <motion.div
             className="text-center mb-16"
@@ -32,7 +28,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
           </motion.div>
 
           {/* Mobile Layout - Stacked Cards */}
-          <div className="block md:hidden space-y-6">
+          <div className="block space-y-6 md:space-y-10">
             {processDetails.map((detail, index) => (
               <motion.div
                 key={index}
@@ -50,7 +46,6 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                   featured={true}
                   color={color}
                   inverse={index > 1}
-                  alignLeft={false}
                   moreDetails={detail.moreDetails}
                 >
                   {detail.description}
@@ -60,6 +55,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
           </div>
 
           {/* Desktop Layout - Apple News Grid */}
+          {/*
           <div className={`hidden md:grid grid-cols-2 gap-5 max-w-5xl mx-auto bg`}>
              {processDetails.map((detail, index) => (
               <motion.div
@@ -79,15 +75,15 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                   featured={true}
                   color={color}
                   inverse={index % 3 !== 0}
-                  alignLeft={index % 3 ? true : false}
                   moreDetails={detail.moreDetails}
                 >
                   {detail.description}
                 </FueStyleTreatmentCardDesktop>
               </motion.div>
             ))}
-           
+
           </div>
+          */}
         </div>
       </section>
     </div>

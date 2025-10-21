@@ -173,7 +173,7 @@ export default function SiteHeader() {
 
         {/* Right Side Phone Icon - Made clickable to call office */}
         <div>
-          <a href="tel:(949) 570-0800">
+          <a href="tel:(949) 570-0500">
             <Button
               variant="ghost"
               size="icon"
@@ -191,7 +191,7 @@ export default function SiteHeader() {
                   transform: "translateZ(0)",
                 }}
               />
-              <span className="sr-only">Call us at (949) 570-0800</span>
+              <span className="sr-only">Call us at (949) 570-0500</span>
             </Button>
           </a>
         </div>
@@ -242,10 +242,10 @@ export default function SiteHeader() {
             {/* Action buttons */}
             <div className="flex items-center space-x-4">
               <a
-                href="tel:(949) 570-0800"
+                href="tel:(949) 570-0500"
                 className="text-[#] text-sm font-medium hidden lg:block"
               >
-                (949) 570-0800
+                (949) 570-0500
               </a>
               <button
                 onClick={() => smoothScrollTo("contact")}
@@ -302,7 +302,7 @@ export default function SiteHeader() {
             <div className="pt-3 mt-3 border-t border-[#C8B68F]/20">
               <div className="grid grid-cols-2 gap-3">
                 <a
-                  href="tel:(949) 570-0800"
+                  href="tel:(949) 570-0500"
                   className="flex items-center justify-center bg-white/10 text-white rounded-lg py-3 text-sm font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
