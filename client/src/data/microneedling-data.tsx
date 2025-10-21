@@ -137,23 +137,23 @@ export const microneedlingDetails = [
 
 export const microneedlingReasons = [
   {
-    highlight: "Up to 40% increase in visible hair density",
-    description: "reported after a dedicated treatment series",
+    highlight: "Up to 40% increase",
+    description: "visible hair density.",
   },
   {
-    highlight: "Enhances absorption of biologic therapies",
-    description: "boosting the efficacy of Growth Factors and Hypersomes",
+    highlight: "Enhances absorption of ",
+    description: "biologic therapies.",
   },
   {
     highlight: "Triggers natural collagen and elastin production",
-    description: "for stronger for stronger scalp support.",
+    description: "for stronger scalp support.",
   },
   {
-    highlight: "Activates local stem cells and growth pathways",
+    highlight: "Activates stem cells and growth pathways",
     description: "to awaken dormant follicles.",
   },
   {
-    highlight: "30-45 minute in-office sessions",
-    description: "with minimal recovery and no downtime",
+    highlight: "60 minute sessions",
+    description: "with little to no downtime.",
   },
 ];

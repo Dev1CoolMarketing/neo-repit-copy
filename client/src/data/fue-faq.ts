@@ -62,3 +62,16 @@ const afterTheProcedureFaq = [
       "Immediately after your NeoGraft procedure, your Dr. Neo team will ensure that the new grafts are secure and in their proper position. They will thoroughly rinse the treated areas and a light protective dressing may be applied. You will be given detailed instructions about how to care for the grafts when you go home, including any recommended shampoos, topical antiseptics, or hair care products. Because there is no incision, there is no need to get any sutures removed.",
   },
 ];
+
+export const fueFaq = [   {
+      title: 'Frequently asked questions about hair loss treatment',  
+      items: faqs,
+  },
+     {
+      title: 'Before the Procedure',  
+      items: theProcedureFAQ,
+  },
+       {
+      title: 'After the Procedure',  
+      items: afterTheProcedureFaq,
+  }]

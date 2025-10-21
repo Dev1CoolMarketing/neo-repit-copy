@@ -336,7 +336,7 @@ export default function FueNavBar() {
                 (949) 570-0500
               </a>
               <button
-                onClick={() => smoothScrollTo("contact")}
+                onClick={() => smoothScrollTo("#contact")}
                 className={`hidden lg:inline-flex items-center justify-center h-10 px-6 text-sm font-medium transition-colors ${bookConsultColor[pathName]?.mainColor}  text-white rounded-full hover:bg-[#2a2a2a] focus:outline-none focus:ring-4 hover:from-${bookConsultColor[pathName]?.hoverColor} hover:to-${bookConsultColor[pathName]?.hoverColor} focus:ring-blue`}
               >
                 Book Consult

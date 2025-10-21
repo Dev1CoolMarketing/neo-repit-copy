@@ -332,7 +332,7 @@ ol {
 }
 
 .custom-button-hypersomes {
-  background-color:  #4D74C8;
+  background-color:  #8051BC;
   /* background: linear-gradient(135deg, #9940B6 0%, #4D74C8 61%, #8051BC 100%); */
   color: white;
   border: none;
@@ -366,7 +366,6 @@ ol {
 
 /* Ensure yellow/gold buttons always have dark brown text */
 button {
-
   &[style*="background-color: rgb(250, 225, 81)"],
   &[style*="background-color: #FAE151"],
   &[style*="background-color: #eab308"],

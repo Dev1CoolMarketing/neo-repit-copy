@@ -18,6 +18,10 @@ import { FadeInOnScroll } from "@/components/ui/FadeInOnScroll";
 import GenericReasons from "@/components/generic-reasons";
 import GenericHowItWorks from "@/components/generic-how-it-works";
 import GFvsHypersomesComparison from "@/components/growth-factors/growth-factor-comparison";
+import GenericFaqSection from "@/components/generic-faq-section";
+import { fueFaq } from "@/data/fue-faq";
+import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
+import ContactSection from "@/components/contact-section";
 
 const headerDetails = [
   "Stimulates natural hair growth.",
@@ -26,25 +30,25 @@ const headerDetails = [
 ];
   const reasons = [
     {
-      highlight: "89% success rate",
-      title: "in clinical trials for androgenetic alopecia",
+      highlight: "Zero Surgical Risk ",
       description:
-        "FDA-cleared microneedling technology combined with autologous PRP growth factors shows superior results compared to topical treatments alone.",
-      statistic: "Proven in 2,400+ patients",
+       "with minimal downtime."
+
     },
     {
-      highlight: "Zero surgical risk",
-      title: "with 24-48 hour recovery time",
+      highlight: "5× Greater Effectiveness ",
       description:
-        "Non-invasive outpatient procedure using your body's own healing factors. Return to work the next day with minimal visible effects.",
-      statistic: "<0.1% complication rate",
+        "versus other topical treatments alone.",
     },
     {
-      highlight: "1000x enhanced absorption",
-      title: "through controlled micro-channel delivery",
+      highlight: "Noticeably Fuller Coverage ",
       description:
-        "Medical-grade 1.5mm microneedling creates optimal penetration pathways for concentrated growth factor infiltration into follicular units.",
-      statistic: "Clinically measured increase",
+        "and proven density boost",
+    },
+        {
+      highlight: "Visible thickening",
+      description:
+        " in as little as 20 weeks.",
     },
   ];
 
@@ -1393,20 +1397,15 @@ export default function GrowthFactors() {
 />  
         <GenericHowItWorks
         processDetails={growthFactorDetails}
-        title="How it Works"
+        title="Growth Power By Your Biology"
         gradientClass={gfGradientClass}
         color="#046706"
         
         />
-      {/* <ProcessSection /> */}
-      <GFvsHypersomesComparison />
-      {/* <PricingSection />
-      {/* <TestimonialsSection /> */}
-      {/* <ResultsSection /> */}
-      {/* <div ref={contactRef}>
-        <AppleContactForm />
-      </div> */}
-      {/* <GrowthFactorsFAQ /> */}
+      {/* <GFvsHypersomesComparison /> */}
+        <HairLineHeroesSlider />
+        <ContactSection />
+      <GenericFaqSection faqs={fueFaq}/>
       <SiteFooter />
       </main>
     </div>

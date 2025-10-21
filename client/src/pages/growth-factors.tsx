@@ -19,6 +19,7 @@ import prpTubeImg from "@assets/715D4C1D-9DD8-4F92-877A-16505BC39FC9_17519663948
 import microneedlingPenImg from "@assets/699A977B-D602-4DE4-90D7-4B61A9565492_1751972967388.png";
 import recoveryTrackerImg from "@assets/DB46019A-08E7-4A57-AF2B-478B6D57F6C9_1751973693083.png";
 import GrowthFactorsFAQ from "../components/growth-factors/growth-factors-faq";
+import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
 
 function DrNeoLogo() {
   return (
@@ -642,6 +643,7 @@ export default function GrowthFactors() {
         <Hero onBookClick={handleBookClick} />
         <Timeline />
         <PricingSection />
+        <HairLineHeroesSlider />
         <GrowthFactorsFAQ />
       </main>
       <SiteFooter />

@@ -295,7 +295,7 @@ export default function FueStyleTreatmentCard({
                     transition: { duration: 0.6, ease: "easeOut" },
                   }}
                   style={{
-                    filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
+                    // filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
                     transformStyle: "preserve-3d",
                   }}
                 />
@@ -305,7 +305,7 @@ export default function FueStyleTreatmentCard({
                 <motion.img
                   src={image}
                   alt={`${title} illustration`}
-                  className="w-full h-auto object-contain max-h-[85%] mr-[-15%]"
+                  className="w-full h-auto object-contain max-h-[85%] mr-[-15%] pb-5"
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -318,7 +318,7 @@ export default function FueStyleTreatmentCard({
                     transition: { duration: 0.6, ease: "easeOut" },
                   }}
                   style={{
-                    filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
+                    // filter: `drop-shadow(0 30px 60px ${lightShadowColor}) drop-shadow(0 15px 30px rgba(0,0,0,0.2))`,
 
                     transformStyle: "preserve-3d",
                   }}
