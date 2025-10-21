@@ -609,7 +609,6 @@ function ProcessSection() {
                 image={step.image}
                 featured={step.featured}
                 inverse={index < 2}
-                alignLeft={true}
               >
                 {step.description}
               </FueStyleTreatmentCard>
@@ -1397,7 +1396,7 @@ export default function GrowthFactors() {
 />  
         <GenericHowItWorks
         processDetails={growthFactorDetails}
-        title="Growth Power By Your Biology"
+        title="Growth Powered By Your Biology"
         gradientClass={gfGradientClass}
         color="#046706"
         

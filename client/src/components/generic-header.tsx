@@ -94,13 +94,13 @@ export default function GenericHeader({
               );
             })}
 
-            <a
-              className={`${gradientButtonClass} w-full px-4 text-md text-center btn  font-[500] text-lg py-2 rounded-full mt-5 text-white`}
+            <button
+              className={`${gradientButtonClass} w-full px-4 text-md  font-[500] text-lg py-2 rounded-full mt-5 text-white`}
               style={{ color: "white" }}
-              href="#contact"
+              onClick={()=> smoothScrollTo('contact')}
             >
               Book Consultation
-            </a>
+            </button>
           </div>
         </motion.div>
       </div>

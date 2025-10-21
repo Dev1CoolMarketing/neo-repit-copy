@@ -12,7 +12,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
       {/* Promotional Ribbon */}
 
       {/* How It Works Section */}
-      <section className="bg-light-gray px-5 py-16 md:py-12">
+      <section className="bg-light-gray px-6 py-18 md:px-8 md:py-16">
         <div className="container mx-auto max-w-md md:max-w-5xl">
           <motion.div
             className="text-center mb-16"
@@ -32,7 +32,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
           </motion.div>
 
           {/* Mobile Layout - Stacked Cards */}
-          <div className="block md:hidden space-y-6">
+          <div className="block space-y-6 md:space-y-10">
             {processDetails.map((detail, index) => (
               <motion.div
                 key={index}
@@ -50,7 +50,6 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                   featured={true}
                   color={color}
                   inverse={index > 1}
-                  alignLeft={false}
                   moreDetails={detail.moreDetails}
                 >
                   {detail.description}
@@ -60,6 +59,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
           </div>
 
           {/* Desktop Layout - Apple News Grid */}
+          {/*
           <div className={`hidden md:grid grid-cols-2 gap-5 max-w-5xl mx-auto bg`}>
              {processDetails.map((detail, index) => (
               <motion.div
@@ -86,8 +86,9 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                 </FueStyleTreatmentCardDesktop>
               </motion.div>
             ))}
-           
+
           </div>
+          */}
         </div>
       </section>
     </div>

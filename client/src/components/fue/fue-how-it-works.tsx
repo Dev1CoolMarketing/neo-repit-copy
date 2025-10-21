@@ -110,7 +110,6 @@ const HowItWorks = () => {
                   featured={true}
                   color={"#8B2635"}
                   inverse={index > 1}
-                  alignLeft={false}
                 >
                   {detail.description}
                 </FueStyleTreatmentCard>
