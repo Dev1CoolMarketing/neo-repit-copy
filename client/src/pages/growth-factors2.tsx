@@ -22,6 +22,7 @@ import GenericFaqSection from "@/components/generic-faq-section";
 import { fueFaq } from "@/data/fue-faq";
 import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
 import ContactSection from "@/components/contact-section";
+import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
 
 const headerDetails = [
   "Stimulates natural hair growth.",
@@ -36,7 +37,7 @@ const reasons = [
   {
     highlight: "Long-Term Results,",
     description:
-      "naturally occurring proteins stimulate continuous regeneration and sustained density.",
+      "naturally occurring proteins stimulate continuous regeneration.",
   },
   {
     highlight: "Noticeably Fuller Coverage ",
@@ -1239,7 +1240,7 @@ const growthFactorDetails = [
     description:
       "Start your journey with a personalized consultation. We’ll determine if Growth Factors — our biologic therapy designed to stimulate follicles and improve hair density — is right for you.",
     image: dermatoscopeImg,
-    alt: "",
+    alt: "medical device shown that you can trust us with consultations",
     moreDetails: [
       {
         type: "list",
@@ -1277,7 +1278,7 @@ const growthFactorDetails = [
     description:
       "Unlike providers who apply growth factors alone, we combine Microneedling + Growth Factors in a single visit to enhance penetration and efficacy through micro-channels that deliver regenerative proteins deeper into the scalp.",
     image: prpTubeImg,
-    alt: "",
+    alt: "tube filled with PRP ",
     moreDetails: [
       {
         type: "list",
@@ -1307,7 +1308,7 @@ const growthFactorDetails = [
     description:
       "Expect a quick recovery and a staged improvement in thickness, coverage, and scalp vitality as follicles respond.",
     image: microneedlingPenImg,
-    alt: "",
+    alt: "hair follicule recovery image",
     moreDetails: [
       {
         type: "list",
@@ -1327,7 +1328,7 @@ const growthFactorDetails = [
     description:
       "Growth Factors Infusion is most effective as a series. Follow-up sessions every 3–6 months reinforce follicular activity and extend long-term results.",
     image: recoveryTrackerImg,
-    alt: "",
+    alt: "optimiation sessions clipboard showing how to optimize your growth",
     moreDetails: [
       {
         type: "list",
@@ -1353,8 +1354,8 @@ const growthFactorDetails = [
     subtitle: "Protect and extend your results",
     description:
       "Keep your results thriving with a tailored plan and professional oversight.",
-    image: "/assets/last-step.png",
-    alt: "",
+    image: followUpConsultationImg,
+    alt: "follow up consulation image",
     moreDetails: [
       {
         type: "list",

@@ -18,6 +18,7 @@ import ContactSection from "@/components/contact-section";
 import GenericFaqSection from "@/components/generic-faq-section";
 import { fueFaq } from "@/data/fue-faq";
 
+
 const headerDetails = [
   "Cellular regeneration.",
   "Promote natural regrowth .",
@@ -96,7 +97,7 @@ const exosomesProcessDetails = [
   {
     title: "Step 3: Recovery & Regrowth",
     subtitle: "",
-    description: "",
+    description: "Recovery after Hypersomes Infusion is simple and well tolerated. Most patients experience only mild redness or sensitivity for a day or two, similar to light sun exposure. Because there are no incisions or sutures, downtime is minimal and normal activities can typically be resumed the same day.",
     image: "/assets/exosomes/recovery-and-regrowth2.png",
     alt: "",
     moreDetails: [
@@ -134,7 +135,7 @@ const exosomesProcessDetails = [
     subtitle: "",
     description:
       "Protect your results and keep them thriving with a tailored plan.",
-    image: "/assets/last-step.png",
+    image: followUpConsultationImg,
     alt: "",
     moreDetails: [
       {

@@ -67,7 +67,7 @@ export default function FueStyleTreatmentCard({
 
   const imageWrapperClasses = [
     "flex-shrink-0",
-    featured ? "px-10 pb-10 md:px-14 md:py-16" : "p-8 pt-0",
+    featured ? "pl-5 pb-10 md:px-14 md:py-16" : "p-8 pt-0",
     featured ? "md:w-1/2 md:flex md:items-center" : "",
     featured ? (imageOnLeft ? "md:order-1" : "md:order-2") : "",
   ]

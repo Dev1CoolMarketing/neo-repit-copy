@@ -1,24 +1,20 @@
 import SiteFooter from "@/components/site-footer";
 import { useEffect } from "react";
 import { initFadeInAnimations } from "@/lib/utils";
-import FueResults from "@/components/fue/fue-results-from-real-patients";
-import Frame_81 from "@/components/Frame_81";
-import TestimonialsSectionPremium from "@/components/testimonials-section-premium";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import GenericHeader from "@/components/generic-header";
 import GenericReasons from "@/components/generic-reasons";
 import GenericHowItWorks from "@/components/generic-how-it-works";
-import FueProcess from "@/components/fue/fue-process";
 import procedureImg from "@assets/fue-hiw2-procedure.webp";
 import recoveryAndRegrowthImg from "@assets/fue-howitworks-step3.webp";
 import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
-import FaqSection from "@/components/faq-section";
-import BadgeGrid from "@/components/badges";
 import GenericProcess from "@/components/generic-process";
 import HairLineHeroesSlider from "@/components/hairline-heroes-slider/HairlineHeroesSlider";
 import ContactSection from "@/components/contact-section";
 import GenericFaqSection from "@/components/generic-faq-section";
 import { fueFaq } from "@/data/fue-faq";
+import prpTubeImg from "@assets/gf-hiw2-prptube.webp";
+
 
 const headerDetails = [
   "Advanced FUE technology.",
@@ -102,7 +98,7 @@ const fueProcessDetails = [
     subtitle: "Microneedling + Growth Factors ",
     description:
       "Before your NeoGraft® FUE procedure, we prep your scalp with a powerful combo: Microneedling + Growth Factor Therapy. This boosts circulation, improves healing, and sets the stage for better graft survival.",
-    image: "/assets/fue/prp.png",
+    image: prpTubeImg,
     alt: "Initial Consultation Inspection Gadget",
     moreDetails: [
       {
@@ -447,7 +443,7 @@ const fueProcessDetails = [
     subtitle: "[Protect and Extend Your Results]",
     description:
       "Your Dr. Neo® FUE transplant is an investment—keep it thriving with long-term care and professional oversight.",
-    image: "/assets/last-step.png",
+    image: "/assets/fue/health.webp",
     alt: "Ipad image showing follow up consultation",
     moreDetails: [
       {
