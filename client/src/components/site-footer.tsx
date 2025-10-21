@@ -63,7 +63,7 @@ export default function SiteFooter() {
             </h2>
             
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
-              8,500+ successful procedures
+              Thousands of successful procedures
             </p>
             
             <motion.button
@@ -105,7 +105,7 @@ export default function SiteFooter() {
               </ul>
             </motion.div>
 
-            {/* Resources Column */}
+            {/* Resources Column
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export default function SiteFooter() {
                   );
                 })}
               </ul>
-            </motion.div>
+            </motion.div> */}
 
             {/* Legal Column */}
             <motion.div
@@ -169,7 +169,7 @@ export default function SiteFooter() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Phone className="w-4 h-4 text-[#FAE151]" />
-                  <a href="tel:+1949570500"className="underline cursor-pointer">(949) 570-0800</a>
+                  <a href="tel:+1949570500"className="underline cursor-pointer">(949) 570-0500</a>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Mail className="w-4 h-4 text-[#FAE151]" />

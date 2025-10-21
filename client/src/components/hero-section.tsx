@@ -204,7 +204,7 @@ export default function HeroSection() {
                   </motion.div>
 
                   <motion.a
-                    href="tel:(949) 570-0800"
+                    href="tel:(949) 570-0500"
                     className="text-[#625046] font-medium hover:text-[#A87B23] transition-colors flex items-center"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -225,7 +225,7 @@ export default function HeroSection() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    Call (949) 570-0800
+                    Call (949) 570-0500
                   </motion.a>
                 </div>
 

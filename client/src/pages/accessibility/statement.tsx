@@ -19,7 +19,7 @@ export const DEFAULT_ACCESSIBILITY_CONFIG: AccessibilityConfig = {
   emails: {
     accessibility: "team@drneo.com",
   },
-  phone: "949-570-0800",
+  phone: "949-570-0500",
   mailRecipient: "Accessibility Coordinator, DrVigor",
   addressLines: ["16460 Bake Pkwy.", "Irvine, CA 92618"],
 };

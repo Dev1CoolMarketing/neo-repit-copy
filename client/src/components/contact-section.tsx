@@ -92,7 +92,13 @@ const expectationItems = [
   "No pressure, educational approach",
 ];
 
-export default function ContactSection() {
+type ContactSectionProps = {
+  formAriaLabel?: string;
+};
+
+export default function ContactSection({
+  formAriaLabel,
+}: ContactSectionProps) {
   const { toast } = useToast();
   const [api, setApi] = useState<any>(null);
 
@@ -166,6 +172,10 @@ export default function ContactSection() {
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="space-y-5"
+                  aria-label={
+                    formAriaLabel ??
+                    "Consultation request form for Dr. Neo hair restoration"
+                  }
                 >
                   <fieldset className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <legend className="sr-only">Full Name</legend>

@@ -100,7 +100,7 @@ const fueProcessDetails = [
     subtitle: "Microneedling + Growth Factors ",
     description:
       "Before your NeoGraft® FUE procedure, we prep your scalp with a powerful combo: Microneedling + Growth Factor Therapy. This boosts circulation, improves healing, and sets the stage for better graft survival.",
-    image: "/assets/fue/initial_consultation.png",
+    image: "/assets/fue/prp.png",
     alt: "Initial Consultation Inspection Gadget",
     moreDetails: [
       {
@@ -163,7 +163,7 @@ const fueProcessDetails = [
     description:
       "Your FUE Procedure Day is a full-day experience. Sessions typically last <b>4 to 10 hours</b>, depending on how many grafts we harvest and implant.",
     subdescription: "Clear your schedule—you’ll be with us most of the day.",
-    image: procedureImg,
+    image: '/assets/fue/proceduredayprep.png',
     alt: "Hand Transplanting a hair follicle with Dr.Neo Tweezers",
     subsetTitle: "Clear your schedule—you’ll be with us most of the day.",
     moreDetails: [

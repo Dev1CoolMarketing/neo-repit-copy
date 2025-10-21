@@ -1057,7 +1057,7 @@ export default function TreatmentsPage() {
                         variant="outline"
                         className="w-full border-[#a87b23] text-[#a87b23] hover:bg-[#a87b23] hover:text-white font-medium py-4 h-auto rounded-full transition-all"
                         onClick={() =>
-                          (window.location.href = `tel:${encodeURIComponent("(949) 570-0800")}`)
+                          (window.location.href = `tel:${encodeURIComponent("(949) 570-0500")}`)
                         }
                       >
                         Call (949) 570-800
@@ -1222,10 +1222,10 @@ export default function TreatmentsPage() {
                     <div className="flex items-center justify-center md:justify-start gap-2 text-[#625046]">
                       <span>or call us at</span>
                       <a
-                        href="tel:(949) 570-0800"
+                        href="tel:(949) 570-0500"
                         className="font-medium text-[#A87B23] hover:underline"
                       >
-                        (949) 570-0800
+                        (949) 570-0500
                       </a>
                     </div>
                   </div>

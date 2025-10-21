@@ -5,7 +5,7 @@ export default function TestimonialsSectionPremium() {
     <>
       {/* Mobile version - keep exactly the same */}
       <div className="md:hidden">
-        <section className="bg-[#] py-4">
+        <section className="bg-[#]">
           <div className="container mx-auto px-2">
             <h2
               className=" hidden text-center bg-gradient-to-r from-[#625046] to-[#c8b68f] bg-clip-text text-transparent text-[2.5rem] sm:text-[3rem] font-normal leading-[1.1] tracking-[-0.04em] mb-12"

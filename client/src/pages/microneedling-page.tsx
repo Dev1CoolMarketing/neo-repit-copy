@@ -41,7 +41,7 @@ export default function Microneedling() {
         title2={"Microneedling"}
         title3={""}
         details={headerDetails}
-        image={"/assets/microneedling/Untitled design (4).png"}
+        image={"/assets/microneedling/microneedlingpen.png"}
         gradientClass={
           "bg-gradient-to-r from-[#007AFF] via-[#00C7BE]  to-[#007AFF] bg-clip-text text-transparent"
         }
