@@ -1,6 +1,6 @@
 import { useState, ReactNode } from "react";
 import { motion } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 interface FueStyleTreatmentCardProps {
   step: number;
@@ -52,7 +52,7 @@ export default function FueStyleTreatmentCard({
   // Example usage:
 
   const lightShadowColor = hexToRgba(color, 0.15);
-  const imageOnLeft = featured && step % 2 === 0;
+  const imageOnLeft = step % 2 === 0;
   const contentClasses = [
     "flex-1",
     featured ? "px-10 py-12 md:px-16 md:py-16" : "p-8 px-8 pb-0",

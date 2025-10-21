@@ -134,7 +134,7 @@ const exosomesProcessDetails = [
     subtitle: "",
     description:
       "Protect your results and keep them thriving with a tailored plan.",
-    image: "/assets/exosomes/redlight2.png",
+    image: "/assets/last-step.png",
     alt: "",
     moreDetails: [
       {

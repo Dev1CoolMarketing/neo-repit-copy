@@ -447,7 +447,7 @@ const fueProcessDetails = [
     subtitle: "[Protect and Extend Your Results]",
     description:
       "Your Dr. Neo® FUE transplant is an investment—keep it thriving with long-term care and professional oversight.",
-    image: followUpConsultationImg,
+    image: "/assets/last-step.png",
     alt: "Ipad image showing follow up consultation",
     moreDetails: [
       {

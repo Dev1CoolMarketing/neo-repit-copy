@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
 import FueStyleTreatmentCard from "./FueStyleTreatmentCard";
-
-import HiddenCard from "./ui/hidden-card";
-import FueStyleTreatmentCardDesktop from "./FueStyleTreatmentCardDesktop";
 
 const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) => {
 
@@ -12,7 +8,7 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
       {/* Promotional Ribbon */}
 
       {/* How It Works Section */}
-      <section className="bg-light-gray px-6 py-18 md:px-8 md:py-16">
+      <section className="bg-light-gray px-6 py-20 md:px-10 md:py-20">
         <div className="container mx-auto max-w-md md:max-w-5xl">
           <motion.div
             className="text-center mb-16"
@@ -79,7 +75,6 @@ const GenericHowItWorks = ({processDetails, color, gradientClass, title}: any) =
                   featured={true}
                   color={color}
                   inverse={index % 3 !== 0}
-                  alignLeft={index % 3 ? true : false}
                   moreDetails={detail.moreDetails}
                 >
                   {detail.description}

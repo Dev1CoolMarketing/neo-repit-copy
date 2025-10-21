@@ -1352,7 +1352,7 @@ const growthFactorDetails = [
     subtitle: "Protect and extend your results",
     description:
       "Keep your results thriving with a tailored plan and professional oversight.",
-    image: "",
+    image: "/assets/last-step.png",
     alt: "",
     moreDetails: [
       {

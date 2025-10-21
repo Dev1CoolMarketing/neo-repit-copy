@@ -1,8 +1,11 @@
+import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
+
+
 export const microneedlingDetails = [
   {
     title: "Step 1: Your Microneedling Consultation",    description:
       "Your journey begins with a personalized consultation to assess your scalp health, degree of thinning, and overall hair goals. Your provider will determine whether Follicular Microneedling is best performed alone or as a foundation for Growth Factors or Hypersomes Infusions.",
-    image: "/assets/microneedling/microneedlingpen.png",
+    image: "/assets/microneedling/step-1-2.png",
     alt: "Provider discussing microneedling treatment plan",
     moreDetails: [
       {
@@ -71,7 +74,7 @@ export const microneedlingDetails = [
     title: "Step 3: Recovery & Regrowth",
     description:
       "Microneedling requires little to no downtime. Mild redness or sensitivity typically resolves within 24-48 hours, while early signs of improved scalp texture and tone appear within weeks.",
-    image: "/assets/microneedling/microneedlingpen.png",
+    image: "/assets/microneedling/step-3.png",
     alt: "Scalp after microneedling treatment",
     moreDetails: [
       {
@@ -101,7 +104,7 @@ export const microneedlingDetails = [
     subtitle: "Create momentum with strategically timed treatments",
     description:
       "For best results, Follicular Microneedling is performed as a series of treatments spaced 3-6 weeks apart. Maintenance sessions every few months reinforce follicular activity and sustain long-term growth.",
-    image: "/assets/microneedling/microneedlingpen.png",
+    image: followUpConsultationImg,
     alt: "Microneedling appointments planned on a calendar",
     moreDetails: [
 
@@ -118,7 +121,7 @@ export const microneedlingDetails = [
     subtitle: "Keep scalp health and follicular activity thriving",
     description:
       "To preserve results and scalp health, your provider will design a maintenance approach tailored to your goals and hair biology.",
-    image: "/assets/microneedling/microneedlingpen.png",
+    image: "/assets/last-step.png",
     alt: "Tools that support ongoing microneedling maintenance",
     moreDetails: [
       {
