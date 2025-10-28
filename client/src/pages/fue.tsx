@@ -559,7 +559,7 @@ export default function Fue() {
             Understand exactly what happens during your treatment."
               video="/assets/video/NEO Stinger.webm"
               gradientClass={
-                "bg-gradient-to-br from-[#8B2635] via-[#A4161A] to-[#E63946] "
+                "bg-gradient-to-br from-[#B91C1C] via-[#761A20] to-[#1D0000] "
               }
             />
             <HairLineHeroesSlider />

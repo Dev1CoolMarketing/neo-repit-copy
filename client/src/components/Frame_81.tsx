@@ -95,7 +95,7 @@ export default function Frame_81() {
                     name: "Alex Colby",
                     location: "Newport Beach",
                     age: 23,
-                    image: "/assets/ALEX COLBY.webp",
+                    image: "/assets/harline_heroes/ALEX COLBY.webp",
                     badge: "GROWTH FACTORS",
                   },
                              {

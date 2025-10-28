@@ -72,6 +72,7 @@ export default function HeroCard({
   const loadedOnceRef = useRef(false);   // `.load()` called for current src
   const autoTimerRef = useRef<number | null>(null);   // autoplay combined delay
   const holdClearRef = useRef<number | null>(null);   // legacy extra clear slot
+  const autoPlayedRef = useRef(false);   // ensure autoplay happens at most once
 
   const clearTimer = (ref: React.MutableRefObject<number | null>) => {
     if (ref.current) {
@@ -200,6 +201,7 @@ export default function HeroCard({
   useEffect(() => {
     primedRef.current = false;
     loadedOnceRef.current = false;
+    autoPlayedRef.current = false;
     setFirstFrameReady(false);
     setShowVideo(false);
     setCanRenderVideo(false);
@@ -272,10 +274,22 @@ export default function HeroCard({
     const shouldAuto = !!hero.video && (!mobileOnly || isMobile);
     v.loop = false;
 
-    if (!fullyInView || !shouldAuto) {
-      // Leaving view (or blocked by mobileOnly): stop immediately
+    if (!fullyInView) {
+      // Leaving viewport: stop immediately
       clearAllTimers();
       safePauseAndReset();
+      autoPlayedRef.current = false;
+      return;
+    }
+
+    if (!shouldAuto) {
+      // In view but desktop-only mode: no autoplay, but keep current state for manual control
+      clearAllTimers();
+      return;
+    }
+
+    if (autoPlayedRef.current) {
+      clearAllTimers();
       return;
     }
 
@@ -290,6 +304,7 @@ export default function HeroCard({
       }
       // Start playback (will be visible once reveal occurs)
       safePlay();
+      autoPlayedRef.current = true;
     }, combinedDelay);
 
     return () => {
@@ -314,6 +329,24 @@ export default function HeroCard({
 
   const videoFadeDelay = firstFrameReady ? 0.06 : 0;
   const imageFadeDelay = firstFrameReady ? OVERLAP_MS / 1000 : 0;
+
+  const getMimeType = (src?: string) => {
+    if (!src) return "video/mp4";
+    const ext = src.split("?")[0].split(".").pop()?.toLowerCase();
+    switch (ext) {
+      case "webm":
+        return "video/webm";
+      case "mov":
+        return "video/quicktime";
+      case "m4v":
+        return "video/x-m4v";
+      case "ogg":
+      case "ogv":
+        return "video/ogg";
+      default:
+        return "video/mp4";
+    }
+  };
 
   // Card entrance
   const CARD_IN_DURATION = 0.75;
@@ -371,7 +404,13 @@ export default function HeroCard({
             }}
           >
             {hero.videoHevc && <source src={hero.videoHevc} type="video/mp4; codecs=hvc1" />}
-            <source src={hero.videoAvc ?? hero.video} type="video/mp4" />
+            {hero.videoAvc && (
+              <source src={hero.videoAvc} type={getMimeType(hero.videoAvc)} />
+            )}
+            <source
+              src={hero.video}
+              type={getMimeType(hero.video)}
+            />
           </motion.video>
         )}
 

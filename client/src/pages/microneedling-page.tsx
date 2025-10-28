@@ -91,7 +91,7 @@ export default function Microneedling() {
               headline="See our process in action"
               details="Watch step-by-step videos of our FUE hair transplant procedure.
             Understand exactly what happens during your treatment."
-              video="/assets/video/microneedling.mov"
+              video="/assets/video/microneedling.webm"
               gradientClass={"bg-[#007AFF] "}
             />
             <HairLineHeroesSlider />
