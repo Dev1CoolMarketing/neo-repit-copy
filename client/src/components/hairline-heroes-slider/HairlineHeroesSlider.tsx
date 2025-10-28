@@ -87,7 +87,7 @@ export default function HairLineHeroesSlider() {
                     name: "Alex Colby",
                     location: "Newport Beach",
                     age: 23,
-                    image: "/assets/heroes/ALEX COLBY.png",
+                    image: "/assets/heroes/ALEX COLBY.webp",
                     badge: "Growth Factors",
                     video: "assets/video/Alex Web Stinger.mov",
                   },

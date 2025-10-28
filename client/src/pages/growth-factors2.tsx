@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 // import imgDrNeoLogo from "@/assets/letterN.png";
 import {
   CheckIcon,
@@ -1375,6 +1375,19 @@ const growthFactorDetails = [
 export default function GrowthFactors() {
   const gfGradientClass =
     "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent";
+  const [headerReady, setHeaderReady] = useState(false);
+  const handleHeaderReady = useCallback(() => {
+    setHeaderReady(true);
+  }, []);
+  useEffect(() => {
+    const fallbackTimer = window.setTimeout(() => {
+      setHeaderReady(true);
+    }, 8000);
+
+    return () => {
+      window.clearTimeout(fallbackTimer);
+    };
+  }, []);
   return (
     <div className="flex min-h-screen flex-col">
       <FueNavBar />
@@ -1390,19 +1403,28 @@ export default function GrowthFactors() {
             "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
           }
           gradientButtonClass={"custom-button-growth-factors"}
+          contentId="growth-factors-page-content"
+          onReady={handleHeaderReady}
         />
-        <GenericReasons reasons={reasons} gradientClass={gfGradientClass} />
-        <GenericHowItWorks
-          processDetails={growthFactorDetails}
-          title="Growth Powered By Your Biology"
-          gradientClass={gfGradientClass}
-          color="#046706"
-        />
-        {/* <GFvsHypersomesComparison /> */}
-        <HairLineHeroesSlider />
-        <ContactSection />
-        <GenericFaqSection faqs={fueFaq} />
-        <SiteFooter />
+        {headerReady && (
+          <div
+            id="growth-factors-page-content"
+            className="flex flex-1 flex-col content-visible"
+          >
+            <GenericReasons reasons={reasons} gradientClass={gfGradientClass} />
+            <GenericHowItWorks
+              processDetails={growthFactorDetails}
+              title="Growth Powered By Your Biology"
+              gradientClass={gfGradientClass}
+              color="#046706"
+            />
+            {/* <GFvsHypersomesComparison /> */}
+            <HairLineHeroesSlider />
+            <ContactSection />
+            <GenericFaqSection faqs={fueFaq} />
+            <SiteFooter />
+          </div>
+        )}
       </main>
     </div>
   );

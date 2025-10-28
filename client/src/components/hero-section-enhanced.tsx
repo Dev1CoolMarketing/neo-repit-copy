@@ -633,7 +633,7 @@ export default function HeroSectionEnhanced() {
               {[
                 {
                   name: "Alex Colby",
-                  image: "/assets/ALEX COLBY.png",
+                  image: "/assets/ALEX COLBY.webp",
                   quote:
                     "The results exceeded my expectations. My confidence is completely restored.",
                   treatment: "FUE Hair Transplant",

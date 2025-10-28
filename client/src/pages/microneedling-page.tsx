@@ -1,5 +1,5 @@
 import SiteFooter from "@/components/site-footer";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { initFadeInAnimations } from "@/lib/utils";
 import TestimonialsSectionPremium from "@/components/testimonials-section-premium";
 import FueNavBar from "@/components/fue/fue-nav-bar";
@@ -24,6 +24,11 @@ const headerDetails = [
   "Effective results without high treatment cost.",
 ];
 export default function Microneedling() {
+  const [headerReady, setHeaderReady] = useState(false);
+  const handleHeaderReady = useCallback(() => {
+    setHeaderReady(true);
+  }, []);
+
   useEffect(() => {
     // Scroll to top on route change
     window.scrollTo(0, 0);
@@ -34,7 +39,16 @@ export default function Microneedling() {
     // Add title to the page
     document.title = "SoCal Advanced Hair Restoration | Dr. NEO";
 
-    return cleanup;
+    const fallbackTimer = window.setTimeout(() => {
+      setHeaderReady(true);
+    }, 8000);
+
+    return () => {
+      window.clearTimeout(fallbackTimer);
+      if (typeof cleanup === "function") {
+        cleanup();
+      }
+    };
   }, []);
   const gradientClass =
     "bg-gradient-to-r from-[#1174DF] via-[#00C7BE] to-[#1174DF] bg-clip-text text-transparent";
@@ -52,31 +66,40 @@ export default function Microneedling() {
             "bg-gradient-to-r from-[#007AFF] via-[#00C7BE]  to-[#007AFF] bg-clip-text text-transparent"
           }
           gradientButtonClass={"bg-[#1174DF]"}
+          contentId="microneedling-page-content"
+          onReady={handleHeaderReady}
         />
 
-        <GenericReasons
-          reasons={microneedlingReasons}
-          gradientClass={gradientClass}
-        />
-        {/* <FueHowItWorks /> */}
-        <GenericHowItWorks
-          processDetails={microneedlingDetails}
-          color="#007AFF"
-          gradientClass={gradientClass}
-          title="The Science of Follicule Renewal"
-        />
-        <GenericProcess
-          title="PROCESS"
-          headline="See our process in action"
-          details="Watch step-by-step videos of our FUE hair transplant procedure.
+        {headerReady && (
+          <div
+            id="microneedling-page-content"
+            className="flex flex-1 flex-col content-visible"
+          >
+            <GenericReasons
+              reasons={microneedlingReasons}
+              gradientClass={gradientClass}
+            />
+            {/* <FueHowItWorks /> */}
+            <GenericHowItWorks
+              processDetails={microneedlingDetails}
+              color="#007AFF"
+              gradientClass={gradientClass}
+              title="The Science of Follicule Renewal"
+            />
+            <GenericProcess
+              title="PROCESS"
+              headline="See our process in action"
+              details="Watch step-by-step videos of our FUE hair transplant procedure.
             Understand exactly what happens during your treatment."
-          video="/assets/video/microneedling.mov"
-          gradientClass={"bg-[#007AFF] "}
-        />
-        <HairLineHeroesSlider />
-        <ContactSection />
-        <GenericFaqSection faqs={fueFaq} />
-        <SiteFooter />
+              video="/assets/video/microneedling.mov"
+              gradientClass={"bg-[#007AFF] "}
+            />
+            <HairLineHeroesSlider />
+            <ContactSection />
+            <GenericFaqSection faqs={fueFaq} />
+            <SiteFooter />
+          </div>
+        )}
       </main>
     </div>
   );
