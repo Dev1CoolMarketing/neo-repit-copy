@@ -557,7 +557,8 @@ export default function Fue() {
               headline="See our process in action"
               details="Watch step-by-step videos of our FUE hair transplant procedure.
             Understand exactly what happens during your treatment."
-              video="/assets/video/NEO Stinger.webm"
+              video="/assets/video/neo-stinger.webm"
+              fallbackVideo="/assets/video/neo-fue.mov"
               gradientClass={
                 "bg-gradient-to-br from-[#B91C1C] via-[#761A20] to-[#1D0000] "
               }
