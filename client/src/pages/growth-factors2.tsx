@@ -230,7 +230,7 @@ export default function GrowthFactors() {
           title1={"Growth"}
           title2={"Factors"}
           details={headerDetails}
-          image={"/assets/FOLLICULES.png"}
+          image={"/assets/header/FOLLICULES.webp"}
           gradientClass={
             "bg-gradient-to-r from-[#5CB270] via-[#89AD5F] to-[#E4A43C] bg-clip-text text-transparent"
           }

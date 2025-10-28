@@ -65,7 +65,7 @@ export default function FueStyleTreatmentCardDesktop({
       whileHover={{ y: -6, scale: 1.01 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="flex flex-col min-h-[460px] justify-center items-center relative">
+      <div className="flex flex-col min-h-[520px] justify-center items-stretch relative">
         {/* Content section */}
         <div
           className={`flex-1 flex-row flex p-8 px-8 pb-0 ${
@@ -73,14 +73,14 @@ export default function FueStyleTreatmentCardDesktop({
           }`}
         >
           <motion.div
-            className={featured ? "max-w-lg" : "max-w-md"}
+            className={`${featured ? "max-w-lg" : "max-w-md"} flex flex-col h-full`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3
-              className={`text-2xl font-[700] ${
+              className={`text-2xl font-[700] min-h-[56px] flex items-end ${
                 inverse ? "text-black" : "text-white"
               } text-black leading-tight mb-4 tracking-[-0.02em]"`}
             >
@@ -109,7 +109,7 @@ export default function FueStyleTreatmentCardDesktop({
             {/* Learn More Button */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex items-center gap-2 font-[600] text-md hover:brightness- transition-colors duration-200 text-[#ffffff]"
+              className="flex items-center gap-2 font-[600] text-md hover:brightness- transition-colors duration-200 text-[#ffffff] mt-auto"
               whileHover={{ x: 3, scale: 1.02 }}
               transition={{ duration: 0.2 }}
               initial={{ opacity: 0, y: 10 }}

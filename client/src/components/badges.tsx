@@ -11,12 +11,12 @@ export interface BadgeGridProps {
 }
 
 const DEFAULT_BADGES: Badge[] = [
-  { src: "/assets/badges/certified-neograft-provider.png", alt: "Certified NeoGraft Provider" },
-  { src: "/assets/badges/center-of-excellence.png", alt: "NeoGraft Center of Excellence" },
-  { src: "/assets/badges/master-transplanter.png", alt: "Master NeoGraft Transplanter" },
-  { src: "/assets/badges/dedicated-expert.png", alt: "Dedicated Hair Restoration Expert" },
-  { src: "/assets/badges/est-2019-dr-neo.png", alt: "Est. 2019 — Dr. Neo California" },
-  { src: "/assets/badges/yelp-love-us.png", alt: "People Love Us on Yelp" },
+  { src: "/assets/badges/certified-neograft-provider.webp", alt: "Certified NeoGraft Provider" },
+  { src: "/assets/badges/center-of-excellence.webp", alt: "NeoGraft Center of Excellence" },
+  { src: "/assets/badges/master-transplanter.webp", alt: "Master NeoGraft Transplanter" },
+  { src: "/assets/badges/dedicated-expert.webp", alt: "Dedicated Hair Restoration Expert" },
+  { src: "/assets/badges/est-2019-dr-neo.webp", alt: "Est. 2019 — Dr. Neo California" },
+  { src: "/assets/badges/yelp-love-us.webp", alt: "People Love Us on Yelp" },
 
 ];
 

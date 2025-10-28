@@ -10,8 +10,8 @@ const heroImage =
   "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=2000&q=80";
 
 const locationImages: Record<number, string> = {
-  1: "/assets/locations/elsegundo.jpg",
-  2: "/assets/locations/encinitas.jpeg",
+  1: "/assets/locations/elsegundo.webp",
+  2: "/assets/locations/encinitas.webp",
   3: "/assets/locations/irvine.webp",
   4: "/assets/locations/palmdesert.webp",
   5: "/assets/locations/temecula.webp",
