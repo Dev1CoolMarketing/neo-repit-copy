@@ -45,12 +45,6 @@ export default function TreatmentsSectionEnhanced() {
   };
   return (
     <>
-      <ProductModal
-        open={isModalOpen}
-        onOpenChange={setIsModalOpen}
-        productType={productType}
-        triggerElement={triggerElement}
-      />
 
       {/* Mobile version - keep exactly the same as current */}
 
@@ -205,7 +199,7 @@ export default function TreatmentsSectionEnhanced() {
                 </div>
               </div>
               <img
-                src="/assets/home/micro.png.PNG"
+                src="/assets/home/micro.png.webp"
                 alt="Microneedling with PRP"
                 className="w-[80%] h-[80%] min-w-md max-w-md mx-auto object-contain drop-shadow-2xl"
                 style={{
@@ -241,44 +235,6 @@ export default function TreatmentsSectionEnhanced() {
 
               {/* Apple iPhone-style horizontal scroll showcase */}
               <div className="mb-16 -mx-8 relative">
-                {/* Scroll indicators */}
-                {/* <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
-                  <div className="w-8 h-32 bg-gradient-to-r from-[#f5f5f7] to-transparent"></div>
-                </div>
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
-                  <div className="w-8 h-32 bg-gradient-to-l from-[#f5f5f7] to-transparent"></div>
-                </div> */}
-
-                {/* Navigation arrows */}
-                {/* <button
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full border border-gray-200/50 flex items-center justify-center hover:bg-white transition-colors"
-                  aria-label="Scroll Left"
-                  onClick={() => {
-                    const container = document.querySelector(
-                      ".horizontal-scroll-container",
-                    );
-                    if (container)
-                      container.scrollBy({ left: -320, behavior: "smooth" });
-                  }}
-                >
-                  <ChevronLeft className="w-5 h-5 text-[#86868b]" />
-                  <span className="sr-only">Scroll Left</span>
-                </button>
-
-                <button
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full border border-gray-200/50 flex items-center justify-center hover:bg-white transition-colors"
-                  aria-label="Scroll Right"
-                  onClick={() => {
-                    const container = document.querySelector(
-                      ".horizontal-scroll-container",
-                    );
-                    if (container)
-                      container.scrollBy({ left: 320, behavior: "smooth" });
-                  }}
-                >
-                  <ChevronRight className="w-5 h-5 text-[#86868b]" />
-                  <span className="sr-only">Scroll Right</span>
-                </button> */}
 
                 {/* Scroll hint indicator */}
                 <div className="absolute  hidden right-16 top-4 z-20 flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1.5 border border-gray-200/50">
@@ -325,9 +281,9 @@ export default function TreatmentsSectionEnhanced() {
                         <span className="text-[11px] font-medium uppercase tracking-[0.5px] text-[#625046]">
                           Dr. Neo Technology
                         </span>
-                        <h2 className="text-[24px] font-semibold leading-[28px] text-[#1d1d1f]">
+                        <h3 className="text-[24px] font-semibold leading-[28px] text-[#1d1d1f]">
                           FUE Hair Transplant
-                        </h2>
+                        </h3>
                       </div>
                       <div className="flex h-[200px] w-full items-center justify-center">
                         <motion.img
@@ -378,7 +334,7 @@ export default function TreatmentsSectionEnhanced() {
 
                       <div className="flex h-[200px] w-full items-center justify-center">
                         <motion.img
-                          src={"/assets/MOIST FOLLICLE.png"}
+                          src={"/assets/home/MOIST FOLLICLE.webp"}
                           alt="Follicular Hypersomes™"
                           className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-105"
                           style={{
@@ -428,7 +384,7 @@ export default function TreatmentsSectionEnhanced() {
 
                       <div className="flex h-[200px] w-full items-center justify-center">
                         <motion.img
-                          src={"/assets/FOLLICULES.png"}
+                          src={"/assets/header/FOLLICULES.webp"}
                           alt="Injectable Growth Factors"
                           className="h-40 w-40 object-contain transition-transform duration-500 group-hover:scale-105"
                           style={{
@@ -478,7 +434,7 @@ export default function TreatmentsSectionEnhanced() {
 
                       <div className="flex h-[200px] w-full items-center justify-center">
                         <motion.img
-                          src={"/assets/home/micro.png.PNG"}
+                          src={"/assets/home/micro.png.webp"}
                           alt="Microneedling Growth Factors"
                           className="h-44 w-44 object-contain transition-transform duration-500 group-hover:scale-105"
                           style={{
@@ -503,104 +459,7 @@ export default function TreatmentsSectionEnhanced() {
                     </div>
                   </motion.div>
 
-                  {/* Vigor VIP Card */}
-                  {/* <motion.div
-                    className="flex-none w-[280px] bg-white rounded-[18px] border border-[#e5e5e7] overflow-hidden group cursor-pointer"
-                    tabIndex={0}
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    whileHover={{
-                      scale: 1.02,
-                      boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    <div className="p-8">
-                      <div className="text-center mb-2">
-                        <span className="text-[11px] font-medium text-[#625046] uppercase tracking-[0.5px]">
-                          Dr. Neo Technology
-                        </span>
-                      </div>
-
-                      <h3 className="text-[24px] h-24 font-semibold text-[#1d1d1f] mb-8 leading-[28px] text-center flex items-center justify-center">
-                        Vigor VIP & </h3>
-
-                      <div className="h-[200px] flex items-center justify-center mb-6">
-                        <motion.img
-                          src={
-                            "/assets/Pecker Johnson VIP Card for NEO sit.svg"
-                          }
-                          alt="Follicular Hypersomes™"
-                          className="w-40 h-40 object-contain group-hover:scale-105 transition-transform duration-500"
-                          style={{
-                            filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.1))",
-                          }}
-                        />
-                      </div>
-
-
-                      <div className="text-center mb-4">
-                        <p className="text-[14px] text-[#76767E]">
-                          From $199/mo or $24.95/mo. for 24 mo.*
-                        </p>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <motion.button
-                          className="custom-button  px-6 py-2 rounded-[980px] text-[14px] font-medium"
-                          whileTap={{ scale: 0.98 }}
-                          role="button"
-                          onClick={(event) => {
-                            navigate('/');
-                            handleOpenModal("Vigor VIP");
-                          }}
-                        >
-                          View
-                        </motion.button>
-                      </div>
-                    </div>
-                  </motion.div> */}
-
-                  {/* Explore All Card */}
-                  {/* <motion.div
-                    className="flex-none w-[280px] bg-white rounded-[18px] border border-[#e5e5e7] overflow-hidden group cursor-pointer relative"
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    whileHover={{
-                      scale: 1.02,
-                      boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    <div className="h-[200px] bg-gradient-to-br from-[#f8f9fa] to-[#e9ecef] flex items-center justify-center relative overflow-hidden">
-                      <div className="grid grid-cols-3 gap-3">
-                        <div className="w-8 h-12 bg-[#A87B23] rounded-lg group-hover:scale-110 transition-transform duration-500" />
-                        <div className="w-8 h-12 bg-[#625046] rounded-lg group-hover:scale-110 transition-transform duration-700" />
-                        <div className="w-8 h-12 bg-[#34c759] rounded-lg group-hover:scale-110 transition-transform duration-900" />
-                      </div>
-                    </div>
-
-                    <div className="p-6 text-center">
-                      <h3 className="text-[24px] font-semibold text-[#1d1d1f] mb-2 leading-[28px]">
-                        Explore all hair restoration options.
-                      </h3>
-                      <p className="text-[17px] text-[#86868b] leading-[22px] mb-6">
-                        Find the perfect treatment for your goals
-                      </p>
-
-                      <motion.button
-                        className="w-full custom-button-outline border border-[#0071e3] text-[#0071e3] py-3 rounded-[980px] text-[14px] font-medium"
-                        whileHover={{
-                          backgroundColor: "#0071e3",
-                          color: "white",
-                        }}
-                        whileTap={{ scale: 0.98 }}
-                        onClick={() => smoothScrollTo("contact")}
-                      >
-                        View All
-                      </motion.button>
-                    </div>
-                  </motion.div> */}
+                  
                 </div>
               </div>
 

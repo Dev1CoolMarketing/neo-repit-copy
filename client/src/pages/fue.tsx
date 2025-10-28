@@ -1,5 +1,5 @@
 import SiteFooter from "@/components/site-footer";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { initFadeInAnimations } from "@/lib/utils";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import GenericHeader from "@/components/generic-header";
@@ -490,6 +490,11 @@ const fueProcessDetails = [
 ];
 
 export default function Fue() {
+  const [headerReady, setHeaderReady] = useState(false);
+  const handleHeaderReady = useCallback(() => {
+    setHeaderReady(true);
+  }, []);
+
   useEffect(() => {
     // Scroll to top on route change
     window.scrollTo(0, 0);
@@ -500,7 +505,16 @@ export default function Fue() {
     // Add title to the page
     document.title = "SoCal Advanced Hair Restoration | Dr. NEO";
 
-    return cleanup;
+    const fallbackTimer = window.setTimeout(() => {
+      setHeaderReady(true);
+    }, 8000);
+
+    return () => {
+      window.clearTimeout(fallbackTimer);
+      if (typeof cleanup === "function") {
+        cleanup();
+      }
+    };
   }, []);
   const fueGradientClass =
     "bg-gradient-to-r from-[#B91C1C] via-[#761A20] to-[#1D0000] bg-clip-text text-transparent";
@@ -518,30 +532,42 @@ export default function Fue() {
             "bg-gradient-to-r from-[#B91C1C] via-[#761A20]  to-[#1D0000] bg-clip-text text-transparent"
           }
           gradientButtonClass={"custom-button-fue"}
+          contentId="fue-page-content"
+          onReady={handleHeaderReady}
         />
-        <GenericReasons reasons={fueReasons} gradientClass={fueGradientClass} />
+        {headerReady && (
+          <div
+            id="fue-page-content"
+            className="flex flex-1 flex-col content-visible"
+          >
+            <GenericReasons
+              reasons={fueReasons}
+              gradientClass={fueGradientClass}
+            />
 
-        {/* <FueHowItWorks /> */}
-        <GenericHowItWorks
-          processDetails={fueProcessDetails}
-          color="#B91C1C"
-          gradientClass={fueGradientClass}
-          title="Redefining the Hair Transplant Experience"
-        />
-        <GenericProcess
-          title="PROCESS"
-          headline="See our process in action"
-          details="Watch step-by-step videos of our FUE hair transplant procedure.
+            {/* <FueHowItWorks /> */}
+            <GenericHowItWorks
+              processDetails={fueProcessDetails}
+              color="#B91C1C"
+              gradientClass={fueGradientClass}
+              title="Redefining the Hair Transplant Experience"
+            />
+            <GenericProcess
+              title="PROCESS"
+              headline="See our process in action"
+              details="Watch step-by-step videos of our FUE hair transplant procedure.
             Understand exactly what happens during your treatment."
-          video="/assets/video/NEO Stinger.mov"
-          gradientClass={
-            "bg-gradient-to-br from-[#8B2635] via-[#A4161A] to-[#E63946] "
-          }
-        />
-        <HairLineHeroesSlider />
-        <ContactSection />
-        <GenericFaqSection faqs={fueFaq} />
-        <SiteFooter />
+              video="/assets/video/NEO Stinger.webm"
+              gradientClass={
+                "bg-gradient-to-br from-[#B91C1C] via-[#761A20] to-[#1D0000] "
+              }
+            />
+            <HairLineHeroesSlider />
+            <ContactSection />
+            <GenericFaqSection faqs={fueFaq} />
+            <SiteFooter />
+          </div>
+        )}
       </main>
     </div>
   );

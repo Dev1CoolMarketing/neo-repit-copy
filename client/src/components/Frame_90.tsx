@@ -19,7 +19,7 @@ export default function Frame_90() {
       name: "Alex Colby",
       location: "Newport Beach",
       age: 23,
-      imageSrc: "/assets/ALEX COLBY.png",
+      imageSrc: "/assets/ALEX COLBY.webp",
       badge: "GROWTH FACTORS",
     },
     {

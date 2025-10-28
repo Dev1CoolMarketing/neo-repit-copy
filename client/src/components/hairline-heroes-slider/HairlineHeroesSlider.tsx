@@ -87,9 +87,9 @@ export default function HairLineHeroesSlider() {
                     name: "Alex Colby",
                     location: "Newport Beach",
                     age: 23,
-                    image: "/assets/heroes/ALEX COLBY.png",
+                    image: "/assets/heroes/Alex.webp",
                     badge: "Growth Factors",
-                    video: "assets/video/Alex Web Stinger.mov",
+                    video: "/assets/video/Alex Web Stinger.webm",
                   },
                   {
                     name: "Ryan Ziegler",
@@ -97,7 +97,7 @@ export default function HairLineHeroesSlider() {
                     age: 30,
                     image: "/assets/heroes/Ryan.png",
                     badge: "Hair Transplant",
-                    video: "assets/video/Ryan Web Stinger.mov",
+                    video: "/assets/video/Ryan Web Stinger.webm",
                   },
                   {
                     name: "Saleem Abdelmuti",
@@ -105,7 +105,7 @@ export default function HairLineHeroesSlider() {
                     age: 30,
                     image: "/assets/heroes/saleem.png",
                     badge: "Hair Transplant",
-                    video: "assets/video/Saleem Web Stinger.mov",
+                    video: "/assets/video/Saleem Web Stinger.webm",
                   },
                 ].map((hero, index) => (
                   <HeroCard hero={hero} index={index} key={hero.name} />

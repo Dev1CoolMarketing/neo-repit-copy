@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "../styles/ExosomesDesign.module.css";
 import FueNavBar from "@/components/fue/fue-nav-bar";
 import SiteFooter from "@/components/site-footer";
@@ -235,6 +235,11 @@ export const ExosomesDesign = (): JSX.Element => {
     },
   ];
 
+  const [headerReady, setHeaderReady] = useState(false);
+  const handleHeaderReady = useCallback(() => {
+    setHeaderReady(true);
+  }, []);
+
   useEffect(() => {
     // Scroll to top on route change
     window.scrollTo(0, 0);
@@ -245,7 +250,16 @@ export const ExosomesDesign = (): JSX.Element => {
     // Add title to the page
     document.title = "Exosome Therapy | Dr. NEO Hair Restoration";
 
-    return cleanup;
+    const fallbackTimer = window.setTimeout(() => {
+      setHeaderReady(true);
+    }, 8000);
+
+    return () => {
+      window.clearTimeout(fallbackTimer);
+      if (typeof cleanup === "function") {
+        cleanup();
+      }
+    };
   }, []);
   const exosomeGradient =
     "bg-gradient-to-r from-[#9940B6] via-[#4D74C8] to-[#8051BC] bg-clip-text text-transparent";
@@ -289,32 +303,40 @@ export const ExosomesDesign = (): JSX.Element => {
         useText={true}
         gradientClass={exosomeGradient}
         gradientButtonClass={"custom-button-hypersomes"}
+        onReady={handleHeaderReady}
+        contentId="exosomes-page-content"
       />{" "}
-      <GenericReasons
-        reasons={exosomeReasons}
-        gradientClass={exosomeGradient}
-      />
-      <GenericHowItWorks
-      processDetails={exosomesProcessDetails}
-      gradientClass={exosomeGradient}
-      color={exsomeColor}
-      title={"Hair Growth with Next-Generation Biologics"}
-      />
-      <GenericProcess
-            title="PROCESS"
-            headline="See our process in action"
-            details="Watch step-by-step videos of our FUE hair transplant procedure.
+      {headerReady && (
+        <div
+          id="exosomes-page-content"
+          className="flex flex-1 flex-col content-visible"
+        >
+          <GenericReasons
+            reasons={exosomeReasons}
+            gradientClass={exosomeGradient}
+          />
+          <GenericHowItWorks
+          processDetails={exosomesProcessDetails}
+          gradientClass={exosomeGradient}
+          color={exsomeColor}
+          title={"Hair Growth with Next-Generation Biologics"}
+          />
+          <GenericProcess
+              title="PROCESS"
+              headline="See our process in action"
+              details="Watch step-by-step videos of our FUE hair transplant procedure.
                   Understand exactly what happens during your treatment."
-            video="/assets/video/NEO Stinger.mov"
-            gradientClass={"bg-[#8051BC]"}
-            />
-            <HairLineHeroesSlider/>
-            <ContactSection />
-                     <GenericFaqSection faqs={fueFaq}/>
-   
+              video="/assets/video/NEO Stinger.webm"
+              gradientClass={"bg-[#8051BC]"}
+              />
+              <HairLineHeroesSlider/>
+              <ContactSection />
+                       <GenericFaqSection faqs={fueFaq}/>
+                       <SiteFooter />
+        </div>
+      )}
       </main>
 
-      <SiteFooter />
     </div>
   );
 };

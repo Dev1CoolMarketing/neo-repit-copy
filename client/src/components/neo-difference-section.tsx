@@ -7,12 +7,12 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import irvineSpectrumImg from "/assets/IRVINE SPECTRUM.png";
+import irvineSpectrumImg from "/assets/neo-difference/IRVINE SPECTRUM.webp";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-import HairlineImage from "/assets/neo-difference/hairlines-stamped.png";
-import NoFlights from "/assets/neo-difference/no-flights.jpg";
-import OneDay from "/assets/neo-difference/one-day-lifetime.png";
+import HairlineImage from "/assets/neo-difference/hairlines-stamped.webp";
+import NoFlights from "/assets/neo-difference/no-flights.webp";
+import OneDay from "/assets/neo-difference/one-day-lifetime.webp";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 // Feature cards data for Neo Difference section
