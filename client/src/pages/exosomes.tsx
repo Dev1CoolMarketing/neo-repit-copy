@@ -267,22 +267,22 @@ export const ExosomesDesign = (): JSX.Element => {
     {
       highlight: "2–3× greater",
       description:
-        "hair density versus other traditional approaches. ",
+        "hair density versus other traditional approaches.",
     },
     {
       highlight: "Non-surgical treatment",
       description:
-        "means no scalpels, no incisions, and no linear scar.",
+        "means no scalpels, no incisions, and no scarring.",
     },
     {
       highlight: "Stem cell–derived particles",
       description:
-        "send regenerative signals to awaken dormant follicles.",
+        "send regenerative signals to awaken follicles.",
     },
     {
       highlight: "Growing in popularity,",
       description:
-        "hypersomes apply cell based technology to hair restoration",
+        "Hypersomes apply cell based technology to hair restoration.",
     },
         {
       highlight: "30–45 minute sessions ",
