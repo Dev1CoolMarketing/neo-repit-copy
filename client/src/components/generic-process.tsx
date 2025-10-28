@@ -1,11 +1,14 @@
 
 
 
+import { useEffect, useRef } from "react";
+
 type GenericProcessProps = {
     details: string,
     title?: string,
     headline: string,
     video: string,
+    fallbackVideo?: string,
     gradientClass: string,
     ctaText?: string
 
@@ -16,9 +19,57 @@ export default function GenericProcess({
     title = 'PROCESS',
     headline,
     video,
+    fallbackVideo,
     gradientClass,
     ctaText = 'Watch process videos'
 }: GenericProcessProps) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const getMimeType = (src: string) => {
+    const ext = src.split('?')[0].split('.').pop()?.toLowerCase();
+    switch (ext) {
+      case 'webm':
+        return 'video/webm';
+      case 'mov':
+        return 'video/quicktime';
+      case 'm4v':
+        return 'video/x-m4v';
+      case 'ogv':
+      case 'ogg':
+        return 'video/ogg';
+      default:
+        return 'video/mp4';
+    }
+  };
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+
+    el.muted = true;
+    el.playsInline = true;
+
+    const tryPlay = () => {
+      const attempt = el.play();
+      if (attempt && typeof attempt.then === "function") {
+        attempt.catch(() => {
+          el.controls = true;
+        });
+      }
+    };
+
+    if (el.readyState >= 2) {
+      tryPlay();
+    } else {
+      const onCanPlay = () => {
+        el.removeEventListener("canplay", onCanPlay);
+        tryPlay();
+      };
+      el.addEventListener("canplay", onCanPlay);
+      return () => el.removeEventListener("canplay", onCanPlay);
+    }
+  }, [video, fallbackVideo]);
+
   return (
     <section className="bg-white px-5 py-16 md:py-24">
       <div className="container mx-auto max-w-sm md:max-w-4xl">
@@ -66,13 +117,17 @@ export default function GenericProcess({
                 {/* Video Goes Here */}
 
                 <video
+                  ref={videoRef}
                   className="absolute top-0 left-0 w-full h-full object-cover"
                   autoPlay
                   muted
                   loop
                   playsInline
                 >
-                  <source src={video} type="video/mp4" />
+                  <source src={video} type={getMimeType(video)} />
+                  {fallbackVideo && (
+                    <source src={fallbackVideo} type={getMimeType(fallbackVideo)} />
+                  )}
                 </video>
               </div>
             </div>

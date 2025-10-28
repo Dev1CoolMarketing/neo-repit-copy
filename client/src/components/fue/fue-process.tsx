@@ -57,7 +57,8 @@ export default function FueProcess() {
                   loop
                   playsInline
                 >
-                  <source src="/assets/video/NEO Stinger.webm" type="video/mp4" />
+                  <source src="/assets/video/neo-stinger.webm" type="video/webm" />
+                  <source src="/assets/video/neo-fue.mov" type="video/quicktime" />
                 </video>
               </div>
             </div>
