@@ -143,11 +143,11 @@ export const microneedlingDetails = [
 export const microneedlingReasons = [
   {
     highlight: "Up to 40% increase",
-    description: "visible hair density.",
+    description: "in visible hair density.",
   },
   {
-    highlight: "Enhances absorption of ",
-    description: "biologic therapies.",
+    highlight: "Enhances absorption of",
+    description: "regenerative add-on therapies.",
   },
   {
     highlight: "Triggers natural collagen and elastin production",

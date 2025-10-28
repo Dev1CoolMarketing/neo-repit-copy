@@ -19,23 +19,23 @@ import followUpConsultationImg from "@assets/fue-howitworks-step4.webp";
 import GenericProcess from "@/components/generic-process";
 
 const headerDetails = [
-  "Stimulates natural hair growth.",
+  "Supports visible density.",
   "No pills. No prescriptions.",
-  "Composed entirely of natural agents.",
+  "Derived from natural proteins.",
 ];
 const reasons = [
   {
-    highlight: "5× Greater Effectiveness ",
-    description: "versus other topical treatments alone.",
+    highlight: "5× greater effectiveness ",
+    description: "versus other topical treatments.",
   },
   {
-    highlight: "Long-Term Results,",
+    highlight: "Delivers lasting results,",
     description:
-      "naturally occurring proteins stimulate continuous regeneration.",
+      "as natural proteins stimulate continuous regeneration.",
   },
   {
-    highlight: "Noticeably Fuller Coverage ",
-    description: "and proven density boost",
+    highlight: "Noticeably fuller coverage ",
+    description: "and proven density boost.",
   },
   {
     highlight: "Visible thickening",
@@ -43,7 +43,7 @@ const reasons = [
   },
 
   {
-    highlight: "Zero Surgical Risk ",
+    highlight: "Zero surgical risk ",
     description: "with minimal downtime.",
   },
 ];

@@ -25,24 +25,24 @@ const headerDetails = [
 const fueReasons = [
   {
     highlight: "Natural-looking results",
-    description: "with aesthetic appeal and more youthful density",
+    description: "with aesthetic appeal and more youthful density.",
   },
   {
     highlight: "No visible linear scar",
     description:
-      "because FUE skips the outdated practice of scalp strip removal",
+      "because FUE skips the outdated practice of scalp strip removal.",
   },
   {
     highlight: "Quicker recovery",
-    description: " with our minimally invasive approach",
+    description: " with our minimally invasive approach.",
   },
   {
     highlight: "Ultra-popular procedure ",
-    description: "with thousands performed nationwide",
+    description: "with thousands performed nationwide.",
   },
   {
     highlight: "Men, women, hairlines, crowns, eyebrows and beards",
-    description: "-we got you covered",
+    description: "-we got you covered.",
   },
 ];
 
