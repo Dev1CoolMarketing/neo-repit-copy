@@ -6,7 +6,7 @@ export const locations = [
     image: "/assets/locations/elsegundo.webp",
     featuredImageId: 5,
     header: null,
-    googleUrl: "https://www.google.com/maps/place/2500+E+Ball+Rd,+Anaheim,+CA+92806,+USA/@33.817797,-117.8828512,17z/data=!3m1!4b1!4m6!3m5!1s0x80dcd7a7c8b1eb31:0x796465641928f34c!8m2!3d33.817797!4d-117.8802763!16s%2Fg%2F11sd8stwsm",
+    googleUrl: "https://maps.app.goo.gl/c1bMKEJjjot27pcFA",
     contact: "(949) 570-0500",
     address: "2041 Rosecrans Ave., Suite 170-16, El Segundo, CA 90245",
     hours: [
