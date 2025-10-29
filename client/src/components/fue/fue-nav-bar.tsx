@@ -335,12 +335,12 @@ export default function FueNavBar() {
               >
                 (949) 570-0500
               </a>
-              <button
-                onClick={() => smoothScrollTo("#contact")}
+              <Link
+                href="/contact"
                 className={`hidden lg:inline-flex items-center justify-center h-10 px-6 text-sm font-medium transition-colors ${bookConsultColor[pathName]?.mainColor}  text-white rounded-full hover:bg-[#2a2a2a] focus:outline-none focus:ring-4 hover:from-${bookConsultColor[pathName]?.hoverColor} hover:to-${bookConsultColor[pathName]?.hoverColor} focus:ring-blue`}
               >
                 Book Consult
-              </button>
+              </Link>
               <Button
                 variant="ghost"
                 size="icon"
@@ -383,17 +383,13 @@ export default function FueNavBar() {
                   <Phone className="w-4 h-4 mr-2" />
                   Call Us
                 </a>
-                <a
-                  href="/#contact"
+                <Link
+                  href="/contact"
                   className={`flex items-center justify-center ${bookConsultColor[pathName]?.mainColor} text-white rounded-lg py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white hover:from-${bookConsultColor[pathName]?.hoverColor} hover:to-${bookConsultColor[pathName]?.hoverColor} transition-all duration-300`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsMenuOpen(false);
-                    handleNavClick("/#contact");
-                  }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Book Consult
-                </a>
+                </Link>
               </div>
             </div>
           </div>
