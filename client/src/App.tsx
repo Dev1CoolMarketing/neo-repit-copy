@@ -24,6 +24,7 @@ import PrivacyPolicyPage from "./pages/privacy-policy/page";
 import Microneedling from "./pages/microneedling-page";
 import TermsOfUsePage from "./pages/terms-of-use/page";
 import LocationsPage from "@/pages/locations";
+import LocationDetailPage from "@/pages/location-detail";
 import FAQPage from "@/pages/faq";
 import ContactPage from "@/pages/contact";
 import SkipToMain from "@/components/skip-to-main";
@@ -63,6 +64,7 @@ function Router() {
         <Route path="/exosomes" component={ExosomesDesign} />
         <Route path="/microneedling" component={Microneedling} />
         <Route path="/locations" component={LocationsPage} />
+        <Route path="/locations/:slug" component={LocationDetailPage} />
         <Route path="/faq" component={FAQPage} />
         <Route path="/component-export" component={ComponentExportPage} />
         <Route path="/gradients" component={GradientsPage} />
