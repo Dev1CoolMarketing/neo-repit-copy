@@ -1,4 +1,4 @@
-import { sendEmail } from "../server/service/emailService";
+import { sendEmail } from "../shared/emailService";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -82,6 +82,7 @@ Message: ${formData.message || "N/A"}
     return res.status(500).json({
       message:
         "An error occurred while processing your request. Please try again later.",
+      details: error instanceof Error ? error.message : "Unknown error",
     });
   }
 }
