@@ -1,11 +1,11 @@
 import dotenv from "dotenv";
-import { createTransport, type Transporter } from "nodemailer";
+import { createTransport } from "nodemailer";
 
 dotenv.config();
 
-let transporter: Transporter | null = null;
+let transporter = null;
 
-function getTransporter(): Transporter {
+function getTransporter() {
   if (transporter) {
     console.log("[email] Reusing existing transporter");
     return transporter;
@@ -37,12 +37,7 @@ function getTransporter(): Transporter {
   return transporter;
 }
 
-export async function sendEmail(
-  to: string,
-  subject: string,
-  text: string,
-  html: string,
-) {
+export async function sendEmail(to, subject, text, html) {
   const transport = getTransporter();
 
   const recipients = [
@@ -61,7 +56,7 @@ export async function sendEmail(
     await transport.verify();
     console.log("[email] Transport verified successfully");
     await transport.sendMail({
-      from: process.env.GMAIL_APP_EMAIL!,
+      from: process.env.GMAIL_APP_EMAIL,
       to: recipients,
       subject,
       text,

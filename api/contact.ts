@@ -1,4 +1,4 @@
-import { sendEmail } from "./_lib/emailService";
+import { sendEmail } from "./_lib/emailService.js";
 import { z } from "zod";
 
 const contactSchema = z.object({
