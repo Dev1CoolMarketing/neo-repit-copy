@@ -16,9 +16,11 @@ import BadgeGrid from "./badges";
 // Simplified footer data
 const treatments = [
   { name: "FUE Hair Transplant", href: "/fue" },
+  { name: "Follicular Hypersomes", href: "/exosomes" },
+
   { name: "Growth Factors", href: "/growth-factors" },
-  { name: "VIP Membership", href: "/vip-membership" },
-];
+      { name: "Microneedling", href: "/microneedling" },
+]
 
 const resources = [
   { name: "Before & After Gallery", href: "/#treatments" },
@@ -82,7 +84,7 @@ export default function SiteFooter() {
 
 
           {/* Simplified navigation */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:flex justify-around flex-row lg:grid-cols-4 gap-8 mb-12">
             {/* Treatments Column */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -177,7 +179,7 @@ export default function SiteFooter() {
                 </div>
                 <div className="flex items-start space-x-2 text-gray-300">
                   <MapPin className="w-4 h-4 text-[#FAE151] mt-0.5" />
-                  <span onClick={()=> smoothScrollTo('contact')} className="underline cursor-pointer">Multiple SoCal Locations</span>
+                  <Link href="/locations" className="underline cursor-pointer">Multiple SoCal Locations</Link>
                 </div>
               </div>
             </motion.div>
