@@ -1,4 +1,4 @@
-import { sendEmail } from "../shared/emailService";
+import { sendEmail } from "./_lib/emailService";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -67,6 +67,15 @@ Message: ${formData.message || "N/A"}
 </div>`;
 
   try {
+    console.log("[contact] Preparing to send email", {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      contactEmail: process.env.CONTACT_EMAIL || "angel@smoothmd.com",
+      hasSmtpUser: Boolean(process.env.GMAIL_APP_EMAIL),
+      hasSmtpPassword: Boolean(process.env.GMAIL_APP_PASSWORD),
+    });
+
     await sendEmail(
       process.env.CONTACT_EMAIL || "angel@smoothmd.com",
       subject,

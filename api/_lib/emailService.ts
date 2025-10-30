@@ -7,6 +7,7 @@ let transporter: Transporter | null = null;
 
 function getTransporter(): Transporter {
   if (transporter) {
+    console.log("[email] Reusing existing transporter");
     return transporter;
   }
 
@@ -14,6 +15,10 @@ function getTransporter(): Transporter {
   const pass = process.env.GMAIL_APP_PASSWORD;
 
   if (!user || !pass) {
+    console.error("[email] Missing SMTP credentials", {
+      hasUser: Boolean(user),
+      hasPass: Boolean(pass),
+    });
     throw new Error(
       "Email credentials are not configured. Set GMAIL_APP_EMAIL and GMAIL_APP_PASSWORD.",
     );
@@ -28,6 +33,7 @@ function getTransporter(): Transporter {
     },
   });
 
+  console.log("[email] Created new transporter instance");
   return transporter;
 }
 
@@ -46,13 +52,28 @@ export async function sendEmail(
     "zach@coolmarketing.com",
   ];
 
-  await transport.verify();
-  await transport.sendMail({
-    from: process.env.GMAIL_APP_EMAIL!,
-    to: recipients,
+  console.log("[email] Attempting to send mail", {
     subject,
-    text,
-    html,
+    recipients,
   });
-}
 
+  try {
+    await transport.verify();
+    console.log("[email] Transport verified successfully");
+    await transport.sendMail({
+      from: process.env.GMAIL_APP_EMAIL!,
+      to: recipients,
+      subject,
+      text,
+      html,
+    });
+    console.log("[email] Mail sent successfully");
+  } catch (error) {
+    console.error("[email] Failed to send mail", {
+      subject,
+      recipients,
+      error,
+    });
+    throw error;
+  }
+}
