@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { sendEmail } from "./service/emailService";
+import { sendEmail } from "../shared/emailService";
 import { mcpClient } from "./mcp-client";
 import { generateAvatarSet } from "./avatar-generator";
 
