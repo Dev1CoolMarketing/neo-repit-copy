@@ -33,7 +33,7 @@ export default function ContactPage() {
 
         <ContactSection formAriaLabel="Contact Dr. Neo consultation request form" />
 
-        <section className="bg-white py-16">
+        {/* <section className="bg-white py-16">
           <div className="mx-auto max-w-4xl space-y-8 px-6 lg:px-12">
             <div>
               <h2 className="text-2xl font-semibold text-[#1f1210] md:text-3xl">
@@ -109,7 +109,7 @@ export default function ContactPage() {
               Explore our California locations
             </Link>
           </div>
-        </section>
+        </section> */}
       </main>
       <SiteFooter />
     </div>
